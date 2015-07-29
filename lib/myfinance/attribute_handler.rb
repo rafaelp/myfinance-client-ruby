@@ -33,7 +33,7 @@ module Myfinance
     end
 
     def is_datetime?
-      attribute =~ /\A\d+{4}\-\d+{2}\-\d+{2}[T ]?\d+{2}\:\d+{2}\:\d+{2}\-\d{2}\:\d{2}\Z/
+      attribute =~ /\A\d+{4}\-\d+{2}\-\d+{2}[T ]?\d+{2}\:\d+{2}\:\d+{2}(\-\d{2}\:\d{2})?\Z/
     end
 
     def as_decimal
