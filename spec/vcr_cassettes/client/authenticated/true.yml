@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/accounts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 29 Jul 2015 14:08:14 GMT
+      ETag:
+      - W/"b7e9de55b2718d50e6dccbcb2ab01efd"
+      Server:
+      - nginx/1.8.0
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - f8fb2efda7a7d438bb0c0ec59edb4cda
+      X-Runtime:
+      - '0.013803'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '325'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"account":{"beta":false,"cache_version":3,"canceled_at":null,"cancellation_reason":null,"created_at":"2015-07-29T11:04:45-03:00","default_currency_id":1,"ecommerce_response":null,"expires_on":"2015-08-13","id":3613,"invite":null,"is_trial":true,"name":"Minhas
+        Aplica\u00e7\u00f5es","owner_id":3703,"payment_method":null,"plan_slug":"bronze","referral_code":"8a54f17e1","referrer_id":null,"updated_at":"2015-07-29T11:04:46-03:00","uuid":"2fe5beef-12d0-45a4-8fb5-701ea61ef3c1","waiting_payment":false}}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/accounts
+  recorded_at: Wed, 29 Jul 2015 14:08:14 GMT
+recorded_with: VCR 2.9.3

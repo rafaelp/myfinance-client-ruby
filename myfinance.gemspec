@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
 
-  spec.add_dependency "rest-client", "~> 1.6.7"
+  spec.add_dependency "typhoeus", "~> 0.7.1"
   spec.add_dependency "multi_json", "~> 1.9.0"
 
   spec.files         = `git ls-files`.split($/).reject { |f| f =~ %r{(vcr_cassettes)/} }
