@@ -1,11 +1,11 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Myfinance::Resources::Entity do
-  describe '.find_all', vcr: true do
-    context 'when success' do
+  describe ".find_all", vcr: true do
+    context "when success" do
       subject { described_class.find_all }
 
-      it 'returns a find_all of orders' do
+      it "returns a find_all of orders" do
         expect(subject.class).to eq(Myfinance::Resources::EntityCollection)
         expect(subject.collection.first.class).to eq(Myfinance::Resources::Entity)
         expect(subject.collection.first.id).to eq(3798)
@@ -22,21 +22,21 @@ describe Myfinance::Resources::Entity do
       end
     end
 
-    context 'when not found' do
+    context "when not found" do
       before { Myfinance.configuration.token = "wrong-token" }
       subject { described_class.find_all }
 
-      it 'raises NotFound' do
+      it "raises NotFound" do
         expect{ subject }.to raise_error(Myfinance::RequestError)
       end
     end
   end
 
-  describe '.find', vcr: true do
-    context 'when success' do
+  describe ".find", vcr: true do
+    context "when success" do
       subject { described_class.find(3798) }
 
-      it 'returns a find_all of orders' do
+      it "returns a find_all of orders" do
         expect(subject.class).to eq(Myfinance::Resources::Entity)
         expect(subject.id).to eq(3798)
         expect(subject.name).to eq("Minhas Finanças")
@@ -51,11 +51,11 @@ describe Myfinance::Resources::Entity do
       end
     end
 
-    context 'when not found' do
+    context "when not found" do
       before { Myfinance.configuration.token = "wrong-token" }
       subject { described_class.find(3798) }
 
-      it 'raises NotFound' do
+      it "raises NotFound" do
         expect{ subject }.to raise_error(Myfinance::RequestError)
       end
     end
