@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 29 Jul 2015 17:30:51 GMT
+      ETag:
+      - W/"f3a035ee88d3bb7e0279bf1eba61efc2"
+      Server:
+      - nginx/1.8.0
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 5cc55c58980241d036b76e52922e612b
+      X-Runtime:
+      - '0.015293'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '227'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"entity":{"account_id":3613,"charging_uuid":null,"created_at":"2015-07-29T11:04:45-03:00","default_in_menu":true,"deleted_at":null,"federation_subscription_number":"","force_destroy":false,"id":3798,"imported_from_sync_at":null,"name":"Minhas
+        Finan\u00e7as","updated_at":"2015-07-29T14:30:36-03:00"}}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities
+  recorded_at: Wed, 29 Jul 2015 17:30:51 GMT
+recorded_with: VCR 2.9.3
