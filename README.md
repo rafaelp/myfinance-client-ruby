@@ -1,8 +1,13 @@
-# Myfinance
+# myfinance-client-ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/myfinance`. To experiment with that code, run `bin/console` for an interactive prompt.
+A Ruby client for the Myfinance REST API
 
-TODO: Delete this and the text above, and describe your gem
+![https://rubygems.org/gems/myfinance-client](https://badge.fury.io/rb/myfinance-client.png)
+![https://travis-ci.org/myfreecomm/myfinance-client-ruby](https://travis-ci.org/myfreecomm/myfinance-client-ruby.png?branch=master)
+![https://coveralls.io/r/myfreecomm/myfinance-client-ruby](https://coveralls.io/repos/myfreecomm/myfinance-client-ruby/badge.png?branch=master)
+![https://codeclimate.com/github/myfreecomm/myfinance-client-ruby](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby.png)
+
+Myfinance API docs: https://app.myfinance.com.br/docs/api
 
 ## Installation
 
@@ -22,7 +27,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Mapping of API endpoints to this client
+
+
+### Configuration
+
+  require 'myfinance'
+
+  Myfinance.configure do |m|
+    m.url = 'https://sandbox.myfinance.com.br' # defaults to 'https://app.myfinance.com.br' if omitted
+    c.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
+    c.token = 'my-token'
+  end
 
 ## Development
 
