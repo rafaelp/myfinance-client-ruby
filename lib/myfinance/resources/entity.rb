@@ -7,8 +7,6 @@ module Myfinance
     #   Documentation: https://app.myfinance.com.br/docs/api/entities
     #
     class Entity < Base
-      attr_reader :id, :name, :account_id, :charging_uuid, :created_at, :default_in_menu, :deleted_at, :federation_subscription_number, :imported_from_sync_at, :updated_at
-
       #
       # List all entities of the user
       #
@@ -17,9 +15,9 @@ module Myfinance
       #
       #   Documentation: https://app.myfinance.com.br/docs/api/entities#get_index
       #
-      def self.find_all
-        client.get('/entities', body: {}) do |response|
-          Myfinance::Resources::EntityCollection.build(response)
+      def find_all
+        http.get('/entities', body: {}) do |response|
+          respond_with_collection(response)
         end
       end
 
@@ -31,9 +29,9 @@ module Myfinance
       #
       #   Documentation: https://app.myfinance.com.br/docs/api/entities#get_show
       #
-      def self.find(entity_id)
-        client.get("/entities/#{entity_id}", body: {}) do |response|
-          self.new(parsed_body(response, 'entity'))
+      def find(entity_id)
+        http.get("/entities/#{entity_id}", body: {}) do |response|
+          respond_with_object(response)
         end
       end
     end

@@ -16,6 +16,13 @@ module Myfinance
       end
     end
 
+    def parsed_body(key=nil)
+      return MultiJson.load(self.body)[key] unless key.nil?
+      MultiJson.load(self.body)
+    rescue MultiJson::ParseError
+      {}
+    end
+
     private
 
     def timeout!

@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "typhoeus", "~> 0.7.1"
   spec.add_dependency "multi_json", "~> 1.9.0"
+  spec.add_dependency "virtus", '~> 1.0.5'
 
   spec.files         = `git ls-files`.split($/).reject { |f| f =~ %r{(vcr_cassettes)/} }
   spec.bindir        = "bin"

@@ -1,28 +1,31 @@
 module Myfinance
   module Resources
     class Base
-      def initialize(attribute={})
-        attribute.each do |k, v|
-          set_attribute(k, v)
-        end
-      end
 
-      def self.client
-        Myfinance.client
+      attr_accessor :http
+
+      def initialize(http)
+        @http = http
       end
 
       private
 
-      def self.parsed_body(response, key=nil)
-        return MultiJson.load(response.body)[key] unless key.nil?
-        MultiJson.load(response.body)
-      rescue MultiJson::ParseError
-        {}
+      def respond_with_collection(response)
+        collection_klass = Myfinance::Entities.const_get("#{entity_klass_name}Collection")
+        collection_klass.build(response)
       end
 
-      def set_attribute(key, value)
-        object_value = Myfinance::AttributeHandler.handle(value)
-        instance_variable_set("@#{key}", object_value)
+      def respond_with_object(response)
+        entity_klass = Myfinance::Entities.const_get(entity_klass_name)
+        entity_klass.new(response.parsed_body('entity'))
+      end
+
+      def entity_klass_name
+        self.class.to_s.gsub('Resources', 'Entities')
+      end
+
+      def response_key
+        self.class.to_s.split('::').last.downcase
       end
     end
   end
