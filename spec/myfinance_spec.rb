@@ -8,12 +8,10 @@ describe Myfinance do
   describe 'configuration' do
     it 'should be done via block initialization' do
       Myfinance.configure do |c|
-        c.token = "ABC-TOKEN"
         c.user_agent = "My App v1.0"
         c.url = "https://sandbox.myfinance.com.br"
       end
 
-      expect(Myfinance.configuration.token).to eq("ABC-TOKEN")
       expect(Myfinance.configuration.user_agent).to eq("My App v1.0")
       expect(Myfinance.configuration.url).to eq("https://sandbox.myfinance.com.br")
     end

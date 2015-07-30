@@ -3,12 +3,15 @@ require "multi_json"
 
 require "myfinance/version"
 require "myfinance/configuration"
+require "myfinance/http"
 require "myfinance/client"
-require "myfinance/attribute_handler"
+
+require "myfinance/entities/base"
+require "myfinance/entities/collection"
+require "myfinance/entities/entity"
+require "myfinance/entities/entity_collection"
 
 require "myfinance/resources/base"
-require "myfinance/resources/collection"
-require "myfinance/resources/entity_collection"
 require "myfinance/resources/entity"
 
 module Myfinance
@@ -20,7 +23,7 @@ module Myfinance
     yield(configuration) if block_given?
   end
 
-  def self.client
-    Client.new(Myfinance.configuration.token)
+  def self.client(token)
+    Client.new(token)
   end
 end
