@@ -27,18 +27,60 @@ Or install it yourself as:
 
 ## Usage
 
-### Mapping of API endpoints to this client
+##### Given your token, create an instance of Myfinance::Client, as below:
 
+```ruby
+client = Myfinance.client("YOUR_TOKEN_HERE")
+```
+
+##### Now you have access to every API endpoint:
+
+* [Entities API](https://app.myfinance.com.br/docs/api/entities) as `client.entities`
+
+### Endpoints
+
+#### [Entities](https://app.myfinance.com.br/docs/api/entities)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/entities#get_index" target="_blank">
+        /entities
+      </a>
+    </td>
+    <td>
+      <code>client.emitters.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/entities#get_show" target="_blank">
+        /entities/:id
+      </a>
+    </td>
+    <td>
+      <code>client.emitters.find</code>
+    </td>
+  </tr>
+</table>
 
 ### Configuration
 
-  require 'myfinance'
+```ruby
+require 'myfinance'
 
-  Myfinance.configure do |m|
-    m.url = 'https://sandbox.myfinance.com.br' # defaults to 'https://app.myfinance.com.br' if omitted
-    c.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
-    c.token = 'my-token'
-  end
+Myfinance.configure do |m|
+  m.url = 'https://sandbox.myfinance.com.br' # defaults to 'https://app.myfinance.com.br' if omitted
+  c.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
+end
+```
 
 ## Development
 
