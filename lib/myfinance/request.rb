@@ -35,7 +35,7 @@ module Myfinance
         "Accept"         => "application/json",
         "Content-Type"   => "application/json",
         "User-Agent"     => args[:user_agent],
-        "Authorization" => "Basic #{args[:authorization_hash]}"
+        "Authorization" => "Basic #{authorization_hash}"
       }.merge(headers)
     end
 
@@ -43,6 +43,10 @@ module Myfinance
       body = args[:body]
       body = MultiJson.dump(body) if body.is_a?(Hash)
       body
+    end
+
+    def authorization_hash
+      ::Base64.strict_encode64("#{args[:token]}:X")
     end
 
   end
