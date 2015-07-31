@@ -1,6 +1,6 @@
 # myfinance-client-ruby
 
-A Ruby client for the Myfinance REST API
+A Ruby client for the [Myfinance](http://www.myfinance.com.br) REST API
 
 ![https://rubygems.org/gems/myfinance-client](https://badge.fury.io/rb/myfinance-client.png)
 ![https://travis-ci.org/myfreecomm/myfinance-client-ruby](https://travis-ci.org/myfreecomm/myfinance-client-ruby.png?branch=master)
