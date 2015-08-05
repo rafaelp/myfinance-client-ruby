@@ -36,6 +36,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 ##### Now you have access to every API endpoint:
 
 * [Entities API](https://app.myfinance.com.br/docs/api/entities) as `client.entities`
+* [PayableAccounts API](https://app.myfinance.com.br/docs/api/payable_accounts) as `client.payable_accounts`
 
 ### Endpoints
 
@@ -55,7 +56,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       </a>
     </td>
     <td>
-      <code>client.emitters.find_all</code>
+      <code>client.entities.find_all</code>
     </td>
   </tr>
   <tr>
@@ -66,7 +67,28 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       </a>
     </td>
     <td>
-      <code>client.emitters.find</code>
+      <code>client.entities.find</code>
+    </td>
+  </tr>
+</table>
+
+#### [PayableAccounts](https://app.myfinance.com.br/docs/api/payable_accounts)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#post_create" target="_blank">
+        /entities/:entity_id/payable_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.create</code>
     </td>
   </tr>
 </table>
