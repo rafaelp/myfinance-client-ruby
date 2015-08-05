@@ -92,6 +92,17 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       <code>client.payable_accounts.create</code>
     </td>
   </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#put_pay" target="_blank">
+        /entities/:entity_id/payable_accounts/:id/pay
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.pay</code>
+    </td>
+  </tr>
 </table>
 
 #### [ReceivableAccounts](https://app.myfinance.com.br/docs/api/receivable_accounts)
@@ -113,6 +124,17 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       <code>client.receivable_accounts.create</code>
     </td>
   </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#put_receive" target="_blank">
+        /entities/:entity_id/receivable_accounts/:id/receive
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.receive</code>
+    </td>
+  </tr>
 </table>
 
 ### Configuration
@@ -122,7 +144,7 @@ require 'myfinance'
 
 Myfinance.configure do |m|
   m.url = 'https://sandbox.myfinance.com.br' # defaults to 'https://app.myfinance.com.br' if omitted
-  c.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
+  m.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
 end
 ```
 
