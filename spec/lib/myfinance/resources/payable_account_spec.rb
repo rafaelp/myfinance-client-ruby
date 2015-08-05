@@ -125,4 +125,22 @@ describe Myfinance::Resources::PayableAccount do
       expect(subject.discount_amount).to be_nil
     end
   end
+
+  describe "#destroy", vcr: true do
+    subject { client.payable_accounts.destroy(1215631, entity_id) }
+
+    context "when payable account exists" do
+      it "returns true" do
+        expect(subject).to be_truthy
+      end
+    end
+
+    context "when payable account does not exist" do
+      subject { client.payable_accounts.destroy(1215631099, entity_id) }
+
+      it "raises request error" do
+        expect { subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+  end
 end

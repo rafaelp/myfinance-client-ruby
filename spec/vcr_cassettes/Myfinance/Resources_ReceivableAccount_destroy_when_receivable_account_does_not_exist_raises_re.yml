@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1215631099
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Aug 2015 19:48:36 GMT
+      Server:
+      - nginx/1.8.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWU2YjA1YjBhNWE3OWM4YzU2YjhiMWQ2OGI0NDY3N2ViBjsAVA%3D%3D--2312b36c4a5faf8e993cf49026757847e9aa8360;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - c26b4dda4d9ffbda785f8b5ca47cef83
+      X-Runtime:
+      - '0.028928'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '122'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6Ik7Do28gZm9pIHBvc3PDrXZlbCBsb2NhbGl6YXIgYSB7Om9u
+        ZT0+XCJDb250YSBhIFJlY2ViZXJcIiwgOm90aGVyPT5cIkNvbnRhcyBhIFJl
+        Y2ViZXJcIn0gY29tIG8gSUQgMTIxNTYzMTA5OSJ9
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1215631099
+  recorded_at: Wed, 05 Aug 2015 19:48:36 GMT
+recorded_with: VCR 2.9.3

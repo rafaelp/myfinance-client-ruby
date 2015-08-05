@@ -125,4 +125,22 @@ describe Myfinance::Resources::ReceivableAccount do
       expect(subject.discount_amount).to be_nil
     end
   end
+
+  describe "#destroy", vcr: true do
+    subject { client.receivable_accounts.destroy(1215634, entity_id) }
+
+    context "when receivable account exists" do
+      it "returns true" do
+        expect(subject).to be_truthy
+      end
+    end
+
+    context "when receivable account does not exist" do
+      subject { client.receivable_accounts.destroy(1215631099, entity_id) }
+
+      it "raises request error" do
+        expect { subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+  end
 end
