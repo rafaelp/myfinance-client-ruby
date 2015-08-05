@@ -26,7 +26,8 @@ module Myfinance
         {
           create: '/entities/:entity_id/receivable_accounts',
           receive: '/entities/:entity_id/receivable_accounts/:id/receive',
-          undo_receivement: '/entities/:entity_id/receivable_accounts/:id/undo_receivement'
+          undo_receivement: '/entities/:entity_id/receivable_accounts/:id/undo_receivement',
+          destroy: '/entities/:entity_id/receivable_accounts/:id'
         }[key].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
       end
 

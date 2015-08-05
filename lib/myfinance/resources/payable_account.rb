@@ -26,7 +26,8 @@ module Myfinance
         {
           create: '/entities/:entity_id/payable_accounts',
           pay: '/entities/:entity_id/payable_accounts/:id/pay',
-          undo_payment: '/entities/:entity_id/payable_accounts/:id/undo_payment'
+          undo_payment: '/entities/:entity_id/payable_accounts/:id/undo_payment',
+          destroy: '/entities/:entity_id/payable_accounts/:id'
         }[key].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
       end
 
