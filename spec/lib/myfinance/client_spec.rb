@@ -34,9 +34,16 @@ describe Myfinance::Client do
   end
 
   describe "#payable_accounts" do
-    it "instantiates a new Myfinance::Resources::Entity" do
+    it "instantiates a new Myfinance::Resources::PayableAccount" do
       expect(Myfinance::Resources::PayableAccount).to receive(:new).with(subject.http)
       subject.payable_accounts
+    end
+  end
+
+  describe "#receivable_accounts" do
+    it "instantiates a new Myfinance::Resources::ReceivableAccount" do
+      expect(Myfinance::Resources::ReceivableAccount).to receive(:new).with(subject.http)
+      subject.receivable_accounts
     end
   end
 end
