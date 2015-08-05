@@ -110,4 +110,19 @@ describe Myfinance::Resources::PayableAccount do
       end
     end
   end
+
+  describe "#undo_payment", vcr: true do
+    subject { client.payable_accounts.undo_payment(1215631, entity_id) }
+
+    it "undoes receivement of the receivable account" do
+      expect(subject.id).to eq(1215631)
+      expect(subject.status).to eq(1)
+      expect(subject.status_name).to eq('unpaid')
+      expect(subject.amount).to eq(150.99)
+      expect(subject.total_amount).to be_nil
+      expect(subject.ticket_amount).to be_nil
+      expect(subject.interest_amount).to be_nil
+      expect(subject.discount_amount).to be_nil
+    end
+  end
 end

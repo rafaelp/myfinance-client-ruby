@@ -14,12 +14,19 @@ module Myfinance
         end
       end
 
+      def undo_payment(id, entity_id)
+        http.put(endpoints(id, entity_id, :undo_payment)) do |response|
+          respond_with_object(response, 'payable_account')
+        end
+      end
+
       private
 
       def endpoints(id, entity_id, key)
         {
           create: '/entities/:entity_id/payable_accounts',
-          pay: '/entities/:entity_id/payable_accounts/:id/pay'
+          pay: '/entities/:entity_id/payable_accounts/:id/pay',
+          undo_payment: '/entities/:entity_id/payable_accounts/:id/undo_payment'
         }[key].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
       end
 
