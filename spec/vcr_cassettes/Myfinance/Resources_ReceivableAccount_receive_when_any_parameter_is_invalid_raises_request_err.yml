@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1215634/receive
+    body:
+      encoding: UTF-8
+      string: '{"receive_account":{"total_amount":null,"occurred_at":"2015-08-05","amount":150.99}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 422
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Aug 2015 18:37:40 GMT
+      Server:
+      - nginx/1.8.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTBiNzE2YjJmYWNhZWM2MmY1YjViMTc1ZWIxMmYwNGEwBjsAVA%3D%3D--f67d70acafa86d395291bc7601a02e4705c84c26;
+        path=/; HttpOnly
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 111f121452cb5fe1bbb1c7e57434e04e
+      X-Runtime:
+      - '0.040477'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":"Sua solicita\u00e7\u00e3o n\u00e3o \u00e9 v\u00e1lida. Por
+        favor, verifique os dados enviados."}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1215634/receive
+  recorded_at: Wed, 05 Aug 2015 18:37:40 GMT
+recorded_with: VCR 2.9.3

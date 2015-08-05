@@ -1,15 +1,17 @@
 require "spec_helper"
 
 describe Myfinance::Resources::ReceivableAccount do
+  let(:entity_id) { 3798 }
+
   describe "#create", vcr: true do
     let(:params) { { due_date: '2015-08-15', amount: 150.99 } }
-    subject { client.receivable_accounts.create(3798, params) }
+    subject { client.receivable_accounts.create(entity_id, params) }
 
     context "with success" do
       it "creates a new object" do
         expect(subject.id).to eq(1215634)
         expect(subject.due_date).to eq(Date.new(2015, 8, 15))
-        expect(subject.entity_id).to eq(3798)
+        expect(subject.entity_id).to eq(entity_id)
         expect(subject.status).to eq(1)
         expect(subject.status_name).to eq('unreceived')
         expect(subject.occurred_at).to be_nil
@@ -78,6 +80,32 @@ describe Myfinance::Resources::ReceivableAccount do
 
       it "adds information on request error object" do
         expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: "{\"error\":\"Voc\\u00ea n\\u00e3o tem permiss\\u00e3o para acessar este recurso.\"}").and_call_original
+        expect { subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+  end
+
+  describe "#receive", vcr: true do
+    let(:params) { { total_amount: 150.99, occurred_at: '2015-08-05', amount: 150.99 } }
+    subject { client.receivable_accounts.receive(1215634, entity_id, params) }
+
+    context "with success" do
+      it "receives the receivable account" do
+        expect(subject.id).to eq(1215634)
+        expect(subject.status).to eq(2)
+        expect(subject.status_name).to eq('received')
+        expect(subject.amount).to eq(150.99)
+        expect(subject.total_amount).to eq(150.99)
+        expect(subject.ticket_amount).to be_nil
+        expect(subject.interest_amount).to be_nil
+        expect(subject.discount_amount).to be_nil
+      end
+    end
+
+    context "when any parameter is invalid" do
+      let(:params) { { total_amount: nil, occurred_at: '2015-08-05', amount: 150.99 } }
+
+      it "raises request error" do
         expect { subject }.to raise_error(Myfinance::RequestError)
       end
     end

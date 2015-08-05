@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1215631/pay
+    body:
+      encoding: UTF-8
+      string: '{"payable_account":{"total_amount":null,"occurred_at":"2015-08-05","amount":150.99}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 422
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 05 Aug 2015 18:12:49 GMT
+      Server:
+      - nginx/1.8.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTdmZDBiZDE2ZjRmYjE4MmNjYTljMzlhMjFiNjY2ZTJiBjsAVA%3D%3D--c8d513d4594c705c95655a5baa72d67883dbaee2;
+        path=/; HttpOnly
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 3ab55ebc2004e588a35a688223c61e10
+      X-Runtime:
+      - '0.074430'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '44'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"total_amount":["n\u00e3o pode ser vazio"]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1215631/pay
+  recorded_at: Wed, 05 Aug 2015 18:12:49 GMT
+recorded_with: VCR 2.9.3

@@ -12,7 +12,7 @@ module Myfinance
       #   Documentation: https://app.myfinance.com.br/docs/api/receivable_accounts#post_create
       #
       def create(entity_id, params = {})
-        http.post(endpoints[:create].gsub(':entity_id', entity_id.to_s), body: { resource_key => params }) do |response|
+        http.post(endpoints(nil, entity_id, :create), body: { resource_key => params }) do |response|
           respond_with_object(response, resource_key)
         end
       end
