@@ -37,6 +37,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 
 * [Entities API](https://app.myfinance.com.br/docs/api/entities) as `client.entities`
 * [PayableAccounts API](https://app.myfinance.com.br/docs/api/payable_accounts) as `client.payable_accounts`
+* [ReceivableAccounts API](https://app.myfinance.com.br/docs/api/receivable_accounts) as `client.receivable_accounts`
 
 ### Endpoints
 
@@ -89,6 +90,27 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.payable_accounts.create</code>
+    </td>
+  </tr>
+</table>
+
+#### [ReceivableAccounts](https://app.myfinance.com.br/docs/api/receivable_accounts)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#post_create" target="_blank">
+        /entities/:entity_id/receivable_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.create</code>
     </td>
   </tr>
 </table>

@@ -1,6 +1,6 @@
 module Myfinance
   module Entities
-    class PayableAccount < FinancialAccount
+    class ReceivableAccount < FinancialAccount
     end
   end
 end
