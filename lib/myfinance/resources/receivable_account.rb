@@ -14,12 +14,19 @@ module Myfinance
         end
       end
 
+      def undo_receivement(id, entity_id)
+        http.put(endpoints(id, entity_id, :undo_receivement)) do |response|
+          respond_with_object(response, 'receivable_account')
+        end
+      end
+
       private
 
       def endpoints(id, entity_id, key)
         {
           create: '/entities/:entity_id/receivable_accounts',
-          receive: '/entities/:entity_id/receivable_accounts/:id/receive'
+          receive: '/entities/:entity_id/receivable_accounts/:id/receive',
+          undo_receivement: '/entities/:entity_id/receivable_accounts/:id/undo_receivement'
         }[key].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
       end
 
