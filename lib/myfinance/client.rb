@@ -23,5 +23,9 @@ module Myfinance
     def payable_accounts
       Myfinance::Resources::PayableAccount.new(http)
     end
+
+    def receivable_accounts
+      Myfinance::Resources::ReceivableAccount.new(http)
+    end
   end
 end
