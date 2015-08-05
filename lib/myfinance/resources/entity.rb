@@ -31,7 +31,7 @@ module Myfinance
       #
       def find(entity_id)
         http.get("/entities/#{entity_id}", body: {}) do |response|
-          respond_with_object(response)
+          respond_with_object(response, 'entity')
         end
       end
     end

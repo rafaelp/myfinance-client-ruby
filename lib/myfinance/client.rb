@@ -19,5 +19,9 @@ module Myfinance
     def entities
       Myfinance::Resources::Entity.new(http)
     end
+
+    def payable_accounts
+      Myfinance::Resources::PayableAccount.new(http)
+    end
   end
 end

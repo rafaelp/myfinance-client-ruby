@@ -3,10 +3,10 @@ require "spec_helper"
 describe Myfinance::Client do
   subject { client }
 
-  describe '#initialize' do
-    it 'instantiates a new Myfinance::Http object' do
-      expect(Myfinance::Http).to receive(:new).with('abc')
-      Myfinance::Client.new('abc')
+  describe "#initialize" do
+    it "instantiates a new Myfinance::Http object" do
+      expect(Myfinance::Http).to receive(:new).with("abc")
+      Myfinance::Client.new("abc")
     end
   end
 
@@ -26,10 +26,17 @@ describe Myfinance::Client do
     end
   end
 
-  describe '#entities' do
-    it 'instantiates a new Myfinance::Resources::Entity' do
+  describe "#entities" do
+    it "instantiates a new Myfinance::Resources::Entity" do
       expect(Myfinance::Resources::Entity).to receive(:new).with(subject.http)
       subject.entities
+    end
+  end
+
+  describe "#payable_accounts" do
+    it "instantiates a new Myfinance::Resources::Entity" do
+      expect(Myfinance::Resources::PayableAccount).to receive(:new).with(subject.http)
+      subject.payable_accounts
     end
   end
 end
