@@ -110,4 +110,19 @@ describe Myfinance::Resources::ReceivableAccount do
       end
     end
   end
+
+  describe "#undo_receivement", vcr: true do
+    subject { client.receivable_accounts.undo_receivement(1215634, entity_id) }
+
+    it "undoes receivement of the receivable account" do
+      expect(subject.id).to eq(1215634)
+      expect(subject.status).to eq(1)
+      expect(subject.status_name).to eq('unreceived')
+      expect(subject.amount).to eq(150.99)
+      expect(subject.total_amount).to be_nil
+      expect(subject.ticket_amount).to be_nil
+      expect(subject.interest_amount).to be_nil
+      expect(subject.discount_amount).to be_nil
+    end
+  end
 end
