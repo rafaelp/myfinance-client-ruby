@@ -103,6 +103,28 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       <code>client.payable_accounts.pay</code>
     </td>
   </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#put_undo_payment" target="_blank">
+        /entities/:entity_id/payable_accounts/:id/undo_payment
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.undo_payment</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#delete_destroy" target="_blank">
+        /entities/:entity_id/payable_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.destroy</code>
+    </td>
+  </tr>
 </table>
 
 #### [ReceivableAccounts](https://app.myfinance.com.br/docs/api/receivable_accounts)
@@ -133,6 +155,28 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.receivable_accounts.receive</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#put_undo_receivement" target="_blank">
+        /entities/:entity_id/receivable_accounts/:id/undo_receivement
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.undo_receivement</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#delete_destroy" target="_blank">
+        /entities/:entity_id/receivable_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.destroy</code>
     </td>
   </tr>
 </table>
