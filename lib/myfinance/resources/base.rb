@@ -15,9 +15,9 @@ module Myfinance
         collection_klass.build(response)
       end
 
-      def respond_with_object(response)
+      def respond_with_object(response, key)
         entity_klass = Myfinance::Entities.const_get(entity_klass_name)
-        entity_klass.new(response.parsed_body('entity'))
+        entity_klass.new(response.parsed_body(key))
       end
 
       def entity_klass_name

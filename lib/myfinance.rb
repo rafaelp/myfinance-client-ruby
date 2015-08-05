@@ -10,9 +10,11 @@ require "myfinance/entities/base"
 require "myfinance/entities/collection"
 require "myfinance/entities/entity"
 require "myfinance/entities/entity_collection"
+require "myfinance/entities/payable_account"
 
 require "myfinance/resources/base"
 require "myfinance/resources/entity"
+require "myfinance/resources/payable_account"
 
 module Myfinance
   def self.configuration
