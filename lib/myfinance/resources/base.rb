@@ -23,10 +23,6 @@ module Myfinance
       def entity_klass_name
         self.class.to_s.gsub('Resources', 'Entities')
       end
-
-      def response_key
-        self.class.to_s.split('::').last.downcase
-      end
     end
   end
 end
