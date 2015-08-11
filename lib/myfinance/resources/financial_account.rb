@@ -12,9 +12,7 @@ module Myfinance
       #   Documentation: https://app.myfinance.com.br/docs/api/receivable_accounts#post_create
       #
       def create(entity_id, params = {})
-        http.post(endpoints(nil, entity_id, :create), body: { resource_key => params }) do |response|
-          respond_with_object(response, resource_key)
-        end
+        request_and_build_response(:post, endpoint_for(nil, entity_id, :create), params)
       end
 
       #
@@ -28,9 +26,32 @@ module Myfinance
       #   Documentation: https://app.myfinance.com.br/docs/api/receivable_accounts#delete_destroy
       #
       def destroy(id, entity_id)
-        http.delete(endpoints(id, entity_id, :destroy)) do |response|
+        http.delete(endpoint_for(id, entity_id, :destroy)) do |response|
           true
         end
+      end
+
+      private
+
+      def request_and_build_response(method, endpoint, params={})
+        http.send(method, endpoint, body: { resource_key => params }) do |response|
+          respond_with_object(response, resource_key)
+        end
+      end
+
+      def endpoint_for(id, entity_id, key)
+        parameterize_endoint(id, entity_id, key)
+      end
+
+      def default_endpoints
+        {
+          create: "/entities/:entity_id/#{resource_key}s",
+          destroy: "/entities/:entity_id/#{resource_key}s/:id"
+        }
+      end
+
+      def parameterize_endoint(id, entity_id, key)
+        endpoints[key].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
       end
     end
   end
