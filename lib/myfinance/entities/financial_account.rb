@@ -1,41 +1,30 @@
 module Myfinance
   module Entities
     class FinancialAccount < Base
-      attribute :id, Integer
-      attribute :entity_id, Integer
-      attribute :status, Integer
-      attribute :status_name, String
-      attribute :due_date, Date
-      attribute :occurred_at, Date
-      attribute :amount, Float
-      attribute :ticket_amount, Float
-      attribute :interest_amount, Float
-      attribute :discount_amount, Float
-      attribute :total_amount, Float
-      attribute :description, String
-      attribute :document, String
-      attribute :document_emission_date, Date
-      attribute :observation, String
-      attribute :remind, Boolean
-      attribute :reminded_at, Date
-      attribute :income_tax_relevant, Boolean
-      attribute :category_id, Integer
-      attribute :classification_center_id, Integer
-      attribute :expected_deposit_account_id, Integer
-      attribute :recurrece_id, Integer
-      attribute :person_id, Integer
-      attribute :recurrent, Boolean
-      attribute :parcelled, Boolean
-      attribute :recurrence_id, Integer
-      attribute :recurrence_period, String
-      attribute :number_of_parcels, Integer
-      attribute :current_parcel, Integer
-      attribute :competency_month, String
+      [:id, :entity_id, :status, :category_id, :person_id, :recurrence_id, :number_of_parcels,
+        :current_parcel, :classification_center_id, :expected_deposit_account_id].each do |k|
+        attribute k, Integer
+      end
+
+      [:status_name, :description, :document, :observation, :recurrence_period,
+        :competency_month].each { |k| attribute k, String }
+
+      [:amount, :interest_amount, :discount_amount, :total_amount, :ticket_amount].each do |k|
+        attribute k, Float
+      end
+
+      [:remind, :income_tax_relevant, :recurrent, :parcelled, :ticket_amount].each do |k|
+        attribute k, Boolean
+      end
+
+      [:due_date, :occurred_at, :document_emission_date, :reminded_at].each do |k|
+        attribute k, Date
+      end
+      [:created_at, :updated_at].each { |k| attribute k, DateTime }
+
       attribute :financial_account_taxes_attributes, Array[Hash]
       attribute :reconciliations, Hash[String => Array]
       attribute :links, Array[Hash[String => String]]
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
     end
   end
 end
