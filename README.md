@@ -2,10 +2,10 @@
 
 A Ruby client for the [Myfinance](http://www.myfinance.com.br) REST API
 
-![https://rubygems.org/gems/myfinance-client](https://badge.fury.io/rb/myfinance-client.png)
-![https://travis-ci.org/myfreecomm/myfinance-client-ruby](https://travis-ci.org/myfreecomm/myfinance-client-ruby.png?branch=master)
-![https://coveralls.io/r/myfreecomm/myfinance-client-ruby](https://coveralls.io/repos/myfreecomm/myfinance-client-ruby/badge.png?branch=master)
-![https://codeclimate.com/github/myfreecomm/myfinance-client-ruby](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby.png)
+[![Gem version](https://badge.fury.io/rb/myfinance-client.png)](https://rubygems.org/gems/myfinance-client)
+[![Build status](https://travis-ci.org/myfreecomm/myfinance-client-ruby.png?branch=master)](https://travis-ci.org/myfreecomm/myfinance-client-ruby)
+[![Test coverage](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby/badges/coverage.svg)](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby)
+[![Code Climate grade](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby.png)](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby)
 
 Myfinance API docs: https://app.myfinance.com.br/docs/api
 
@@ -200,7 +200,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/myfinance. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/myfreecomm/myfinance-client-ruby. This project is intended to be a safe and welcoming space for collaboration.
 
 
 ## License

@@ -1,7 +1,24 @@
+require "codeclimate-test-reporter"
+require "simplecov"
+
+CodeClimate::TestReporter.start
+
+SimpleCov.start do
+  SimpleCov.maximum_coverage_drop 0.2
+
+  SimpleCov.start do
+    add_group  "Resources", "lib/myfinance/resources"
+    add_group  "Entities",  "lib/myfinance/entities"
+    add_filter "vendor"
+  end
+end
+
+
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require "myfinance"
 require "pry"
 require "vcr"
+
 
 Dir["spec/support/**/*.rb"].each { |f| load f }
 
