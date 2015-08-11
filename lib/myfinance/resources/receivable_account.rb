@@ -8,14 +8,6 @@ module Myfinance
     #
     class ReceivableAccount < FinancialAccount
 
-      def receive(id, entity_id, params = {})
-        request_and_build_response(:put, endpoint_for(id, entity_id, :receive), params)
-      end
-
-      def undo_receivement(id, entity_id)
-        request_and_build_response(:put, endpoint_for(id, entity_id, :undo_receivement))
-      end
-
       private
 
       def endpoints
@@ -23,6 +15,14 @@ module Myfinance
           receive: '/entities/:entity_id/receivable_accounts/:id/receive',
           undo_receivement: '/entities/:entity_id/receivable_accounts/:id/undo_receivement',
         })
+      end
+
+      def pay_or_receive_method
+        'receive'
+      end
+
+      def undo_payment_or_receivement
+        'undo_receivement'
       end
 
       def resource_key

@@ -1,6 +1,12 @@
 module Myfinance
   module Resources
     class FinancialAccount < Base
+
+      def initialize(http)
+        @http = http
+        set_method_for(pay_or_receive_method)
+        set_method_for(undo_payment_or_receivement)
+      end
       #
       # Creates a payable/receivable account
       #
@@ -51,7 +57,13 @@ module Myfinance
       end
 
       def parameterize_endoint(id, entity_id, key)
-        endpoints[key].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
+        endpoints[key.to_sym].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
+      end
+
+      def set_method_for(action)
+        self.class.send(:define_method, action) do |id, entity_id, params={}|
+          request_and_build_response(:put, endpoint_for(id, entity_id, action), params)
+        end
       end
     end
   end
