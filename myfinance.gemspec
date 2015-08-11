@@ -6,8 +6,8 @@ require 'myfinance/version'
 Gem::Specification.new do |spec|
   spec.name          = "myfinance"
   spec.version       = Myfinance::VERSION
-  spec.authors       = ["Eduardo Hertz"]
-  spec.email         = ["eduardohertz@gmail.com"]
+  spec.authors       = ["Eduardo Hertz", "Rodrigo Tassinari"]
+  spec.email         = ["eduardohertz@gmail.com", "rodrigo@pittlandia.net"]
 
   spec.summary       = %q{A Ruby client for the Myfinance REST API}
   spec.description   = %q{A Ruby client for the Myfinance REST API: https://app.myfinance.com.br/docs/api}
@@ -17,20 +17,20 @@ Gem::Specification.new do |spec|
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
-
-  spec.add_dependency "typhoeus", "~> 0.7.1"
-  spec.add_dependency "multi_json", "~> 1.9.0"
-  spec.add_dependency "virtus", '~> 1.0.5'
 
   spec.files         = `git ls-files`.split($/).reject { |f| f =~ %r{(vcr_cassettes)/} }
   spec.bindir        = "bin"
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "typhoeus", "~> 0.7.1"
+  spec.add_dependency "multi_json", "~> 1.9.0"
+  spec.add_dependency "virtus", '~> 1.0.5'
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
