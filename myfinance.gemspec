@@ -4,10 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'myfinance/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "myfinance"
-  spec.version       = Myfinance::VERSION
-  spec.authors       = ["Eduardo Hertz", "Rodrigo Tassinari"]
-  spec.email         = ["eduardohertz@gmail.com", "rodrigo@pittlandia.net"]
+  spec.name                 = "myfinance"
+  spec.version              = Myfinance::VERSION
+  spec.authors              = ["Eduardo Hertz", "Rafael B. Tauil", "Rodrigo Tassinari"]
+  spec.email                = ["eduardohertz@gmail.com", "rafael@tauil.com.br", "rodrigo@pittlandia.net"]
+  spec.required_ruby_version = '>= 2.0.0'
 
   spec.summary       = %q{A Ruby client for the Myfinance REST API}
   spec.description   = %q{A Ruby client for the Myfinance REST API: https://app.myfinance.com.br/docs/api}
