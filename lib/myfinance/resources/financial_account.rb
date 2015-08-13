@@ -46,7 +46,7 @@ module Myfinance
       end
 
       def endpoint_for(id, entity_id, key)
-        parameterize_endoint(id, entity_id, key)
+        parameterize_endpoint(id, entity_id, key)
       end
 
       def default_endpoints
@@ -56,7 +56,7 @@ module Myfinance
         }
       end
 
-      def parameterize_endoint(id, entity_id, key)
+      def parameterize_endpoint(id, entity_id, key)
         endpoints[key.to_sym].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
       end
 
