@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    myfinance (0.1.0)
+    myfinance (0.2.0)
       multi_json (~> 1.9.0)
       typhoeus (~> 0.7.1)
       virtus (~> 1.0.5)
@@ -62,7 +62,7 @@ GEM
     simplecov-html (0.10.0)
     slop (3.6.0)
     thread_safe (0.3.5)
-    typhoeus (0.7.2)
+    typhoeus (0.7.3)
       ethon (>= 0.7.4)
     vcr (2.9.3)
     virtus (1.0.5)
