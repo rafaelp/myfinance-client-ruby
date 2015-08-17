@@ -127,7 +127,7 @@ describe Myfinance::Resources::ReceivableAccount do
   end
 
   describe "#update", vcr: true do
-    subject { client.receivable_accounts.update(1235051, entity_id, {amount: 100.00}) }
+    subject { client.receivable_accounts.update(1235051, entity_id, { amount: 100.00 }) }
 
     context "when payable account exists" do
       it "returns true" do
@@ -136,7 +136,7 @@ describe Myfinance::Resources::ReceivableAccount do
     end
 
     context "when payable account does not exist" do
-      subject { client.receivable_accounts.update(9999999, entity_id, {amount: 100.00}) }
+      subject { client.receivable_accounts.update(9999999, entity_id, { amount: 100.00 }) }
 
       it "raises request error" do
         expect { subject }.to raise_error(Myfinance::RequestError)
