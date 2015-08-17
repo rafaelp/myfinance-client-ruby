@@ -95,6 +95,17 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   <tr>
     <td><code>PUT</code></td>
     <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#put_update" target="_blank">
+        /entities/:entity_id/payable_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
       <a href="https://app.myfinance.com.br/docs/api/payable_accounts#put_pay" target="_blank">
         /entities/:entity_id/payable_accounts/:id/pay
       </a>
@@ -144,6 +155,17 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.receivable_accounts.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#put_update" target="_blank">
+        /entities/:entity_id/receivable_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.update</code>
     </td>
   </tr>
   <tr>
