@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1235051
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"amount":100.0}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.2.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 13 Aug 2015 19:31:34 GMT
+      ETag:
+      - W/"4e9686c78b4b907eada8f09d4fa6173c"
+      Server:
+      - nginx/1.8.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWM1OGQzNDM4OTk1YzQ0Y2ZhNWU3ZDk4ZTQxNmIzNjEwBjsAVA%3D%3D--2071144d8eb22eae5ecd0342b7ee6e954b0dccc3;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - f396efe09cf8339ce79ff1edbf557bf7
+      X-Runtime:
+      - '0.102538'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '513'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"id":1235051,"entity_id":3798,"status":1,"status_name":"unreceived","due_date":"2015-08-15","occurred_at":null,"amount":"100.0","ticket_amount":null,"interest_amount":null,"discount_amount":null,"total_amount":null,"description":null,"document":null,"document_emission_date":null,"observation":null,"remind":false,"reminded_at":null,"category_id":null,"classification_center_id":null,"expected_deposit_account_id":null,"recurrence_id":null,"person_id":null,"created_at":"2015-08-13T16:29:06-03:00","updated_at":"2015-08-13T16:31:34-03:00","competency_month":"2015-08","recurrent":false,"parcelled":false,"recurrence_period":null,"number_of_parcels":null,"current_parcel":null,"attachment_id_list":[],"financial_account_taxes_attributes":[],"reconciliations":{"financial_transactions":[],"financial_accounts":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1235051","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1235051","method":"delete"},{"rel":"receive","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1235051/receive","method":"put"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1235051
+  recorded_at: Thu, 13 Aug 2015 19:31:34 GMT
+recorded_with: VCR 2.9.3

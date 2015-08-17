@@ -9,7 +9,7 @@ describe Myfinance::Resources::ReceivableAccount do
 
     context "with success" do
       it "creates a new object" do
-        expect(subject.id).to eq(1215634)
+        expect(subject.id).to eq(1235051)
         expect(subject.due_date).to eq(Date.new(2015, 8, 15))
         expect(subject.entity_id).to eq(entity_id)
         expect(subject.status).to eq(1)
@@ -32,8 +32,8 @@ describe Myfinance::Resources::ReceivableAccount do
         expect(subject.expected_deposit_account_id).to be_nil
         expect(subject.recurrence_id).to be_nil
         expect(subject.person_id).to be_nil
-        expect(subject.created_at).to eq(DateTime.parse("2015-08-05T11:59:05-03:00"))
-        expect(subject.updated_at).to eq(DateTime.parse("2015-08-05T11:59:05-03:00"))
+        expect(subject.created_at).to eq(DateTime.parse("2015-08-13T16:29:06-03:00"))
+        expect(subject.updated_at).to eq(DateTime.parse("2015-08-13T16:29:06-03:00"))
         expect(subject.recurrent).to be_falsy
         expect(subject.parcelled).to be_falsy
         expect(subject.recurrence_period).to be_nil
@@ -123,6 +123,24 @@ describe Myfinance::Resources::ReceivableAccount do
       expect(subject.ticket_amount).to be_nil
       expect(subject.interest_amount).to be_nil
       expect(subject.discount_amount).to be_nil
+    end
+  end
+
+  describe "#update", vcr: true do
+    subject { client.receivable_accounts.update(1235051, entity_id, { amount: 100.00 }) }
+
+    context "when payable account exists" do
+      it "returns true" do
+        expect(subject).to be_truthy
+      end
+    end
+
+    context "when payable account does not exist" do
+      subject { client.receivable_accounts.update(9999999, entity_id, { amount: 100.00 }) }
+
+      it "raises request error" do
+        expect { subject }.to raise_error(Myfinance::RequestError)
+      end
     end
   end
 

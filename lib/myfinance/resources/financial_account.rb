@@ -22,6 +22,20 @@ module Myfinance
       end
 
       #
+      # Updates a payable/receivable account
+      #
+      # [API]
+      #   Method: <tt>PUT /entities/:entity_id/payable_accounts/:id</tt>
+      #   Method: <tt>PUT /entities/:entity_id/receivable_accounts/:id</tt>
+      #
+      #   Documentation: https://app.myfinance.com.br/docs/api/payable_accounts#put_update
+      #   Documentation: https://app.myfinance.com.br/docs/api/receivable_accounts#put_update
+      #
+      def update(id, entity_id, params = {})
+        request_and_build_response(:put, endpoint_for(id, entity_id, :update), params)
+      end
+
+      #
       # Destroys a payable/receivable account
       #
       # [API]
@@ -46,17 +60,18 @@ module Myfinance
       end
 
       def endpoint_for(id, entity_id, key)
-        parameterize_endoint(id, entity_id, key)
+        parameterize_endpoint(id, entity_id, key)
       end
 
       def default_endpoints
         {
           create: "/entities/:entity_id/#{resource_key}s",
+          update: "/entities/:entity_id/#{resource_key}s/:id",
           destroy: "/entities/:entity_id/#{resource_key}s/:id"
         }
       end
 
-      def parameterize_endoint(id, entity_id, key)
+      def parameterize_endpoint(id, entity_id, key)
         endpoints[key.to_sym].gsub(':entity_id', entity_id.to_s).gsub(':id', id.to_s)
       end
 
