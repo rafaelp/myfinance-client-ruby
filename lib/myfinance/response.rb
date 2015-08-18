@@ -32,10 +32,14 @@ module Myfinance
     def error!
       raise RequestError.new(
         code:    code,
-        message: status_message,
-        body:    body
+        message: request_error_message,
+        body:    parsed_body
       )
     end
 
+    def request_error_message
+      return status_message if !status_message.nil? && status_message != ""
+      parsed_body["error"] || ""
+    end
   end
 end

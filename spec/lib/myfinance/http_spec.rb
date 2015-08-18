@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe Myfinance::Http do
-  subject { Myfinance::Http.new('b552dd5a8598ca089b91c5e355a83b86e4696aefac9eaa05') }
+  let(:account_id) { 12 }
+  subject { Myfinance::Http.new('b552dd5a8598ca089b91c5e355a83b86e4696aefac9eaa05', account_id) }
 
   describe '#get' do
     let(:http_method) { :get }

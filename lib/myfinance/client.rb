@@ -5,8 +5,8 @@ module Myfinance
   class Client
     attr_reader :http
 
-    def initialize(token)
-      @http = Http.new(token)
+    def initialize(token, account_id = nil)
+      @http = Http.new(token, account_id)
     end
 
     def authenticated?

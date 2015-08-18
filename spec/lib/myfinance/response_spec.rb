@@ -32,12 +32,45 @@ describe Myfinance::Response do
       let(:response) { double(success?: false, timed_out?: false, code: 301, status_message: 'Moved Permanently', body: '') }
 
       it 'raises RequestError' do
-        expect { subject.resolve! }.to raise_error(Myfinance::RequestError)
+        expect { subject.resolve! }.to raise_error do |error|
+          expect(error).to be_a(Myfinance::RequestError)
+          expect(error.code).to eq(301)
+          expect(error.message).to eq("Moved Permanently")
+          expect(error.body).to eq({})
+        end
+      end
+
+      context "when status_message is empty" do
+        context "when body has an 'error' key" do
+          let(:response) { double(success?: false, timed_out?: false, code: 301, status_message: '', body: '{"error": "My custom error message"}') }
+
+          it "raises RequestError with custom message" do
+            expect { subject.resolve! }.to raise_error do |error|
+              expect(error).to be_a(Myfinance::RequestError)
+              expect(error.code).to eq(301)
+              expect(error.message).to eq("My custom error message")
+              expect(error.body).to eq({ "error" => "My custom error message" })
+            end
+          end
+        end
+
+        context "when body has an 'error' key" do
+          let(:response) { double(success?: false, timed_out?: false, code: 301, status_message: '', body: '') }
+
+          it "raises RequestError with empty message" do
+            expect { subject.resolve! }.to raise_error do |error|
+              expect(error).to be_a(Myfinance::RequestError)
+              expect(error.code).to eq(301)
+              expect(error.message).to eq("")
+              expect(error.body).to eq({})
+            end
+          end
+        end
       end
     end
   end
 
-  describe "#parsed_body" do
+  describe "#body" do
     let(:response) { double(success?: true) }
 
     context "when JSON is invalid" do
