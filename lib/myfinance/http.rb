@@ -3,10 +3,11 @@ require "myfinance/response"
 
 module Myfinance
   class Http
-    attr_reader :token
+    attr_reader :token, :account_id
 
-    def initialize(token)
+    def initialize(token, account_id = nil)
       @token = token
+      @account_id = account_id
     end
 
     %w[get post delete put].each do |m|
@@ -22,7 +23,8 @@ module Myfinance
         method: method,
         token: token,
         url: "#{Myfinance.configuration.url}#{path}",
-        user_agent: Myfinance.configuration.user_agent
+        user_agent: Myfinance.configuration.user_agent,
+        account_id: account_id
       }))
 
       response = Response.new(request.run)

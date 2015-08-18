@@ -1,7 +1,7 @@
 shared_examples 'available http request methods' do
   it "instantiates a new Request object" do
     VCR.use_cassette("client/#{http_method}/request") do
-      expect(Myfinance::Request).to receive(:new).and_call_original
+      expect(Myfinance::Request).to receive(:new).with({ body: params, method: http_method, token: "b552dd5a8598ca089b91c5e355a83b86e4696aefac9eaa05", url: "#{Myfinance.configuration.url}#{url}", user_agent: "Myfinance Ruby Client v0.2.0", account_id: account_id }).and_call_original
       subject.send(http_method, url, body: params)
     end
   end

@@ -5,8 +5,15 @@ describe Myfinance::Client do
 
   describe "#initialize" do
     it "instantiates a new Myfinance::Http object" do
-      expect(Myfinance::Http).to receive(:new).with("abc")
+      expect(Myfinance::Http).to receive(:new).with("abc", nil)
       Myfinance::Client.new("abc")
+    end
+
+    context "when account_id is present" do
+      it "instantiates a new Myfinance::Http object" do
+        expect(Myfinance::Http).to receive(:new).with("abc", 123)
+        Myfinance::Client.new("abc", 123)
+      end
     end
   end
 
