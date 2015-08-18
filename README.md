@@ -2,7 +2,7 @@
 
 A Ruby client for the [Myfinance](http://www.myfinance.com.br) REST API
 
-[![Gem version](https://badge.fury.io/rb/myfinance-client.png)](https://rubygems.org/gems/myfinance-client)
+[![Gem version](https://badge.fury.io/rb/myfinance.png)](https://rubygems.org/gems/myfinance)
 [![Build status](https://travis-ci.org/myfreecomm/myfinance-client-ruby.png?branch=master)](https://travis-ci.org/myfreecomm/myfinance-client-ruby)
 [![Test coverage](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby/badges/coverage.svg)](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby)
 [![Code Climate grade](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby.png)](https://codeclimate.com/github/myfreecomm/myfinance-client-ruby)
