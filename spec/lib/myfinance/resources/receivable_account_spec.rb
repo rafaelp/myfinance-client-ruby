@@ -66,7 +66,7 @@ describe Myfinance::Resources::ReceivableAccount do
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 422, message: "", body: "{\"competency_month\":[\"n\\u00e3o pode ser vazio\"],\"due_date\":[\"n\\u00e3o \\u00e9 uma data v\\u00e1lida\"]}").and_call_original
+        expect(Myfinance::RequestError).to receive(:new).with(code: 422, message: "", body: { "competency_month" => ["não pode ser vazio"], "due_date" => ["não é uma data válida"] }).and_call_original
         expect { subject }.to raise_error(Myfinance::RequestError)
       end
     end
@@ -79,7 +79,7 @@ describe Myfinance::Resources::ReceivableAccount do
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: "{\"error\":\"Voc\\u00ea n\\u00e3o tem permiss\\u00e3o para acessar este recurso.\"}").and_call_original
+        expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: { "error" => "Você não tem permissão para acessar este recurso." }).and_call_original
         expect { subject }.to raise_error(Myfinance::RequestError)
       end
     end
