@@ -22,4 +22,11 @@ describe Myfinance do
       expect(config1).to eq(config2)
     end
   end
+
+  describe ".client" do
+    it "instantiates a new client" do
+      expect(Myfinance::Client).to receive(:new).with("abc", 12).and_call_original
+      Myfinance.client("abc", 12)
+    end
+  end
 end

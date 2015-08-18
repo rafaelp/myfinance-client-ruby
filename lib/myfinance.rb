@@ -29,7 +29,7 @@ module Myfinance
     yield(configuration) if block_given?
   end
 
-  def self.client(token)
-    Client.new(token)
+  def self.client(token, account_id = nil)
+    Client.new(token, account_id)
   end
 end
