@@ -214,6 +214,26 @@ Myfinance.configure do |m|
 end
 ```
 
+### Multiple accounts
+
+When an account has multiple accounts, an `ACCOUNT_ID` header is required for the requests. To instantiate a new client with an `ACCOUNT_ID` header:
+
+```ruby
+client = Myfinance.client("YOUR_TOKEN_HERE", ACCOUNT_ID) # where ACCOUNT_ID is the ID of the account
+```
+
+If you instantiate a new client without an `account_id` and the user has more than one account, the lib will raise a [`Myfinance::RequestError`](https://github.com/myfreecomm/myfinance-client-ruby/blob/master/lib/myfinance/response.rb#L33) error. The list of available accounts will be in the body of the object.
+
+```ruby
+begin
+  client.entities.find_all
+rescue Myfinance::RequestError => e
+  e.body # { "error" => "O cabeçalho da requisição não possui o atributo ACCOUNT_ID.", "accounts" => [{"account" => { "id" => 3, .. } }, { ... }] }
+  e.message # O cabeçalho da requisição não possui o atributo ACCOUNT_ID.
+  e.code # 422
+end
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
