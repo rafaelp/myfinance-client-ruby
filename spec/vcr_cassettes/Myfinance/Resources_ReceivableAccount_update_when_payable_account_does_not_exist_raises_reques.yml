@@ -8,7 +8,7 @@ http_interactions:
       string: '{"receivable_account":{"amount":100.0}}'
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.3.0
+      - Myfinance Ruby Client v0.3.1
       Accept:
       - application/json
       Content-Type:
