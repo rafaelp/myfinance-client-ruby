@@ -6,8 +6,8 @@ require 'myfinance/version'
 Gem::Specification.new do |spec|
   spec.name                 = "myfinance"
   spec.version              = Myfinance::VERSION
-  spec.authors              = ["Eduardo Hertz", "Rafael B. Tauil", "Rodrigo Tassinari"]
-  spec.email                = ["eduardohertz@gmail.com", "rafael@tauil.com.br", "rodrigo@pittlandia.net"]
+  spec.authors              = ["Eduardo Hertz", "Guilherme Franco", "Rafael B. Tauil", "Rodrigo Tassinari"]
+  spec.email                = ["eduardohertz@gmail.com", "g.francosilva@gmail.com", "rafael@tauil.com.br", "rodrigo@pittlandia.net"]
   spec.required_ruby_version = '>= 2.0.0'
 
   spec.summary       = %q{A Ruby client for the Myfinance REST API}

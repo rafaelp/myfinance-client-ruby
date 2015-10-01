@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    myfinance (0.3.1)
+    myfinance (0.3.2)
       multi_json (~> 1.11)
       typhoeus (~> 0.7.1)
       virtus (~> 1.0.5)
@@ -15,7 +15,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
-    codeclimate-test-reporter (0.4.7)
+    codeclimate-test-reporter (0.4.8)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     coercible (1.0.0)
@@ -34,7 +34,7 @@ GEM
     json (1.8.3)
     method_source (0.8.2)
     multi_json (1.11.2)
-    pry (0.10.1)
+    pry (0.10.2)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
