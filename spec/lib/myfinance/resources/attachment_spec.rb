@@ -29,4 +29,32 @@ describe Myfinance::Resources::Attachment, vcr: true do
       end
     end
   end
+
+  describe "#find" do
+    context "when success" do
+      subject { client.attachments.find(3798, 1305) }
+
+      it "returns a list of attachments" do
+        expect(subject.class).to eq(Myfinance::Entities::Attachment)
+        expect(subject.class).to eq(Myfinance::Entities::Attachment)
+        expect(subject.id).to eq(1305)
+        expect(subject.attachment_content_type).to eq("application/octet-stream")
+        expect(subject.attachment_file_name).to eq("Mensalidade_MyFinance_15-07-2015.oxps")
+        expect(subject.attachment_file_size).to eq(135328)
+        expect(subject.download_url).to eq("https://sandbox.myfinance.com.br/entities/3798/attachments/1305/download")
+        expect(subject.title).to be_nil
+        expect(subject.created_at).to eq(DateTime.parse("2015-11-11T11:04:15-02:00"))
+        expect(subject.updated_at).to eq(DateTime.parse("2015-11-11T11:04:15-02:00"))
+      end
+    end
+
+    context "when not found" do
+      let(:client) { Myfinance.client('') }
+      subject { client.attachments.find(3798, 1305) }
+
+      it "raises NotFound" do
+        expect{ subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+  end
 end
