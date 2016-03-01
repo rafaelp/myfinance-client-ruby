@@ -43,6 +43,18 @@ module Myfinance
           respond_with_object(response, 'attachment')
         end
       end
+
+      #
+      # Destroy an attachment
+      #
+      # [API]
+      #   Method: <tt>DELETE /entities/:entity_id/attachments/:attachment_id</tt>
+      #
+      #   Documentation: https://sandbox.myfinance.com.br/docs/api/attachments#delete_destroy
+      #
+      def destroy(entity_id, attachment_id)
+        http.delete("/entities/#{entity_id}/attachments/#{attachment_id}")
+      end
     end
   end
 end

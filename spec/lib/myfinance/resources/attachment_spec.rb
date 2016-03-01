@@ -107,4 +107,21 @@ describe Myfinance::Resources::Attachment, vcr: true do
       end
     end
   end
+
+  describe "#destroy", vcr: true do
+    let(:attachment_id) { 1585 }
+    subject { client.attachments.destroy(entity_id, attachment_id) }
+
+    context "when attachment exists" do
+      it { expect(subject.code).to eq(200) }
+    end
+
+    context "when payable account does not exist" do
+      subject { client.attachments.destroy(entity_id, attachment_id) }
+
+      it "raises request error" do
+        expect { subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+  end
 end
