@@ -28,6 +28,21 @@ module Myfinance
           respond_with_object(response, 'attachment')
         end
       end
+
+      #
+      # Create an attachment
+      #
+      # [API]
+      #   Method: <tt>POST /entities/:entity_id/attachments</tt>
+      #
+      #   Documentation: https://sandbox.myfinance.com.br/docs/api/attachments#post_create
+      #
+      def create(entity_id, file, params = {})
+        params.merge!(attachment: file)
+        http.post("/entities/#{entity_id}/attachments", { body: { attachment: params }, multipart: true }) do |response|
+          respond_with_object(response, 'attachment')
+        end
+      end
     end
   end
 end

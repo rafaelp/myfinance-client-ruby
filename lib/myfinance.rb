@@ -1,5 +1,6 @@
 require "typhoeus"
 require "multi_json"
+require 'mime/types'
 
 require "myfinance/version"
 require "myfinance/configuration"

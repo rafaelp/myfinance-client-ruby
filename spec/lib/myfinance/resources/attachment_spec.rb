@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe Myfinance::Resources::Attachment, vcr: true do
+  let!(:entity_id) { 3798 }
+  let(:file) { File.open('spec/support/attachments/attachment.png', 'r') }
+
   describe "#find_all" do
     context "when success" do
       subject { client.attachments.find_all(3798) }
@@ -54,6 +57,53 @@ describe Myfinance::Resources::Attachment, vcr: true do
 
       it "raises NotFound" do
         expect{ subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+  end
+
+  describe "#create" do
+    let(:params) { { title: 'My first attachment' } }
+    subject { client.attachments.create(entity_id, file, params) }
+
+    context "with success" do
+      it "creates a new object" do
+        expect(subject.id).to eq(1585)
+        expect(subject.entity_id).to eq(entity_id)
+        expect(subject.attachment_file_size).to eq(6115)
+        expect(subject.title).to eq(params[:title])
+        expect(subject.attachment_file_name).to eq('attachment.png')
+        expect(subject.download_url).to eq("https://sandbox.myfinance.com.br/entities/3798/attachments/1585/download")
+        expect(subject.attachment_content_type).to eq("image/png")
+        expect(subject.created_at).to eq(DateTime.parse("2016-03-01T15:42:30-03:00"))
+        expect(subject.updated_at).to eq(DateTime.parse("2016-03-01T15:42:30-03:00"))
+        expect(subject.attachables).to be_empty
+        expect(subject.links).to eq([{ "rel" => "self", "href" => "https://sandbox.myfinance.com.br/entities/3798/attachments/1585", "method" => "get" }, { "rel" => "download", "href" => "https://sandbox.myfinance.com.br/entities/3798/attachments/1585/download", "method" => "get" }])
+      end
+    end
+
+    context "when any data is invalid" do
+      subject { client.attachments.create(entity_id, nil, params) }
+
+      it "raises Myfinance::RequestError" do
+        expect { subject }.to raise_error(Myfinance::RequestError)
+      end
+
+      it "adds information on request error object" do
+        expect(Myfinance::RequestError).to receive(:new).with(code: 422, message: "Unprocessable Entity", body: { "attachment" => ["não pode ser vazio."] }).and_call_original
+        expect { subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+
+    context "when entity does not exist" do
+      subject { client.attachments.create(0, file, params) }
+
+      it "raises Myfinance::RequestError" do
+        expect { subject }.to raise_error(Myfinance::RequestError)
+      end
+
+      it "adds information on request error object" do
+        expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: {"error" => "Você não tem permissão para acessar este recurso." }).and_call_original
+        expect { subject }.to raise_error(Myfinance::RequestError)
       end
     end
   end

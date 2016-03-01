@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     myfinance (0.3.2)
+      mime-types (~> 2.99.1)
       multi_json (~> 1.11)
       typhoeus (~> 0.7.1)
       virtus (~> 1.0.5)
@@ -30,9 +31,10 @@ GEM
     ethon (0.8.0)
       ffi (>= 1.3.0)
     ffi (1.9.10)
-    ice_nine (0.11.1)
+    ice_nine (0.11.2)
     json (1.8.3)
     method_source (0.8.2)
+    mime-types (2.99.1)
     multi_json (1.11.2)
     pry (0.10.2)
       coderay (~> 1.1.0)
@@ -91,4 +93,4 @@ DEPENDENCIES
   webmock (~> 1.9.3)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

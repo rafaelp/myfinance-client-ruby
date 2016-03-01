@@ -25,7 +25,7 @@ module Myfinance
         body:             body,
         headers:          headers,
         accept_encoding:  "gzip"
-      }.reject {|k,v| v.nil?}
+      }.reject { |k,v| v.nil? }
     end
 
     def headers
@@ -33,7 +33,7 @@ module Myfinance
 
       {
         "Accept"         => "application/json",
-        "Content-Type"   => "application/json",
+        "Content-Type"   => content_type,
         "User-Agent"     => args[:user_agent],
         "Authorization"  => "Basic #{authorization_hash}",
         "ACCOUNT_ID"     => args[:account_id]
@@ -42,7 +42,7 @@ module Myfinance
 
     def body
       body = args[:body]
-      body = MultiJson.dump(body) if body.is_a?(Hash)
+      body = MultiJson.dump(body) if body.is_a?(Hash) && !args[:multipart]
       body
     end
 
@@ -50,5 +50,8 @@ module Myfinance
       ::Base64.strict_encode64("#{args[:token]}:X")
     end
 
+    def content_type
+      args[:multipart] ? nil : "application/json"
+    end
   end
 end
