@@ -53,4 +53,11 @@ describe Myfinance::Client do
       subject.receivable_accounts
     end
   end
+
+  describe "#attachments" do
+    it "instantiates a new Myfinance::Resources::Attachment" do
+      expect(Myfinance::Resources::Attachment).to receive(:new).with(subject.http)
+      subject.attachments
+    end
+  end
 end

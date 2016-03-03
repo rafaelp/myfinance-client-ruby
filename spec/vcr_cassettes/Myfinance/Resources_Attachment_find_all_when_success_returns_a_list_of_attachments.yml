@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3798/attachments
+    body:
+      encoding: UTF-8
+      string: '{"page":1}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.3.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 26 Feb 2016 21:23:03 GMT
+      ETag:
+      - W/"bd59384edbc698c701ebd504a8936aeb"
+      Server:
+      - nginx/1.8.1
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - bf33cd5676742473ec63b36f4f83f327
+      X-Runtime:
+      - '0.049184'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '752'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siYXR0YWNobWVudCI6eyJpZCI6MTMwNSwiZW50aXR5X2lkIjozNzk4LCJ0
+        aXRsZSI6bnVsbCwiYXR0YWNobWVudF9maWxlX25hbWUiOiJNZW5zYWxpZGFk
+        ZV9NeUZpbmFuY2VfMTUtMDctMjAxNS5veHBzIiwiYXR0YWNobWVudF9jb250
+        ZW50X3R5cGUiOiJhcHBsaWNhdGlvbi9vY3RldC1zdHJlYW0iLCJhdHRhY2ht
+        ZW50X2ZpbGVfc2l6ZSI6MTM1MzI4LCJjcmVhdGVkX2F0IjoiMjAxNS0xMS0x
+        MVQxMTowNDoxNS0wMjowMCIsInVwZGF0ZWRfYXQiOiIyMDE1LTExLTExVDEx
+        OjA0OjE1LTAyOjAwIiwiZG93bmxvYWRfdXJsIjoiaHR0cHM6Ly9zYW5kYm94
+        Lm15ZmluYW5jZS5jb20uYnIvZW50aXRpZXMvMzc5OC9hdHRhY2htZW50cy8x
+        MzA1L2Rvd25sb2FkIiwiYXR0YWNoYWJsZXMiOlt7ImlkIjoxMjE3OTE4LCJl
+        bnRpdHlfaWQiOjM3OTgsInN0YXR1cyI6MSwic3RhdHVzX25hbWUiOiJ1bnBh
+        aWQiLCJkdWVfZGF0ZSI6IjIwMTUtMDgtMDYiLCJvY2N1cnJlZF9hdCI6bnVs
+        bCwiYW1vdW50IjoiMTgwLjkiLCJ0aWNrZXRfYW1vdW50IjpudWxsLCJpbnRl
+        cmVzdF9hbW91bnQiOm51bGwsImRpc2NvdW50X2Ftb3VudCI6bnVsbCwibm9t
+        aW5hbF9hbW91bnQiOiIxODAuOSIsInRvdGFsX2Ftb3VudCI6bnVsbCwiZGVz
+        Y3JpcHRpb24iOiJDb250YSByZXN1bHRhbnRlIGRhIGludGVncmHDp8OjbyBN
+        eWZpbmFuY2UgfiBSZXhwZW5zZSIsImRvY3VtZW50IjpudWxsLCJvYnNlcnZh
+        dGlvbiI6bnVsbCwicmVtaW5kIjpmYWxzZSwicmVtaW5kZWRfYXQiOm51bGws
+        ImNhdGVnb3J5X2lkIjpudWxsLCJjbGFzc2lmaWNhdGlvbl9jZW50ZXJfaWQi
+        Om51bGwsImV4cGVjdGVkX2RlcG9zaXRfYWNjb3VudF9pZCI6bnVsbCwicmVj
+        dXJyZW5jZV9pZCI6bnVsbCwicGVyc29uX2lkIjpudWxsLCJjcmVhdGVkX2F0
+        IjoiMjAxNS0wOC0wNlQxNjoxNDozMi0wMzowMCIsInVwZGF0ZWRfYXQiOiIy
+        MDE1LTExLTExVDE3OjE1OjM1LTAyOjAwIiwicmVjdXJyZW50IjpmYWxzZSwi
+        cGFyY2VsbGVkIjpmYWxzZSwiYXR0YWNobWVudF9pZF9saXN0IjpbMTMwNV0s
+        ImxpbmtzIjpbeyJyZWwiOiJzZWxmIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJv
+        eC5teWZpbmFuY2UuY29tLmJyL2VudGl0aWVzLzM3OTgvcGF5YWJsZV9hY2Nv
+        dW50cy8xMjE3OTE4IiwibWV0aG9kIjoiZ2V0In0seyJyZWwiOiJkZXN0cm95
+        IiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5teWZpbmFuY2UuY29tLmJyL2Vu
+        dGl0aWVzLzM3OTgvcGF5YWJsZV9hY2NvdW50cy8xMjE3OTE4IiwibWV0aG9k
+        IjoiZGVsZXRlIn0seyJyZWwiOiJhdHRhY2htZW50IiwiaHJlZiI6Imh0dHBz
+        Oi8vc2FuZGJveC5teWZpbmFuY2UuY29tLmJyL2VudGl0aWVzLzM3OTgvYXR0
+        YWNobWVudHMvMTMwNSIsIm1ldGhvZCI6ImdldCJ9LHsicmVsIjoicGF5Iiwi
+        aHJlZiI6Imh0dHBzOi8vc2FuZGJveC5teWZpbmFuY2UuY29tLmJyL2VudGl0
+        aWVzLzM3OTgvcGF5YWJsZV9hY2NvdW50cy8xMjE3OTE4L3BheSIsIm1ldGhv
+        ZCI6InB1dCJ9XX1dLCJsaW5rcyI6W3sicmVsIjoic2VsZiIsImhyZWYiOiJo
+        dHRwczovL3NhbmRib3gubXlmaW5hbmNlLmNvbS5ici9lbnRpdGllcy8zNzk4
+        L2F0dGFjaG1lbnRzLzEzMDUiLCJtZXRob2QiOiJnZXQifSx7InJlbCI6ImRv
+        d25sb2FkIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5teWZpbmFuY2UuY29t
+        LmJyL2VudGl0aWVzLzM3OTgvYXR0YWNobWVudHMvMTMwNS9kb3dubG9hZCIs
+        Im1ldGhvZCI6ImdldCJ9XX19LHsiYXR0YWNobWVudCI6eyJpZCI6MTMwNCwi
+        ZW50aXR5X2lkIjozNzk4LCJ0aXRsZSI6IkNhcHR1cmEiLCJhdHRhY2htZW50
+        X2ZpbGVfbmFtZSI6IkNhcHR1cmFfZGVfdGVsYV8yMDExLTA4LTEwX2HMgHNf
+        MTMuMzIuMTcucG5nIiwiYXR0YWNobWVudF9jb250ZW50X3R5cGUiOiJpbWFn
+        ZS9wbmciLCJhdHRhY2htZW50X2ZpbGVfc2l6ZSI6MzI4OCwiY3JlYXRlZF9h
+        dCI6IjIwMTUtMTEtMDRUMTY6MDU6MTYtMDI6MDAiLCJ1cGRhdGVkX2F0Ijoi
+        MjAxNS0xMS0wNFQxNjowNToxNi0wMjowMCIsImRvd25sb2FkX3VybCI6Imh0
+        dHBzOi8vc2FuZGJveC5teWZpbmFuY2UuY29tLmJyL2VudGl0aWVzLzM3OTgv
+        YXR0YWNobWVudHMvMTMwNC9kb3dubG9hZCIsImF0dGFjaGFibGVzIjpbXSwi
+        bGlua3MiOlt7InJlbCI6InNlbGYiLCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94
+        Lm15ZmluYW5jZS5jb20uYnIvZW50aXRpZXMvMzc5OC9hdHRhY2htZW50cy8x
+        MzA0IiwibWV0aG9kIjoiZ2V0In0seyJyZWwiOiJkb3dubG9hZCIsImhyZWYi
+        OiJodHRwczovL3NhbmRib3gubXlmaW5hbmNlLmNvbS5ici9lbnRpdGllcy8z
+        Nzk4L2F0dGFjaG1lbnRzLzEzMDQvZG93bmxvYWQiLCJtZXRob2QiOiJnZXQi
+        fV19fV0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/attachments
+  recorded_at: Fri, 26 Feb 2016 21:23:03 GMT
+recorded_with: VCR 2.9.3

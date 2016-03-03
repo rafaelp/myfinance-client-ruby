@@ -38,6 +38,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [Entities API](https://app.myfinance.com.br/docs/api/entities) as `client.entities`
 * [PayableAccounts API](https://app.myfinance.com.br/docs/api/payable_accounts) as `client.payable_accounts`
 * [ReceivableAccounts API](https://app.myfinance.com.br/docs/api/receivable_accounts) as `client.receivable_accounts`
+* [Attachments API](https://app.myfinance.com.br/docs/api/attachments) as `client.attachments`
 
 ### Endpoints
 
@@ -199,6 +200,60 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.receivable_accounts.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [Attachments](https://app.myfinance.com.br/docs/api/attachments)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/attachments#get_index" target="_blank">
+        /entities/:entity_id/attachments
+      </a>
+    </td>
+    <td>
+      <code>client.attachments.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/attachments#get_show" target="_blank">
+        /entities/:entity_id/attachments/:id
+      </a>
+    </td>
+    <td>
+      <code>client.attachments.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/attachments#post_create" target="_blank">
+        /entities/:entity_id/attachments
+      </a>
+    </td>
+    <td>
+      <code>client.attachments.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/attachments#delete_destroy" target="_blank">
+        /entities/:entity_id/attachments/:id
+      </a>
+    </td>
+    <td>
+      <code>client.attachments.destroy</code>
     </td>
   </tr>
 </table>
