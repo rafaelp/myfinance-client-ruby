@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    myfinance (0.3.4)
+    myfinance (0.4.0)
       mime-types (~> 2.99)
       multi_json (~> 1.11)
       typhoeus (~> 0.8)
