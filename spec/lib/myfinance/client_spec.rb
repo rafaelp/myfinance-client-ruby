@@ -60,4 +60,11 @@ describe Myfinance::Client do
       subject.attachments
     end
   end
+
+  describe '#categories' do
+    it 'instantiates a new Myfinance::Resources::Category' do
+      expect(Myfinance::Resources::Category).to receive(:new).with(subject.http)
+      subject.categories
+    end
+  end
 end
