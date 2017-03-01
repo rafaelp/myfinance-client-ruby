@@ -3,6 +3,27 @@ require 'spec_helper'
 describe Myfinance::Resources::Category, vcr: true do
   let(:entity_klass) { Myfinance::Entities::Category }
 
+  describe "#find_all" do
+    context "with success" do
+      subject { client.categories.find_all }
+
+      it "show all categories successfully" do
+        expect(subject.class).to eq(Myfinance::Entities::CategoryCollection)
+        expect(subject.collection.first.class).to eq(Myfinance::Entities::Category)
+        expect(subject.collection.first.full_name).to eq("Alimentação")
+      end
+    end
+
+    context "when not found" do
+      let(:client) { Myfinance.client('') }
+      subject { client.categories.find_all }
+
+      it "raises NotFound" do
+        expect{ subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+  end
+
   describe "#create" do
     let(:params) { { name: "Category 1" } }
 
@@ -24,6 +45,11 @@ describe Myfinance::Resources::Category, vcr: true do
           expect(error.code).to eql(422)
         end
       end
+    end
+  end
+
+  describe "#update" do
+    context "with success" do
     end
   end
 end
