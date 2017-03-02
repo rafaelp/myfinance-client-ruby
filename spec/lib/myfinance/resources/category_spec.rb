@@ -27,6 +27,27 @@ describe Myfinance::Resources::Category, vcr: true do
     end
   end
 
+  describe "#find" do
+    context "with success" do
+      subject { client.categories.find(532314) }
+     
+      it "returns a category successfully" do
+        expect(subject.class).to eql(entity_klass)
+        expect(subject.id).to eql(532314)
+      end
+    end
+
+    context "with error" do
+      it "raises Myfinance::RequestError with 404 status code" do
+        expect {
+          client.categories.find(32244000)
+        }.to raise_error(Myfinance::RequestError) do |error|
+          expect(error.code).to eql(404)
+        end
+      end
+    end
+  end
+
   describe "#create" do
     let(:params) { { name: "Category 1" } }
 
@@ -51,6 +72,39 @@ describe Myfinance::Resources::Category, vcr: true do
 
   describe "#update" do
     context "with success" do
+      it "updates a category successfully" do
+        result = client.categories.update(532314, { name: "Category updated" })
+        expect(result).to be_a(entity_klass)
+        expect(result).to be_truthy
+      end
+    end
+
+    context "with error" do
+      it "raises Myfinance::RequestError with 404 status code" do
+        expect {
+          client.categories.update(32244000, {})
+        }.to raise_error(Myfinance::RequestError) do |error|
+          expect(error.code).to eql(404)
+        end
+      end
+    end
+  end
+
+  describe "#destroy" do
+    context "with success" do
+      it "destroy a category successfully" do
+        expect(client.categories.destroy(532314)).to be_truthy
+      end
+    end
+
+    context "with error" do
+      it "raises Myfinance::RequestError with 404 status code" do
+        expect {
+          client.categories.destroy(32244000)
+        }.to raise_error(Myfinance::RequestError) do |error|
+          expect(error.code).to eql(404)
+        end
+      end
     end
   end
 end
