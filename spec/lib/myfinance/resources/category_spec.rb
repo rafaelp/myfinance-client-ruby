@@ -9,17 +9,21 @@ describe Myfinance::Resources::Category, vcr: true do
 
       it "show all categories successfully" do
         expect(subject.class).to eq(Myfinance::Entities::CategoryCollection)
-        expect(subject.collection.first.class).to eq(Myfinance::Entities::Category)
+        expect(subject.collection.first.class).to eq(entity_klass)
         expect(subject.collection.first.full_name).to eq("Alimentação")
       end
     end
 
     context "when not found" do
-      let(:client) { Myfinance.client('') }
+      let(:client) { Myfinance.client("") }
       subject { client.categories.find_all }
 
       it "raises NotFound" do
-        expect{ subject }.to raise_error(Myfinance::RequestError)
+        expect {
+          subject
+        }.to raise_error(Myfinance::RequestError) do |error|
+          expect(error.code).to eql(401)
+        end
       end
     end
   end
@@ -30,16 +34,14 @@ describe Myfinance::Resources::Category, vcr: true do
     context "with success" do
       it "creates a category successfully" do
         result = client.categories.create(params)
-
         expect(result).to be_a(entity_klass)
         expect(result.name).to eql("Category 1")
       end
-
     end
 
     context "with error" do 
       it "raises Myfinance::RequestError with 422 status code" do
-        expect{
+        expect {
           client.categories.create({})
         }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(422)
