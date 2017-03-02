@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Myfinance::Entities::CategoryCollection do
   let(:entity_klass) { Myfinance::Entities::Category }
+
   let(:response) do
     double(
       headers: {},

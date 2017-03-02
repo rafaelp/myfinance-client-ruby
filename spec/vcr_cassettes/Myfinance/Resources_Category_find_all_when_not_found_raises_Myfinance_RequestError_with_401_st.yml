@@ -15,8 +15,6 @@ http_interactions:
       - application/json
       Authorization:
       - Basic Olg=
-      Expect:
-      - ''
   response:
     status:
       code: 401
@@ -27,7 +25,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Wed, 01 Mar 2017 20:04:34 GMT
+      - Thu, 02 Mar 2017 17:27:03 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -37,9 +35,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 57c97cbf8d86760003c36978d3e2e401
+      - 0a5eb39aec23f78080d5f39da82a88d0
       X-Runtime:
-      - '0.004508'
+      - '0.004755'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -54,5 +52,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/categories
-  recorded_at: Wed, 01 Mar 2017 20:04:34 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Thu, 02 Mar 2017 17:27:03 GMT
+recorded_with: VCR 2.9.3

@@ -16,11 +16,10 @@ describe Myfinance::Resources::Category, vcr: true do
 
     context "when not found" do
       let(:client) { Myfinance.client("") }
-      subject { client.categories.find_all }
 
-      it "raises NotFound" do
+      it "raises Myfinance::RequestError with 401 status code" do
         expect {
-          subject
+          client.categories.find_all
         }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(401)
         end
