@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 describe Myfinance::Entities::CategoryCollection do
+  let(:entity_klass) { Myfinance::Entities::Category }
   let(:response) do
     double(
-      headers: {}, 
+      headers: {},
       parsed_body: [
         {
           "category" => {
@@ -28,7 +29,7 @@ describe Myfinance::Entities::CategoryCollection do
       ]
     )
   end
-  
+
   subject { Myfinance::Entities::CategoryCollection.new(response) }
 
   describe "#build" do
@@ -39,7 +40,7 @@ describe Myfinance::Entities::CategoryCollection do
     it "returns order" do
       subject.build
       expect(subject.collection.count).to eq(1)
-      expect(subject.collection.first.class).to eq(Myfinance::Entities::Category)
+      expect(subject.collection.first.class).to eq(entity_klass)
     end
   end
 end

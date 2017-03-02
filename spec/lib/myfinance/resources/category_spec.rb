@@ -39,7 +39,7 @@ describe Myfinance::Resources::Category, vcr: true do
       end
     end
 
-    context "with error" do 
+    context "with error" do
       it "raises Myfinance::RequestError with 422 status code" do
         expect {
           client.categories.create({})
