@@ -30,7 +30,7 @@ describe Myfinance::Resources::Category, vcr: true do
   describe "#find" do
     context "with success" do
       subject { client.categories.find(532314) }
-     
+
       it "returns a category successfully" do
         expect(subject.class).to eql(entity_klass)
         expect(subject.id).to eql(532314)
