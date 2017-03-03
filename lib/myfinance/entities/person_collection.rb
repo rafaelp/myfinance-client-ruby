@@ -6,7 +6,7 @@ module Myfinance
     class PersonCollection < Collection
       def build_collection
         response.parsed_body.each do |attributes|
-          collection.push(Myfinance::Entities::Person.new(attributes['person']))
+          collection.push(Myfinance::Entities::Person.new(attributes["person"]))
         end
       end
     end
