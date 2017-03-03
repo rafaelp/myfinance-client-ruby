@@ -60,4 +60,11 @@ describe Myfinance::Client do
       subject.attachments
     end
   end
+
+  describe "#people" do
+    it "instantiates a new Myfinance::Resources::Person" do
+      expect(Myfinance::Resources::Person).to receive(:new).with(subject.http)
+      subject.people
+    end
+  end
 end

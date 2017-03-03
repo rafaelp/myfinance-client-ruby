@@ -39,6 +39,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [PayableAccounts API](https://app.myfinance.com.br/docs/api/payable_accounts) as `client.payable_accounts`
 * [ReceivableAccounts API](https://app.myfinance.com.br/docs/api/receivable_accounts) as `client.receivable_accounts`
 * [Attachments API](https://app.myfinance.com.br/docs/api/attachments) as `client.attachments`
+* [People API](https://app.myfinance.com.br/docs/api/people) as `client.people`
 
 ### Endpoints
 
@@ -254,6 +255,27 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.attachments.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [Entities](https://app.myfinance.com.br/docs/api/people)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/people#get_index" target="_blank">
+        /people
+      </a>
+    </td>
+    <td>
+      <code>client.people.find_all</code>
     </td>
   </tr>
 </table>

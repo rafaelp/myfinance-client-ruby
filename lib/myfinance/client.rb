@@ -31,5 +31,9 @@ module Myfinance
     def attachments
       Myfinance::Resources::Attachment.new(http)
     end
+
+    def people
+      Myfinance::Resources::Person.new(http)
+    end
   end
 end
