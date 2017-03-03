@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://sandbox.myfinance.com.br/categories/32244000
+    uri: https://sandbox.myfinance.com.br/categories/88888888
     body:
       encoding: UTF-8
       string: '{"category":{}}'
@@ -27,11 +27,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 02 Mar 2017 19:50:52 GMT
+      - Fri, 03 Mar 2017 13:47:02 GMT
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWYwOTdjNWE1ZDIwMGE4YzUzMGM3MjViYjRlMDMzNWVlBjsAVA%3D%3D--9cd3311193ce5e50b3c4709cad5081469084577d;
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTMzMmFhZGJiMjU1ODE0NzQ4OWFkNWI1OWY3MWViMjY1BjsAVA%3D%3D--d40bda2352b4de48f74e2c4b5797d621a9ddc889;
         path=/; HttpOnly
       Vary:
       - Accept-Encoding
@@ -41,25 +41,25 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '16'
+      - '18'
       X-RateLimit-Reset:
-      - '2017-03-02T19:51:00Z'
+      - '2017-03-03T13:48:00Z'
       X-Request-Id:
-      - 107edc32d4deccf34d8b09c2084664ef
+      - 8979c4141309062e0676c7b42f08f73d
       X-Runtime:
-      - '0.324683'
+      - '0.042962'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '108'
+      - '102'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"error":"Couldn''t find Category with id=32244000 [WHERE `categories`.`account_id`
+      string: '{"error":"Couldn''t find Category with id=88888888 [WHERE `categories`.`account_id`
         = 3613]"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/categories/32244000
-  recorded_at: Thu, 02 Mar 2017 19:50:52 GMT
+      effective_url: https://sandbox.myfinance.com.br/categories/88888888
+  recorded_at: Fri, 03 Mar 2017 13:47:02 GMT
 recorded_with: VCR 2.9.3

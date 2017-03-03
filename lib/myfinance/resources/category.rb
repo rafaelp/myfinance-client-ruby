@@ -53,7 +53,7 @@ module Myfinance
       # Updates a category
       #
       # [API]
-      #   Method: <tt>PUT /category/:id</tt>
+      #   Method: <tt>PUT /categories/:id</tt>
       #
       #   Documentation: https://sandbox.myfinance.com.br/docs/api/categories#put_update
       #
@@ -67,7 +67,7 @@ module Myfinance
       # Destroy a category
       #
       # [API]
-      #   Method: <tt>DELETE /category/:id</tt>
+      #   Method: <tt>DELETE /categories/:id</tt>
       #
       #   Documentation: https://sandbox.myfinance.com.br/docs/api/categories#delete_destroy
       #

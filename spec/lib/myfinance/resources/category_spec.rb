@@ -40,7 +40,7 @@ describe Myfinance::Resources::Category, vcr: true do
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
         expect {
-          client.categories.find(32244000)
+          client.categories.find(88888888)
         }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
         end
@@ -73,18 +73,26 @@ describe Myfinance::Resources::Category, vcr: true do
   describe "#update" do
     context "with success" do
       it "updates a category successfully" do
-        result = client.categories.update(532314, { name: "Category updated" })
-        expect(result).to be_a(entity_klass)
-        expect(result).to be_truthy
+        expect(
+          client.categories.update(548083, { name: "Category updated" })
+        ).to be_a(entity_klass)
       end
     end
 
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
         expect {
-          client.categories.update(32244000, {})
+          client.categories.update(88888888, {})
         }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
+        end
+      end
+
+      it "raises Myfinance::RequestError with 422 status core" do
+        expect {
+          result = client.categories.update(548083, { name: "" })
+        }.to raise_error(Myfinance::RequestError) do |error|
+          expect(error.code).to eql(422)
         end
       end
     end
@@ -100,7 +108,7 @@ describe Myfinance::Resources::Category, vcr: true do
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
         expect {
-          client.categories.destroy(32244000)
+          client.categories.destroy(88888888)
         }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
         end

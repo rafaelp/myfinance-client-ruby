@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/categories/32244000
+    uri: https://sandbox.myfinance.com.br/categories/88888888
     body:
       encoding: UTF-8
       string: "{}"
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 02 Mar 2017 19:50:50 GMT
+      - Fri, 03 Mar 2017 13:03:10 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -38,25 +38,25 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '18'
+      - '19'
       X-RateLimit-Reset:
-      - '2017-03-02T19:51:00Z'
+      - '2017-03-03T13:04:00Z'
       X-Request-Id:
-      - 1efd43f56c94881665e458d36a8b3365
+      - 6ae2d7bcf7f02076b43c4d2ac136b0dd
       X-Runtime:
-      - '0.468591'
+      - '0.036463'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '108'
+      - '102'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"error":"Couldn''t find Category with id=32244000 [WHERE `categories`.`account_id`
+      string: '{"error":"Couldn''t find Category with id=88888888 [WHERE `categories`.`account_id`
         = 3613]"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/categories/32244000
-  recorded_at: Thu, 02 Mar 2017 19:50:50 GMT
+      effective_url: https://sandbox.myfinance.com.br/categories/88888888
+  recorded_at: Fri, 03 Mar 2017 13:03:10 GMT
 recorded_with: VCR 2.9.3
