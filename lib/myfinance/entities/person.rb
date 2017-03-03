@@ -13,7 +13,7 @@ module Myfinance
       attribute :excel_import_id, Integer
       attribute :febraban_favored_code, Integer
       attribute :febraban_name, String
-      attribute :federation_subscription_number, String 
+      attribute :federation_subscription_number, String
       attribute :federation_subscription_number_only_numbers, Integer
       attribute :federation_subscription_type_id, Integer
       attribute :force_destroy, Boolean
@@ -23,9 +23,9 @@ module Myfinance
       attribute :interested_users_ids, Array
       attribute :modified_by_sync, Boolean
       attribute :name, String
-      attribute :neighborhood, String 
+      attribute :neighborhood, String
       attribute :note, String
-      attribute :person_type, String 
+      attribute :person_type, String
       attribute :phone, String
       attribute :site, String
       attribute :state, String
