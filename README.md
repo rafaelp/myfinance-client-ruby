@@ -39,6 +39,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [PayableAccounts API](https://app.myfinance.com.br/docs/api/payable_accounts) as `client.payable_accounts`
 * [ReceivableAccounts API](https://app.myfinance.com.br/docs/api/receivable_accounts) as `client.receivable_accounts`
 * [Attachments API](https://app.myfinance.com.br/docs/api/attachments) as `client.attachments`
+* [Categories API](https://app.myfinance.com.br/docs/api/categories) as `client.categories`
 
 ### Endpoints
 
