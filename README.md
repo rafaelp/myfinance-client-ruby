@@ -281,6 +281,17 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   <tr>
     <td><code>GET</code></td>
     <td>
+      <a href="https://app.myfinance.com.br/docs/api/people" target="_blank">
+        /people
+      </a>
+    </td>
+    <td>
+      <code>client.people.find_by</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
       <a href="https://app.myfinance.com.br/docs/api/people#get_show" target="_blank">
         /people/:id
       </a>

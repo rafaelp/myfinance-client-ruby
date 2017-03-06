@@ -27,6 +27,32 @@ describe Myfinance::Resources::Person, vcr: true do
     end
   end
 
+  describe "#find_by" do
+    context "with success" do
+      let(:params) do
+        { name_equals: "Myfreecomm", person_type_in: "JuridicalPerson" }
+      end
+
+      it "find people by attributte" do
+        result = client.people.find_by(params)
+        expect(result).to be_a(Myfinance::Entities::PersonCollection)
+        expect(result.collection.first.name).to eq("Myfreecomm")
+      end
+    end
+
+    context "with error" do
+      let(:client) { Myfinance.client("") }
+
+      it "raises Myfinance::RequestError with 401 status code" do
+        expect {
+          client.people.find_by({ name_equals: "Myfreecomm" })
+        }.to raise_error(Myfinance::RequestError) do |error|
+          expect(error.code).to eq(401)
+        end
+      end
+    end
+  end
+
   describe "#find" do
     context "with success" do
       subject { client.people.find(199424) }
