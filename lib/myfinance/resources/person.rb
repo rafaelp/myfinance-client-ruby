@@ -25,9 +25,9 @@ module Myfinance
       # Find people by attributtes
       #
       # [API]
-      #   Method: <tt>GET /people?key=value</tt>
+      #   Method: <tt>GET /people</tt>
       #
-      #   Documentation: https://app.myfinance.com.br/docs/api/people#get_show
+      #   Documentation: https://app.myfinance.com.br/docs/api/people#get_index
       #
       def find_by(params)
         values = params.map { |k,v| "search[#{k}]=#{v}" }.join("&")
