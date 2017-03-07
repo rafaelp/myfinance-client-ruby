@@ -5,7 +5,7 @@ http_interactions:
     uri: https://sandbox.myfinance.com.br/integrations/webhooks
     body:
       encoding: UTF-8
-      string: '{"webhook":{"entity_id":3798,"description":"Webhook test","url":"http://requestb.in/xssmudxs","format":"json"}}'
+      string: '{"webhook":{"entity_id":3798,"description":"Webhook 2","url":"https://sandbox.myfinance.com.br/docs/api/webhooks#get_show","format":"json"}}'
     headers:
       User-Agent:
       - Myfinance Ruby Client v0.4.0
@@ -17,19 +17,23 @@ http_interactions:
       - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
   response:
     status:
-      code: 422
-      message: Unprocessable Entity
+      code: 201
+      message: Created
     headers:
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 07 Mar 2017 12:07:46 GMT
+      - Tue, 07 Mar 2017 13:35:53 GMT
+      ETag:
+      - '"b85bbc5334464c11d468651cc0a4230a"'
+      Location:
+      - https://sandbox.myfinance.com.br/integrations/webhooks/78
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWJhYmI1ODU5MTZhNGQxMGY0NjYwMTIyYzNiNGZhODBkBjsAVA%3D%3D--4e33b77fbc4d5f61c0b684acba19d73761555728;
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTRmZGQxZGFlYjI1ZTgwZGU5ZmE2YmJmNDg1YmI3MzAyBjsAVA%3D%3D--d2b114ff25941625a04cd7cf8b5201ff522d97a5;
         path=/; HttpOnly
       Vary:
       - Origin
@@ -40,22 +44,23 @@ http_interactions:
       X-RateLimit-Remaining:
       - '19'
       X-RateLimit-Reset:
-      - '2017-03-07T12:08:00Z'
+      - '2017-03-07T13:36:00Z'
       X-Request-Id:
-      - ee8054fb718f9b0733323ca3a85f7921
+      - cdd2e0b4c5ffbb1852a783a8e2fda88a
       X-Runtime:
-      - '0.074751'
+      - '0.272117'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '74'
+      - '309'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"url":["A URL n\u00e3o respondeu \u00e0 requisi\u00e7\u00e3o de teste."]}'
+      string: '{"webhook":{"account_id":3613,"created_at":"2017-03-07T10:35:53-03:00","description":"Webhook
+        2","entity_id":3798,"format":"json","healthy_check_code":200,"id":78,"secret":"be82ad61b71f5ee20bade867","updated_at":"2017-03-07T10:35:53-03:00","url":"https://sandbox.myfinance.com.br/docs/api/webhooks#get_show"}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/integrations/webhooks
-  recorded_at: Tue, 07 Mar 2017 12:07:46 GMT
+  recorded_at: Tue, 07 Mar 2017 13:35:53 GMT
 recorded_with: VCR 2.9.3

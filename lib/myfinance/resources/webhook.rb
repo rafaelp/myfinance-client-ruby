@@ -22,6 +22,20 @@ module Myfinance
       end
 
       #
+      # List a webhook
+      #
+      # [API]
+      #   Method: <tt>GET /integrations/webhooks/:id</tt>
+      #
+      #   Documentation: https://app.myfinance.com.br/docs/api/webhooks#get_show
+      #
+      def find(id)
+        http.get("/integrations/webhooks/#{id}", body: {}) do |response|
+          respond_with_object response, "webhook"
+        end
+      end
+
+      #
       # Create a webhook
       #
       # [API]
@@ -31,7 +45,37 @@ module Myfinance
       #
       def create(params)
         http.post("/integrations/webhooks", body: { webhook: params }) do |response|
-          respond_with_object response, "webhook"
+          respond_with_object(response, "webhook")
+        end
+      end
+
+      #
+      # Updates a webhook
+      #
+      # [API]
+      #   Method: <tt>PUT /integrations/webhooks/:id</tt>
+      #
+      #   Documentation: https://app.myfinance.com.br/docs/api/webhooks#put_update
+      #
+      def update(id, params = {})
+        http.put(
+          "/integrations/webhooks/#{id}", body: { webhook: params }
+        ) do |response|
+          respond_with_object(response, "webhook")
+        end
+      end
+
+      #
+      # Destroy a webhook
+      #
+      # [API]
+      #   Method: <tt>DELETE /integrations/webhooks/:id</tt>
+      #
+      #   Documentation: https://app.myfinance.com.br/docs/api/webhooks#delete_destroy
+      #
+      def destroy(id)
+        http.delete("/integrations/webhooks/#{id}", body: {}) do |response|
+          respond_with_object(response, "webhook")
         end
       end
     end

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Myfinance::Entities::Webhook do
   subject { described_class.new({}) }

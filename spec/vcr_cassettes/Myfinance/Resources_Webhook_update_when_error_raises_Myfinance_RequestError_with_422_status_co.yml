@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://sandbox.myfinance.com.br/integrations/webhooks
+    method: put
+    uri: https://sandbox.myfinance.com.br/integrations/webhooks/76
     body:
       encoding: UTF-8
-      string: '{"webhook":{"description":""}}'
+      string: '{"webhook":{"url":""}}'
     headers:
       User-Agent:
       - Myfinance Ruby Client v0.4.0
@@ -25,11 +25,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 07 Mar 2017 13:34:42 GMT
+      - Tue, 07 Mar 2017 17:38:02 GMT
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWFjYjQ4NTU1YWFjODYxODU1NDk2ZGU1NDEwNjM0ZDdjBjsAVA%3D%3D--808e3a2b954451d9d5d8499763d19d863d619a67;
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTNlMzEzYjFmNjY3M2EwMGY0NTkwYjU3NGViMjkwMDMyBjsAVA%3D%3D--8edd0ef0c84b511bef9fdf0888ec32a3f309a9e7;
         path=/; HttpOnly
       Vary:
       - Origin
@@ -38,26 +38,24 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '16'
+      - '18'
       X-RateLimit-Reset:
-      - '2017-03-07T13:35:00Z'
+      - '2017-03-07T17:39:00Z'
       X-Request-Id:
-      - d4915d005a8d82f6e8c898a976c1f5bb
+      - b857d407f3f8206ee51d72f7e53b4d9c
       X-Runtime:
-      - '0.041660'
+      - '0.098759'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '177'
+      - '65'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"entity":["n\u00e3o pode ser vazio"],"format":["n\u00e3o pode ser
-        vazio","n\u00e3o est\u00e1 incluso na lista"],"url":["n\u00e3o pode ser vazio","n\u00e3o
-        \u00e9 v\u00e1lido"]}'
+      string: '{"url":["n\u00e3o pode ser vazio","n\u00e3o \u00e9 v\u00e1lido"]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/integrations/webhooks
-  recorded_at: Tue, 07 Mar 2017 13:34:42 GMT
+      effective_url: https://sandbox.myfinance.com.br/integrations/webhooks/76
+  recorded_at: Tue, 07 Mar 2017 17:38:02 GMT
 recorded_with: VCR 2.9.3

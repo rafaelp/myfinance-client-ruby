@@ -39,6 +39,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [PayableAccounts API](https://app.myfinance.com.br/docs/api/payable_accounts) as `client.payable_accounts`
 * [ReceivableAccounts API](https://app.myfinance.com.br/docs/api/receivable_accounts) as `client.receivable_accounts`
 * [Attachments API](https://app.myfinance.com.br/docs/api/attachments) as `client.attachments`
+* [Webhooks API](https://app.myfinance.com.br/docs/api/webhooks) as `client.webhooks`
 
 ### Endpoints
 
@@ -256,6 +257,72 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       <code>client.attachments.destroy</code>
     </td>
   </tr>
+
+#### [Webhooks](https://app.myfinance.com.br/docs/api/webhooks)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#get_index" target="_blank">
+        /integrations/webhooks
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#get_show" target="_blank">
+        /integrations/webhooks/:id
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#post_create" target="_blank">
+        /integrations/webhooks
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#put_update" target="_blank">
+        /integrations/webhooks/:id
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#delete_destroy" target="_blank">
+        /integrations/webhooks/:id
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.destroy</code>
+    </td>
+  </tr>
+</table>
+
 </table>
 
 ### Configuration
