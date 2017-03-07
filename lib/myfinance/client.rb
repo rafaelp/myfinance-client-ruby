@@ -31,5 +31,9 @@ module Myfinance
     def attachments
       Myfinance::Resources::Attachment.new(http)
     end
+
+    def webhooks
+      Myfinance::Resources::Webhook.new(http)
+    end
   end
 end
