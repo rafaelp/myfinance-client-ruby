@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Myfinance::Entities::CategoryCollection do
   let(:entity_klass) { Myfinance::Entities::Category }
