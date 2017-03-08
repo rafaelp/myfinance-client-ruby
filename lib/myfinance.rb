@@ -16,6 +16,8 @@ require "myfinance/entities/financial_account"
 require "myfinance/entities/payable_account"
 require "myfinance/entities/receivable_account"
 require "myfinance/entities/attachment"
+require "myfinance/entities/classification_center"
+require "myfinance/entities/classification_center_collection"
 
 require "myfinance/resources/base"
 require "myfinance/resources/entity"
