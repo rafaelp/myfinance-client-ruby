@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Mar 2017 17:49:52 GMT
+      ETag:
+      - W/"ec3f6462736ec6708e14c98362877b3b"
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-08T17:50:00Z'
+      X-Request-Id:
+      - a6ca5fa337b45a46661cce3d11fb68a3
+      X-Runtime:
+      - '0.054651'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '350'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"deposit_account":{"id":14268,"archived_at":null,"bank_account_id":null,"currency_id":1,"deposit_account_type_id":2,"description":null,"entity_id":3798,"force_destroy":false,"imported_from_sync":false,"initial_balance":null,"last_transaction_date":null,"name":"Carteira","sync_response":{},"calculated_balance":"1098.6","logo_image_url":"logos/logo-money-account.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268","method":"get"}]}},{"deposit_account":{"id":14448,"archived_at":null,"bank_account_id":null,"currency_id":1,"deposit_account_type_id":2,"description":null,"entity_id":3798,"force_destroy":false,"imported_from_sync":false,"initial_balance":null,"last_transaction_date":null,"name":"Caixa
+        Pequeno","sync_response":{},"calculated_balance":"0.0","logo_image_url":"logos/logo-money-account.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14448","method":"get"}]}}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts
+  recorded_at: Wed, 08 Mar 2017 17:49:52 GMT
+recorded_with: VCR 2.9.3

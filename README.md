@@ -39,6 +39,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [PayableAccounts API](https://app.myfinance.com.br/docs/api/payable_accounts) as `client.payable_accounts`
 * [ReceivableAccounts API](https://app.myfinance.com.br/docs/api/receivable_accounts) as `client.receivable_accounts`
 * [Attachments API](https://app.myfinance.com.br/docs/api/attachments) as `client.attachments`
+* [DepositAccounts API](https://app.myfinance.com.br/docs/api/deposit_accounts) as `client.deposit_accounts`
 
 ### Endpoints
 
@@ -254,6 +255,71 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.attachments.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [DepositAccounts](https://app.myfinance.com.br/docs/api/deposit_accounts)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#get_index" target="_blank">
+        /entities/:entity_id/deposit_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#get_show" target="_blank">
+        /entities/:entity_id/deposit_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#post_create" target="_blank">
+        /entities/:entity_id/deposit_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#put_update" target="_blank">
+        /entities/:entity_id/deposit_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#delete_destroy" target="_blank">
+        /entities/:entity_id/deposit_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.destroy</code>
     </td>
   </tr>
 </table>
