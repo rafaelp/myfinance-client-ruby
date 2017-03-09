@@ -25,6 +25,7 @@ require "myfinance/resources/financial_account"
 require "myfinance/resources/payable_account"
 require "myfinance/resources/receivable_account"
 require "myfinance/resources/attachment"
+require "myfinance/resources/classification_center"
 
 module Myfinance
   def self.configuration

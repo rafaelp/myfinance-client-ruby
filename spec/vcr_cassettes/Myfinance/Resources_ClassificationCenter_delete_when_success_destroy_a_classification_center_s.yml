@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/classification_centers/18744
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Mar 2017 12:35:48 GMT
+      ETag:
+      - W/"7215ee9c7d9dc229d2921a40e899ec5f"
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTZhYzJjNDEyYjI5OGYyNmQ1NjhlNTRiNDFmY2FkOTJkBjsAVA%3D%3D--e0f854b96321752a46991ec75aa46d1da4c13c90;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-09T12:36:00Z'
+      X-Request-Id:
+      - 7c0ea8e2757b44f7cf99d1b3ea65d2cb
+      X-Runtime:
+      - '0.086408'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '21'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/classification_centers/18744
+  recorded_at: Thu, 09 Mar 2017 12:35:48 GMT
+recorded_with: VCR 2.9.3

@@ -31,5 +31,9 @@ module Myfinance
     def attachments
       Myfinance::Resources::Attachment.new(http)
     end
+
+    def classification_centers
+      Myfinance::Resources::ClassificationCenter.new(http)
+    end
   end
 end
