@@ -31,5 +31,9 @@ module Myfinance
     def attachments
       Myfinance::Resources::Attachment.new(http)
     end
+
+    def deposit_accounts
+      Myfinance::Resources::DepositAccount.new(http)
+    end
   end
 end
