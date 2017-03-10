@@ -20,6 +20,10 @@ module Myfinance
       Myfinance::Resources::Entity.new(http)
     end
 
+    def financial_transactions
+      Myfinance::Resources::FinancialTransaction.new(http)
+    end
+
     def payable_accounts
       Myfinance::Resources::PayableAccount.new(http)
     end
