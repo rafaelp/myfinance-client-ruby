@@ -15,6 +15,7 @@ module Myfinance
       attribute :user_description, String
       attribute :notes, String
       attribute :amount, Decimal
+      attribute :id, Integer
       attribute :is_pending, Boolean
       attribute :created_at, DateTime
       attribute :updated_at, DateTime
