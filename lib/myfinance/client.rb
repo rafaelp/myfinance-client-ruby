@@ -47,5 +47,9 @@ module Myfinance
     def deposit_accounts
       Myfinance::Resources::DepositAccount.new(http)
     end
+
+    def people
+      Myfinance::Resources::Person.new(http)
+    end
   end
 end

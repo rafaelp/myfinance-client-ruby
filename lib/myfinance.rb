@@ -24,6 +24,8 @@ require "myfinance/entities/account"
 require "myfinance/entities/account_collection"
 require "myfinance/entities/deposit_account"
 require "myfinance/entities/deposit_account_collection"
+require "myfinance/entities/person"
+require "myfinance/entities/person_collection"
 
 require "myfinance/resources/base"
 require "myfinance/resources/entity"
@@ -35,6 +37,7 @@ require "myfinance/resources/classification_center"
 require "myfinance/resources/category"
 require "myfinance/resources/account"
 require "myfinance/resources/deposit_account"
+require "myfinance/resources/person"
 
 module Myfinance
   def self.configuration
