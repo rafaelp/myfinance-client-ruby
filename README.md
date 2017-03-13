@@ -41,6 +41,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [Attachments API](https://app.myfinance.com.br/docs/api/attachments) as `client.attachments`
 * [Accounts API](https://app.myfinance.com.br/docs/api/multiple_accounts) as `client.accounts`
 * [DepositAccounts API](https://app.myfinance.com.br/docs/api/deposit_accounts) as `client.deposit_accounts`
+* [Categories API](https://app.myfinance.com.br/docs/api/categories) as `client.categories`
 
 ### Endpoints
 
@@ -342,6 +343,72 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.deposit_accounts.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [Categories](https://app.myfinance.com.br/docs/api/categories)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+
+      <a href="https://app.myfinance.com.br/docs/api/categories#get_index" target="_blank">
+        /categories
+      </a>
+    </td>
+    <td>
+      <code>client.categories.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/categories#get_show" target="_blank">
+        /categories/:id
+      </a>
+    </td>
+    <td>
+      <code>client.categories.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/categories#post_create" target="_blank">
+        /categories
+      </a>
+    </td>
+    <td>
+      <code>client.categories.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/categories#put_update" target="_blank">
+        /categories/:id
+      </a>
+    </td>
+    <td>
+      <code>client.categories.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/categories#delete_destroy" target="_blank">
+        /categories/:id
+      </a>
+    </td>
+    <td>
+      <code>client.categories.destroy</code>
     </td>
   </tr>
 </table>

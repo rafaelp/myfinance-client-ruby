@@ -32,6 +32,10 @@ module Myfinance
       Myfinance::Resources::Attachment.new(http)
     end
 
+    def categories
+      Myfinance::Resources::Category.new(http)
+    end
+    
     def accounts
       Myfinance::Resources::Account.new(http)
     end

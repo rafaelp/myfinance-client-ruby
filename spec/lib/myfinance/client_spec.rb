@@ -61,6 +61,13 @@ describe Myfinance::Client do
     end
   end
 
+  describe "#categories" do
+    it "instantiates a new Myfinance::Resources::Category" do
+      expect(Myfinance::Resources::Category).to receive(:new).with(subject.http)
+      subject.categories
+    end
+  end
+
   describe "#accounts" do
     it "instantiates a new Myfinance::Resources::Account" do
       expect(Myfinance::Resources::Account).to receive(:new).with(subject.http)
