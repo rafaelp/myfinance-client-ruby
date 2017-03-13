@@ -5,7 +5,7 @@ describe Myfinance::Resources::FinancialTransaction, vcr: true do
   let(:ent_id) { 3798 }
   let(:ft_id) { 1663920 }
   let(:financial_transactions) { client.financial_transactions }
-  let(:params) {{ amount: 68.5, occurred_at: "2011-07-15", type: "Debit"}}
+  let(:params) { { amount: 68.5, occurred_at: "2011-07-15", type: "Debit" } }
   let(:request_error) { Myfinance::RequestError }
 
   describe "#find_all" do

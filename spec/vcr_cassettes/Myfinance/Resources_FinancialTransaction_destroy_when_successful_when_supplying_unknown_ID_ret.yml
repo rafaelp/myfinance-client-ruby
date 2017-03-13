@@ -8,7 +8,7 @@ http_interactions:
       string: "{}"
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.4.0
+      - Myfinance Ruby Client v0.5.0
       Accept:
       - application/json
       Content-Type:
@@ -27,11 +27,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 13 Mar 2017 21:37:11 GMT
+      - Mon, 13 Mar 2017 21:49:52 GMT
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BzohbGFzdF91c2VkX2RlcG9zaXRfYWNjb3VudF9pZGkCvDdJIg9zZXNzaW9uX2lkBjoGRVRJIiUzYzM1ZmEyZjQ4NWQ2NDVjNDQzMzU2MjkxZWRlOTQ0ZAY7BlQ%3D--527f12b31f3d9ef0653781e96a081400eca45dd4;
+      - _financecompany_session=BAh7BzohbGFzdF91c2VkX2RlcG9zaXRfYWNjb3VudF9pZGkCvDdJIg9zZXNzaW9uX2lkBjoGRVRJIiU0YTBhOTIxMmIwYzYwMjJhNDlkMTMyMTQ2YzhiOTRhZAY7BlQ%3D--4b8aefa5232ae9c4131c498897566e0d53920c96;
         path=/; HttpOnly
       Vary:
       - Accept-Encoding
@@ -43,11 +43,11 @@ http_interactions:
       X-RateLimit-Remaining:
       - '8'
       X-RateLimit-Reset:
-      - '2017-03-13T21:38:00Z'
+      - '2017-03-13T21:50:00Z'
       X-Request-Id:
-      - c7ad2a2ba5716b5fe7fe93a465f86ba2
+      - bfd7a2fa86f34566535b48d9f84734ed
       X-Runtime:
-      - '0.045938'
+      - '0.044587'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -62,5 +62,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/99999
-  recorded_at: Mon, 13 Mar 2017 21:37:11 GMT
+  recorded_at: Mon, 13 Mar 2017 21:49:52 GMT
 recorded_with: VCR 2.9.3

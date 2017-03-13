@@ -81,7 +81,7 @@ module Myfinance
       end
 
       def destroy_many(entity_id, deposit_account_id, ids=[])
-        # Delete a financial transaction
+        # Delete many financial transactions
         #
         # [API]
         #   Method: <tt>DELETE entities/:entity_id/deposit_accounts/:deposit_account_id/financial_transactions/destroy_many?selected_ids=:id1,id2,id3</tt>
