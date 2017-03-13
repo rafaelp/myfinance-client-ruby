@@ -39,6 +39,11 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [PayableAccounts API](https://app.myfinance.com.br/docs/api/payable_accounts) as `client.payable_accounts`
 * [ReceivableAccounts API](https://app.myfinance.com.br/docs/api/receivable_accounts) as `client.receivable_accounts`
 * [Attachments API](https://app.myfinance.com.br/docs/api/attachments) as `client.attachments`
+* [Accounts API](https://app.myfinance.com.br/docs/api/multiple_accounts) as `client.accounts`
+* [DepositAccounts API](https://app.myfinance.com.br/docs/api/deposit_accounts) as `client.deposit_accounts`
+* [Categories API](https://app.myfinance.com.br/docs/api/categories) as `client.categories`
+* [ClassificationCenters API](https://app.myfinance.com.br/docs/api/classification_centers) as `client.classification_centers`
+* [People API](https://app.myfinance.com.br/docs/api/people) as `client.people`
 * [Webhooks API](https://app.myfinance.com.br/docs/api/webhooks) as `client.webhooks`
 
 ### Endpoints
@@ -255,6 +260,310 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.attachments.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [Accounts](https://app.myfinance.com.br/docs/api/multiple_accounts)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/multiple_accounts#get_index" target="_blank">
+        /accounts
+      </a>
+    </td>
+    <td>
+      <code>client.accounts.find_all</code>
+    </td>
+  </tr>
+</table>
+
+#### [DepositAccounts](https://app.myfinance.com.br/docs/api/deposit_accounts)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#get_index" target="_blank">
+        /entities/:entity_id/deposit_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#get_show" target="_blank">
+        /entities/:entity_id/deposit_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#post_create" target="_blank">
+        /entities/:entity_id/deposit_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#put_update" target="_blank">
+        /entities/:entity_id/deposit_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#delete_destroy" target="_blank">
+        /entities/:entity_id/deposit_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [Categories](https://app.myfinance.com.br/docs/api/categories)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+
+      <a href="https://app.myfinance.com.br/docs/api/categories#get_index" target="_blank">
+        /categories
+      </a>
+    </td>
+    <td>
+      <code>client.categories.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/categories#get_show" target="_blank">
+        /categories/:id
+      </a>
+    </td>
+    <td>
+      <code>client.categories.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/categories#post_create" target="_blank">
+        /categories
+      </a>
+    </td>
+    <td>
+      <code>client.categories.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/categories#put_update" target="_blank">
+        /categories/:id
+      </a>
+    </td>
+    <td>
+      <code>client.categories.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/categories#delete_destroy" target="_blank">
+        /categories/:id
+      </a>
+    </td>
+    <td>
+      <code>client.categories.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [ClassificationCenters](https://app.myfinance.com.br/docs/api/classification_centers)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#get_index" target="_blank">
+        /classification_centers
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#get_show" target="_blank">
+        /classification_centers/:id
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#get_show" target="_blank">
+        /classification_centers
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.find_by</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#post_create" target="_blank">
+        /classification_centers
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#put_update" target="_blank">
+        /classification_centers/:id
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#delete_destroy" target="_blank">
+        /classification_centers/:id
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [People](https://app.myfinance.com.br/docs/api/people)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/people#get_index" target="_blank">
+        /people
+      </a>
+    </td>
+    <td>
+      <code>client.people.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/people" target="_blank">
+        /people
+      </a>
+    </td>
+    <td>
+      <code>client.people.find_by</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/people#get_show" target="_blank">
+        /people/:id
+      </a>
+    </td>
+    <td>
+      <code>client.people.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/people#post_create" target="_blank">
+        /people
+      </a>
+    </td>
+    <td>
+      <code>client.people.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/people#put_update" target="_blank">
+        /people/:id
+      </a>
+    </td>
+    <td>
+      <code>client.people.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/people#delete_destroy" target="_blank">
+        /people/:id
+      </a>
+    </td>
+    <td>
+      <code>client.people.destroy</code>
     </td>
   </tr>
 </table>
