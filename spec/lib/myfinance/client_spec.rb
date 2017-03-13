@@ -61,6 +61,39 @@ describe Myfinance::Client do
     end
   end
 
+  describe "#classification_centers" do
+    it "instantiates a new Myfinance::Resources::ClassificationCenter" do
+      expect(
+        Myfinance::Resources::ClassificationCenter
+      ).to receive(:new).with(subject.http)
+      subject.classification_centers
+    end
+  end
+
+  describe "#categories" do
+    it "instantiates a new Myfinance::Resources::Category" do
+      expect(Myfinance::Resources::Category).to receive(:new).with(subject.http)
+      subject.categories
+    end
+  end
+
+  describe "#accounts" do
+    it "instantiates a new Myfinance::Resources::Account" do
+      expect(Myfinance::Resources::Account).to receive(:new).with(subject.http)
+      subject.accounts
+    end
+  end
+
+  describe "#deposit_accounts" do
+    it "instantiates a new Myfinance::Resources::DepositAccount" do
+      expect(
+        Myfinance::Resources::DepositAccount
+      ).to receive(:new).with(subject.http)
+
+      subject.deposit_accounts
+    end
+  end
+
   describe "#people" do
     it "instantiates a new Myfinance::Resources::Person" do
       expect(Myfinance::Resources::Person).to receive(:new).with(subject.http)

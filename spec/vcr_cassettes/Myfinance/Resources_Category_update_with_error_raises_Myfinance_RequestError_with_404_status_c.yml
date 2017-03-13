@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/categories/88888888
+    body:
+      encoding: UTF-8
+      string: '{"category":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 03 Mar 2017 13:47:02 GMT
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTMzMmFhZGJiMjU1ODE0NzQ4OWFkNWI1OWY3MWViMjY1BjsAVA%3D%3D--d40bda2352b4de48f74e2c4b5797d621a9ddc889;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-03-03T13:48:00Z'
+      X-Request-Id:
+      - 8979c4141309062e0676c7b42f08f73d
+      X-Runtime:
+      - '0.042962'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '102'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":"Couldn''t find Category with id=88888888 [WHERE `categories`.`account_id`
+        = 3613]"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/categories/88888888
+  recorded_at: Fri, 03 Mar 2017 13:47:02 GMT
+recorded_with: VCR 2.9.3

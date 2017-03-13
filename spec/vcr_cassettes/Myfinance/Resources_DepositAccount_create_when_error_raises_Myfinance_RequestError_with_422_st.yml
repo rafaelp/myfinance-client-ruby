@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts
+    body:
+      encoding: UTF-8
+      string: '{"deposit_account":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Mar 2017 18:30:58 GMT
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWRjYjEwMTM4MTUzY2JhNGU4M2IxZGI3MjU3ZDA4NDQ0BjsAVA%3D%3D--f307e04c1594e55ae8c286e744865b769119748b;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-03-08T18:31:00Z'
+      X-Request-Id:
+      - df87c597dc0e68c5e063bc36c281f772
+      X-Runtime:
+      - '0.065620'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '87'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"deposit_account_type":["n\u00e3o pode ser vazio"],"name":["n\u00e3o
+        pode ser vazio"]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts
+  recorded_at: Wed, 08 Mar 2017 18:30:58 GMT
+recorded_with: VCR 2.9.3
