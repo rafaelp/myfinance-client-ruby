@@ -4,7 +4,7 @@ module Myfinance
       attribute :account_id, Integer
       attribute :cost, Boolean
       attribute :created_at, DateTime
-      attribute :excel_import_id, String
+      attribute :excel_import_id, Integer
       attribute :force_destroy, Boolean
       attribute :full_name, String
       attribute :guid, String
