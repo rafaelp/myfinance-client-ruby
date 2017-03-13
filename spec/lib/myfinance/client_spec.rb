@@ -67,4 +67,21 @@ describe Myfinance::Client do
       subject.categories
     end
   end
+
+  describe "#accounts" do
+    it "instantiates a new Myfinance::Resources::Account" do
+      expect(Myfinance::Resources::Account).to receive(:new).with(subject.http)
+      subject.accounts
+    end
+  end
+
+  describe "#deposit_accounts" do
+    it "instantiates a new Myfinance::Resources::DepositAccount" do
+      expect(
+        Myfinance::Resources::DepositAccount
+      ).to receive(:new).with(subject.http)
+
+      subject.deposit_accounts
+    end
+  end
 end

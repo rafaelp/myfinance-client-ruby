@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts
+    body:
+      encoding: UTF-8
+      string: '{"deposit_account":{"archive":false,"bank_account_id":141,"currency_id":1,"deposit_account_type_id":2,"description":"Deposit
+        account test","entity_id":3798,"force_destroy":false,"imported_from_sync":false,"name":"Caixa
+        18","calculated_balance":"34290.11","logo_image_url":"logos/logo-bank-bradesco.png"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Mar 2017 18:30:58 GMT
+      ETag:
+      - '"472adf0251814c46feb7590af5851bd7"'
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14820
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWE5NjMzNjVhYmY4MGM1NjMwMzllYWRjNjcyNWUyYzZhBjsAVA%3D%3D--a953972f93d1593bf28453f66ba490a57dd648a5;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-08T18:31:00Z'
+      X-Request-Id:
+      - eb6d46b4a41e5d38c1f6cb32f5403bb3
+      X-Runtime:
+      - '0.085544'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '419'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"deposit_account":{"archived_at":null,"bank_account_id":null,"created_at":"2017-03-08T15:30:58-03:00","currency_id":1,"deposit_account_type_id":2,"description":"Deposit
+        account test","entity_id":3798,"force_destroy":false,"id":14820,"imported_from_sync":false,"initial_balance":null,"last_transaction_date":null,"name":"Caixa
+        18","sync_response":{},"updated_at":"2017-03-08T15:30:58-03:00","calculated_balance":"0.0"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts
+  recorded_at: Wed, 08 Mar 2017 18:30:58 GMT
+recorded_with: VCR 2.9.3
