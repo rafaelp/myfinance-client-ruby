@@ -42,6 +42,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [Accounts API](https://app.myfinance.com.br/docs/api/multiple_accounts) as `client.accounts`
 * [DepositAccounts API](https://app.myfinance.com.br/docs/api/deposit_accounts) as `client.deposit_accounts`
 * [Categories API](https://app.myfinance.com.br/docs/api/categories) as `client.categories`
+* [ClassificationCenters API](https://app.myfinance.com.br/docs/api/classification_centers) as `client.classification_centers`
 
 ### Endpoints
 
@@ -409,6 +410,82 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.categories.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [ClassificationCenters](https://app.myfinance.com.br/docs/api/classification_centers)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#get_index" target="_blank">
+        /classification_centers
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#get_show" target="_blank">
+        /classification_centers/:id
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#get_show" target="_blank">
+        /classification_centers
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.find_by</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#post_create" target="_blank">
+        /classification_centers
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#put_update" target="_blank">
+        /classification_centers/:id
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/classification_centers#delete_destroy" target="_blank">
+        /classification_centers/:id
+      </a>
+    </td>
+    <td>
+      <code>client.classification_centers.destroy</code>
     </td>
   </tr>
 </table>

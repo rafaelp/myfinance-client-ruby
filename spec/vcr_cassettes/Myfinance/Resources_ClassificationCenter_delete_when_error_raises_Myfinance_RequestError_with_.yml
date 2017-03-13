@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/classification_centers/888888
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Mar 2017 12:35:48 GMT
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTQ4YWE5NzAwOGJjOGM0YjdhMzA5Y2FjYzYyN2IzMmRjBjsAVA%3D%3D--3f9d0ea7b4578b4c859f705bbb697742224018ab;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-03-09T12:36:00Z'
+      X-Request-Id:
+      - 326cfe9deadf5a6a7cd91471f545d7e8
+      X-Runtime:
+      - '0.038770'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '120'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":"Couldn''t find ClassificationCenter with id=888888 [WHERE
+        (classification_centers.entity_id in (3798,3800))]"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/classification_centers/888888
+  recorded_at: Thu, 09 Mar 2017 12:35:48 GMT
+recorded_with: VCR 2.9.3

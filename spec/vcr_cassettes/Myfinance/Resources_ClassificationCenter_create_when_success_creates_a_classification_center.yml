@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/classification_centers
+    body:
+      encoding: UTF-8
+      string: '{"classification_center":{"cost_center":true,"entity_id":3798,"name":"Centro
+        de custo 1","revenu_center":false,"use_count":0}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Mar 2017 12:22:45 GMT
+      ETag:
+      - '"54c95ff02fccaa919237baca4ec607b2"'
+      Location:
+      - https://sandbox.myfinance.com.br/classification_centers/18744
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWUzNjNlYWFhMDk4ZGVhNGEyYmRhZjc3Mzc5M2FkYzZlBjsAVA%3D%3D--32591070dde25053377c33dfb8ed91d0c6db6f97;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-09T12:23:00Z'
+      X-Request-Id:
+      - e3e9b807bf935a914f9398eb88fa3a45
+      X-Runtime:
+      - '0.074547'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '242'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"classification_center":{"cost_center":true,"created_at":"2017-03-09T09:22:45-03:00","entity_id":3798,"excel_import_id":null,"id":18744,"name":"Centro
+        de custo 1","revenue_center":true,"updated_at":"2017-03-09T09:22:45-03:00","use_count":0}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/classification_centers
+  recorded_at: Thu, 09 Mar 2017 12:22:45 GMT
+recorded_with: VCR 2.9.3

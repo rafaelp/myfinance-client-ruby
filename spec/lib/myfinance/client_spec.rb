@@ -61,6 +61,15 @@ describe Myfinance::Client do
     end
   end
 
+  describe "#classification_centers" do
+    it "instantiates a new Myfinance::Resources::ClassificationCenter" do
+      expect(
+        Myfinance::Resources::ClassificationCenter
+      ).to receive(:new).with(subject.http)
+      subject.classification_centers
+    end
+  end
+
   describe "#categories" do
     it "instantiates a new Myfinance::Resources::Category" do
       expect(Myfinance::Resources::Category).to receive(:new).with(subject.http)
