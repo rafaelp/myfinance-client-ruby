@@ -35,5 +35,17 @@ module Myfinance
     def classification_centers
       Myfinance::Resources::ClassificationCenter.new(http)
     end
+
+    def categories
+      Myfinance::Resources::Category.new(http)
+    end
+    
+    def accounts
+      Myfinance::Resources::Account.new(http)
+    end
+
+    def deposit_accounts
+      Myfinance::Resources::DepositAccount.new(http)
+    end
   end
 end
