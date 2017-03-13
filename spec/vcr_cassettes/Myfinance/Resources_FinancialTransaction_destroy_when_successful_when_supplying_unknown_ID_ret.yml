@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/99999999
+    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/99999
     body:
       encoding: UTF-8
       string: "{}"
@@ -27,11 +27,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 13 Mar 2017 21:31:11 GMT
+      - Mon, 13 Mar 2017 21:37:11 GMT
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BzohbGFzdF91c2VkX2RlcG9zaXRfYWNjb3VudF9pZGkCvDdJIg9zZXNzaW9uX2lkBjoGRVRJIiUwYWNhNzRlNTJkOGViNWFkYmU5ZWExZDgyNWQ4NDI4OQY7BlQ%3D--3b974a82071b781d565c00158b01a9c527064e41;
+      - _financecompany_session=BAh7BzohbGFzdF91c2VkX2RlcG9zaXRfYWNjb3VudF9pZGkCvDdJIg9zZXNzaW9uX2lkBjoGRVRJIiUzYzM1ZmEyZjQ4NWQ2NDVjNDQzMzU2MjkxZWRlOTQ0ZAY7BlQ%3D--527f12b31f3d9ef0653781e96a081400eca45dd4;
         path=/; HttpOnly
       Vary:
       - Accept-Encoding
@@ -43,11 +43,11 @@ http_interactions:
       X-RateLimit-Remaining:
       - '8'
       X-RateLimit-Reset:
-      - '2017-03-13T21:32:00Z'
+      - '2017-03-13T21:38:00Z'
       X-Request-Id:
-      - 7cabef1fb5239a4010e6918457e872e9
+      - c7ad2a2ba5716b5fe7fe93a465f86ba2
       X-Runtime:
-      - '0.045590'
+      - '0.045938'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -61,6 +61,6 @@ http_interactions:
         p8OjbyBzZWxlY2lvbmFkYS4ifQ==
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/99999999
-  recorded_at: Mon, 13 Mar 2017 21:31:11 GMT
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/99999
+  recorded_at: Mon, 13 Mar 2017 21:37:11 GMT
 recorded_with: VCR 2.9.3
