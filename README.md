@@ -44,6 +44,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [Categories API](https://app.myfinance.com.br/docs/api/categories) as `client.categories`
 * [ClassificationCenters API](https://app.myfinance.com.br/docs/api/classification_centers) as `client.classification_centers`
 * [People API](https://app.myfinance.com.br/docs/api/people) as `client.people`
+* [Webhooks API](https://app.myfinance.com.br/docs/api/webhooks) as `client.webhooks`
 
 ### Endpoints
 
@@ -563,6 +564,71 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.people.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [Webhooks](https://app.myfinance.com.br/docs/api/webhooks)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#get_index" target="_blank">
+        /integrations/webhooks
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#get_show" target="_blank">
+        /integrations/webhooks/:id
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#post_create" target="_blank">
+        /integrations/webhooks
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#put_update" target="_blank">
+        /integrations/webhooks/:id
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/webhooks#delete_destroy" target="_blank">
+        /integrations/webhooks/:id
+      </a>
+    </td>
+    <td>
+      <code>client.webhooks.destroy</code>
     </td>
   </tr>
 </table>

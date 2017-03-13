@@ -50,6 +50,10 @@ module Myfinance
 
     def people
       Myfinance::Resources::Person.new(http)
+    end      
+
+    def webhooks
+      Myfinance::Resources::Webhook.new(http)
     end
   end
 end

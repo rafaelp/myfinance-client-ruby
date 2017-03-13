@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/integrations/webhooks
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic Olg=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache, private
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Tue, 07 Mar 2017 16:55:23 GMT
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Origin
+      WWW-Authenticate:
+      - Basic realm="Myfinance API"
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - aa349eb4c05761cafa8c4fbbeebc92f0
+      X-Runtime:
+      - '0.004816'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '27'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: 'HTTP Basic: Access denied.
+
+'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/integrations/webhooks
+  recorded_at: Tue, 07 Mar 2017 16:55:23 GMT
+recorded_with: VCR 2.9.3

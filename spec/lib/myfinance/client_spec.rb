@@ -100,4 +100,11 @@ describe Myfinance::Client do
       subject.people
     end
   end
+
+  describe "#webhooks" do
+    it "instantiates a new Myfinance::Resources::Webhook" do
+      expect(Myfinance::Resources::Webhook).to receive(:new).with(subject.http)
+      subject.webhooks
+    end
+  end
 end

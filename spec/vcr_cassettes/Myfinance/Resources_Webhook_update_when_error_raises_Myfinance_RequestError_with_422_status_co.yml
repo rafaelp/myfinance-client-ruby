@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/integrations/webhooks/76
+    body:
+      encoding: UTF-8
+      string: '{"webhook":{"url":""}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.4.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 07 Mar 2017 17:38:02 GMT
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTNlMzEzYjFmNjY3M2EwMGY0NTkwYjU3NGViMjkwMDMyBjsAVA%3D%3D--8edd0ef0c84b511bef9fdf0888ec32a3f309a9e7;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-03-07T17:39:00Z'
+      X-Request-Id:
+      - b857d407f3f8206ee51d72f7e53b4d9c
+      X-Runtime:
+      - '0.098759'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '65'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"url":["n\u00e3o pode ser vazio","n\u00e3o \u00e9 v\u00e1lido"]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/integrations/webhooks/76
+  recorded_at: Tue, 07 Mar 2017 17:38:02 GMT
+recorded_with: VCR 2.9.3
