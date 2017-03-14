@@ -107,4 +107,11 @@ describe Myfinance::Client do
       subject.webhooks
     end
   end
+
+  describe "#taxes" do
+    it "instantiates a new Myfinance::Resources::Tax" do
+      expect(Myfinance::Resources::Tax).to receive(:new).with(subject.http)
+      subject.taxes
+    end
+  end
 end
