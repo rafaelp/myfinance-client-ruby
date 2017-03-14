@@ -362,7 +362,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   <tr>
     <td><code>GET</code></td>
     <td>
-
       <a href="https://app.myfinance.com.br/docs/api/categories#get_index" target="_blank">
         /categories
       </a>
