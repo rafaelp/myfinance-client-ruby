@@ -39,6 +39,7 @@ require "myfinance/entities/credit_card_collection"
 require "myfinance/entities/credit_card_transaction"
 require "myfinance/entities/credit_card_transaction_collection"
 require "myfinance/entities/reconcile_collection"
+require "myfinance/entities/bank_statement"
 
 require "myfinance/resources/base"
 require "myfinance/resources/entity"
@@ -57,6 +58,7 @@ require "myfinance/resources/tax"
 require "myfinance/resources/credit_card"
 require "myfinance/resources/credit_card_transaction"
 require "myfinance/resources/reconcile"
+require "myfinance/resources/bank_statement"
 
 module Myfinance
   def self.configuration
