@@ -63,5 +63,9 @@ module Myfinance
     def taxes
       Myfinance::Resources::Tax.new(http)
     end
+
+    def credit_cards
+      Myfinance::Resources::CreditCard.new(http)
+    end
   end
 end
