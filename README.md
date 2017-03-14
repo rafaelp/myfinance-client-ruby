@@ -45,6 +45,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [ClassificationCenters API](https://app.myfinance.com.br/docs/api/classification_centers) as `client.classification_centers`
 * [People API](https://app.myfinance.com.br/docs/api/people) as `client.people`
 * [Webhooks API](https://app.myfinance.com.br/docs/api/webhooks) as `client.webhooks`
+* [Taxes API](https://app.myfinance.com.br/docs/api/taxes) as `client.taxes`
 
 ### Endpoints
 
@@ -629,6 +630,37 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.webhooks.destroy</code>
+    </td>
+  </tr>
+
+#### [Taxes](https://app.myfinance.com.br/docs/api/taxes)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/taxes#get_index" target="_blank">
+        /taxes
+      </a>
+    </td>
+    <td>
+      <code>client.taxes.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/taxes#get_show" target="_blank">
+        /taxes/:id
+      </a>
+    </td>
+    <td>
+      <code>client.taxes.find</code>
     </td>
   </tr>
 </table>
