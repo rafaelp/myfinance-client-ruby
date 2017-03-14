@@ -632,6 +632,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       <code>client.webhooks.destroy</code>
     </td>
   </tr>
+</table>
 
 #### [Taxes](https://app.myfinance.com.br/docs/api/taxes)
 
