@@ -22,9 +22,7 @@ describe Myfinance::Resources::Tax, vcr: true do
       let(:client) { Myfinance.client("") }
 
       it "raises Myfinance::RequestError with 401 status code" do
-        expect {
-          client.taxes.find_all
-        }.to raise_error(Myfinance::RequestError) do |error|
+        expect { client.taxes.find_all }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eq(401)
         end
       end
@@ -43,9 +41,7 @@ describe Myfinance::Resources::Tax, vcr: true do
 
     context "when error" do
       it "raises Myfinance::RequestError with 404 status code" do
-        expect {
-          client.taxes.find(42424242)
-        }.to raise_error(Myfinance::RequestError) do |error|
+        expect { client.taxes.find(42424242) }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eq(404)
         end
       end

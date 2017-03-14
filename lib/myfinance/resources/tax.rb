@@ -34,6 +34,6 @@ module Myfinance
           respond_with_object(response, "tax")
         end
       end
-   end
+    end
   end
 end
