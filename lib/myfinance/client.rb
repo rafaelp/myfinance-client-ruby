@@ -55,5 +55,9 @@ module Myfinance
     def webhooks
       Myfinance::Resources::Webhook.new(http)
     end
+
+    def taxes
+      Myfinance::Resources::Tax.new(http)
+    end
   end
 end
