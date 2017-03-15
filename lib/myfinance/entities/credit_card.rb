@@ -12,6 +12,8 @@ module Myfinance
       attribute :flag, String
       attribute :flag_image_url, String
       attribute :observation, String
+      attribute :created_at, DateTime
+      attribute :updated_at, DateTime
     end
   end
 end
