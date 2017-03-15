@@ -1,0 +1,185 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/credit_cards
+    body:
+      encoding: UTF-8
+      string: '{"credit_card":{"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 15 Mar 2017 15:09:10 GMT
+      ETag:
+      - '"09967f0af6422dd5f728ee88b44a4727"'
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWU2M2Y1ZGI0YzQ1NjExNjQwY2NiZGM4NGFlNDhjMjIxBjsAVA%3D%3D--670ae85c379e4dfaf31e38bf101152491779285c;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '7'
+      X-RateLimit-Reset:
+      - '2017-03-15T15:10:00Z'
+      X-Request-Id:
+      - 745647fa33f8c2529b19795cb9cb4318
+      X-Runtime:
+      - '0.077204'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '481'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"credit_card":{"id":93,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/93","method":"get"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/credit_cards
+  recorded_at: Wed, 15 Mar 2017 15:09:10 GMT
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/entities/3798/credit_cards/93
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 15 Mar 2017 15:09:11 GMT
+      ETag:
+      - W/"7215ee9c7d9dc229d2921a40e899ec5f"
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWZhMmUxYTNlZWYzOWExZGNjZDdlYjk4M2UwYzc1ZjZhBjsAVA%3D%3D--3993490e5728f3e2df5503a33ef6dc988b8327d0;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '6'
+      X-RateLimit-Reset:
+      - '2017-03-15T15:10:00Z'
+      X-Request-Id:
+      - 9418be8c7fc33671d1873fcc2a26f374
+      X-Runtime:
+      - '0.077668'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '21'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/credit_cards/93
+  recorded_at: Wed, 15 Mar 2017 15:09:11 GMT
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3798/credit_cards/93
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache, private
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 15 Mar 2017 15:09:11 GMT
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '5'
+      X-RateLimit-Reset:
+      - '2017-03-15T15:10:00Z'
+      X-Request-Id:
+      - 99de18653ba031b465077f0bacee9c8a
+      X-Runtime:
+      - '0.037696'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":"Couldn''t find CreditCard with id=93 [WHERE `credit_cards`.`entity_id`
+        = 3798]"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/credit_cards/93
+  recorded_at: Wed, 15 Mar 2017 15:09:11 GMT
+recorded_with: VCR 2.9.3

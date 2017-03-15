@@ -60,6 +60,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [People API](https://app.myfinance.com.br/docs/api/people) as `client.people`
 * [Webhooks API](https://app.myfinance.com.br/docs/api/webhooks) as `client.webhooks`
 * [Taxes API](https://app.myfinance.com.br/docs/api/taxes) as `client.taxes`
+* [CreditCards API](https://app.myfinance.com.br/docs/api/credit_cards) as `client.credit_cards`
 
 ### Endpoints
 
@@ -755,6 +756,72 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
   </tr>
 </table>
+
+#### [CreditCards](https://app.myfinance.com.br/docs/api/credit_cards)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_cards#get_index" target="_blank">
+        /entities/:entity_id/credit_cards
+      </a>
+    </td>
+    <td>
+      <code>client.credit_cards.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_cards#get_show" target="_blank">
+        /entities/:entity_id/credit_cards/:id
+      </a>
+    </td>
+    <td>
+      <code>client.credit_cards.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_cards#post_create" target="_blank">
+        /entities/:entity_id/credit_cards
+      </a>
+    </td>
+    <td>
+      <code>client.credit_cards.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_cards#put_update" target="_blank">
+        /entities/:entity_id/credit_cards/:id
+      </a>
+    </td>
+    <td>
+      <code>client.credit_cards.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_cards#delete_destroy" target="_blank">
+        /entities/:entity_id/credit_cards/:id
+      </a>
+    </td>
+    <td>
+      <code>client.credit_cards.destroy</code>
+    </td>
+  </tr>
+</table>
+
 
 ### Configuration
 

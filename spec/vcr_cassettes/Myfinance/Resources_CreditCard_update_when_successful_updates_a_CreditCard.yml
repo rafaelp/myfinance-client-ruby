@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/entities/3798/credit_cards/44
+    body:
+      encoding: UTF-8
+      string: '{"credit_card":{"name":"Neon","flag":"Visa","closing_day":20,"expiration_day":2}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 15 Mar 2017 15:09:09 GMT
+      ETag:
+      - W/"b1a235bc13587762de9b5d179ecb7804"
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTJhNjAwNGUyZjBkMTc3NTQzYzk2OTA0Zjk0NWE1NDdhBjsAVA%3D%3D--16db9ccf1f50e3ca84181c9059e3d247650aa426;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '10'
+      X-RateLimit-Reset:
+      - '2017-03-15T15:10:00Z'
+      X-Request-Id:
+      - 27a7da448939166d5253f6c1f3dd1731
+      X-Runtime:
+      - '0.081890'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '323'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"credit_card":{"id":44,"name":"Neon","flag":"Visa","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-visa-6757228292690c5f271966ba521f91be.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/44","method":"get"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/credit_cards/44
+  recorded_at: Wed, 15 Mar 2017 15:09:09 GMT
+recorded_with: VCR 2.9.3

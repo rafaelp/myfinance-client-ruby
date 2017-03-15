@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/credit_cards
+    body:
+      encoding: UTF-8
+      string: '{"credit_card":{"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 15 Mar 2017 15:09:09 GMT
+      ETag:
+      - '"a2eeca977aaa2425ad0a9c47f83a46b0"'
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTViZjA5MjFhNmU4ZTJhYWE5NTcwNmI1ZGI3YWRlNWE1BjsAVA%3D%3D--4c3a0572dcfc926ed3fcb186da565f70995c3256;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '12'
+      X-RateLimit-Reset:
+      - '2017-03-15T15:10:00Z'
+      X-Request-Id:
+      - aa2c0429deac0c66b058fdaea7e0dc4f
+      X-Runtime:
+      - '0.077403'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '481'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"credit_card":{"id":92,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/92","method":"get"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/credit_cards
+  recorded_at: Wed, 15 Mar 2017 15:09:09 GMT
+recorded_with: VCR 2.9.3
