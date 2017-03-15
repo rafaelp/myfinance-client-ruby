@@ -778,7 +778,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     <td><code>POST</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/credit_cards#post_create" target="_blank">
-        /entities/:entity_id/credit_cards/:id
+        /entities/:entity_id/credit_cards
       </a>
     </td>
     <td>
