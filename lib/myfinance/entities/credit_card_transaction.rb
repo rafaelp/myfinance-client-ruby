@@ -2,6 +2,7 @@ module Myfinance
   module Entities
     class CreditCardTransaction < Base
       attribute :credit_card_invoice_id, Integer
+      attribute :credit_card_id, Integer
       attribute :classification_center_id, Integer
       attribute :category_id, Integer
       attribute :amount, Decimal
