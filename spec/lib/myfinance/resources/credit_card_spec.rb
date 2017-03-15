@@ -60,7 +60,7 @@ describe Myfinance::Resources::CreditCard, vcr: true do
   end
 
   describe "#create" do
-    context "when successful"  do
+    context "when successful" do
       let(:params) { { name: "Nubank", flag: "MasterCard", closing_day: 20, expiration_day: 02 } }
       subject { credit_cards.create(entity_id, params) }
 
@@ -87,7 +87,7 @@ describe Myfinance::Resources::CreditCard, vcr: true do
   end
 
   describe "#update" do
-    context "when successful"  do
+    context "when successful" do
       let(:params) { { name: "Neon", flag: "Visa", closing_day: 20, expiration_day: 02 } }
       subject { credit_cards.update(entity_id, cc_id, params) }
 
@@ -117,7 +117,7 @@ describe Myfinance::Resources::CreditCard, vcr: true do
     let(:params) { { name: "Nubank", flag: "MasterCard", closing_day: 20, expiration_day: 02 } }
     let(:new_cc) { credit_cards.create(entity_id, params) }
 
-    context "when successful"  do
+    context "when successful" do
       before :each do
         credit_cards.destroy(entity_id, new_cc.id)
       end
@@ -139,5 +139,4 @@ describe Myfinance::Resources::CreditCard, vcr: true do
       end
     end
   end
-
 end
