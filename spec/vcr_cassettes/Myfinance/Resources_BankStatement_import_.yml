@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/entities/1/deposit_accounts/2/bank_statements
+    body:
+      encoding: UTF-8
+      string: '{"bank_statement":{"file":"#<File:0x007fcbb80fb190>"},"multipart":true}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic MDY1N2JhYzcwZmRmNWMwNmNlODIyNzE5NTY4ZjM2MzZhOWEwN2I4N2JhNjE3ZWM3Olg=
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - 42994dd337fa74397e238af228c79b57
+      X-Runtime:
+      - '23.655045'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      - __profilin=p%3Dt; path=/
+      Vary:
+      - Origin
+      Content-Length:
+      - '8869'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: "Paperclip::AdapterRegistry::NoHandlerError at /entities/1/deposit_accounts/2/bank_statements\n============================================================================================\n\n>
+        No handler found for \"#<File:0x007fcbb80fb190>\"\n\napp/controllers/bank_statements_controller.rb,
+        line 83\n------------------------------------------------------\n\n``` ruby\n
+        \  78       @tmp_file\n   79     end\n   80   \n   81     def assign_bank_statement\n
+        \  82       binding.pry\n>  83       @bank_statement = deposit_account.bank_statements.build(bank_statement_params)\n
+        \  84     end\n   85   \n   86     def bank_statement_path\n   87       entity_deposit_account_bank_statement_path(current_entity,
+        deposit_account, bank_statement)\n   88     end\n```\n\nApp backtrace\n-------------\n\n
+        - app/controllers/bank_statements_controller.rb:83:in `assign_bank_statement'\n\nFull
+        backtrace\n--------------\n\n - paperclip (4.3.6) lib/paperclip/io_adapters/registry.rb:19:in
+        `handler_for'\n - paperclip (4.3.6) lib/paperclip/io_adapters/registry.rb:29:in
+        `for'\n - paperclip (4.3.6) lib/paperclip/attachment.rb:98:in `assign'\n -
+        paperclip (4.3.6) lib/paperclip/has_attached_file.rb:66:in `block in define_setter'\n
+        - activerecord (3.2.22.2) lib/active_record/attribute_assignment.rb:85:in
+        `block in assign_attributes'\n - activerecord (3.2.22.2) lib/active_record/attribute_assignment.rb:78:in
+        `assign_attributes'\n - activerecord (3.2.22.2) lib/active_record/base.rb:498:in
+        `initialize'\n - activerecord (3.2.22.2) lib/active_record/reflection.rb:183:in
+        `build_association'\n - activerecord (3.2.22.2) lib/active_record/associations/association.rb:239:in
+        `build_record'\n - activerecord (3.2.22.2) lib/active_record/associations/collection_association.rb:112:in
+        `build'\n - activerecord (3.2.22.2) lib/active_record/associations/collection_proxy.rb:46:in
+        `build'\n - app/controllers/bank_statements_controller.rb:83:in `assign_bank_statement'\n
+        - activesupport (3.2.22.2) lib/active_support/callbacks.rb:561:in `_run__4329072850991691309__process_action__3949474815635538668__callbacks'\n
+        - activesupport (3.2.22.2) lib/active_support/callbacks.rb:405:in `__run_callback'\n
+        - activesupport (3.2.22.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'\n
+        - activesupport (3.2.22.2) lib/active_support/callbacks.rb:81:in `run_callbacks'\n
+        - actionpack (3.2.22.2) lib/abstract_controller/callbacks.rb:17:in `process_action'\n
+        - actionpack (3.2.22.2) lib/action_controller/metal/rescue.rb:29:in `process_action'\n
+        - skylight (1.0.1) lib/skylight/probes/action_controller.rb:39:in `block in
+        process_action'\n - skylight (1.0.1) lib/skylight/vendor/active_support/notifications.rb:159:in
+        `block in instrument'\n - skylight (1.0.1) lib/skylight/vendor/active_support/notifications/instrumenter.rb:20:in
+        `instrument'\n - skylight (1.0.1) lib/skylight/vendor/active_support/notifications.rb:159:in
+        `instrument'\n - skylight (1.0.1) lib/skylight/probes/action_controller.rb:37:in
+        `process_action'\n - actionpack (3.2.22.2) lib/action_controller/metal/params_wrapper.rb:207:in
+        `process_action'\n - activerecord (3.2.22.2) lib/active_record/railties/controller_runtime.rb:18:in
+        `process_action'\n - actionpack (3.2.22.2) lib/abstract_controller/base.rb:121:in
+        `process'\n - actionpack (3.2.22.2) lib/abstract_controller/rendering.rb:45:in
+        `process'\n - rack-mini-profiler (0.9.3) lib/mini_profiler/profiling_methods.rb:106:in
+        `block in profile_method'\n - actionpack (3.2.22.2) lib/action_controller/metal.rb:203:in
+        `dispatch'\n - actionpack (3.2.22.2) lib/action_controller/metal/rack_delegation.rb:14:in
+        `dispatch'\n - actionpack (3.2.22.2) lib/action_controller/metal.rb:246:in
+        `block in action'\n - actionpack (3.2.22.2) lib/action_dispatch/routing/route_set.rb:73:in
+        `dispatch'\n - actionpack (3.2.22.2) lib/action_dispatch/routing/route_set.rb:36:in
+        `call'\n - journey (1.0.4) lib/journey/router.rb:68:in `block in call'\n -
+        journey (1.0.4) lib/journey/router.rb:56:in `call'\n - actionpack (3.2.22.2)
+        lib/action_dispatch/routing/route_set.rb:608:in `call'\n - xray-rails (0.1.23)
+        lib/xray/middleware.rb:38:in `call'\n - rack-attack (4.4.1) lib/rack/attack.rb:107:in
+        `call'\n - nexaas-throttle (0.1.0) lib/nexaas/throttle/middleware.rb:50:in
+        `call'\n - omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'\n - omniauth
+        (1.3.1) lib/omniauth/strategy.rb:164:in `call'\n - omniauth (1.3.1) lib/omniauth/strategy.rb:186:in
+        `call!'\n - omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'\n - omniauth
+        (1.3.1) lib/omniauth/builder.rb:63:in `call'\n - meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in
+        `call'\n - meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in
+        `call'\n - bullet (4.14.10) lib/bullet/rack.rb:12:in `call'\n - actionpack
+        (3.2.22.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call'\n - rack (1.4.7) lib/rack/etag.rb:23:in `call'\n - rack (1.4.7) lib/rack/conditionalget.rb:35:in
+        `call'\n - actionpack (3.2.22.2) lib/action_dispatch/middleware/head.rb:14:in
+        `call'\n - remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'\n
+        - actionpack (3.2.22.2) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call'\n - actionpack (3.2.22.2) lib/action_dispatch/middleware/flash.rb:242:in
+        `call'\n - rack (1.4.7) lib/rack/session/abstract/id.rb:210:in `context'\n
+        - rack (1.4.7) lib/rack/session/abstract/id.rb:205:in `call'\n - actionpack
+        (3.2.22.2) lib/action_dispatch/middleware/cookies.rb:341:in `call'\n - activerecord
+        (3.2.22.2) lib/active_record/query_cache.rb:64:in `call'\n - activerecord
+        (3.2.22.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in
+        `call'\n - actionpack (3.2.22.2) lib/action_dispatch/middleware/callbacks.rb:28:in
+        `block in call'\n - activesupport (3.2.22.2) lib/active_support/callbacks.rb:405:in
+        `_run__3725061323157800422__call__4357621846494844128__callbacks'\n - activesupport
+        (3.2.22.2) lib/active_support/callbacks.rb:405:in `__run_callback'\n - activesupport
+        (3.2.22.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'\n
+        - activesupport (3.2.22.2) lib/active_support/callbacks.rb:81:in `run_callbacks'\n
+        - actionpack (3.2.22.2) lib/action_dispatch/middleware/callbacks.rb:27:in
+        `call'\n - actionpack (3.2.22.2) lib/action_dispatch/middleware/reloader.rb:65:in
+        `call'\n - actionpack (3.2.22.2) lib/action_dispatch/middleware/remote_ip.rb:31:in
+        `call'\n - rollbar (2.13.2) lib/rollbar/middleware/rails/rollbar.rb:24:in
+        `block in call'\n - rollbar (2.13.2) lib/rollbar.rb:145:in `scoped'\n - rollbar
+        (2.13.2) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'\n - better_errors
+        (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'\n - better_errors
+        (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'\n - better_errors
+        (2.1.1) lib/better_errors/middleware.rb:57:in `call'\n - rack-contrib (1.4.0)
+        lib/rack/contrib/response_headers.rb:17:in `call'\n - meta_request (0.3.4)
+        lib/meta_request/middlewares/headers.rb:16:in `call'\n - actionpack (3.2.22.2)
+        lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'\n - rollbar
+        (2.13.2) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'\n
+        - actionpack (3.2.22.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in
+        `call'\n - railties (3.2.22.2) lib/rails/rack/logger.rb:32:in `call_app'\n
+        - railties (3.2.22.2) lib/rails/rack/logger.rb:18:in `call'\n - request_store
+        (1.3.2) lib/request_store/middleware.rb:9:in `call'\n - actionpack (3.2.22.2)
+        lib/action_dispatch/middleware/request_id.rb:22:in `call'\n - rack (1.4.7)
+        lib/rack/methodoverride.rb:21:in `call'\n - rack (1.4.7) lib/rack/runtime.rb:17:in
+        `call'\n - activesupport (3.2.22.2) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call'\n - actionpack (3.2.22.2) lib/action_dispatch/middleware/static.rb:83:in
+        `call'\n - rack-mini-profiler (0.9.3) lib/mini_profiler/profiler.rb:276:in
+        `call'\n - rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'\n - railties (3.2.22.2)
+        lib/rails/engine.rb:484:in `call'\n - railties (3.2.22.2) lib/rails/application.rb:231:in
+        `call'\n - rack (1.4.7) lib/rack/content_length.rb:14:in `call'\n - railties
+        (3.2.22.2) lib/rails/rack/log_tailer.rb:17:in `call'\n - thin (1.6.4) lib/thin/connection.rb:86:in
+        `block in pre_process'\n - thin (1.6.4) lib/thin/connection.rb:84:in `pre_process'\n
+        - thin (1.6.4) lib/thin/connection.rb:53:in `process'\n - thin (1.6.4) lib/thin/connection.rb:39:in
+        `receive_data'\n - eventmachine (1.2.1) lib/eventmachine.rb:194:in `run'\n
+        - thin (1.6.4) lib/thin/backends/base.rb:73:in `start'\n - thin (1.6.4) lib/thin/server.rb:162:in
+        `start'\n - rack (1.4.7) lib/rack/handler/thin.rb:13:in `run'\n - rack (1.4.7)
+        lib/rack/server.rb:268:in `start'\n - railties (3.2.22.2) lib/rails/commands/server.rb:70:in
+        `start'\n - railties (3.2.22.2) lib/rails/commands.rb:55:in `block in <top
+        (required)>'\n - railties (3.2.22.2) lib/rails/commands.rb:50:in `<top (required)>'\n
+        - script/rails:6:in `<main>'\n\n"
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://127.0.0.1:3000/entities/1/deposit_accounts/2/bank_statements
+  recorded_at: Wed, 15 Mar 2017 13:56:51 GMT
+recorded_with: VCR 2.9.3
