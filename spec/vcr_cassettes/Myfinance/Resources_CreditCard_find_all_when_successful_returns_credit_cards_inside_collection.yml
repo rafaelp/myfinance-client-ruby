@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 14 Mar 2017 20:01:54 GMT
+      - Wed, 15 Mar 2017 15:09:08 GMT
       ETag:
-      - W/"a909f7c7b0638b17904990f8dce44500"
+      - W/"36f5977bb1d72bbdcc2eb3235274588a"
       Server:
       - nginx/1.10.3
       Vary:
@@ -40,25 +40,24 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '16'
+      - '17'
       X-RateLimit-Reset:
-      - '2017-03-14T20:02:00Z'
+      - '2017-03-15T15:10:00Z'
       X-Request-Id:
-      - bb89230332ae6f2be1c139d9977b0b66
+      - 39e0a6a5633b42498f29246146ed970f
       X-Runtime:
-      - '0.052464'
+      - '0.065768'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '414'
+      - '474'
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        W3siY3JlZGl0X2NhcmQiOnsiaWQiOjQzLCJuYW1lIjoiQ2FydMOjbyBWaXNhIiwiZmxhZyI6IlZpc2EiLCJjbG9zaW5nX2RheSI6MjEsImV4cGlyYXRpb25fZGF5IjoxLCJiYWxhbmNlIjoiMTM5OS45MyIsImVudGl0eV9pZCI6Mzc5OCwiY2F0ZWdvcnlfaWQiOm51bGwsInBlcnNvbl9pZCI6bnVsbCwiY2xhc3NpZmljYXRpb25fY2VudGVyX2lkIjpudWxsLCJvYnNlcnZhdGlvbiI6IiIsImFyY2hpdmVkX2F0IjpudWxsLCJmbGFnX2ltYWdlX3VybCI6Imh0dHBzOi8vZGJ2OWxmMG5rZzdkMy5jbG91ZGZyb250Lm5ldC9hc3NldHMvbG9nb3MvbG9nby1jcmVkaXRjYXJkLXZpc2EtNjc1NzIyODI5MjY5MGM1ZjI3MTk2NmJhNTIxZjkxYmUucG5nIiwibGlua3MiOlt7InJlbCI6InNlbGYiLCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94Lm15ZmluYW5jZS5jb20uYnIvZW50aXRpZXMvMzc5OC9jcmVkaXRfY2FyZHMvNDMiLCJtZXRob2QiOiJnZXQifV19fSx7ImNyZWRpdF9jYXJkIjp7ImlkIjo0NCwibmFtZSI6IkNhcnTDo28gMSIsImZsYWciOiJNYXN0ZXJDYXJkIiwiY2xvc2luZ19kYXkiOjIwLCJleHBpcmF0aW9uX2RheSI6MiwiYmFsYW5jZSI6IjAuMCIsImVudGl0eV9pZCI6Mzc5OCwiY2F0ZWdvcnlfaWQiOm51bGwsInBlcnNvbl9pZCI6bnVsbCwiY2xhc3NpZmljYXRpb25fY2VudGVyX2lkIjpudWxsLCJvYnNlcnZhdGlvbiI6bnVsbCwiYXJjaGl2ZWRfYXQiOm51bGwsImZsYWdfaW1hZ2VfdXJsIjoiaHR0cHM6Ly9kYnY5bGYwbmtnN2QzLmNsb3VkZnJvbnQubmV0L2Fzc2V0cy9sb2dvcy9sb2dvLWNyZWRpdGNhcmQtbWFzdGVyY2FyZC04M2UyZjI1ODI1NWQwOTAwYTU5NWU1YzQ0N2Y5MTE0Yy5wbmciLCJsaW5rcyI6W3sicmVsIjoic2VsZiIsImhyZWYiOiJodHRwczovL3NhbmRib3gubXlmaW5hbmNlLmNvbS5ici9lbnRpdGllcy8zNzk4L2NyZWRpdF9jYXJkcy80NCIsIm1ldGhvZCI6ImdldCJ9XX19XQ==
+      encoding: UTF-8
+      string: '[{"credit_card":{"id":44,"name":"Neon","flag":"Visa","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-visa-6757228292690c5f271966ba521f91be.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/44","method":"get"}]}},{"credit_card":{"id":75,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/75","method":"get"}]}},{"credit_card":{"id":76,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/76","method":"get"}]}},{"credit_card":{"id":77,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/77","method":"get"}]}},{"credit_card":{"id":78,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/78","method":"get"}]}},{"credit_card":{"id":85,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/85","method":"get"}]}},{"credit_card":{"id":86,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/86","method":"get"}]}},{"credit_card":{"id":88,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/88","method":"get"}]}},{"credit_card":{"id":89,"name":"Nubank","flag":"MasterCard","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-mastercard-83e2f258255d0900a595e5c447f9114c.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/89","method":"get"}]}}]'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3798/credit_cards
-  recorded_at: Tue, 14 Mar 2017 20:01:54 GMT
+  recorded_at: Wed, 15 Mar 2017 15:09:08 GMT
 recorded_with: VCR 2.9.3

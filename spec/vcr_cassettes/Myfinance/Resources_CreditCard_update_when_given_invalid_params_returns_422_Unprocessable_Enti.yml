@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: get
+    method: put
     uri: https://sandbox.myfinance.com.br/entities/3798/credit_cards/44
     body:
       encoding: UTF-8
-      string: "{}"
+      string: '{"credit_card":{"name":"Nubank","flag":"BandeiraDeWesteros","closing_day":20,"expiration_day":2}}'
     headers:
       User-Agent:
       - Myfinance Ruby Client v0.7.0
@@ -17,47 +17,45 @@ http_interactions:
       - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
   response:
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
     headers:
       Cache-Control:
-      - must-revalidate, private, max-age=0
-      Content-Encoding:
-      - gzip
+      - no-cache
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 15 Mar 2017 15:09:08 GMT
-      ETag:
-      - W/"b1a235bc13587762de9b5d179ecb7804"
+      - Wed, 15 Mar 2017 15:09:10 GMT
       Server:
       - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTczMWEzMTJiNTg3MGFmMjYyZjExZjAwOWMwNDk1NzMyBjsAVA%3D%3D--927eaaa9331defef3434ade0e8eaf2a8c31f80ca;
+        path=/; HttpOnly
       Vary:
-      - Accept-Encoding
       - Origin
       X-Rack-Cache:
-      - miss
+      - invalidate, pass
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '15'
+      - '8'
       X-RateLimit-Reset:
       - '2017-03-15T15:10:00Z'
       X-Request-Id:
-      - 89bf990e5d220c14c091cbb7ead7b376
+      - 46f2c3e1a5288350d5b5f0893a7cabd9
       X-Runtime:
-      - '0.039273'
+      - '0.047749'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '323'
+      - '48'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"credit_card":{"id":44,"name":"Neon","flag":"Visa","closing_day":20,"expiration_day":2,"balance":"0.0","entity_id":3798,"category_id":null,"person_id":null,"classification_center_id":null,"observation":null,"archived_at":null,"flag_image_url":"https://dbv9lf0nkg7d3.cloudfront.net/assets/logos/logo-creditcard-visa-6757228292690c5f271966ba521f91be.png","links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/credit_cards/44","method":"get"}]}}'
+      string: '{"flag":["n\u00e3o est\u00e1 incluso na lista"]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3798/credit_cards/44
-  recorded_at: Wed, 15 Mar 2017 15:09:08 GMT
+  recorded_at: Wed, 15 Mar 2017 15:09:10 GMT
 recorded_with: VCR 2.9.3
