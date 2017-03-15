@@ -125,10 +125,20 @@ describe Myfinance::Client do
     end
   end
 
+<<<<<<< 0f898e36b169ef0d9d3c2f7a4c71b39104607331
   describe "#credit_cards" do
     it "instantiates a new Myfinance::Resources::CreditCard" do
       expect(Myfinance::Resources::CreditCard).to receive(:new).with(subject.http)
       subject.credit_cards
     end
   end
+=======
+  describe "#credit_card_transactions" do
+    it "instantiates a new Myfinance::Resources::CreditCardTransaction" do
+      expect(Myfinance::Resources::CreditCardTransaction).to receive(:new).with(subject.http)
+      subject.taxes
+    end
+  end
+
+>>>>>>> Create credit card transaction endpoint
 end
