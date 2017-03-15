@@ -25,6 +25,19 @@ Or install it yourself as:
 
     $ gem install myfinance
 
+## Configuration
+
+Use `Myfinance.configure` to setup your environment:
+
+```ruby
+require 'myfinance'
+
+Myfinance.configure do |config|
+  config.url = 'https://sandbox.myfinance.com.br' # defaults to 'https://app.myfinance.com.br'
+  config.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
+end
+```
+
 ## Usage
 
 ##### Given your token, create an instance of Myfinance::Client, as below:
