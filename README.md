@@ -822,6 +822,82 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   </tr>
 </table>
 
+#### [CreditCardTransactions](https://app.myfinance.com.br/docs/api/credit_card_transactions)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_card_transactions#get_index" target="_blank">
+        /entities/:entity_id/credit_cards/:credit_card_id/transactions
+      </a>
+    </td>
+    <td>
+      <code>client.credit_card_transactions.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_card_transactions#get_show" target="_blank">
+        /entities/:entity_id/credit_cards/:credit_card_id/transactions/:id
+      </a>
+    </td>
+    <td>
+      <code>client.credit_card_transactions.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_card_transactions#post_create" target="_blank">
+        /entities/:entity_id/credit_cards/:credit_card_id/transactions
+      </a>
+    </td>
+    <td>
+      <code>client.credit_card_transactions.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_card_transactions#put_update" target="_blank">
+        /entities/:entity_id/credit_cards/:credit_card_id/transactions/:id
+      </a>
+    </td>
+    <td>
+      <code>client.credit_card_transactions.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_card_transactions#delete_destroy" target="_blank">
+        /entities/:entity_id/credit_cards/:credit_card_id/transactions/:id
+      </a>
+    </td>
+    <td>
+      <code>client.credit_card_transactions.destroy</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/credit_card_transactions#delete_destroy_parcelled" target="_blank">
+        /entities/:entity_id/credit_cards/:credit_card_id/transactions/:id/recurrence
+      </a>
+    </td>
+    <td>
+      <code>client.credit_card_transactions.destroy_parcelled</code>
+    </td>
+  </tr>
+</table>
+
 
 ### Configuration
 
