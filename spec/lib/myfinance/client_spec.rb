@@ -136,7 +136,7 @@ describe Myfinance::Client do
   describe "#credit_card_transactions" do
     it "instantiates a new Myfinance::Resources::CreditCardTransaction" do
       expect(Myfinance::Resources::CreditCardTransaction).to receive(:new).with(subject.http)
-      subject.taxes
+      subject.credit_card_transactions
     end
   end
 

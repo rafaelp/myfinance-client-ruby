@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions
+    body:
+      encoding: UTF-8
+      string: '{"credit_card_transaction":{"amount":"0.199e3","occurred_at":"2017-01-01","description":"O
+        Guia","credit_card_id":73}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic MDY1N2JhYzcwZmRmNWMwNmNlODIyNzE5NTY4ZjM2MzZhOWEwN2I4N2JhNjE3ZWM3Olg=
+      ACCOUNT_ID:
+      - 3682
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 16 Mar 2017 13:53:05 GMT
+      ETag:
+      - '"a3f4d8006bbe29f0d7b06ef8557eda57"'
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTEwNTZmM2Y3YTU0OTRkMTA2ZjU2ZGQyMDQwOWUwNjY1BjsAVA%3D%3D--81321c9958e75edde559a4159175856a92935863;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '13'
+      X-RateLimit-Reset:
+      - '2017-03-16T13:54:00Z'
+      X-Request-Id:
+      - 9e9d418a5f3d158564fca9f0753d66c0
+      X-Runtime:
+      - '0.225859'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '519'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"credit_card_transaction":{"id":319756,"amount":"199.0","occurred_at":"2017-01-01","document":null,"observation":null,"description":"O
+        Guia","classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2881,"start_date":"2016-12-22","end_date":"2017-01-21","due_date":"2017-02-01","balance":"1990.0"},"parcels":null,"parcel":null,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319756","method":"get"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions
+  recorded_at: Thu, 16 Mar 2017 13:53:05 GMT
+recorded_with: VCR 2.9.3

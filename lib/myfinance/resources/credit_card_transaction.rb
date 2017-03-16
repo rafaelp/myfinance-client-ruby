@@ -32,14 +32,14 @@ module Myfinance
       def destroy(entity_id, credit_card_id, credit_card_transaction_id, params = {})
         path = "/entities/#{entity_id}/credit_cards/#{credit_card_id}/transactions/#{credit_card_transaction_id}" 
         http.delete(path, body: { credit_card_transaction: params }) do |response|
-          respond_with_object(response, "credit_card_transaction")
+          response
         end
       end
 
       def destroy_parcelled(entity_id, credit_card_id, credit_card_transaction_id, params = {})
         path = "/entities/#{entity_id}/credit_cards/#{credit_card_id}/transactions/#{credit_card_transaction_id}/recurrence" 
         http.delete(path, body: { credit_card_transaction: params }) do |response|
-          respond_with_object(response, "credit_card_transaction")
+          response
         end
       end
     end
