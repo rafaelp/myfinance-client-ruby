@@ -64,15 +64,12 @@ module Myfinance
       Myfinance::Resources::Tax.new(http)
     end
 
-<<<<<<< 0f898e36b169ef0d9d3c2f7a4c71b39104607331
     def credit_cards
       Myfinance::Resources::CreditCard.new(http)
     end
-=======
+
     def credit_card_transactions
       Myfinance::Resources::CreditCardTransaction.new(http)
     end
-
->>>>>>> Create credit card transaction endpoint
   end
 end
