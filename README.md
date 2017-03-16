@@ -61,6 +61,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [Webhooks API](https://app.myfinance.com.br/docs/api/webhooks) as `client.webhooks`
 * [Taxes API](https://app.myfinance.com.br/docs/api/taxes) as `client.taxes`
 * [CreditCards API](https://app.myfinance.com.br/docs/api/credit_cards) as `client.credit_cards`
+* [CreditCardsTransactions API](https://app.myfinance.com.br/docs/api/credit_cards_transactions) as `client.credit_cards_transactions`
 
 ### Endpoints
 
