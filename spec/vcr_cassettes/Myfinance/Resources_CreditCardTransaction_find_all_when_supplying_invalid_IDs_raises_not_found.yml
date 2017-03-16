@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Thu, 16 Mar 2017 13:53:04 GMT
+      - Thu, 16 Mar 2017 14:20:02 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -38,9 +38,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - d2a05dc6c9f65219d62f285da564800c
+      - '00984b362447d5c3c8ace2f6c91071f0'
       X-Runtime:
-      - '0.006430'
+      - '0.005925'
       Content-Length:
       - '1027'
       Connection:
@@ -52,5 +52,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities//credit_cards//invoices/2017-99
-  recorded_at: Thu, 16 Mar 2017 13:53:04 GMT
+  recorded_at: Thu, 16 Mar 2017 14:20:02 GMT
 recorded_with: VCR 2.9.3

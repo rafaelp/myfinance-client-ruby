@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Thu, 16 Mar 2017 13:53:05 GMT
+      - Thu, 16 Mar 2017 14:20:03 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -38,9 +38,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 10150b83fadc07b46da82992a7a0b53e
+      - cfc6e3f3f0dcf381058330f19374e9cf
       X-Runtime:
-      - '0.006028'
+      - '0.006281'
       Content-Length:
       - '1027'
       Connection:
@@ -52,5 +52,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities//credit_cards/666/transactions/99999
-  recorded_at: Thu, 16 Mar 2017 13:53:05 GMT
+  recorded_at: Thu, 16 Mar 2017 14:20:03 GMT
 recorded_with: VCR 2.9.3

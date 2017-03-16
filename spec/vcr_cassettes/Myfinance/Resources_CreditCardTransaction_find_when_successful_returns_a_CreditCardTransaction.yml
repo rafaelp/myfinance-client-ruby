@@ -29,9 +29,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Mar 2017 13:53:05 GMT
+      - Thu, 16 Mar 2017 14:20:02 GMT
       ETag:
-      - W/"2e83f04eccb9349af4b680d8396e8591"
+      - W/"4b5057b8b3ae3f47222e9321f4f525b2"
       Server:
       - nginx/1.10.3
       Vary:
@@ -44,23 +44,23 @@ http_interactions:
       X-RateLimit-Remaining:
       - '15'
       X-RateLimit-Reset:
-      - '2017-03-16T13:54:00Z'
+      - '2017-03-16T14:21:00Z'
       X-Request-Id:
-      - 3d91e1cf8165b2759115357ed5a57a84
+      - e59affeb44610aaa673745f7cbdefd1c
       X-Runtime:
-      - '0.053696'
+      - '0.052738'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '320'
+      - '323'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '{"credit_card_transaction":{"id":319529,"amount":"999.0","occurred_at":"2017-03-10","document":"","observation":"","description":"O
-        Guia Vol. II","classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2867,"start_date":"2017-02-22","end_date":"2017-03-21","due_date":"2017-04-01","balance":"999.0"},"parcels":null,"parcel":null,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319529","method":"get"}]}}'
+        Guia Vol. II","classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2867,"start_date":"2017-02-22","end_date":"2017-03-21","due_date":"2017-04-01","balance":"1795.0"},"parcels":null,"parcel":null,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319529","method":"get"}]}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319529
-  recorded_at: Thu, 16 Mar 2017 13:53:05 GMT
+  recorded_at: Thu, 16 Mar 2017 14:20:03 GMT
 recorded_with: VCR 2.9.3

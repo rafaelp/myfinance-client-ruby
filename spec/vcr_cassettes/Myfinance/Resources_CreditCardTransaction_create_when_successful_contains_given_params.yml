@@ -28,13 +28,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Mar 2017 13:53:05 GMT
+      - Thu, 16 Mar 2017 14:20:03 GMT
       ETag:
-      - '"e160fb3a07cbce19c097be78ebd1abca"'
+      - '"4b76ba249872835af8174c9aeee567d1"'
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTdkOTQ3OTg5NTczNTRjNDhiODJkNDdjY2ViNmIzYjBkBjsAVA%3D%3D--9ec84260704692af53abb62dd24a4266d5a16d90;
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWViNGE0YjRiODQxOTM3MGM4YWY3MmI4MDk1ODBkODA3BjsAVA%3D%3D--180d4ba65a6a8760e1d83073bb0b4e217dd0b5c2;
         path=/; HttpOnly
       Vary:
       - Origin
@@ -45,11 +45,11 @@ http_interactions:
       X-RateLimit-Remaining:
       - '12'
       X-RateLimit-Reset:
-      - '2017-03-16T13:54:00Z'
+      - '2017-03-16T14:21:00Z'
       X-Request-Id:
-      - fcbb287aebdcfaf6005a3900c7066827
+      - 4633302806f3c66925eb99c581093671
       X-Runtime:
-      - '0.176573'
+      - '0.229221'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -58,10 +58,10 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"credit_card_transaction":{"id":319757,"amount":"199.0","occurred_at":"2017-01-01","document":null,"observation":null,"description":"O
-        Guia","classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2881,"start_date":"2016-12-22","end_date":"2017-01-21","due_date":"2017-02-01","balance":"2189.0"},"parcels":null,"parcel":null,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319757","method":"get"}]}}'
+      string: '{"credit_card_transaction":{"id":319776,"amount":"199.0","occurred_at":"2017-01-01","document":null,"observation":null,"description":"O
+        Guia","classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2881,"start_date":"2016-12-22","end_date":"2017-01-21","due_date":"2017-02-01","balance":"3383.0"},"parcels":null,"parcel":null,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319776","method":"get"}]}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions
-  recorded_at: Thu, 16 Mar 2017 13:53:06 GMT
+  recorded_at: Thu, 16 Mar 2017 14:20:03 GMT
 recorded_with: VCR 2.9.3

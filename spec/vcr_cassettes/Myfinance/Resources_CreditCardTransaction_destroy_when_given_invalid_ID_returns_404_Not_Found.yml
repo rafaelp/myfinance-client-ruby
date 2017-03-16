@@ -29,11 +29,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Mar 2017 13:53:08 GMT
+      - Thu, 16 Mar 2017 14:20:06 GMT
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWMwZmI3YTNkOTEzOGViOTUyNzY0Y2Y4NjgwODA1NjE1BjsAVA%3D%3D--707dc531b60b26b2ef0d4e965606aebeadb8cff3;
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTAzMjlmYjUwOWFlODkyNjY1OTdmYWI3MDBmOTZmNTQxBjsAVA%3D%3D--199b31a2b0e0ebef2fe9a88b38267813afa846b4;
         path=/; HttpOnly
       Vary:
       - Accept-Encoding
@@ -45,11 +45,11 @@ http_interactions:
       X-RateLimit-Remaining:
       - '5'
       X-RateLimit-Reset:
-      - '2017-03-16T13:54:00Z'
+      - '2017-03-16T14:21:00Z'
       X-Request-Id:
-      - 73df4b408d04855400dfe42f38d59748
+      - 591c8c10b59f7a0b78b186ad5cb08d28
       X-Runtime:
-      - '0.042538'
+      - '0.042890'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -63,5 +63,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/6666/transactions/424242
-  recorded_at: Thu, 16 Mar 2017 13:53:08 GMT
+  recorded_at: Thu, 16 Mar 2017 14:20:06 GMT
 recorded_with: VCR 2.9.3

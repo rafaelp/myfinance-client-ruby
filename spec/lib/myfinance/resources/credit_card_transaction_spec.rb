@@ -133,4 +133,30 @@ describe Myfinance::Resources::CreditCardTransaction, vcr: true do
       end
     end
   end
+
+  describe "#destroy_parcelled" do
+    let(:params) do
+      { amount: BigDecimal.new(199), occurred_at: Date.new(2017, 1, 1), number_of_parcels: 2, credit_card_id: cc_id }
+    end
+    let(:new_cct) { credit_card_transactions.create(entity_id, cc_id, params) }
+
+    before :each do
+      credit_card_transactions.destroy_parcelled(entity_id, cc_id, new_cct.id)
+    end
+
+    it "does not find first CreditCardTransaction" do
+      expect { credit_card_transactions.find(entity_id, cc_id, new_cct.id) }.to raise_error(request_error) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+    end
+
+    it "does not find second CreditCardTransaction" do
+      expect { credit_card_transactions.find(entity_id, cc_id, new_cct.id + 1) }.to raise_error(request_error) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+    end
+
+  end
 end

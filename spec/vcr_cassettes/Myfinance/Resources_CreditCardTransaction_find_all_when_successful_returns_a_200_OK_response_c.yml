@@ -29,9 +29,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Mar 2017 13:53:04 GMT
+      - Thu, 16 Mar 2017 14:20:01 GMT
       ETag:
-      - W/"0d57d203e1ccbcffae970a26cd87dae1"
+      - W/"c47b4894775f07e67b266d77d5317de9"
       Server:
       - nginx/1.10.3
       Vary:
@@ -44,23 +44,23 @@ http_interactions:
       X-RateLimit-Remaining:
       - '19'
       X-RateLimit-Reset:
-      - '2017-03-16T13:54:00Z'
+      - '2017-03-16T14:21:00Z'
       X-Request-Id:
-      - c3259bda6cc2335b3f958bf0c0cfc599
+      - 92256dae1b42afcf9c0eafdc9d4063fd
       X-Runtime:
-      - '0.054655'
+      - '0.318835'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '322'
+      - '457'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '[{"credit_card_transaction":{"id":319529,"amount":"999.0","occurred_at":"2017-03-10","document":"","observation":"","description":"O
-        Guia Vol. II","classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2867,"start_date":"2017-02-22","end_date":"2017-03-21","due_date":"2017-04-01","balance":"999.0"},"parcels":null,"parcel":null,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319529","method":"get"}]}}]'
+      string: '[{"credit_card_transaction":{"id":319761,"amount":"199.0","occurred_at":"2017-03-01","document":null,"observation":null,"description":null,"classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2867,"start_date":"2017-02-22","end_date":"2017-03-21","due_date":"2017-04-01","balance":"1795.0"},"parcels":3,"parcel":3,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319761","method":"get"},{"rel":"previous","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319760","method":"get"}]}},{"credit_card_transaction":{"id":319764,"amount":"199.0","occurred_at":"2017-03-01","document":null,"observation":null,"description":null,"classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2867,"start_date":"2017-02-22","end_date":"2017-03-21","due_date":"2017-04-01","balance":"1795.0"},"parcels":3,"parcel":3,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319764","method":"get"},{"rel":"previous","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319763","method":"get"}]}},{"credit_card_transaction":{"id":319767,"amount":"199.0","occurred_at":"2017-03-01","document":null,"observation":null,"description":null,"classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2867,"start_date":"2017-02-22","end_date":"2017-03-21","due_date":"2017-04-01","balance":"1795.0"},"parcels":3,"parcel":3,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319767","method":"get"},{"rel":"previous","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319766","method":"get"}]}},{"credit_card_transaction":{"id":319770,"amount":"199.0","occurred_at":"2017-03-01","document":null,"observation":null,"description":null,"classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2867,"start_date":"2017-02-22","end_date":"2017-03-21","due_date":"2017-04-01","balance":"1795.0"},"parcels":3,"parcel":3,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319770","method":"get"},{"rel":"previous","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319769","method":"get"}]}},{"credit_card_transaction":{"id":319529,"amount":"999.0","occurred_at":"2017-03-10","document":"","observation":"","description":"O
+        Guia Vol. II","classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2867,"start_date":"2017-02-22","end_date":"2017-03-21","due_date":"2017-04-01","balance":"1795.0"},"parcels":null,"parcel":null,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319529","method":"get"}]}}]'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/invoices/2017-04
-  recorded_at: Thu, 16 Mar 2017 13:53:04 GMT
+  recorded_at: Thu, 16 Mar 2017 14:20:01 GMT
 recorded_with: VCR 2.9.3
