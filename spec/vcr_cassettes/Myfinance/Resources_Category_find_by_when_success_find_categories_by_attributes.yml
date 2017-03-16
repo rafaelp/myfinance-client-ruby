@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 16 Mar 2017 19:03:15 GMT
+      ETag:
+      - W/"5ca77a20241863cde1c6ee06062b3ddb"
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-03-16T19:04:00Z'
+      X-Request-Id:
+      - 27f3d25a1066fe330ab0aeec140bcb7e
+      X-Runtime:
+      - '0.038495'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '267'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"category":{"account_id":3613,"cost":true,"created_at":"2015-07-29T11:04:50-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Despesas
+        com Filhos / Alimenta\u00e7\u00e3o","guid":null,"id":532331,"imported_from_sync":false,"interested_users_ids":[],"modified_by_sync":false,"name":"Alimenta\u00e7\u00e3o","parent_id":532330,"revenue":true,"updated_at":"2015-07-29T11:04:50-03:00","use_count":0}}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
+  recorded_at: Thu, 16 Mar 2017 19:03:15 GMT
+recorded_with: VCR 2.9.3
