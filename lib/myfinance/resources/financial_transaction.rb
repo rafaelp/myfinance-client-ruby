@@ -100,11 +100,8 @@ module Myfinance
       private
 
       def index_path(entity_id, deposit_account_id, page)
-        if page
-          paginated_path(entity_id, deposit_account_id, page)
-        else
-          path(entity_id, deposit_account_id)
-        end
+        return paginated_path(entity_id, deposit_account_id, page) if page
+        path(entity_id, deposit_account_id)
       end
 
       def path(entity_id, deposit_account_id)

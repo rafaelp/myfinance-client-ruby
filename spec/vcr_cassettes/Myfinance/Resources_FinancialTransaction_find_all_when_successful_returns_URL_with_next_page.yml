@@ -37,7 +37,7 @@ http_interactions:
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTUwYjk0OWNmZDVhN2M5MTY2MzY2ODcyNjBkMTFkOWQ3BjsAVEkiIWxhc3RfdXNlZF9kZXBvc2l0X2FjY291bnRfaWQGOwBGaQK8Nw%3D%3D--ed57cf9201979004bbb18b31dce0f380f34fcfa2;
+      - _financecompany_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTU2OTVmZTQ5YjJkNWEyZjYzNDg1ZThmN2NhZDQ2NDJkBjsAVEkiIWxhc3RfdXNlZF9kZXBvc2l0X2FjY291bnRfaWQGOwBGaQK8Nw%3D%3D--a48d194531791146d2dae806cf99802ad5b067ca;
         path=/; HttpOnly
       Vary:
       - Accept-Encoding
@@ -47,17 +47,17 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '17'
+      - '18'
       X-RateLimit-Reset:
       - '2017-03-20T17:18:00Z'
       X-Request-Id:
-      - 66a9d2b0a0420883814aec93b79d7ae6
+      - 25559c509337ca52fe401353132adc3b
       X-Runtime:
-      - '0.278545'
+      - '0.273187'
       X-UA-Compatible:
       - IE=Edge,chrome=1
-      transfer-encoding:
-      - chunked
+      Content-Length:
+      - '1627'
       Connection:
       - keep-alive
     body:
