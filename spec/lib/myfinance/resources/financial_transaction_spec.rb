@@ -21,7 +21,7 @@ describe Myfinance::Resources::FinancialTransaction, vcr: true do
         expect(subject.response.code).to eq(200)
       end
 
-      it "returns URL for page 2" do
+      it "returns URL with next page" do
         url = subject.response.request.base_url
         expect(url).to include("?page=#{page}")
       end
@@ -41,7 +41,7 @@ describe Myfinance::Resources::FinancialTransaction, vcr: true do
           expect(subject).to be_a(Myfinance::Entities::FinancialTransactionCollection)
         end
 
-        it "does not returns URL for page" do
+        it "does not return URL for next page" do
           url = subject.response.request.base_url
           expect(url).not_to include("?page=#{page}")
         end
