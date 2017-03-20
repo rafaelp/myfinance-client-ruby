@@ -36,6 +36,22 @@ module Myfinance
       end
 
       #
+      # Find a category by attributes
+      #
+      # [API]
+      #   Method: <tt>GET /categories/:id</tt>
+      #
+      #   Documentation: https://sandbox.myfinance.com.br/docs/api/categories#get_show
+      #
+      def find_by(params = {})
+        path = params.map { |k, v| "search[#{k}]=#{v}" }.join("&")
+
+        http.get(URI.encode("/categories?#{path}"), body: {}) do |response|
+          respond_with_collection(response)
+        end
+      end
+
+      #
       # Creates a category
       #
       # [API]

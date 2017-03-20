@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/categories?
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic Olg=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache, private
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Thu, 16 Mar 2017 19:03:15 GMT
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Origin
+      WWW-Authenticate:
+      - Basic realm="Myfinance API"
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 11e56bd4a4ea8072fb9b9533c88e65dd
+      X-Runtime:
+      - '0.004752'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '27'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: 'HTTP Basic: Access denied.
+
+'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/categories?
+  recorded_at: Thu, 16 Mar 2017 19:03:16 GMT
+recorded_with: VCR 2.9.3
