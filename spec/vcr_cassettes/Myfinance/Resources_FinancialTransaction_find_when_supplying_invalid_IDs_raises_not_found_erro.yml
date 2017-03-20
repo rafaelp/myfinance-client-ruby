@@ -5,10 +5,10 @@ http_interactions:
     uri: https://sandbox.myfinance.com.br/entities//deposit_accounts//financial_transactions/
     body:
       encoding: UTF-8
-      string: '{"financial_transaction":{}}'
+      string: "{}"
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.5.0
+      - Myfinance Ruby Client v0.7.0
       Accept:
       - application/json
       Content-Type:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Mon, 13 Mar 2017 21:49:50 GMT
+      - Mon, 20 Mar 2017 16:49:16 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -36,9 +36,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - a6c41d3784f630c97fd20aaa17957bd2
+      - 77231b6277192431340f81aea095b80a
       X-Runtime:
-      - '0.006442'
+      - '0.006407'
       Content-Length:
       - '1027'
       Connection:
@@ -92,5 +92,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities//deposit_accounts//financial_transactions/
-  recorded_at: Mon, 13 Mar 2017 21:49:50 GMT
+  recorded_at: Mon, 20 Mar 2017 16:49:16 GMT
 recorded_with: VCR 2.9.3

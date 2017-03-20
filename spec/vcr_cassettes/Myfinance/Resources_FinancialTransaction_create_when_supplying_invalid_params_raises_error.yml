@@ -8,7 +8,7 @@ http_interactions:
       string: '{"financial_transaction":{"amount":68.5,"occurred_at":"2011-07-15","type":"QUALQUER"}}'
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.5.0
+      - Myfinance Ruby Client v0.7.0
       Accept:
       - application/json
       Content-Type:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Mon, 13 Mar 2017 21:49:51 GMT
+      - Mon, 20 Mar 2017 16:49:16 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -31,9 +31,9 @@ http_interactions:
       X-Rack-Cache:
       - invalidate, pass
       X-Request-Id:
-      - 422c9f761959479d8b010c26d60a58d5
+      - e61b7ad2409878cf496d60a6edcf0650
       X-Runtime:
-      - '0.089044'
+      - '0.084852'
       Content-Length:
       - '1403'
       Connection:
@@ -76,5 +76,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions
-  recorded_at: Mon, 13 Mar 2017 21:49:51 GMT
+  recorded_at: Mon, 20 Mar 2017 16:49:16 GMT
 recorded_with: VCR 2.9.3
