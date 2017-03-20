@@ -7,7 +7,7 @@ module Myfinance
       # [API]
       #   Documentation: https://app.myfinance.com.br/docs/api/financial_transactions
       #
-      def find_all(entity_id, deposit_account_id)
+      def find_all(entity_id, deposit_account_id, page = nil)
         #
         # List all financial transactions
         #
@@ -16,7 +16,9 @@ module Myfinance
         #
         #   Documentation: https://app.myfinance.com.br/docs/api/financial_transactions#get_index
         #
-        http.get(path(entity_id, deposit_account_id), body: {}) do |response|
+        fts_path = index_path(entity_id, deposit_account_id, page)
+
+        http.get(fts_path, body: {}) do |response|
           respond_with_collection(response)
         end       
       end
@@ -97,8 +99,17 @@ module Myfinance
 
       private
 
+      def index_path(entity_id, deposit_account_id, page)
+        return paginated_path(entity_id, deposit_account_id, page) if page
+        path(entity_id, deposit_account_id)
+      end
+
       def path(entity_id, deposit_account_id)
         "/entities/#{entity_id}/deposit_accounts/#{deposit_account_id}/financial_transactions"
+      end
+
+      def paginated_path(entity_id, deposit_account_id, page)
+        "/entities/#{entity_id}/deposit_accounts/#{deposit_account_id}/financial_transactions?page=#{page}"
       end
 
       def destroy_many_path(entity_id, deposit_account_id, ids)

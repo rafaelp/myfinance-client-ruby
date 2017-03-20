@@ -4,23 +4,48 @@ describe Myfinance::Resources::FinancialTransaction, vcr: true do
   let(:da_id) { 14268 }
   let(:ent_id) { 3798 }
   let(:ft_id) { 1663920 }
+  let(:page) { 2 }
   let(:financial_transactions) { client.financial_transactions }
   let(:params) { { amount: 68.5, occurred_at: "2011-07-15", type: "Debit" } }
   let(:request_error) { Myfinance::RequestError }
 
   describe "#find_all" do
     context "when successful" do
-      subject { client.financial_transactions.find_all(ent_id, da_id) }
       before :each do
         subject.build
       end
+
+      subject { client.financial_transactions.find_all(ent_id, da_id, page) }
 
       it "returns a 200 OK response code" do
         expect(subject.response.code).to eq(200)
       end
 
-      it "return collection of FinancialTransactions" do
+      it "returns URL with next page" do
+        url = subject.response.request.base_url
+        expect(url).to include("?page=#{page}")
+      end
+
+      it "returns collection of FinancialTransactions" do
         expect(subject).to be_a(Myfinance::Entities::FinancialTransactionCollection)
+      end
+
+      context "without pagination" do
+        subject { client.financial_transactions.find_all(ent_id, da_id) }
+
+        it "returns a 200 OK response code" do
+          expect(subject.response.code).to eq(200)
+        end
+
+        it "returns collection of FinancialTransactions" do
+          expect(subject).to be_a(Myfinance::Entities::FinancialTransactionCollection)
+        end
+
+        it "does not return URL for next page" do
+          url = subject.response.request.base_url
+          expect(url).not_to include("?page=#{page}")
+        end
+
       end
     end
 

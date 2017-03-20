@@ -5,10 +5,10 @@ http_interactions:
     uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1663920
     body:
       encoding: UTF-8
-      string: '{"financial_transaction":{}}'
+      string: "{}"
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.5.0
+      - Myfinance Ruby Client v0.7.0
       Accept:
       - application/json
       Content-Type:
@@ -27,13 +27,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 13 Mar 2017 21:49:50 GMT
+      - Mon, 20 Mar 2017 17:17:43 GMT
       ETag:
-      - W/"a7db3a60548a47897bb08cc96d604bc3"
+      - W/"ee4566a7074d261c14dcebb863541a14"
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTM0YjU2ZjE1NTMyN2M0M2JhMTMxMjcwMGE4YzVmOTVhBjsAVEkiIWxhc3RfdXNlZF9kZXBvc2l0X2FjY291bnRfaWQGOwBGaQK8Nw%3D%3D--45d966420c82bcab9d9f61a775f25319c435a4aa;
+      - _financecompany_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTI0YjZmNjc3NTgyNDQyNWZmMjRjNjM0MDE2MjZjMmYyBjsAVEkiIWxhc3RfdXNlZF9kZXBvc2l0X2FjY291bnRfaWQGOwBGaQK8Nw%3D%3D--40c01dc6a588f5f9e197fdf1986d5c1a340cf425;
         path=/; HttpOnly
       Vary:
       - Accept-Encoding
@@ -43,24 +43,24 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '16'
+      - '12'
       X-RateLimit-Reset:
-      - '2017-03-13T21:50:00Z'
+      - '2017-03-20T17:18:00Z'
       X-Request-Id:
-      - b48219eb7fb280e5c299c983066298cc
+      - 75c74844873a41d2da66a2fbe31223d2
       X-Runtime:
-      - '0.084338'
+      - '0.059898'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '471'
+      - '474'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"financial_transaction":{"id":1663920,"guid":null,"type":"Debit","absolute_amount":"500.0","amount":"-500.0","occurred_at":"2011-07-15","document":null,"original_description":null,"user_description":null,"bank_statement_id":null,"classification_center_id":null,"deposit_account_id":14268,"person_id":null,"parent_id":null,"currency_id":1,"category_id":null,"transfer_id":null,"created_at":"2017-03-13T17:49:34-03:00","updated_at":"2017-03-13T18:46:33-03:00","imported_from_sync":false,"balance_difference":false,"divided":false,"attachments_count":0,"observation":null,"reconciled":false,"transfer_deposit_account_id":null,"attachment_id_list":[],"reconciliations":{"financial_accounts":[],"financial_transactions":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1663920","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1663920","method":"delete"}]}}'
+      string: '{"financial_transaction":{"id":1663920,"guid":null,"type":"Debit","absolute_amount":"500.0","amount":"-500.0","occurred_at":"2011-07-15","document":null,"original_description":null,"user_description":null,"bank_statement_id":null,"classification_center_id":null,"deposit_account_id":14268,"person_id":null,"parent_id":null,"currency_id":1,"category_id":null,"transfer_id":null,"created_at":"2017-03-13T17:49:34-03:00","updated_at":"2017-03-20T14:16:22-03:00","imported_from_sync":false,"balance_difference":false,"divided":false,"attachments_count":0,"observation":null,"reconciled":false,"transfer_deposit_account_id":null,"attachment_id_list":[],"reconciliations":{"financial_accounts":[],"financial_transactions":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1663920","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1663920","method":"delete"}]}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1663920
-  recorded_at: Mon, 13 Mar 2017 21:49:50 GMT
+  recorded_at: Mon, 20 Mar 2017 17:17:43 GMT
 recorded_with: VCR 2.9.3
