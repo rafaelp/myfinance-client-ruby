@@ -25,15 +25,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 20 Mar 2017 16:49:16 GMT
+      - Mon, 20 Mar 2017 16:58:16 GMT
       ETag:
-      - '"a45d72781ee9cce32f2746bef08fd6fa"'
+      - '"e99704c1bba5792e9cda518143168f5e"'
       Location:
-      - https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664069
+      - https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664073
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BzohbGFzdF91c2VkX2RlcG9zaXRfYWNjb3VudF9pZGkCvDdJIg9zZXNzaW9uX2lkBjoGRVRJIiU1MGYzYjBjY2YyZDM1ZTk0NDBhMDViZmEyYWFmMmY2MwY7BlQ%3D--8dc3c344fdea200fd5e53608124a8f1410f651e1;
+      - _financecompany_session=BAh7BzohbGFzdF91c2VkX2RlcG9zaXRfYWNjb3VudF9pZGkCvDdJIg9zZXNzaW9uX2lkBjoGRVRJIiU5NTAxM2ZhZTM5NDZiNDkxMjU5OTk2ZjEzMThjMmIzNgY7BlQ%3D--fda2bfe772337f1279585f8590debcf7a666c5bf;
         path=/; HttpOnly
       Vary:
       - Origin
@@ -44,11 +44,11 @@ http_interactions:
       X-RateLimit-Remaining:
       - '10'
       X-RateLimit-Reset:
-      - '2017-03-20T16:50:00Z'
+      - '2017-03-20T16:59:00Z'
       X-Request-Id:
-      - f1c3a64468de8a943990ec50ca52820f
+      - 2f2a86e149084510601bab8e1024eb81
       X-Runtime:
-      - '0.116908'
+      - '0.134237'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -57,9 +57,9 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"financial_transaction":{"id":1664069,"guid":null,"type":"Debit","absolute_amount":"68.5","amount":"-68.5","occurred_at":"2011-07-15","document":null,"original_description":null,"user_description":null,"bank_statement_id":null,"classification_center_id":null,"deposit_account_id":14268,"person_id":null,"parent_id":null,"currency_id":1,"category_id":null,"transfer_id":null,"created_at":"2017-03-20T13:49:16-03:00","updated_at":"2017-03-20T13:49:16-03:00","imported_from_sync":false,"balance_difference":false,"divided":false,"attachments_count":0,"observation":null,"reconciled":false,"transfer_deposit_account_id":null,"attachment_id_list":[],"reconciliations":{"financial_accounts":[],"financial_transactions":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664069","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664069","method":"delete"}]}}'
+      string: '{"financial_transaction":{"id":1664073,"guid":null,"type":"Debit","absolute_amount":"68.5","amount":"-68.5","occurred_at":"2011-07-15","document":null,"original_description":null,"user_description":null,"bank_statement_id":null,"classification_center_id":null,"deposit_account_id":14268,"person_id":null,"parent_id":null,"currency_id":1,"category_id":null,"transfer_id":null,"created_at":"2017-03-20T13:58:16-03:00","updated_at":"2017-03-20T13:58:16-03:00","imported_from_sync":false,"balance_difference":false,"divided":false,"attachments_count":0,"observation":null,"reconciled":false,"transfer_deposit_account_id":null,"attachment_id_list":[],"reconciliations":{"financial_accounts":[],"financial_transactions":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664073","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664073","method":"delete"}]}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions
-  recorded_at: Mon, 20 Mar 2017 16:49:16 GMT
+  recorded_at: Mon, 20 Mar 2017 16:58:17 GMT
 recorded_with: VCR 2.9.3

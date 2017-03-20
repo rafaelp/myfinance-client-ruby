@@ -18,7 +18,6 @@ describe Myfinance::Resources::FinancialTransaction, vcr: true do
       subject { client.financial_transactions.find_all(ent_id, da_id, page) }
 
       it "returns a 200 OK response code" do
-        puts subject.response.request.base_url
         expect(subject.response.code).to eq(200)
       end
 
@@ -35,7 +34,6 @@ describe Myfinance::Resources::FinancialTransaction, vcr: true do
         subject { client.financial_transactions.find_all(ent_id, da_id) }
 
         it "returns a 200 OK response code" do
-          puts subject.response.request.base_url
           expect(subject.response.code).to eq(200)
         end
 

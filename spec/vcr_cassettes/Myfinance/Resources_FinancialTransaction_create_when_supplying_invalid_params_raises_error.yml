@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Mon, 20 Mar 2017 16:49:16 GMT
+      - Mon, 20 Mar 2017 16:58:17 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -31,9 +31,9 @@ http_interactions:
       X-Rack-Cache:
       - invalidate, pass
       X-Request-Id:
-      - e61b7ad2409878cf496d60a6edcf0650
+      - 29f2807020efd965387c277e43d2230f
       X-Runtime:
-      - '0.084852'
+      - '0.087536'
       Content-Length:
       - '1403'
       Connection:
@@ -76,5 +76,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions
-  recorded_at: Mon, 20 Mar 2017 16:49:16 GMT
+  recorded_at: Mon, 20 Mar 2017 16:58:17 GMT
 recorded_with: VCR 2.9.3
