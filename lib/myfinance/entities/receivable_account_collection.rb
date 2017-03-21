@@ -1,7 +1,7 @@
 module Myfinance
   module Entities
     #
-    # A wrapper to Myfinance entities collection
+    # A wrapper to Myfinance receivable accounts collection
     #
     class ReceivableAccountCollection < Collection
       def build_collection
