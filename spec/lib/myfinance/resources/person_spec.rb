@@ -29,12 +29,24 @@ describe Myfinance::Resources::Person, vcr: true do
 
   describe "#find_by" do
     context "with success" do
-      let(:params) do
-        { name_equals: "Myfreecomm", person_type_in: "JuridicalPerson" }
+      it "find people by attributte name_equals" do
+        result = client.people.find_by(
+          { name_equals: "Myfreecomm", person_type_in: "JuridicalPerson" }
+        )
+        expect(result).to be_a(Myfinance::Entities::PersonCollection)
+        expect(result.collection.first.name).to eq("Myfreecomm")
       end
 
-      it "find people by attributte" do
-        result = client.people.find_by(params)
+      it "find people by attributte name_equals with special characters" do
+        result = client.people.find_by({ name_equals: "João das neves"})
+        expect(result).to be_a(Myfinance::Entities::PersonCollection)
+        expect(result.collection.first.name).to eq("João das neves")
+      end
+
+      it "find people by attributte federation_subscription_number_equals" do
+        result = client.people.find_by(
+          { federation_subscription_number_equals: "42.308.611/0001-41" }
+        )
         expect(result).to be_a(Myfinance::Entities::PersonCollection)
         expect(result.collection.first.name).to eq("Myfreecomm")
       end

@@ -54,15 +54,22 @@ describe Myfinance::Resources::ClassificationCenter, vcr: true do
 
   describe "#find_by" do
     context "when success" do
-      let(:params) do
-        { entity_id_equals: 3798, name_equals: "Centro de Custo Tal" }
-      end
-
       it "find a classification centers by name successfully" do
-        result = client.classification_centers.find_by(params)
+        result = client.classification_centers.find_by(
+          { entity_id_equals: 3798, name_equals: "Centro de Custo Tal" }
+        )
         expect(result).to be_a(entity_collection)
         expect(result.collection.first).to be_a(entity_klass)
         expect(result.collection.first.name).to eq("Centro de Custo Tal")
+      end
+
+      it "find a classification centers with special characters" do
+        result = client.classification_centers.find_by(
+          { entity_id_equals: 3798, name_equals: "Socialização 2" }
+        )
+        expect(result).to be_a(entity_collection)
+        expect(result.collection.first).to be_a(entity_klass)
+        expect(result.collection.first.name).to eq("Socialização 2")
       end
 
       it "returns a empty classification center successfully" do
