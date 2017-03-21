@@ -194,11 +194,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   </tr>
 
   <tr>
-    <th>HTTP method</th>
-    <th>Endpoint</th>
-    <th>Client method</th>
-  </tr>
-  <tr>
     <td><code>GET</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/payable_accounts#get_show" target="_blank">
@@ -210,11 +205,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
   </tr>
 
-  <tr>
-    <th>HTTP method</th>
-    <th>Endpoint</th>
-    <th>Client method</th>
-  </tr>
   <tr>
     <td><code>POST</code></td>
     <td>
@@ -293,11 +283,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   </tr>
 
   <tr>
-    <th>HTTP method</th>
-    <th>Endpoint</th>
-    <th>Client method</th>
-  </tr>
-  <tr>
     <td><code>GET</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#get_show" target="_blank">
@@ -307,11 +292,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     <td>
       <code>client.receivable_accounts.find</code>
     </td>
-  </tr>
-  <tr>
-    <th>HTTP method</th>
-    <th>Endpoint</th>
-    <th>Client method</th>
   </tr>
   <tr>
     <td><code>POST</code></td>
