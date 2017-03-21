@@ -13,7 +13,7 @@ module Myfinance
       end
 
       def find(entity_id, id)
-        request_and_build_object_response(:get, endpoint_for(id, entity_id, :show)) 
+        request_and_build_object_response(:get, endpoint_for(id, entity_id, :show))
       end
 
       #
@@ -62,7 +62,7 @@ module Myfinance
 
       private
 
-      def request_and_build_object_response(method, endpoint, params= {} )
+      def request_and_build_object_response(method, endpoint, params = {})
         http.send(method, endpoint, body: { resource_key => params }) do |response|
           respond_with_object(response, resource_key)
         end
