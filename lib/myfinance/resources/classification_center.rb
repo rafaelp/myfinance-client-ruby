@@ -46,7 +46,7 @@ module Myfinance
       def find_by(params)
         values = params.map { |k,v| "search[#{k}]=#{v}" }.join("&")
         http.get(
-          "/classification_centers?#{values.gsub(%r/\s/, '+')}", body: {}
+          URI.encode("/classification_centers?#{values}"), body: {}
         ) do |response|
           respond_with_collection(response)
         end

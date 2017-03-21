@@ -32,7 +32,7 @@ module Myfinance
       def find_by(params)
         values = params.map { |k,v| "search[#{k}]=#{v}" }.join("&")
 
-        http.get("/people?#{values}", body: {}) do |response|
+        http.get(URI.encode("/people?#{values}"), body: {}) do |response|
           respond_with_collection(response)
         end
       end
