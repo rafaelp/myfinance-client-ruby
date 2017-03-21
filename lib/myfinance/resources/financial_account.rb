@@ -60,6 +60,18 @@ module Myfinance
         end
       end
 
+      def destroy_recurrence(id, entity_id)
+        http.delete(endpoint_for(id, entity_id, :destroy_recurrence)) do |_response|
+         true
+        end 
+      end
+
+      def destroy_many(ids, entity_id)
+        http.delete(destroy_many_endpoint(ids, entity_id)) do |_response|
+          true
+        end
+      end
+
       private
 
       def request_and_build_object_response(method, endpoint, params = {})
@@ -91,7 +103,8 @@ module Myfinance
           show: "/entities/:entity_id/#{resource_key}s/:id",
           create: "/entities/:entity_id/#{resource_key}s",
           update: "/entities/:entity_id/#{resource_key}s/:id",
-          destroy: "/entities/:entity_id/#{resource_key}s/:id"
+          destroy: "/entities/:entity_id/#{resource_key}s/:id",
+          destroy_recurrence: "/entities/:entity_id/#{resource_key}s/:id/recurrence"
         }
       end
 
@@ -103,6 +116,10 @@ module Myfinance
         self.class.send(:define_method, action) do |id, entity_id, params={}|
           request_and_build_object_response(:put, endpoint_for(id, entity_id, action), params)
         end
+      end
+
+      def destroy_many_endpoint(ids, entity_id)
+        "/entities/#{entity_id}/#{resource_key}s?selected_ids=#{ids.join(",")}"
       end
     end
   end

@@ -237,4 +237,42 @@ describe Myfinance::Resources::ReceivableAccount do
       end
     end
   end
+
+  describe "#destroy_recurrence", vcr: true do
+    let(:params) { { due_date: '2015-08-15', amount: 150.99, create_as_recurrent: "annual"} }
+    let(:new_ra) { client.receivable_accounts.create(entity_id, params) }
+
+    before :each do
+      client.receivable_accounts.destroy_recurrence(new_ra.id, entity_id)
+    end
+
+    it "does not find recurrent receivable accounts" do
+      expect { client.receivable_accounts.find(entity_id, new_ra.id) }.to raise_error(Myfinance::RequestError) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+
+      expect { client.receivable_accounts.find(entity_id, new_ra.id + 1) }.to raise_error(Myfinance::RequestError) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+    end
+  end
+
+  describe "#destroy_many", vcr: true do
+    let(:params) { { due_date: '2015-08-15', amount: 150.99 } }
+    let(:new_ra) { client.receivable_accounts.create(entity_id, params) }
+    let(:new_ra2) { client.receivable_accounts.create(entity_id, params) }
+
+    before :each do
+      client.receivable_accounts.destroy_many([new_ra.id, new_ra2.id], entity_id)
+    end
+
+    it "does not find created ReceivableAccount" do
+      expect { client.receivable_accounts.find(entity_id, new_ra.id) }.to raise_error(Myfinance::RequestError) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+    end
+  end
 end

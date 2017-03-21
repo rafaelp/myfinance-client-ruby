@@ -1,0 +1,249 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"due_date":"2015-08-15","amount":150.99}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Mar 2017 17:32:33 GMT
+      ETag:
+      - '"d84a1f922360021e397fdc5519087b30"'
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771192
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWM5MTkzZDMyZWU5ZDQwZDY4OTYwZTUwMzM0NThiMDZkBjsAVA%3D%3D--818b2e3cde5a9d1d39ea5ca0e44a77ede4fc4101;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '17'
+      X-RateLimit-Reset:
+      - '2017-03-21T17:33:00Z'
+      X-Request-Id:
+      - a3d0411d33373ec751b45125627d5e72
+      X-Runtime:
+      - '0.167268'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      transfer-encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"id":1771192,"entity_id":3798,"status":1,"status_name":"unreceived","due_date":"2015-08-15","occurred_at":null,"amount":"150.99","ticket_amount":null,"interest_amount":null,"discount_amount":null,"nominal_amount":"150.99","total_amount":null,"description":null,"document":null,"document_emission_date":null,"observation":null,"remind":false,"reminded_at":null,"category_id":null,"classification_center_id":null,"expected_deposit_account_id":null,"recurrence_id":null,"person_id":null,"created_at":"2017-03-21T14:32:33-03:00","updated_at":"2017-03-21T14:32:33-03:00","competency_month":"2015-08","recurrent":false,"parcelled":false,"recurrence_period":null,"number_of_parcels":null,"current_parcel":null,"attachment_id_list":[],"financial_account_taxes_attributes":[],"reconciliations":{"financial_transactions":[],"financial_accounts":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771192","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771192","method":"delete"},{"rel":"receive","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771192/receive","method":"put"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts
+  recorded_at: Tue, 21 Mar 2017 17:32:33 GMT
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"due_date":"2015-08-15","amount":150.99}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Mar 2017 17:32:33 GMT
+      ETag:
+      - '"e1ec1640f315cab6b3d56ba7d44a2f31"'
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771193
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTEyODg5MDlkMmYxM2NjZDA3NTc3MGVhYzI1MzI2MGI4BjsAVA%3D%3D--22d87788def990b0aa2c734779045b5b0a9471ef;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '16'
+      X-RateLimit-Reset:
+      - '2017-03-21T17:33:00Z'
+      X-Request-Id:
+      - b45361729151d8f5b0112918f298f39a
+      X-Runtime:
+      - '0.232984'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      transfer-encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"id":1771193,"entity_id":3798,"status":1,"status_name":"unreceived","due_date":"2015-08-15","occurred_at":null,"amount":"150.99","ticket_amount":null,"interest_amount":null,"discount_amount":null,"nominal_amount":"150.99","total_amount":null,"description":null,"document":null,"document_emission_date":null,"observation":null,"remind":false,"reminded_at":null,"category_id":null,"classification_center_id":null,"expected_deposit_account_id":null,"recurrence_id":null,"person_id":null,"created_at":"2017-03-21T14:32:33-03:00","updated_at":"2017-03-21T14:32:33-03:00","competency_month":"2015-08","recurrent":false,"parcelled":false,"recurrence_period":null,"number_of_parcels":null,"current_parcel":null,"attachment_id_list":[],"financial_account_taxes_attributes":[],"reconciliations":{"financial_transactions":[],"financial_accounts":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771193","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771193","method":"delete"},{"rel":"receive","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771193/receive","method":"put"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts
+  recorded_at: Tue, 21 Mar 2017 17:32:34 GMT
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts?selected_ids=1771192,1771193
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Mar 2017 17:32:34 GMT
+      ETag:
+      - W/"7215ee9c7d9dc229d2921a40e899ec5f"
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTA2ZDUzZTZhYzU4YjZjZThhZmUxYWM2NjMzNWYwMTA1BjsAVA%3D%3D--3ad4d45f7a57b6732ed1239de7c7d56da770a955;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '15'
+      X-RateLimit-Reset:
+      - '2017-03-21T17:33:00Z'
+      X-Request-Id:
+      - b4e04e546338dda04e178098d89fe0f6
+      X-Runtime:
+      - '0.297024'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '21'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts?selected_ids=1771192,1771193
+  recorded_at: Tue, 21 Mar 2017 17:32:34 GMT
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771192
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache, private
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Mar 2017 17:32:34 GMT
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '14'
+      X-RateLimit-Reset:
+      - '2017-03-21T17:33:00Z'
+      X-Request-Id:
+      - a3b1af7fbf3123c4b05cedb8676d05a6
+      X-Runtime:
+      - '0.047871'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '89'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6Ik7Do28gZm9pIHBvc3PDrXZlbCBsb2NhbGl6YXIgYSBDb250YSBhIHJlY2ViZXIgc29saWNpdGFkYS4ifQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771192
+  recorded_at: Tue, 21 Mar 2017 17:32:34 GMT
+recorded_with: VCR 2.9.3
