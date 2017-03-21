@@ -239,7 +239,7 @@ describe Myfinance::Resources::ReceivableAccount do
   end
 
   describe "#destroy_recurrence", vcr: true do
-    let(:params) { { due_date: '2015-08-15', amount: 150.99, create_as_recurrent: "annual"} }
+    let(:params) { { due_date: "2015-08-15", amount: 150.99, create_as_recurrent: "annual" } }
     let(:new_ra) { client.receivable_accounts.create(entity_id, params) }
 
     before :each do
@@ -260,7 +260,7 @@ describe Myfinance::Resources::ReceivableAccount do
   end
 
   describe "#destroy_many", vcr: true do
-    let(:params) { { due_date: '2015-08-15', amount: 150.99 } }
+    let(:params) { { due_date: "2015-08-15", amount: 150.99 } }
     let(:new_ra) { client.receivable_accounts.create(entity_id, params) }
     let(:new_ra2) { client.receivable_accounts.create(entity_id, params) }
 

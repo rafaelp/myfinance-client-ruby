@@ -62,8 +62,8 @@ module Myfinance
 
       def destroy_recurrence(id, entity_id)
         http.delete(endpoint_for(id, entity_id, :destroy_recurrence)) do |_response|
-         true
-        end 
+          true
+        end
       end
 
       def destroy_many(ids, entity_id)
@@ -119,7 +119,7 @@ module Myfinance
       end
 
       def destroy_many_endpoint(ids, entity_id)
-        "/entities/#{entity_id}/#{resource_key}s?selected_ids=#{ids.join(",")}"
+        "/entities/#{entity_id}/#{resource_key}s?selected_ids=#{ids.join(',')}"
       end
     end
   end
