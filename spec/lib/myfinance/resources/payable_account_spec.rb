@@ -2,6 +2,81 @@ require "spec_helper"
 
 describe Myfinance::Resources::PayableAccount do
   let(:entity_id) { 3798 }
+  let(:pa_id) { 1235663 }
+  let(:page) { 2 }
+  let(:url) { subject.response.request.base_url }
+
+  describe "#find_all", vcr: true do
+    before :each do
+      subject.build
+    end
+    context "with pagination" do
+      subject { client.payable_accounts.find_all(entity_id, page) }
+
+      it "returns 200 OK response code" do
+        expect(subject.response.code).to eq(200)
+      end
+
+      it "returns a PayableAccount collection" do
+        expect(subject).to be_a(Myfinance::Entities::PayableAccountCollection)
+      end
+
+      it "returns a paginated URL" do
+        expect(url).to include("?page=#{page}")
+      end
+
+      context "with invalid page" do
+        subject { client.payable_accounts.find_all(entity_id, 42424242) }
+
+        it "returns empty collection" do
+          expect(subject.collection).to be_empty
+        end
+      end
+    end
+
+    context "without pagination" do
+      subject { client.payable_accounts.find_all(entity_id) }
+
+      it "returns 200 OK response code" do
+        expect(subject.response.code).to eq(200)
+      end
+
+      it "returns a PayableAccount collection" do
+        expect(subject).to be_a(Myfinance::Entities::PayableAccountCollection)
+      end
+
+      it "returns a paginated URL" do
+        expect(url).not_to include("?page=#{page}")
+      end
+
+      context "with invalid entity id" do
+        it "raises 404 not found error" do
+          expect { client.payable_accounts.find_all(nil) }.to raise_error(Myfinance::RequestError) do |e|
+            expect(e.code).to eq(404)
+            expect(e.message).to eq("Not Found")
+          end
+        end
+      end
+    end
+  end
+
+  describe "#find", vcr: true do
+    subject { client.payable_accounts.find(entity_id, pa_id) }
+
+    it "returns a PayableAccount" do
+      expect(subject).to be_a(Myfinance::Entities::PayableAccount)
+    end
+
+    context "with invalid ID" do
+      subject { client.payable_accounts.find(nil, nil) }
+
+      it "raises 404 not found error" do
+        expect { subject }.to raise_error(Myfinance::RequestError) do |e|
+          expect(e.code).to eq(404)
+        end
+      end
+    end
+  end
 
   describe "#create", vcr: true do
     let(:params) { { due_date: '2015-08-15', amount: 150.99 } }

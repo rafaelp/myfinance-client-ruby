@@ -7,6 +7,15 @@ module Myfinance
         set_method_for(pay_or_receive_method)
         set_method_for(undo_payment_or_receivement)
       end
+
+      def find_all(entity_id, page = nil)
+        request_and_build_collection_response(:get, index_endpoint(entity_id, page))
+      end
+
+      def find(entity_id, id)
+        request_and_build_object_response(:get, endpoint_for(id, entity_id, :show))
+      end
+
       #
       # Creates a payable/receivable account
       #
@@ -18,7 +27,7 @@ module Myfinance
       #   Documentation: https://app.myfinance.com.br/docs/api/receivable_accounts#post_create
       #
       def create(entity_id, params = {})
-        request_and_build_response(:post, endpoint_for(nil, entity_id, :create), params)
+        request_and_build_object_response(:post, endpoint_for(nil, entity_id, :create), params)
       end
 
       #
@@ -32,7 +41,7 @@ module Myfinance
       #   Documentation: https://app.myfinance.com.br/docs/api/receivable_accounts#put_update
       #
       def update(id, entity_id, params = {})
-        request_and_build_response(:put, endpoint_for(id, entity_id, :update), params)
+        request_and_build_object_response(:put, endpoint_for(id, entity_id, :update), params)
       end
 
       #
@@ -53,10 +62,23 @@ module Myfinance
 
       private
 
-      def request_and_build_response(method, endpoint, params={})
+      def request_and_build_object_response(method, endpoint, params = {})
         http.send(method, endpoint, body: { resource_key => params }) do |response|
           respond_with_object(response, resource_key)
         end
+      end
+
+      def request_and_build_collection_response(method, endpoint)
+        http.send(method, endpoint, body: {}) do |response|
+          respond_with_collection(response)
+        end
+      end
+
+      def index_endpoint(entity_id, page)
+        index_path = parameterize_endpoint(nil, entity_id, :index)
+
+        return index_path unless page
+        index_path + "?page=#{page}"
       end
 
       def endpoint_for(id, entity_id, key)
@@ -65,6 +87,8 @@ module Myfinance
 
       def default_endpoints
         {
+          index: "/entities/:entity_id/#{resource_key}s",
+          show: "/entities/:entity_id/#{resource_key}s/:id",
           create: "/entities/:entity_id/#{resource_key}s",
           update: "/entities/:entity_id/#{resource_key}s/:id",
           destroy: "/entities/:entity_id/#{resource_key}s/:id"
@@ -77,7 +101,7 @@ module Myfinance
 
       def set_method_for(action)
         self.class.send(:define_method, action) do |id, entity_id, params={}|
-          request_and_build_response(:put, endpoint_for(id, entity_id, action), params)
+          request_and_build_object_response(:put, endpoint_for(id, entity_id, action), params)
         end
       end
     end

@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1235663
+    body:
+      encoding: UTF-8
+      string: '{"payable_account":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 21 Mar 2017 15:52:44 GMT
+      ETag:
+      - W/"dae88b55665f6c01de246f8223b426ff"
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '10'
+      X-RateLimit-Reset:
+      - '2017-03-21T15:53:00Z'
+      X-Request-Id:
+      - 60e6df7a2e61556e610cd75840127a66
+      X-Runtime:
+      - '0.048786'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '578'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYXlhYmxlX2FjY291bnQiOnsiaWQiOjEyMzU2NjMsImVudGl0eV9pZCI6Mzc5OCwic3RhdHVzIjoxLCJzdGF0dXNfbmFtZSI6InVucGFpZCIsImR1ZV9kYXRlIjoiMjAxNS0wOC0xMiIsIm9jY3VycmVkX2F0IjpudWxsLCJhbW91bnQiOiIwLjAxIiwidGlja2V0X2Ftb3VudCI6bnVsbCwiaW50ZXJlc3RfYW1vdW50IjpudWxsLCJkaXNjb3VudF9hbW91bnQiOm51bGwsIm5vbWluYWxfYW1vdW50IjoiMC4wMSIsInRvdGFsX2Ftb3VudCI6bnVsbCwiZGVzY3JpcHRpb24iOiJDb250YSByZXN1bHRhbnRlIGRhIGludGVncmHDp8OjbyBNeWZpbmFuY2UgfiBSZXhwZW5zZSIsImRvY3VtZW50IjpudWxsLCJkb2N1bWVudF9lbWlzc2lvbl9kYXRlIjpudWxsLCJvYnNlcnZhdGlvbiI6Imh0dHA6Ly90ZXN0Lmhvc3QvYWR2YW5jZW1lbnRzLzIyNjEiLCJyZW1pbmQiOmZhbHNlLCJyZW1pbmRlZF9hdCI6bnVsbCwiY2F0ZWdvcnlfaWQiOm51bGwsImNsYXNzaWZpY2F0aW9uX2NlbnRlcl9pZCI6bnVsbCwiZXhwZWN0ZWRfZGVwb3NpdF9hY2NvdW50X2lkIjpudWxsLCJyZWN1cnJlbmNlX2lkIjpudWxsLCJwZXJzb25faWQiOm51bGwsImNyZWF0ZWRfYXQiOiIyMDE1LTA4LTE5VDEyOjIyOjU3LTAzOjAwIiwidXBkYXRlZF9hdCI6IjIwMTUtMDgtMTlUMTI6MjI6NTctMDM6MDAiLCJjb21wZXRlbmN5X21vbnRoIjoiMjAxNS0wOCIsInJlY3VycmVudCI6ZmFsc2UsInBhcmNlbGxlZCI6ZmFsc2UsInJlY3VycmVuY2VfcGVyaW9kIjpudWxsLCJudW1iZXJfb2ZfcGFyY2VscyI6bnVsbCwiY3VycmVudF9wYXJjZWwiOm51bGwsImF0dGFjaG1lbnRfaWRfbGlzdCI6W10sImZpbmFuY2lhbF9hY2NvdW50X3RheGVzX2F0dHJpYnV0ZXMiOltdLCJyZWNvbmNpbGlhdGlvbnMiOnsiZmluYW5jaWFsX3RyYW5zYWN0aW9ucyI6W10sImZpbmFuY2lhbF9hY2NvdW50cyI6W119LCJsaW5rcyI6W3sicmVsIjoic2VsZiIsImhyZWYiOiJodHRwczovL3NhbmRib3gubXlmaW5hbmNlLmNvbS5ici9lbnRpdGllcy8zNzk4L3BheWFibGVfYWNjb3VudHMvMTIzNTY2MyIsIm1ldGhvZCI6ImdldCJ9LHsicmVsIjoiZGVzdHJveSIsImhyZWYiOiJodHRwczovL3NhbmRib3gubXlmaW5hbmNlLmNvbS5ici9lbnRpdGllcy8zNzk4L3BheWFibGVfYWNjb3VudHMvMTIzNTY2MyIsIm1ldGhvZCI6ImRlbGV0ZSJ9LHsicmVsIjoicGF5IiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5teWZpbmFuY2UuY29tLmJyL2VudGl0aWVzLzM3OTgvcGF5YWJsZV9hY2NvdW50cy8xMjM1NjYzL3BheSIsIm1ldGhvZCI6InB1dCJ9XX19
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1235663
+  recorded_at: Tue, 21 Mar 2017 15:52:44 GMT
+recorded_with: VCR 2.9.3

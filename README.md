@@ -182,6 +182,30 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     <th>Client method</th>
   </tr>
   <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#get_index" target="_blank">
+        /entities/:entity_id/payable_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.find_all</code>
+    </td>
+  </tr>
+
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#get_show" target="_blank">
+        /entities/:entity_id/payable_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.find</code>
+    </td>
+  </tr>
+
+  <tr>
     <td><code>POST</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/payable_accounts#post_create" target="_blank">
@@ -245,6 +269,29 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     <th>HTTP method</th>
     <th>Endpoint</th>
     <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#get_index" target="_blank">
+        /entities/:entity_id/receivable_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.find_all</code>
+    </td>
+  </tr>
+
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#get_show" target="_blank">
+        /entities/:entity_id/receivable_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.find</code>
+    </td>
   </tr>
   <tr>
     <td><code>POST</code></td>
