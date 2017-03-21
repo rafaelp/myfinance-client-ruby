@@ -11,6 +11,7 @@ describe Myfinance::Resources::ReceivableAccount do
     before :each do
       subject.build
     end
+    
     context "with pagination" do
       subject { client.receivable_accounts.find_all(entity_id, page) }
 
