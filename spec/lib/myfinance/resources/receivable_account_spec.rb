@@ -6,7 +6,6 @@ describe Myfinance::Resources::ReceivableAccount do
   let(:page) { 2 }
   let(:url) { subject.response.request.base_url }
 
-
   describe "#find_all", vcr: true do
     before :each do
       subject.build
