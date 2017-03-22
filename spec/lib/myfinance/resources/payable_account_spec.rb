@@ -5,6 +5,7 @@ describe Myfinance::Resources::PayableAccount do
   let(:pa_id) { 1235663 }
   let(:page) { 2 }
   let(:url) { subject.response.request.base_url }
+  let(:request_error) { Myfinance::RequestError }
 
   describe "#find_all", vcr: true do
     before :each do
@@ -220,7 +221,7 @@ describe Myfinance::Resources::PayableAccount do
   end
 
   describe "#destroy", vcr: true do
-    subject { client.payable_accounts.destroy(1215631, entity_id) }
+    subject { client.payable_accounts.destroy(entity_id, 1215631) }
 
     context "when payable account exists" do
       it "returns true" do
@@ -229,10 +230,48 @@ describe Myfinance::Resources::PayableAccount do
     end
 
     context "when payable account does not exist" do
-      subject { client.payable_accounts.destroy(1215631099, entity_id) }
+      subject { client.payable_accounts.destroy(entity_id, 1215631099) }
 
       it "raises request error" do
         expect { subject }.to raise_error(Myfinance::RequestError)
+      end
+    end
+  end
+
+  describe "#destroy_recurrence", vcr: true do
+    let(:params) { { due_date: "2015-08-15", amount: 150.99, create_as_recurrent: "annual" } }
+    let(:new_pa) { client.payable_accounts.create(entity_id, params) }
+
+    before :each do
+      client.payable_accounts.destroy_recurrence(entity_id, new_pa.id)
+    end
+
+    it "does not find recurrent payable accounts" do
+      expect { client.payable_accounts.find(entity_id, new_pa.id) }.to raise_error(request_error) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+
+      expect { client.payable_accounts.find(entity_id, new_pa.id + 1) }.to raise_error(request_error) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+    end
+  end
+
+  describe "#destroy_many", vcr: true do
+    let(:params) { { due_date: "2015-08-15", amount: 150.99 } }
+    let(:new_pa) { client.payable_accounts.create(entity_id, params) }
+    let(:new_pa2) { client.payable_accounts.create(entity_id, params) }
+
+    before :each do
+      client.payable_accounts.destroy_many(entity_id, [new_pa.id, new_pa2.id])
+    end
+
+    it "does not find created PayableAccount" do
+      expect { client.payable_accounts.find(entity_id, new_pa.id) }.to raise_error(request_error) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
       end
     end
   end

@@ -1,0 +1,250 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/payable_accounts
+    body:
+      encoding: UTF-8
+      string: '{"payable_account":{"due_date":"2015-08-15","amount":150.99}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Mar 2017 20:01:49 GMT
+      ETag:
+      - '"defb349a4dea90b97915afdd925beff5"'
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771317
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTU4OWI0Mzg1MTA1MWM3ZWJlZjc5NmE4YzQ2OTk3ZDdhBjsAVA%3D%3D--3795b5671eb2a73b9b48e86c4b260491afec4eac;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '15'
+      X-RateLimit-Reset:
+      - '2017-03-22T20:02:00Z'
+      X-Request-Id:
+      - bd471864dccdf6b4502e3b3993316624
+      X-Runtime:
+      - '0.191064'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '1208'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"payable_account":{"id":1771317,"entity_id":3798,"status":1,"status_name":"unpaid","due_date":"2015-08-15","occurred_at":null,"amount":"150.99","ticket_amount":null,"interest_amount":null,"discount_amount":null,"nominal_amount":"150.99","total_amount":null,"description":null,"document":null,"document_emission_date":null,"observation":null,"remind":false,"reminded_at":null,"category_id":null,"classification_center_id":null,"expected_deposit_account_id":null,"recurrence_id":null,"person_id":null,"created_at":"2017-03-22T17:01:49-03:00","updated_at":"2017-03-22T17:01:49-03:00","competency_month":"2015-08","recurrent":false,"parcelled":false,"recurrence_period":null,"number_of_parcels":null,"current_parcel":null,"attachment_id_list":[],"financial_account_taxes_attributes":[],"reconciliations":{"financial_transactions":[],"financial_accounts":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771317","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771317","method":"delete"},{"rel":"pay","href":"https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771317/pay","method":"put"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/payable_accounts
+  recorded_at: Wed, 22 Mar 2017 20:01:49 GMT
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/payable_accounts
+    body:
+      encoding: UTF-8
+      string: '{"payable_account":{"due_date":"2015-08-15","amount":150.99}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Mar 2017 20:01:49 GMT
+      ETag:
+      - '"1550caedc7a90aaf42d314418492ddc6"'
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771318
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWI0MDg1YzAxNTE1ZTIwY2IzMjNjODUzMDQ5MzNmYTBhBjsAVA%3D%3D--edb1c698121803cbc8f5729e088eb8eb05232157;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '14'
+      X-RateLimit-Reset:
+      - '2017-03-22T20:02:00Z'
+      X-Request-Id:
+      - 4d93232e2b189b06953caf515a05b376
+      X-Runtime:
+      - '0.178384'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      transfer-encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"payable_account":{"id":1771318,"entity_id":3798,"status":1,"status_name":"unpaid","due_date":"2015-08-15","occurred_at":null,"amount":"150.99","ticket_amount":null,"interest_amount":null,"discount_amount":null,"nominal_amount":"150.99","total_amount":null,"description":null,"document":null,"document_emission_date":null,"observation":null,"remind":false,"reminded_at":null,"category_id":null,"classification_center_id":null,"expected_deposit_account_id":null,"recurrence_id":null,"person_id":null,"created_at":"2017-03-22T17:01:49-03:00","updated_at":"2017-03-22T17:01:49-03:00","competency_month":"2015-08","recurrent":false,"parcelled":false,"recurrence_period":null,"number_of_parcels":null,"current_parcel":null,"attachment_id_list":[],"financial_account_taxes_attributes":[],"reconciliations":{"financial_transactions":[],"financial_accounts":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771318","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771318","method":"delete"},{"rel":"pay","href":"https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771318/pay","method":"put"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/payable_accounts
+  recorded_at: Wed, 22 Mar 2017 20:01:49 GMT
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/entities/3798/payable_accounts?selected_ids=1771317,1771318
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Mar 2017 20:01:49 GMT
+      ETag:
+      - W/"7215ee9c7d9dc229d2921a40e899ec5f"
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTg0NTgxMjUxZTcyMjQ3M2FlMmUyZGVkNjM4YzhlZjhlBjsAVA%3D%3D--48be3d7379a516be7edc9e4a953481d46d15d065;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '13'
+      X-RateLimit-Reset:
+      - '2017-03-22T20:02:00Z'
+      X-Request-Id:
+      - 53ccd0a9d4d03cc9c1ad31aa235ff1b2
+      X-Runtime:
+      - '0.270412'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '21'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/payable_accounts?selected_ids=1771317,1771318
+  recorded_at: Wed, 22 Mar 2017 20:01:49 GMT
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771317
+    body:
+      encoding: UTF-8
+      string: '{"payable_account":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache, private
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Mar 2017 20:01:50 GMT
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '12'
+      X-RateLimit-Reset:
+      - '2017-03-22T20:02:00Z'
+      X-Request-Id:
+      - ba5d9d4071b2e1482254a2b2b8734856
+      X-Runtime:
+      - '0.040082'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '86'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6Ik7Do28gZm9pIHBvc3PDrXZlbCBsb2NhbGl6YXIgYSBDb250
+        YSBhIHBhZ2FyIHNvbGljaXRhZGEuIn0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/payable_accounts/1771317
+  recorded_at: Wed, 22 Mar 2017 20:01:50 GMT
+recorded_with: VCR 2.9.3

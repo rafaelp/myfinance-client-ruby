@@ -5,6 +5,7 @@ describe Myfinance::Resources::ReceivableAccount do
   let(:ra_id) { 1320786 }
   let(:page) { 2 }
   let(:url) { subject.response.request.base_url }
+  let(:request_error) { Myfinance::RequestError }
 
   describe "#find_all", vcr: true do
     before :each do
@@ -52,7 +53,7 @@ describe Myfinance::Resources::ReceivableAccount do
 
       context "with invalid entity id" do
         it "raises 404 not found error" do
-          expect { client.receivable_accounts.find_all(nil) }.to raise_error(Myfinance::RequestError) do |e|
+          expect { client.receivable_accounts.find_all(nil) }.to raise_error(request_error) do |e|
             expect(e.code).to eq(404)
             expect(e.message).to eq("Not Found")
           end
@@ -72,7 +73,7 @@ describe Myfinance::Resources::ReceivableAccount do
       subject { client.receivable_accounts.find(nil, nil) }
 
       it "raises 404 not found error" do
-        expect { subject }.to raise_error(Myfinance::RequestError) do |e|
+        expect { subject }.to raise_error(request_error) do |e|
           expect(e.code).to eq(404)
         end
       end
@@ -137,26 +138,26 @@ describe Myfinance::Resources::ReceivableAccount do
     context "when any data is invalid" do
       let(:params) { { due_date: '', amount: 150.99 } }
 
-      it "raises Myfinance::RequestError" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+      it "raises request_error" do
+        expect { subject }.to raise_error(request_error)
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 422, message: "", body: { "competency_month" => ["não pode ser vazio"], "due_date" => ["não é uma data válida"] }).and_call_original
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect(request_error).to receive(:new).with(code: 422, message: "", body: { "competency_month" => ["não pode ser vazio"], "due_date" => ["não é uma data válida"] }).and_call_original
+        expect { subject }.to raise_error(request_error)
       end
     end
 
     context "when entity does not exist" do
       subject { client.receivable_accounts.create(555, params) }
 
-      it "raises Myfinance::RequestError" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+      it "raises request_error" do
+        expect { subject }.to raise_error(request_error)
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: { "error" => "Você não tem permissão para acessar este recurso." }).and_call_original
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect(request_error).to receive(:new).with(code: 403, message: "Forbidden", body: { "error" => "Você não tem permissão para acessar este recurso." }).and_call_original
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
@@ -182,7 +183,7 @@ describe Myfinance::Resources::ReceivableAccount do
       let(:params) { { total_amount: nil, occurred_at: '2015-08-05', amount: 150.99 } }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
@@ -215,13 +216,13 @@ describe Myfinance::Resources::ReceivableAccount do
       subject { client.receivable_accounts.update(9999999, entity_id, { amount: 100.00 }) }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
 
   describe "#destroy", vcr: true do
-    subject { client.receivable_accounts.destroy(1215634, entity_id) }
+    subject { client.receivable_accounts.destroy(entity_id, 1215634) }
 
     context "when receivable account exists" do
       it "returns true" do
@@ -230,10 +231,10 @@ describe Myfinance::Resources::ReceivableAccount do
     end
 
     context "when receivable account does not exist" do
-      subject { client.receivable_accounts.destroy(1215631099, entity_id) }
+      subject { client.receivable_accounts.destroy(entity_id, 1215631099) }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
@@ -243,16 +244,16 @@ describe Myfinance::Resources::ReceivableAccount do
     let(:new_ra) { client.receivable_accounts.create(entity_id, params) }
 
     before :each do
-      client.receivable_accounts.destroy_recurrence(new_ra.id, entity_id)
+      client.receivable_accounts.destroy_recurrence(entity_id, new_ra.id)
     end
 
     it "does not find recurrent receivable accounts" do
-      expect { client.receivable_accounts.find(entity_id, new_ra.id) }.to raise_error(Myfinance::RequestError) do |e|
+      expect { client.receivable_accounts.find(entity_id, new_ra.id) }.to raise_error(request_error) do |e|
         expect(e.code).to eq(404)
         expect(e.message).to eq("Not Found")
       end
 
-      expect { client.receivable_accounts.find(entity_id, new_ra.id + 1) }.to raise_error(Myfinance::RequestError) do |e|
+      expect { client.receivable_accounts.find(entity_id, new_ra.id + 1) }.to raise_error(request_error) do |e|
         expect(e.code).to eq(404)
         expect(e.message).to eq("Not Found")
       end
@@ -265,11 +266,11 @@ describe Myfinance::Resources::ReceivableAccount do
     let(:new_ra2) { client.receivable_accounts.create(entity_id, params) }
 
     before :each do
-      client.receivable_accounts.destroy_many([new_ra.id, new_ra2.id], entity_id)
+      client.receivable_accounts.destroy_many(entity_id, [new_ra.id, new_ra2.id])
     end
 
     it "does not find created ReceivableAccount" do
-      expect { client.receivable_accounts.find(entity_id, new_ra.id) }.to raise_error(Myfinance::RequestError) do |e|
+      expect { client.receivable_accounts.find(entity_id, new_ra.id) }.to raise_error(request_error) do |e|
         expect(e.code).to eq(404)
         expect(e.message).to eq("Not Found")
       end

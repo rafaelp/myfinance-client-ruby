@@ -54,19 +54,19 @@ module Myfinance
       #   Documentation: https://app.myfinance.com.br/docs/api/payable_accounts#delete_destroy
       #   Documentation: https://app.myfinance.com.br/docs/api/receivable_accounts#delete_destroy
       #
-      def destroy(id, entity_id)
+      def destroy(entity_id, id)
         http.delete(endpoint_for(id, entity_id, :destroy)) do |_response|
           true
         end
       end
 
-      def destroy_recurrence(id, entity_id)
+      def destroy_recurrence(entity_id, id)
         http.delete(endpoint_for(id, entity_id, :destroy_recurrence)) do |_response|
           true
         end
       end
 
-      def destroy_many(ids, entity_id)
+      def destroy_many(entity_id, ids)
         http.delete(destroy_many_endpoint(ids, entity_id)) do |_response|
           true
         end
