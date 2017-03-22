@@ -40,7 +40,7 @@ module Myfinance
       #   Documentation: https://app.myfinance.com.br/docs/api/payable_accounts#put_update
       #   Documentation: https://app.myfinance.com.br/docs/api/receivable_accounts#put_update
       #
-      def update(id, entity_id, params = {})
+      def update(entity_id, id, params = {})
         request_and_build_object_response(:put, endpoint_for(id, entity_id, :update), params)
       end
 
