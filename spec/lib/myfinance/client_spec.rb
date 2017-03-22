@@ -138,4 +138,11 @@ describe Myfinance::Client do
       subject.credit_card_transactions
     end
   end
+
+  describe "#reconciles" do
+    it "instantiates a new Myfinance::Resources::Reconcile" do
+      expect(Myfinance::Resources::Reconcile).to receive(:new).with(subject.http)
+      subject.reconciles
+    end
+  end
 end

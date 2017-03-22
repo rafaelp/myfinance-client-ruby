@@ -71,5 +71,9 @@ module Myfinance
     def credit_card_transactions
       Myfinance::Resources::CreditCardTransaction.new(http)
     end
+
+    def reconciles
+      Myfinance::Resources::Reconcile.new(http)
+    end
   end
 end

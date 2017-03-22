@@ -1,0 +1,190 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"due_date":"2017-01-01","amount":150.0,"occurred_at":"2017-01-01","total_amount":150.0}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Mar 2017 18:24:03 GMT
+      ETag:
+      - '"4696b5b5c27330c0a7343ffb435b1c2e"'
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771297
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTk0MGI2NWZkY2JjZTcwNzI1NWM3NjQ3OGQ3OGI5MjQzBjsAVA%3D%3D--ce1a1c4089a2d746dbba9aaad2e9f47336754990;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-22T18:25:00Z'
+      X-Request-Id:
+      - abe5d1a777b52fd1bcdf11827385b18c
+      X-Runtime:
+      - '0.137897'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      transfer-encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"id":1771297,"entity_id":3798,"status":2,"status_name":"received","due_date":"2017-01-01","occurred_at":"2017-01-01","amount":"150.0","ticket_amount":null,"interest_amount":null,"discount_amount":null,"nominal_amount":"150.0","total_amount":"150.0","description":null,"document":null,"document_emission_date":null,"observation":null,"remind":false,"reminded_at":null,"category_id":null,"classification_center_id":null,"expected_deposit_account_id":null,"recurrence_id":null,"person_id":null,"created_at":"2017-03-22T15:24:03-03:00","updated_at":"2017-03-22T15:24:03-03:00","competency_month":"2017-01","recurrent":false,"parcelled":false,"recurrence_period":null,"number_of_parcels":null,"current_parcel":null,"attachment_id_list":[],"financial_account_taxes_attributes":[],"reconciliations":{"financial_transactions":[],"financial_accounts":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771297","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771297","method":"delete"},{"rel":"undo_receivement","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771297/undo_receivement","method":"put"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts
+  recorded_at: Wed, 22 Mar 2017 18:24:03 GMT
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions
+    body:
+      encoding: UTF-8
+      string: '{"financial_transaction":{"type":"Credit","amount":150.0,"occurred_at":"2017-01-01"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Mar 2017 18:24:04 GMT
+      ETag:
+      - '"a22266a1501ad37c30d19685834a045d"'
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664130
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BzohbGFzdF91c2VkX2RlcG9zaXRfYWNjb3VudF9pZGkCvDdJIg9zZXNzaW9uX2lkBjoGRVRJIiU4ZjFlYzUzMTk0OTM5ODQxMmQ1YzcyYjM2NjZlMzgxYQY7BlQ%3D--260104581aead2233e81733d287dc564c827c97e;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-03-22T18:25:00Z'
+      X-Request-Id:
+      - f868b7ff516095fe48798a4f14389a24
+      X-Runtime:
+      - '0.202369'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '1017'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"financial_transaction":{"id":1664130,"guid":null,"type":"Credit","absolute_amount":"150.0","amount":"150.0","occurred_at":"2017-01-01","document":null,"original_description":null,"user_description":null,"bank_statement_id":null,"classification_center_id":null,"deposit_account_id":14268,"person_id":null,"parent_id":null,"currency_id":1,"category_id":null,"transfer_id":null,"created_at":"2017-03-22T15:24:03-03:00","updated_at":"2017-03-22T15:24:03-03:00","imported_from_sync":false,"balance_difference":false,"divided":false,"attachments_count":0,"observation":null,"reconciled":false,"transfer_deposit_account_id":null,"attachment_id_list":[],"reconciliations":{"financial_accounts":[],"financial_transactions":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664130","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664130","method":"delete"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions
+  recorded_at: Wed, 22 Mar 2017 18:24:04 GMT
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/reconciles
+    body:
+      encoding: UTF-8
+      string: '{"selected_financial_account_ids":[1771297],"selected_financial_transaction_ids":[1664130]}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Mar 2017 18:24:04 GMT
+      ETag:
+      - W/"cee3f1701a28655c4e35d7034890cfe6"
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWQyY2JiYTYwMGNhNWY0NmE4NGExNGUxOTI2YjkwZmQ0BjsAVA%3D%3D--ec217b9c8fd0aa8cf8dae2bf9bb6943aae638173;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '17'
+      X-RateLimit-Reset:
+      - '2017-03-22T18:25:00Z'
+      X-Request-Id:
+      - ce321b146297a0847e32f55529026199
+      X-Runtime:
+      - '0.358461'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      transfer-encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"financial_transactions":[{"id":1664130,"guid":null,"type":"Credit","absolute_amount":"150.0","amount":"150.0","occurred_at":"2017-01-01","document":null,"original_description":null,"user_description":null,"bank_statement_id":null,"classification_center_id":null,"deposit_account_id":14268,"person_id":null,"parent_id":null,"currency_id":1,"category_id":null,"transfer_id":null,"created_at":"2017-03-22T15:24:03-03:00","updated_at":"2017-03-22T15:24:04-03:00","imported_from_sync":false,"balance_difference":false,"divided":false,"attachments_count":0,"observation":null,"reconciled":true,"transfer_deposit_account_id":null,"attachment_id_list":[],"reconciliations":{"financial_accounts":[],"financial_transactions":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664130","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664130","method":"delete"}]}],"financial_accounts":[{"id":1771297,"entity_id":3798,"status":3,"status_name":"reconciled","due_date":"2017-01-01","occurred_at":"2017-01-01","amount":"150.0","ticket_amount":null,"interest_amount":null,"discount_amount":null,"nominal_amount":"150.0","total_amount":"150.0","description":null,"document":null,"document_emission_date":null,"observation":null,"remind":false,"reminded_at":null,"category_id":null,"classification_center_id":null,"expected_deposit_account_id":14268,"recurrence_id":null,"person_id":null,"created_at":"2017-03-22T15:24:03-03:00","updated_at":"2017-03-22T15:24:04-03:00","competency_month":"2017-01","recurrent":false,"parcelled":false,"recurrence_period":null,"number_of_parcels":null,"current_parcel":null,"attachment_id_list":[],"financial_account_taxes_attributes":[],"reconciliations":{"financial_transactions":[{"id":1664130,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/financial_transactions/1664130","method":"get"}]}],"financial_accounts":[]},"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771297","method":"get"},{"rel":"destroy","href":"https://sandbox.myfinance.com.br/entities/3798/receivable_accounts/1771297","method":"delete"}]}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/reconciles
+  recorded_at: Wed, 22 Mar 2017 18:24:04 GMT
+recorded_with: VCR 2.9.3
