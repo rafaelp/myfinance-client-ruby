@@ -11,7 +11,7 @@ module Myfinance
       end
 
       private
-      
+
       def create_collection(type, attributes)
         klass = klass_name(type)
 
