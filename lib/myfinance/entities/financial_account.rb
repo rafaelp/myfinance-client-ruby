@@ -10,7 +10,7 @@ module Myfinance
         :competency_month].each { |k| attribute k, String }
 
       [:amount, :interest_amount, :discount_amount, :total_amount, :ticket_amount].each do |k|
-        attribute k, Float
+        attribute k, Decimal
       end
 
       [:remind, :income_tax_relevant, :recurrent, :parcelled, :ticket_amount].each do |k|

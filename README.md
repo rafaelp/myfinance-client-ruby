@@ -62,6 +62,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [Taxes API](https://app.myfinance.com.br/docs/api/taxes) as `client.taxes`
 * [CreditCards API](https://app.myfinance.com.br/docs/api/credit_cards) as `client.credit_cards`
 * [CreditCardsTransactions API](https://app.myfinance.com.br/docs/api/credit_cards_transactions) as `client.credit_cards_transactions`
+* [Reconciles API](https://app.myfinance.com.br/docs/api/reconciles) as `client.reconciles`
 
 ### Endpoints
 
@@ -991,6 +992,26 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   </tr>
 </table>
 
+#### [Reconciles](https://app.myfinance.com.br/docs/api/reconciles)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/reconciles#post_reconciles" target="_blank">
+        /entities/:entity_id/reconciles
+      </a>
+    </td>
+    <td>
+      <code>client.reconciles.reconcile</code>
+    </td>
+  </tr>
+</table>
 
 ### Configuration
 
