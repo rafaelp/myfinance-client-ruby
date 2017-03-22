@@ -260,6 +260,29 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       <code>client.payable_accounts.destroy</code>
     </td>
   </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#delete_destroy_as_recurrent" target="_blank">
+        /entities/:entity_id/payable_accounts/:id/recurrence
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.destroy_recurrence</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/payable_accounts#delete_destroy_many" target="_blank">
+        /entities/:entity_id/payable_accounts?selected_ids=:id1,id2,id3
+      </a>
+    </td>
+    <td>
+      <code>client.payable_accounts.destroy_many</code>
+    </td>
+  </tr>
+
 </table>
 
 #### [ReceivableAccounts](https://app.myfinance.com.br/docs/api/receivable_accounts)
@@ -346,6 +369,28 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.receivable_accounts.destroy</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#delete_destroy_as_recurrent" target="_blank">
+        /entities/:entity_id/receivable_accounts/:id/recurrence
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.destroy_recurrence</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/receivable_accounts#delete_destroy_many" target="_blank">
+        /entities/:entity_id/receivable_accounts?selected_ids=:id1,id2,id3
+      </a>
+    </td>
+    <td>
+      <code>client.receivable_accounts.destroy_many</code>
     </td>
   </tr>
 </table>
