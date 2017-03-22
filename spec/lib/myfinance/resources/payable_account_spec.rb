@@ -52,7 +52,7 @@ describe Myfinance::Resources::PayableAccount do
 
       context "with invalid entity id" do
         it "raises 404 not found error" do
-          expect { client.payable_accounts.find_all(nil) }.to raise_error(Myfinance::RequestError) do |e|
+          expect { client.payable_accounts.find_all(nil) }.to raise_error(request_error) do |e|
             expect(e.code).to eq(404)
             expect(e.message).to eq("Not Found")
           end
@@ -72,7 +72,7 @@ describe Myfinance::Resources::PayableAccount do
       subject { client.payable_accounts.find(nil, nil) }
 
       it "raises 404 not found error" do
-        expect { subject }.to raise_error(Myfinance::RequestError) do |e|
+        expect { subject }.to raise_error(request_error) do |e|
           expect(e.code).to eq(404)
         end
       end
@@ -137,26 +137,28 @@ describe Myfinance::Resources::PayableAccount do
     context "when any data is invalid" do
       let(:params) { { due_date: '', amount: 150.99 } }
 
-      it "raises Myfinance::RequestError" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+      it "raises request_error" do
+        expect { subject }.to raise_error(request_error)
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 422, message: "", body: { "competency_month" => ["não pode ser vazio"], "due_date" => ["não é uma data válida"] }).and_call_original
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        body = { "competency_month" => ["não pode ser vazio"], "due_date" => ["não é uma data válida"] }
+        expect(request_error).to receive(:new).with(code: 422, message: "", body: body).and_call_original
+        expect { subject }.to raise_error(request_error)
       end
     end
 
     context "when entity does not exist" do
       subject { client.payable_accounts.create(555, params) }
 
-      it "raises Myfinance::RequestError" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+      it "raises request_error" do
+        expect { subject }.to raise_error(request_error)
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: {"error" => "Você não tem permissão para acessar este recurso." }).and_call_original
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        body = {"error" => "Você não tem permissão para acessar este recurso." }
+        expect(request_error).to receive(:new).with(code: 403, message: "Forbidden", body: body).and_call_original
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
@@ -182,7 +184,7 @@ describe Myfinance::Resources::PayableAccount do
       let(:params) { { total_amount: nil, occurred_at: '2015-08-05', amount: 150.99 } }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
@@ -215,7 +217,7 @@ describe Myfinance::Resources::PayableAccount do
       subject { client.payable_accounts.update(9999999, entity_id, { amount: 100.00 }) }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
@@ -233,7 +235,7 @@ describe Myfinance::Resources::PayableAccount do
       subject { client.payable_accounts.destroy(entity_id, 1215631099) }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
       end
     end
   end

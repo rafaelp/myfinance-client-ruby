@@ -112,9 +112,7 @@ describe Myfinance::Resources::Category, vcr: true do
       end
 
       it "raises Myfinance::RequestError with 422 status core" do
-        expect {
-          result = client.categories.update(548083, { name: "" })
-        }.to raise_error(Myfinance::RequestError) do |error|
+        expect { client.categories.update(548083, { name: "" }) }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(422)
         end
       end
