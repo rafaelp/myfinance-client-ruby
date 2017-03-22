@@ -36,6 +36,8 @@ require "myfinance/entities/tax"
 require "myfinance/entities/tax_collection"
 require "myfinance/entities/credit_card"
 require "myfinance/entities/credit_card_collection"
+require "myfinance/entities/credit_card_transaction"
+require "myfinance/entities/credit_card_transaction_collection"
 
 require "myfinance/resources/base"
 require "myfinance/resources/entity"
@@ -52,6 +54,7 @@ require "myfinance/resources/person"
 require "myfinance/resources/webhook"
 require "myfinance/resources/tax"
 require "myfinance/resources/credit_card"
+require "myfinance/resources/credit_card_transaction"
 
 module Myfinance
   def self.configuration

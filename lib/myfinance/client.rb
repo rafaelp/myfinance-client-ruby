@@ -67,5 +67,9 @@ module Myfinance
     def credit_cards
       Myfinance::Resources::CreditCard.new(http)
     end
+
+    def credit_card_transactions
+      Myfinance::Resources::CreditCardTransaction.new(http)
+    end
   end
 end

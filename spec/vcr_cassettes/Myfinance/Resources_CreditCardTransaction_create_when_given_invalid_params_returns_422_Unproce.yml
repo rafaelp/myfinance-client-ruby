@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions
+    body:
+      encoding: UTF-8
+      string: '{"credit_card_transaction":{"amount":"0.199e3","description":"O Guia"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic MDY1N2JhYzcwZmRmNWMwNmNlODIyNzE5NTY4ZjM2MzZhOWEwN2I4N2JhNjE3ZWM3Olg=
+      ACCOUNT_ID:
+      - 3682
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 16 Mar 2017 14:20:04 GMT
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTEwMDFkYTVmODE1MzQ5YzZlYjY2MDUyNTU2ZmY0NWM3BjsAVA%3D%3D--d98e768c549e8f824e005c40f40f788aa9142a73;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '11'
+      X-RateLimit-Reset:
+      - '2017-03-16T14:21:00Z'
+      X-Request-Id:
+      - 401e272efddebc3614b2d0139a55345a
+      X-Runtime:
+      - '0.059623'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '43'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"occurred_at":["n\u00e3o pode ser vazio"]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions
+  recorded_at: Thu, 16 Mar 2017 14:20:04 GMT
+recorded_with: VCR 2.9.3

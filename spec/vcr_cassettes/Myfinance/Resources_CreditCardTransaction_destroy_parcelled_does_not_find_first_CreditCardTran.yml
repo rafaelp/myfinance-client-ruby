@@ -1,0 +1,182 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions
+    body:
+      encoding: UTF-8
+      string: '{"credit_card_transaction":{"amount":"0.199e3","occurred_at":"2017-01-01","number_of_parcels":2,"credit_card_id":73}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic MDY1N2JhYzcwZmRmNWMwNmNlODIyNzE5NTY4ZjM2MzZhOWEwN2I4N2JhNjE3ZWM3Olg=
+      ACCOUNT_ID:
+      - 3682
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 16 Mar 2017 14:19:53 GMT
+      ETag:
+      - '"4342eb16638bb3406da2fc3139927e8a"'
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWU1ODkwYjUzOWI4MGJiODEyYzhlZDc2YjE0MGQ0ZmM5BjsAVA%3D%3D--c9540ea6c898c6f5891084f95b6788bd4b1f5598;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-16T14:20:00Z'
+      X-Request-Id:
+      - 5bb7b01d95c66d3286126e2a64e328da
+      X-Runtime:
+      - '0.440877'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '631'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"credit_card_transaction":{"id":319771,"amount":"199.0","occurred_at":"2017-01-01","document":null,"observation":null,"description":null,"classification_center_id":null,"category_id":null,"person_id":null,"credit_card_id":73,"credit_card_invoice":{"id":2881,"start_date":"2016-12-22","end_date":"2017-01-21","due_date":"2017-02-01","balance":"3184.0"},"parcels":2,"parcel":1,"links":[{"rel":"self","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319771","method":"get"},{"rel":"next","href":"https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319772","method":"get"}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions
+  recorded_at: Thu, 16 Mar 2017 14:19:53 GMT
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319771/recurrence
+    body:
+      encoding: UTF-8
+      string: '{"credit_card_transaction":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic MDY1N2JhYzcwZmRmNWMwNmNlODIyNzE5NTY4ZjM2MzZhOWEwN2I4N2JhNjE3ZWM3Olg=
+      ACCOUNT_ID:
+      - 3682
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      Date:
+      - Thu, 16 Mar 2017 14:19:53 GMT
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTMxMjljMDI1YmQxNTc4MjNjMzY3NmViMzMwMGRmNzQ5BjsAVA%3D%3D--2276d14d864c3e49f50a33b1c6211415fa459ece;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-03-16T14:20:00Z'
+      X-Request-Id:
+      - 1646076aa2d51aa454b30a91f5702e2f
+      X-Runtime:
+      - '0.508371'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319771/recurrence
+  recorded_at: Thu, 16 Mar 2017 14:19:53 GMT
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319771
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic MDY1N2JhYzcwZmRmNWMwNmNlODIyNzE5NTY4ZjM2MzZhOWEwN2I4N2JhNjE3ZWM3Olg=
+      ACCOUNT_ID:
+      - 3682
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache, private
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 16 Mar 2017 14:19:54 GMT
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '17'
+      X-RateLimit-Reset:
+      - '2017-03-16T14:20:00Z'
+      X-Request-Id:
+      - aba0780c2d1278376a041b7ac7633b45
+      X-Runtime:
+      - '0.053955'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '88'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6Ik7Do28gZm9pIHBvc3PDrXZlbCBsb2NhbGl6YXIgYSB0cmFuc2HDp8OjbyBjb20gbyBJRCAzMTk3NzEifQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3906/credit_cards/73/transactions/319771
+  recorded_at: Thu, 16 Mar 2017 14:19:54 GMT
+recorded_with: VCR 2.9.3
