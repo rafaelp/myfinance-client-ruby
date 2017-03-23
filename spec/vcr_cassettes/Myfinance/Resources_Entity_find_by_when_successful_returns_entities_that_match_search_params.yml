@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities?search[name]=Minhas
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 23 Mar 2017 19:22:59 GMT
+      ETag:
+      - W/"b3c5782799ac06ea191e66adac4825b0"
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-23T19:23:00Z'
+      X-Request-Id:
+      - 96363a85afec8722ba60637b033af474
+      X-Runtime:
+      - '0.045693'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"entity":{"account_id":3613,"charging_uuid":null,"created_at":"2015-07-29T11:04:45-03:00","default_in_menu":true,"deleted_at":null,"federation_subscription_number":"","force_destroy":false,"id":3798,"imported_from_sync_at":null,"name":"Minhas
+        Finan\u00e7as","updated_at":"2015-07-29T14:30:36-03:00"}},{"entity":{"account_id":3613,"charging_uuid":null,"created_at":"2015-08-01T01:56:13-03:00","default_in_menu":false,"deleted_at":null,"federation_subscription_number":"","force_destroy":false,"id":3800,"imported_from_sync_at":null,"name":"Nova
+        entidade","updated_at":"2015-08-01T01:56:13-03:00"}}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities?search[name]=Minhas
+  recorded_at: Thu, 23 Mar 2017 19:22:59 GMT
+recorded_with: VCR 2.9.3
