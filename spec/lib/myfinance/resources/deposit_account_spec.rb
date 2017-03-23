@@ -48,6 +48,25 @@ describe Myfinance::Resources::DepositAccount, vcr: true do
     end
   end
 
+  describe "#find_by" do
+    context "when succesful"  do
+      subject { client.entities.find_by(3798, name: "Carteira") }
+
+      it "returns a collection of DepositAccounts" do
+        expect(subject).to be_a(Myfinance::Entities::DepositAccountCollection)
+      end
+
+      it "returns matched DepositAccount" do
+        da = subject.collection.first
+        expect(da.name).to eq("Carteira")
+      end
+
+      it "does not match other DepositAccounts" do
+        expect(subject.collection.size).to eq(1)
+      end
+    end
+  end
+
   describe "#create" do
     context "when success" do
       let(:params) do
