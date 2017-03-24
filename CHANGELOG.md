@@ -12,4 +12,4 @@
 ### Improvements
 - Implement search by attributes in Categories
 ###  Deprecations
-- `FinancialAccount#destroy` and `#update` signature is now `(entity_id, id, params)` instead of `(id, entity_id, params)`
+- `FinancialAccount#destroy` and `#update` signatures are now `(entity_id, id, params)` instead of `(id, entity_id, params)`
