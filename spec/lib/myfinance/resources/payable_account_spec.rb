@@ -5,6 +5,7 @@ describe Myfinance::Resources::PayableAccount do
   let(:pa_id) { 1235663 }
   let(:page) { 2 }
   let(:url) { subject.response.request.base_url }
+  let(:request_error) { Myfinance::RequestError }
 
   describe "#find_all", vcr: true do
     before :each do
@@ -51,7 +52,7 @@ describe Myfinance::Resources::PayableAccount do
 
       context "with invalid entity id" do
         it "raises 404 not found error" do
-          expect { client.payable_accounts.find_all(nil) }.to raise_error(Myfinance::RequestError) do |e|
+          expect { client.payable_accounts.find_all(nil) }.to raise_error(request_error) do |e|
             expect(e.code).to eq(404)
             expect(e.message).to eq("Not Found")
           end
@@ -71,7 +72,7 @@ describe Myfinance::Resources::PayableAccount do
       subject { client.payable_accounts.find(nil, nil) }
 
       it "raises 404 not found error" do
-        expect { subject }.to raise_error(Myfinance::RequestError) do |e|
+        expect { subject }.to raise_error(request_error) do |e|
           expect(e.code).to eq(404)
         end
       end
@@ -136,26 +137,28 @@ describe Myfinance::Resources::PayableAccount do
     context "when any data is invalid" do
       let(:params) { { due_date: '', amount: 150.99 } }
 
-      it "raises Myfinance::RequestError" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+      it "raises request_error" do
+        expect { subject }.to raise_error(request_error)
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 422, message: "", body: { "competency_month" => ["não pode ser vazio"], "due_date" => ["não é uma data válida"] }).and_call_original
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        body = { "competency_month" => ["não pode ser vazio"], "due_date" => ["não é uma data válida"] }
+        expect(request_error).to receive(:new).with(code: 422, message: "", body: body).and_call_original
+        expect { subject }.to raise_error(request_error)
       end
     end
 
     context "when entity does not exist" do
       subject { client.payable_accounts.create(555, params) }
 
-      it "raises Myfinance::RequestError" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+      it "raises request_error" do
+        expect { subject }.to raise_error(request_error)
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: {"error" => "Você não tem permissão para acessar este recurso." }).and_call_original
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        body = {"error" => "Você não tem permissão para acessar este recurso." }
+        expect(request_error).to receive(:new).with(code: 403, message: "Forbidden", body: body).and_call_original
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
@@ -181,7 +184,7 @@ describe Myfinance::Resources::PayableAccount do
       let(:params) { { total_amount: nil, occurred_at: '2015-08-05', amount: 150.99 } }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
@@ -202,7 +205,7 @@ describe Myfinance::Resources::PayableAccount do
   end
 
   describe "#update", vcr: true do
-    subject { client.payable_accounts.update(1235050, entity_id, { amount: 100.00 }) }
+    subject { client.payable_accounts.update(entity_id, 1235050, { amount: 100.00 }) }
 
     context "when payable account exists" do
       it "returns true" do
@@ -211,16 +214,16 @@ describe Myfinance::Resources::PayableAccount do
     end
 
     context "when payable account does not exist" do
-      subject { client.payable_accounts.update(9999999, entity_id, { amount: 100.00 }) }
+      subject { client.payable_accounts.update(entity_id, 9999999, { amount: 100.00 }) }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
       end
     end
   end
 
   describe "#destroy", vcr: true do
-    subject { client.payable_accounts.destroy(1215631, entity_id) }
+    subject { client.payable_accounts.destroy(entity_id, 1215631) }
 
     context "when payable account exists" do
       it "returns true" do
@@ -229,10 +232,48 @@ describe Myfinance::Resources::PayableAccount do
     end
 
     context "when payable account does not exist" do
-      subject { client.payable_accounts.destroy(1215631099, entity_id) }
+      subject { client.payable_accounts.destroy(entity_id, 1215631099) }
 
       it "raises request error" do
-        expect { subject }.to raise_error(Myfinance::RequestError)
+        expect { subject }.to raise_error(request_error)
+      end
+    end
+  end
+
+  describe "#destroy_recurrence", vcr: true do
+    let(:params) { { due_date: "2015-08-15", amount: 150.99, create_as_recurrent: "annual" } }
+    let(:new_pa) { client.payable_accounts.create(entity_id, params) }
+
+    before :each do
+      client.payable_accounts.destroy_recurrence(entity_id, new_pa.id)
+    end
+
+    it "does not find recurrent payable accounts" do
+      expect { client.payable_accounts.find(entity_id, new_pa.id) }.to raise_error(request_error) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+
+      expect { client.payable_accounts.find(entity_id, new_pa.id + 1) }.to raise_error(request_error) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
+      end
+    end
+  end
+
+  describe "#destroy_many", vcr: true do
+    let(:params) { { due_date: "2015-08-15", amount: 150.99 } }
+    let(:new_pa) { client.payable_accounts.create(entity_id, params) }
+    let(:new_pa2) { client.payable_accounts.create(entity_id, params) }
+
+    before :each do
+      client.payable_accounts.destroy_many(entity_id, [new_pa.id, new_pa2.id])
+    end
+
+    it "does not find created PayableAccount" do
+      expect { client.payable_accounts.find(entity_id, new_pa.id) }.to raise_error(request_error) do |e|
+        expect(e.code).to eq(404)
+        expect(e.message).to eq("Not Found")
       end
     end
   end

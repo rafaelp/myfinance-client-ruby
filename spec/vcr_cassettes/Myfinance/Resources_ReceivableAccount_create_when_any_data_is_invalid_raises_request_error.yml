@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts
+    body:
+      encoding: UTF-8
+      string: '{"receivable_account":{"due_date":"","amount":150.99}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Mar 2017 19:53:26 GMT
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTU1NjE3OWMyNTc5ODA4YWNlNjNkZjRiODdjNzlmOGZlBjsAVA%3D%3D--c80e2ee2f34d03177ea6787883408ca67f326555;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-22T19:54:00Z'
+      X-Request-Id:
+      - 784128952c403afc97bfa2640e505303
+      X-Runtime:
+      - '0.080990'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '100'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"competency_month":["n\u00e3o pode ser vazio"],"due_date":["n\u00e3o
+        \u00e9 uma data v\u00e1lida"]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/receivable_accounts
+  recorded_at: Wed, 22 Mar 2017 19:53:26 GMT
+recorded_with: VCR 2.9.3
