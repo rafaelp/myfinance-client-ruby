@@ -1083,6 +1083,12 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 To release a new version, update the version number in `lib/myfinance/version.rb`, run `bundle install` and commit & push the changes to the repository. Then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). Make sure you have publishing rights for the gem on RubyGems beforehand, though.
 
+After publishing the new version, add a comment to each pull request that was included in this release like this:
+
+```
+:shipit: released on [version x.y.z](https://rubygems.org/gems/myfinance/versions/x.y.z)
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/myfreecomm/myfinance-client-ruby. This project is intended to be a safe and welcoming space for collaboration.
