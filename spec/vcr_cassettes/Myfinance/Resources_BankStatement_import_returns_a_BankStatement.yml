@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/bank_statements
+    body:
+      encoding: UTF-8
+      string: bank_statement[file]=extrato.ofx=application/octet-stream=/Users/lmansur/workspace/myfinance-client-ruby/spec/support/bank_statements/extrato.ofx
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 24 Mar 2017 15:40:46 GMT
+      ETag:
+      - '"c741ca14805c1961bc10b48f45b96369"'
+      Location:
+      - "/entities/3798/deposit_accounts/14268/bank_statements/22842"
+      Server:
+      - nginx/1.10.3
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWU0YmVkZGM5Y2RmZmU5MWJhZGQxMjQ5N2Y5Mzc2MDBlBjsAVA%3D%3D--23f6edd22e6c12691a7867ec8425f70e3d561838;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - d7e3150188a8d505d22b84fb3b2bff92
+      X-Runtime:
+      - '0.434705'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '503'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"bank_statement":{"id":22842,"created_at":"2017-03-24T12:40:45-03:00","updated_at":"2017-03-24T12:40:45-03:00","file_file_name":"extrato.ofx","file_content_type":"application/octet-stream","file_file_size":4020,"file_updated_at":"2017-03-24T12:40:45-03:00","deposit_account_id":14268,"future_items_ignored_count":0,"amount_zero_items_ignored_count":0,"invalid_date_items_ignored_count":0,"event":{"id":20452,"status":"queued","output":null,"created_at":"2017-03-24T12:40:46-03:00","finished_at":null}}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/bank_statements
+  recorded_at: Fri, 24 Mar 2017 15:40:46 GMT
+recorded_with: VCR 2.9.3

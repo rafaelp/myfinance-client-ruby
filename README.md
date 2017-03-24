@@ -63,6 +63,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [CreditCards API](https://app.myfinance.com.br/docs/api/credit_cards) as `client.credit_cards`
 * [CreditCardsTransactions API](https://app.myfinance.com.br/docs/api/credit_cards_transactions) as `client.credit_cards_transactions`
 * [Reconciles API](https://app.myfinance.com.br/docs/api/reconciles) as `client.reconciles`
+* [BankStatements API](https://app.myfinance.com.br/docs/api/bank_statements) as `client.bank_statements`
 
 ### Endpoints
 
@@ -851,7 +852,10 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   </tr>
 </table>
 
+<<<<<<< HEAD
 #### [CreditCards](https://app.myfinance.com.br/docs/api/credit_cards)
+=======
+>>>>>>> Fix specs
 
 <table>
   <tr>
@@ -860,6 +864,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     <th>Client method</th>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><code>GET</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/credit_cards#get_index" target="_blank">
@@ -938,6 +943,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   <tr>
     <td><code>GET</code></td>
     <td>
+<<<<<<< HEAD
       <a href="https://app.myfinance.com.br/docs/api/credit_card_transactions#get_show" target="_blank">
         /entities/:entity_id/credit_cards/:credit_card_id/transactions/:id
       </a>
@@ -1009,6 +1015,37 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.reconciles.reconcile</code>
+    </td>
+  </tr>
+</table>
+
+#### [BankStatements](https://app.myfinance.com.br/docs/api/bank_statements)
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/bank_statements" target="_blank">
+        /entities/:entity_id/deposit_accounts/:deposit_account_id/bank_statements
+      </a>
+    </td>
+    <td>
+      <code>client.bank_statements.import</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/bank_statements" target="_blank">
+        /entities/:entity_id/deposit_accounts/:deposit_account_id/bank_statements/:id
+      </a>
+    </td>
+    <td>
+      <code>client.bank_statements.status</code>
     </td>
   </tr>
 </table>

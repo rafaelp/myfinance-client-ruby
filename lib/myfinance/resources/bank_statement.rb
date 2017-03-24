@@ -4,7 +4,8 @@ module Myfinance
 
       def import(entity_id, deposit_account_id, file)
         path = "/entities/#{entity_id}/deposit_accounts/#{deposit_account_id}/bank_statements"
-        http.post(path, { body: { bank_statement: { file: file }, multipart: true } }) do |response|
+        params = { file: file }
+        http.post(path, { body: { bank_statement: params }, multipart: true }) do |response|
           respond_with_object(response, "bank_statement")
         end
       end

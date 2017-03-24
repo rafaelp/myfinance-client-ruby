@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/bank_statements/18213
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 24 Mar 2017 15:40:47 GMT
+      ETag:
+      - W/"5e438e2f059c33a06570e344d0d6f704"
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-03-24T15:41:00Z'
+      X-Request-Id:
+      - c1344f8084464d7994df71e402e36490
+      X-Runtime:
+      - '0.133444'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '297'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJiYW5rX3N0YXRlbWVudCI6eyJpZCI6MTgyMTMsImNyZWF0ZWRfYXQiOiIy
+        MDE1LTExLTEyVDExOjU0OjEzLTAyOjAwIiwidXBkYXRlZF9hdCI6IjIwMTUt
+        MTEtMTJUMTE6NTQ6MTMtMDI6MDAiLCJmaWxlX2ZpbGVfbmFtZSI6IkJCX09G
+        WC5vZngiLCJmaWxlX2NvbnRlbnRfdHlwZSI6ImFwcGxpY2F0aW9uL29jdGV0
+        LXN0cmVhbSIsImZpbGVfZmlsZV9zaXplIjo0NTYxLCJmaWxlX3VwZGF0ZWRf
+        YXQiOiIyMDE1LTExLTEyVDExOjU0OjEyLTAyOjAwIiwiZGVwb3NpdF9hY2Nv
+        dW50X2lkIjoxNDI2OCwiZnV0dXJlX2l0ZW1zX2lnbm9yZWRfY291bnQiOjAs
+        ImFtb3VudF96ZXJvX2l0ZW1zX2lnbm9yZWRfY291bnQiOjAsImludmFsaWRf
+        ZGF0ZV9pdGVtc19pZ25vcmVkX2NvdW50IjowLCJldmVudCI6eyJpZCI6MTU0
+        MjUsInN0YXR1cyI6InN1Y2Nlc3MiLCJvdXRwdXQiOiJGb3JhbSBpbXBvcnRh
+        ZGFzIDggdHJhbnNhw6fDtWVzLiIsImNyZWF0ZWRfYXQiOiIyMDE1LTExLTEy
+        VDExOjU0OjEzLTAyOjAwIiwiZmluaXNoZWRfYXQiOiIyMDE1LTExLTEyVDEx
+        OjU0OjE0LTAyOjAwIn19fQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts/14268/bank_statements/18213
+  recorded_at: Fri, 24 Mar 2017 15:40:47 GMT
+recorded_with: VCR 2.9.3
