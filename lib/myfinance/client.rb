@@ -75,5 +75,9 @@ module Myfinance
     def reconciles
       Myfinance::Resources::Reconcile.new(http)
     end
+
+    def bank_statements
+      Myfinance::Resources::BankStatement.new(http)
+    end
   end
 end
