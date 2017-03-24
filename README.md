@@ -852,11 +852,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   </tr>
 </table>
 
-<<<<<<< HEAD
 #### [CreditCards](https://app.myfinance.com.br/docs/api/credit_cards)
-=======
->>>>>>> Fix specs
-
 <table>
   <tr>
     <th>HTTP method</th>
@@ -864,7 +860,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     <th>Client method</th>
   </tr>
   <tr>
-<<<<<<< HEAD
     <td><code>GET</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/credit_cards#get_index" target="_blank">
