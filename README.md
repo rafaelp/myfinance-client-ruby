@@ -938,7 +938,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   <tr>
     <td><code>GET</code></td>
     <td>
-<<<<<<< HEAD
       <a href="https://app.myfinance.com.br/docs/api/credit_card_transactions#get_show" target="_blank">
         /entities/:entity_id/credit_cards/:credit_card_id/transactions/:id
       </a>
