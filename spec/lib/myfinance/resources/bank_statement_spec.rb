@@ -1,9 +1,9 @@
 require "spec_helper"
 
 describe Myfinance::Resources::BankStatement, vcr: true do
-  let(:entity_id) { 3798 }
-  let(:deposit_account_id) { 14268 }
-  let(:bank_statement_id) { 18213 }
+  let(:entity_id) { 3_798 }
+  let(:deposit_account_id) { 14_268 }
+  let(:bank_statement_id) { 18_213 }
   let(:bank_statement_klass) { Myfinance::Entities::BankStatement }
   let(:file) { File.open("spec/support/bank_statements/#{file_name}", "r") }
   let(:file_name) { "extrato.ofx" }
