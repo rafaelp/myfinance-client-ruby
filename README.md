@@ -504,6 +504,17 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
   </tr>
   <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#get_show" target="_blank">
+        /entities/:entity_id/deposit_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.deposit_accounts.find_by</code>
+    </td>
+  </tr>
+  <tr>
     <td><code>POST</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#post_create" target="_blank">
