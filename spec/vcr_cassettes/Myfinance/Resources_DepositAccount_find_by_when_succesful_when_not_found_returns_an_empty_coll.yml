@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts?search[name]=NAO_EXISTE_ESSA_DEPOSIT_ACCOUNT_42
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v0.7.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 27 Mar 2017 14:54:21 GMT
+      ETag:
+      - W/"d751713988987e9331980363e24189ce"
+      Server:
+      - nginx/1.10.3
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '16'
+      X-RateLimit-Reset:
+      - '2017-03-27T14:55:00Z'
+      X-Request-Id:
+      - 949f42c6fd4d673148737fd0be3d4910
+      X-Runtime:
+      - '0.047415'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '22'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts?search[name]=NAO_EXISTE_ESSA_DEPOSIT_ACCOUNT_42
+  recorded_at: Mon, 27 Mar 2017 14:54:21 GMT
+recorded_with: VCR 2.9.3

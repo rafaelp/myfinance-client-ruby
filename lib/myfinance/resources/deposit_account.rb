@@ -92,7 +92,7 @@ module Myfinance
         params.map { |key, value| "search[#{key}]=#{value}" }.join("&")
       end
 
-      def enconde_endpoint(entity_id, path)
+      def encode_endpoint(entity_id, path)
         URI.encode("/entities/#{entity_id}/deposit_accounts?#{path}")
       end
     end
