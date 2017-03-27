@@ -60,4 +60,29 @@ describe Myfinance::Resources::Entity do
       end
     end
   end
+
+  describe "#find_by", vcr: true do
+    context "when successful" do
+      subject { client.entities.find_by(name_contains: "Minhas") }
+
+      it "returns a collection of Entities" do
+        expect(subject).to be_a(Myfinance::Entities::EntityCollection)
+      end
+
+      it "returns Entity that matches search params" do
+        entity = subject.collection.first
+
+        expect(entity.id).to eq(3798)
+        expect(entity.name).to eq("Minhas Finanças")
+      end
+    end
+
+    context "when not found" do
+      subject { client.entities.find_by(name: "ENTIDADE_QUE_NAO_EXISTE_42") }
+
+      it "returns an empty colleciton" do
+        expect(subject.collection).to be_empty
+      end
+    end
+  end
 end

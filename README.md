@@ -97,6 +97,18 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       <code>client.entities.find</code>
     </td>
   </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/entities#get_show" target="_blank">
+        /entities
+      </a>
+    </td>
+    <td>
+      <code>client.entities.find_by</code>
+    </td>
+  </tr>
+
 </table>
 
 #### [FinancialTransactions](https://app.myfinance.com.br/docs/api/financial_transactions)
