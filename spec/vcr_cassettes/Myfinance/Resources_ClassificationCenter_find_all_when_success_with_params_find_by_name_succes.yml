@@ -4,11 +4,11 @@ http_interactions:
     method: get
     uri: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Centro%20de%20Custo%20Tal
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Mar 2017 19:29:52 GMT
+      - Tue, 28 Mar 2017 16:35:14 GMT
       ETag:
       - W/"f024db5329094bae388f251ec2fd67ac"
       Server:
@@ -42,11 +42,11 @@ http_interactions:
       X-RateLimit-Remaining:
       - '19'
       X-RateLimit-Reset:
-      - '2017-03-21T19:30:00Z'
+      - '2017-03-28T16:36:00Z'
       X-Request-Id:
-      - 8a508d762a65c903bb136dc4ec353a92
+      - 479ad677cc6bd0b261447afdb112d35f
       X-Runtime:
-      - '0.042548'
+      - '0.041004'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -60,5 +60,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Centro%20de%20Custo%20Tal
-  recorded_at: Tue, 21 Mar 2017 19:29:53 GMT
+  recorded_at: Tue, 28 Mar 2017 16:35:14 GMT
 recorded_with: VCR 2.9.3

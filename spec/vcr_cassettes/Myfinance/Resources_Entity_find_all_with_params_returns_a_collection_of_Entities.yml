@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
+    uri: https://sandbox.myfinance.com.br/entities?search[name_contains]=Minhas
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Mar 2017 19:03:15 GMT
+      - Tue, 28 Mar 2017 16:48:58 GMT
       ETag:
-      - W/"5ca77a20241863cde1c6ee06062b3ddb"
+      - W/"f3a035ee88d3bb7e0279bf1eba61efc2"
       Server:
       - nginx/1.10.3
       Vary:
@@ -40,25 +40,25 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '18'
+      - '10'
       X-RateLimit-Reset:
-      - '2017-03-16T19:04:00Z'
+      - '2017-03-28T16:49:00Z'
       X-Request-Id:
-      - 27f3d25a1066fe330ab0aeec140bcb7e
+      - 61f42a31073cf937cd5f892b290961bb
       X-Runtime:
-      - '0.038495'
+      - '0.039400'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '267'
+      - '227'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '[{"category":{"account_id":3613,"cost":true,"created_at":"2015-07-29T11:04:50-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Despesas
-        com Filhos / Alimenta\u00e7\u00e3o","guid":null,"id":532331,"imported_from_sync":false,"interested_users_ids":[],"modified_by_sync":false,"name":"Alimenta\u00e7\u00e3o","parent_id":532330,"revenue":true,"updated_at":"2015-07-29T11:04:50-03:00","use_count":0}}]'
+      string: '[{"entity":{"account_id":3613,"charging_uuid":null,"created_at":"2015-07-29T11:04:45-03:00","default_in_menu":true,"deleted_at":null,"federation_subscription_number":"","force_destroy":false,"id":3798,"imported_from_sync_at":null,"name":"Minhas
+        Finan\u00e7as","updated_at":"2015-07-29T14:30:36-03:00"}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
-  recorded_at: Thu, 16 Mar 2017 19:03:15 GMT
+      effective_url: https://sandbox.myfinance.com.br/entities?search[name_contains]=Minhas
+  recorded_at: Tue, 28 Mar 2017 16:48:58 GMT
 recorded_with: VCR 2.9.3

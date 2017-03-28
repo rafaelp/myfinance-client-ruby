@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o%202
+    uri: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Mar 2017 19:35:05 GMT
+      - Tue, 28 Mar 2017 16:57:48 GMT
       ETag:
-      - W/"0563718e5d9e5b084bae2b3ae672ce5e"
+      - W/"5ca77a20241863cde1c6ee06062b3ddb"
       Server:
       - nginx/1.10.3
       Vary:
@@ -42,23 +42,23 @@ http_interactions:
       X-RateLimit-Remaining:
       - '19'
       X-RateLimit-Reset:
-      - '2017-03-21T19:36:00Z'
+      - '2017-03-28T16:58:00Z'
       X-Request-Id:
-      - 4c760bd7c00d499ff1c2c1ddfab4bf35
+      - ff20e885d1ed307f85f8c2d3807a9745
       X-Runtime:
-      - '0.041157'
+      - '0.038001'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '209'
+      - '267'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '[{"classification_center":{"cost_center":true,"created_at":"2017-03-21T16:34:11-03:00","entity_id":3798,"excel_import_id":null,"guid":null,"id":18745,"imported_from_sync":false,"modified_by_sync":false,"name":"Socializa\u00e7\u00e3o
-        2","revenue_center":true,"updated_at":"2017-03-21T16:34:11-03:00","use_count":0}}]'
+      string: '[{"category":{"account_id":3613,"cost":true,"created_at":"2015-07-29T11:04:50-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Despesas
+        com Filhos / Alimenta\u00e7\u00e3o","guid":null,"id":532331,"imported_from_sync":false,"interested_users_ids":[],"modified_by_sync":false,"name":"Alimenta\u00e7\u00e3o","parent_id":532330,"revenue":true,"updated_at":"2015-07-29T11:04:50-03:00","use_count":0}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o%202
-  recorded_at: Tue, 21 Mar 2017 19:35:05 GMT
+      effective_url: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
+  recorded_at: Tue, 28 Mar 2017 16:57:48 GMT
 recorded_with: VCR 2.9.3

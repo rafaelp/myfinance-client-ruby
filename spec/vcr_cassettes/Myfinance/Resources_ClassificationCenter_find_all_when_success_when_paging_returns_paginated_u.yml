@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Any
+    uri: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_contains]=Centro&page=2
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Mar 2017 19:29:53 GMT
+      - Tue, 28 Mar 2017 16:31:38 GMT
       ETag:
       - W/"d751713988987e9331980363e24189ce"
       Server:
@@ -40,13 +40,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '18'
+      - '16'
       X-RateLimit-Reset:
-      - '2017-03-21T19:30:00Z'
+      - '2017-03-28T16:32:00Z'
       X-Request-Id:
-      - 74c3ae537a1ad3bc3052ff28ecfc10ad
+      - 39089b01bb397565ae9456c265a2e7cb
       X-Runtime:
-      - '0.041880'
+      - '0.040424'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -58,6 +58,6 @@ http_interactions:
       string: "[]"
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Any
-  recorded_at: Tue, 21 Mar 2017 19:29:53 GMT
+      effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_contains]=Centro&page=2
+  recorded_at: Tue, 28 Mar 2017 16:31:38 GMT
 recorded_with: VCR 2.9.3

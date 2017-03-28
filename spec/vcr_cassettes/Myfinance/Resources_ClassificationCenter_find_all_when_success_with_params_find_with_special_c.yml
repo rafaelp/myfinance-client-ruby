@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/entities?search[name_contains]=Minhas
+    uri: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o%202
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 27 Mar 2017 14:47:44 GMT
+      - Tue, 28 Mar 2017 16:35:15 GMT
       ETag:
-      - W/"f3a035ee88d3bb7e0279bf1eba61efc2"
+      - W/"0563718e5d9e5b084bae2b3ae672ce5e"
       Server:
       - nginx/1.10.3
       Vary:
@@ -40,25 +40,25 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '18'
       X-RateLimit-Reset:
-      - '2017-03-27T14:48:00Z'
+      - '2017-03-28T16:36:00Z'
       X-Request-Id:
-      - fe7da35bbc0ab07efe7fe73fa87c7545
+      - 0c6cd6942f61be830faa54fc11f39cd7
       X-Runtime:
-      - '0.074581'
+      - '0.055066'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '227'
+      - '209'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '[{"entity":{"account_id":3613,"charging_uuid":null,"created_at":"2015-07-29T11:04:45-03:00","default_in_menu":true,"deleted_at":null,"federation_subscription_number":"","force_destroy":false,"id":3798,"imported_from_sync_at":null,"name":"Minhas
-        Finan\u00e7as","updated_at":"2015-07-29T14:30:36-03:00"}}]'
+      string: '[{"classification_center":{"cost_center":true,"created_at":"2017-03-21T16:34:11-03:00","entity_id":3798,"excel_import_id":null,"guid":null,"id":18745,"imported_from_sync":false,"modified_by_sync":false,"name":"Socializa\u00e7\u00e3o
+        2","revenue_center":true,"updated_at":"2017-03-21T16:34:11-03:00","use_count":0}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/entities?search[name_contains]=Minhas
-  recorded_at: Mon, 27 Mar 2017 14:47:44 GMT
+      effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o%202
+  recorded_at: Tue, 28 Mar 2017 16:35:15 GMT
 recorded_with: VCR 2.9.3

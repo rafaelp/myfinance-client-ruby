@@ -18,9 +18,34 @@ describe Myfinance::Resources::Entity do
         expect(subject.collection.first.federation_subscription_number).to eq("")
         expect(subject.collection.first.imported_from_sync_at).to be_nil
         expect(subject.collection.first.updated_at).to eq(DateTime.parse("2015-07-29T14:30:36-03:00"))
-        expect(subject.collection.count).to eq(1)
+        expect(subject.collection.count).to eq(2)
       end
     end
+
+    context "with params" do
+      let(:params) { { name_contains: "Minhas" } }
+      subject { client.entities.find_all(params) }
+
+      it "returns a collection of Entities" do
+        expect(subject).to be_a(Myfinance::Entities::EntityCollection)
+      end
+
+      it "returns Entity that matches search params" do
+        entity = subject.collection.first
+
+        expect(entity.id).to eq(3798)
+        expect(entity.name).to eq("Minhas Finanças")
+      end
+    end
+
+    context "when not found" do
+      subject { client.entities.find_all(name: "ENTIDADE_QUE_NAO_EXISTE_42") }
+
+      it "returns an empty collection" do
+        expect(subject.collection).to be_empty
+      end
+    end
+
 
     context "when not found" do
       let(:client) { Myfinance.client('') }
@@ -57,31 +82,6 @@ describe Myfinance::Resources::Entity do
 
       it "raises NotFound" do
         expect{ subject }.to raise_error(Myfinance::RequestError)
-      end
-    end
-  end
-
-  describe "#find_by", vcr: true do
-    context "when successful" do
-      subject { client.entities.find_by(name_contains: "Minhas") }
-
-      it "returns a collection of Entities" do
-        expect(subject).to be_a(Myfinance::Entities::EntityCollection)
-      end
-
-      it "returns Entity that matches search params" do
-        entity = subject.collection.first
-
-        expect(entity.id).to eq(3798)
-        expect(entity.name).to eq("Minhas Finanças")
-      end
-    end
-
-    context "when not found" do
-      subject { client.entities.find_by(name: "ENTIDADE_QUE_NAO_EXISTE_42") }
-
-      it "returns an empty colleciton" do
-        expect(subject.collection).to be_empty
       end
     end
   end

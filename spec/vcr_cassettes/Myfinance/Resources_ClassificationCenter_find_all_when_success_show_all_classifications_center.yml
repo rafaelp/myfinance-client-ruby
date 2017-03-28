@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/classification_centers
+    uri: https://sandbox.myfinance.com.br/classification_centers?
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
       - Myfinance Ruby Client v0.4.0
@@ -27,7 +27,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
+<<<<<<< Updated upstream
       - Thu, 09 Mar 2017 12:10:25 GMT
+=======
+      - Tue, 28 Mar 2017 16:31:37 GMT
+>>>>>>> Stashed changes
       ETag:
       - W/"f024db5329094bae388f251ec2fd67ac"
       Server:
@@ -42,11 +46,19 @@ http_interactions:
       X-RateLimit-Remaining:
       - '19'
       X-RateLimit-Reset:
+<<<<<<< Updated upstream
       - '2017-03-09T12:11:00Z'
       X-Request-Id:
       - 80432ab3cb7844b8a3f3ebac04f5643d
       X-Runtime:
       - '0.290308'
+=======
+      - '2017-03-28T16:32:00Z'
+      X-Request-Id:
+      - b069f850830da4e73a1f9bbb7074f51c
+      X-Runtime:
+      - '0.036854'
+>>>>>>> Stashed changes
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -59,6 +71,11 @@ http_interactions:
         de Custo Tal","revenue_center":false,"updated_at":"2015-11-13T16:40:42-02:00","use_count":0}}]'
     http_version: '1.1'
     adapter_metadata:
+<<<<<<< Updated upstream
       effective_url: https://sandbox.myfinance.com.br/classification_centers
   recorded_at: Thu, 09 Mar 2017 12:10:25 GMT
+=======
+      effective_url: https://sandbox.myfinance.com.br/classification_centers?
+  recorded_at: Tue, 28 Mar 2017 16:31:37 GMT
+>>>>>>> Stashed changes
 recorded_with: VCR 2.9.3

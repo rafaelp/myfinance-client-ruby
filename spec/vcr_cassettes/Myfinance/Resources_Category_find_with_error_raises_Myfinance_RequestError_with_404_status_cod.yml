@@ -8,7 +8,7 @@ http_interactions:
       string: "{}"
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.4.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 03 Mar 2017 13:03:10 GMT
+      - Tue, 28 Mar 2017 16:57:49 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -38,13 +38,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '17'
       X-RateLimit-Reset:
-      - '2017-03-03T13:04:00Z'
+      - '2017-03-28T16:58:00Z'
       X-Request-Id:
-      - 6ae2d7bcf7f02076b43c4d2ac136b0dd
+      - 661b5dd881f80c7220b63d8a26f93d15
       X-Runtime:
-      - '0.036463'
+      - '0.034637'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -58,5 +58,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/categories/88888888
-  recorded_at: Fri, 03 Mar 2017 13:03:10 GMT
+  recorded_at: Tue, 28 Mar 2017 16:57:49 GMT
 recorded_with: VCR 2.9.3

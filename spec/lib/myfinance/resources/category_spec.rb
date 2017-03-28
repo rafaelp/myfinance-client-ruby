@@ -14,15 +14,35 @@ describe Myfinance::Resources::Category, vcr: true do
       end
     end
 
-    context "when not found" do
-      let(:client) { Myfinance.client("") }
+    it "find categories by attributes" do
+      params = { name: "Alimentação" }
+      result = client.categories.find_all(params)
 
-      it "raises Myfinance::RequestError with 401 status code" do
-        expect {
-          client.categories.find_all
-        }.to raise_error(Myfinance::RequestError) do |error|
-          expect(error.code).to eql(401)
-        end
+      expect(result).to be_a(Myfinance::Entities::CategoryCollection)
+      expect(result.collection.first).to be_a(entity_klass)
+      expect(result.collection.first.name).to eql("Alimentação")
+    end
+  end
+
+  context "when error" do
+    let(:client) { Myfinance.client("") }
+
+    it "raises Myfinance::RequestError with 401 status code" do
+      expect { client.categories.find_all({}) }.to raise_error(Myfinance::RequestError) do |error|
+        expect(error.code).to eql(401)
+      end
+    end
+  end
+
+
+  context "when not found" do
+    let(:client) { Myfinance.client("") }
+
+    it "raises Myfinance::RequestError with 401 status code" do
+      expect {
+        client.categories.find_all
+      }.to raise_error(Myfinance::RequestError) do |error|
+        expect(error.code).to eql(401)
       end
     end
   end
@@ -43,29 +63,6 @@ describe Myfinance::Resources::Category, vcr: true do
           client.categories.find(88888888)
         }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
-        end
-      end
-    end
-  end
-
-  describe "#find_by" do
-    context "when success" do
-      it "find categories by attributes" do
-        result = client.categories.find_by({ name: "Alimentação" })
-        expect(result).to be_a(Myfinance::Entities::CategoryCollection)
-        expect(result.collection.first).to be_a(entity_klass)
-        expect(result.collection.first.name).to eql("Alimentação")
-      end
-    end
-
-    context "when error" do
-      let(:client) { Myfinance.client("") }
-
-      it "raises Myfinance::RequestError with 401 status code" do
-        expect {
-          client.categories.find_by({})
-        }.to raise_error(Myfinance::RequestError) do |error|
-          expect(error.code).to eql(401)
         end
       end
     end

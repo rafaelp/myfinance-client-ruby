@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/categories
+    uri: https://sandbox.myfinance.com.br/categories?
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.4.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Thu, 02 Mar 2017 17:27:03 GMT
+      - Tue, 28 Mar 2017 16:57:49 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -35,9 +35,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 0a5eb39aec23f78080d5f39da82a88d0
+      - 8dd7caf4955cef0ab762a719f38770fd
       X-Runtime:
-      - '0.004755'
+      - '0.004527'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -51,6 +51,6 @@ http_interactions:
 '
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/categories
-  recorded_at: Thu, 02 Mar 2017 17:27:03 GMT
+      effective_url: https://sandbox.myfinance.com.br/categories?
+  recorded_at: Tue, 28 Mar 2017 16:57:49 GMT
 recorded_with: VCR 2.9.3

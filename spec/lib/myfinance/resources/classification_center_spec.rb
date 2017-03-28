@@ -16,6 +16,46 @@ describe Myfinance::Resources::ClassificationCenter, vcr: true do
         expect(subject.collection.first).to be_a(entity_klass)
         expect(subject.collection.first.name).to eq("Centro de Custo Tal")
       end
+
+      context "with params" do
+        let(:params) { { entity_id_equals: 3798 } }
+
+        it "find by name successfully" do
+          params[:name_equals] = "Centro de Custo Tal"
+          outcome = client.classification_centers.find_all(params)
+
+          expect(outcome).to be_a(entity_collection)
+          expect(outcome.collection.first).to be_a(entity_klass)
+          expect(outcome.collection.first.name).to eq("Centro de Custo Tal")
+        end
+
+        it "find with special characters" do
+          params[:name_equals] = "Socialização 2"
+          outcome = client.classification_centers.find_all(params)
+
+          expect(outcome).to be_a(entity_collection)
+          expect(outcome.collection.first).to be_a(entity_klass)
+          expect(outcome.collection.first.name).to eq("Socialização 2")
+        end
+
+        it "returns a empty classification center successfully" do
+          params[:name_equals] = "Any"
+          outcome = client.classification_centers.find_all(params)
+
+          expect(outcome).to be_a(entity_collection)
+          expect(outcome.collection.first).to be_falsy
+        end
+      end
+
+      context "when paging" do
+        let(:search_params) { { page: page, entity_id_equals: 3798, name_contains: "Centro" } }
+        subject { client.classification_centers.find_all(search_params) } 
+
+        it "returns paginated url " do
+          url = subject.response.request.base_url
+          expect(url).to include("page=#{page}")
+        end
+      end
     end
 
     context "when error" do
@@ -48,36 +88,6 @@ describe Myfinance::Resources::ClassificationCenter, vcr: true do
         }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eq(404)
         end
-      end
-    end
-  end
-
-  describe "#find_by" do
-    context "when success" do
-      it "find a classification centers by name successfully" do
-        result = client.classification_centers.find_by(
-          { entity_id_equals: 3798, name_equals: "Centro de Custo Tal" }
-        )
-        expect(result).to be_a(entity_collection)
-        expect(result.collection.first).to be_a(entity_klass)
-        expect(result.collection.first.name).to eq("Centro de Custo Tal")
-      end
-
-      it "find a classification centers with special characters" do
-        result = client.classification_centers.find_by(
-          { entity_id_equals: 3798, name_equals: "Socialização 2" }
-        )
-        expect(result).to be_a(entity_collection)
-        expect(result.collection.first).to be_a(entity_klass)
-        expect(result.collection.first.name).to eq("Socialização 2")
-      end
-
-      it "returns a empty classification center successfully" do
-        result = client.classification_centers.find_by(
-          { entity_id_equals: 3798, name_equals: "Any" }
-        )
-        expect(result).to be_a(entity_collection)
-        expect(result.collection.first).to be_falsy
       end
     end
   end

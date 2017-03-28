@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/entities
+    uri: https://sandbox.myfinance.com.br/entities?
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.1.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,31 +27,39 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 29 Jul 2015 17:30:51 GMT
+      - Tue, 28 Mar 2017 16:48:58 GMT
       ETag:
-      - W/"f3a035ee88d3bb7e0279bf1eba61efc2"
+      - W/"b3c5782799ac06ea191e66adac4825b0"
       Server:
-      - nginx/1.8.0
+      - nginx/1.10.3
       Vary:
       - Accept-Encoding
+      - Origin
       X-Rack-Cache:
       - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '11'
+      X-RateLimit-Reset:
+      - '2017-03-28T16:49:00Z'
       X-Request-Id:
-      - 5cc55c58980241d036b76e52922e612b
+      - 7d65529902e4739e7d5cf3d913203bf4
       X-Runtime:
-      - '0.015293'
+      - '0.051408'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '227'
+      - '272'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '[{"entity":{"account_id":3613,"charging_uuid":null,"created_at":"2015-07-29T11:04:45-03:00","default_in_menu":true,"deleted_at":null,"federation_subscription_number":"","force_destroy":false,"id":3798,"imported_from_sync_at":null,"name":"Minhas
-        Finan\u00e7as","updated_at":"2015-07-29T14:30:36-03:00"}}]'
+        Finan\u00e7as","updated_at":"2015-07-29T14:30:36-03:00"}},{"entity":{"account_id":3613,"charging_uuid":null,"created_at":"2015-08-01T01:56:13-03:00","default_in_menu":false,"deleted_at":null,"federation_subscription_number":"","force_destroy":false,"id":3800,"imported_from_sync_at":null,"name":"Nova
+        entidade","updated_at":"2015-08-01T01:56:13-03:00"}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/entities
-  recorded_at: Wed, 29 Jul 2015 17:30:51 GMT
+      effective_url: https://sandbox.myfinance.com.br/entities?
+  recorded_at: Tue, 28 Mar 2017 16:48:58 GMT
 recorded_with: VCR 2.9.3

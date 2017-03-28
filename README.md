@@ -657,17 +657,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
   </tr>
   <tr>
-    <td><code>GET</code></td>
-    <td>
-      <a href="https://app.myfinance.com.br/docs/api/classification_centers#get_show" target="_blank">
-        /classification_centers
-      </a>
-    </td>
-    <td>
-      <code>client.classification_centers.find_by</code>
-    </td>
-  </tr>
-  <tr>
     <td><code>POST</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/classification_centers#post_create" target="_blank">
