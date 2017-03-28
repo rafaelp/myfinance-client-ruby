@@ -15,8 +15,10 @@ module Myfinance
       #
       #   Documentation: https://sandbox.myfinance.com.br/docs/api/categories#get_index
       #
-      def find_all
-        http.get("/categories", body: {}) do |response|
+      def find_all(params = {})
+        search_endpoint = build_search_endpoint(params)
+
+        http.get(search_endpoint) do |response|
           respond_with_collection(response)
         end
       end
@@ -32,22 +34,6 @@ module Myfinance
       def find(id)
         http.get("/categories/#{id}", body: {}) do |response|
           respond_with_object response, "category"
-        end
-      end
-
-      #
-      # Find a category by attributes
-      #
-      # [API]
-      #   Method: <tt>GET /categories/:id</tt>
-      #
-      #   Documentation: https://sandbox.myfinance.com.br/docs/api/categories#get_show
-      #
-      def find_by(params = {})
-        path = params.map { |k, v| "search[#{k}]=#{v}" }.join("&")
-
-        http.get(URI.encode("/categories?#{path}"), body: {}) do |response|
-          respond_with_collection(response)
         end
       end
 
@@ -91,6 +77,12 @@ module Myfinance
         http.delete("/categories/#{id}", body: {}) do |response|
           respond_with_object response, "category"
         end
+      end
+
+      private
+
+      def endpoint
+        "/categories"
       end
     end
   end

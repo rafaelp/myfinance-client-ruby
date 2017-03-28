@@ -8,15 +8,17 @@ module Myfinance
     #
     class DepositAccount < Base
       #
-      # List all deposit accounts of entity
+      # List all deposit accounts of entity with optional filters for refinement
       #
       # [API]
       #   Method: <tt>GET /entities/:entity_id/deposit_accounts</tt>
       #
       #   Documentation: https://app.myfinance.com.br/docs/api/deposit_accounts#get_index
       #
-      def find_all(entity_id)
-        http.get("/entities/#{entity_id}/deposit_accounts", body: {}) do |response|
+      def find_all(entity_id, params = {})
+        search_endpoint = build_search_endpoint(entity_id, params)
+
+        http.get(search_endpoint) do |response|
           respond_with_collection(response)
         end
       end
@@ -32,15 +34,6 @@ module Myfinance
       def find(entity_id, id)
         http.get("/entities/#{entity_id}/deposit_accounts/#{id}", body: {}) do |response|
           respond_with_object(response, "deposit_account")
-        end
-      end
-
-      def find_by(entity_id, params = {})
-        sanitized_params = search_params(params) 
-        endpoint = encode_endpoint(entity_id, sanitized_params)
-
-        http.get(endpoint, body: {}) do |response|
-          respond_with_collection(response)
         end
       end
 
@@ -88,12 +81,15 @@ module Myfinance
 
       private
 
-      def search_params(params)
-        params.map { |key, value| "search[#{key}]=#{value}" }.join("&")
+      def build_search_endpoint(entity_id, params)
+        query_string = query(params).join("&")
+        deposit_endpoint = endpoint(entity_id)
+
+        URI.encode("#{deposit_endpoint}?#{query_string}")
       end
 
-      def encode_endpoint(entity_id, path)
-        URI.encode("/entities/#{entity_id}/deposit_accounts?#{path}")
+      def endpoint(entity_id)
+        "/entities/#{entity_id}/deposit_accounts"
       end
     end
   end

@@ -12,7 +12,32 @@ describe Myfinance::Resources::DepositAccount, vcr: true do
         subject.build
         expect(subject).to be_a(Myfinance::Entities::DepositAccountCollection)
         expect(subject.collection.first).to be_a(entity_klass)
-        expect(subject.collection.first.name).to eq("Carteira")
+        expect(subject.collection.first.name).to eq("Caixa Grande")
+      end
+
+      context "with params" do
+        subject { client.deposit_accounts.find_all(entity_id, name: "Carteira") }
+      end
+
+      it "returns a collection of DepositAccounts" do
+        expect(subject).to be_a(Myfinance::Entities::DepositAccountCollection)
+      end
+
+      it "returns matched DepositAccount" do
+        da = subject.collection.first
+        expect(da.name).to eq("Caixa Grande")
+      end
+
+      it "does not match other DepositAccounts" do
+        expect(subject.collection.size).to eq(3)
+      end
+
+      context "when not found" do
+        subject { client.deposit_accounts.find_all(entity_id, name: "NAO_EXISTE_ESSA_DEPOSIT_ACCOUNT_42") }
+
+        it "returns an empty collection" do
+          expect(subject.collection).to be_empty
+        end
       end
     end
 
@@ -44,33 +69,6 @@ describe Myfinance::Resources::DepositAccount, vcr: true do
           client.deposit_accounts.find(entity_id, 888888)
         }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eq(404)
-        end
-      end
-    end
-  end
-
-  describe "#find_by" do
-    context "when succesful"  do
-      subject { client.deposit_accounts.find_by(entity_id, name: "Carteira") }
-
-      it "returns a collection of DepositAccounts" do
-        expect(subject).to be_a(Myfinance::Entities::DepositAccountCollection)
-      end
-
-      it "returns matched DepositAccount" do
-        da = subject.collection.first
-        expect(da.name).to eq("Carteira")
-      end
-
-      it "does not match other DepositAccounts" do
-        expect(subject.collection.size).to eq(1)
-      end
-
-      context "when not found"  do
-        subject { client.deposit_accounts.find_by(entity_id, name: "NAO_EXISTE_ESSA_DEPOSIT_ACCOUNT_42") }
-
-        it "returns an empty collection" do
-          expect(subject.collection).to be_empty
         end
       end
     end

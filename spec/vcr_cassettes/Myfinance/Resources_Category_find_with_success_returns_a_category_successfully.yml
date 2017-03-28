@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/categories/532314
+    uri: https://sandbox.myfinance.com.br/categories/532323
     body:
       encoding: UTF-8
       string: "{}"
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.4.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 02 Mar 2017 19:50:50 GMT
+      - Tue, 28 Mar 2017 17:30:37 GMT
       ETag:
-      - W/"5005e008ec484ab18507b384eddafe97"
+      - W/"041af51087b707535b05fe9a9090e0ea"
       Server:
       - nginx/1.10.3
       Vary:
@@ -40,26 +40,25 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '17'
       X-RateLimit-Reset:
-      - '2017-03-02T19:51:00Z'
+      - '2017-03-28T17:31:00Z'
       X-Request-Id:
-      - 166cbcb62a472bf20ec4206ffbccbeda
+      - 5d56a8396122a9540af4c074506aae16
       X-Runtime:
-      - '4.567124'
+      - '0.034089'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '237'
+      - '248'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"category":{"cost":true,"created_at":"2015-07-29T11:04:50-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Category
-        updated","id":532314,"imported_from_sync":false,"interested_users_ids":[3703],"modified_by_sync":false,"name":"Category
-        updated","parent_id":null,"revenue":true,"updated_at":"2017-03-02T16:08:55-03:00","use_count":0}}'
+      string: '{"category":{"cost":true,"created_at":"2015-07-29T11:04:50-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Animal
+        de Estima\u00e7\u00e3o / Veterin\u00e1rio","id":532323,"imported_from_sync":false,"interested_users_ids":[],"modified_by_sync":false,"name":"Veterin\u00e1rio","parent_id":532320,"revenue":true,"updated_at":"2015-07-29T11:04:50-03:00","use_count":0}}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/categories/532314
-  recorded_at: Thu, 02 Mar 2017 19:50:50 GMT
+      effective_url: https://sandbox.myfinance.com.br/categories/532323
+  recorded_at: Tue, 28 Mar 2017 17:30:37 GMT
 recorded_with: VCR 2.9.3

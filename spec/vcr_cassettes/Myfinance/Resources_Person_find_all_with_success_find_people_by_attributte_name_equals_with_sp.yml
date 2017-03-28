@@ -4,11 +4,11 @@ http_interactions:
     method: get
     uri: https://sandbox.myfinance.com.br/people?search[name_equals]=Jo%C3%A3o%20das%20neves
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Mar 2017 19:26:27 GMT
+      - Tue, 28 Mar 2017 18:03:08 GMT
       ETag:
       - W/"706d6e56af8c0583b0fcf546b6e62c2a"
       Server:
@@ -40,13 +40,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '18'
       X-RateLimit-Reset:
-      - '2017-03-21T19:27:00Z'
+      - '2017-03-28T18:04:00Z'
       X-Request-Id:
-      - 8071e8514eb75ac9c63bafb49edbab34
+      - 39136cef8d55394f9ab7211c7267d003
       X-Runtime:
-      - '0.037002'
+      - '0.036830'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -60,5 +60,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/people?search[name_equals]=Jo%C3%A3o%20das%20neves
-  recorded_at: Tue, 21 Mar 2017 19:26:28 GMT
+  recorded_at: Tue, 28 Mar 2017 18:03:08 GMT
 recorded_with: VCR 2.9.3

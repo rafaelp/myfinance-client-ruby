@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts?
+    uri: https://sandbox.myfinance.com.br/categories?
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Tue, 28 Mar 2017 19:13:07 GMT
+      - Tue, 28 Mar 2017 17:30:37 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -35,9 +35,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - babfbbf853b7e2372ab555a67723a6e6
+      - 59781a21f4966daec32f28d302408cd1
       X-Runtime:
-      - '0.004606'
+      - '0.004780'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -51,6 +51,6 @@ http_interactions:
 '
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/entities/3798/deposit_accounts?
-  recorded_at: Tue, 28 Mar 2017 19:13:07 GMT
+      effective_url: https://sandbox.myfinance.com.br/categories?
+  recorded_at: Tue, 28 Mar 2017 17:30:37 GMT
 recorded_with: VCR 2.9.3

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/entities?search[name]=ENTIDADE_QUE_NAO_EXISTE_42
+    uri: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 27 Mar 2017 14:47:46 GMT
+      - Tue, 28 Mar 2017 17:30:35 GMT
       ETag:
-      - W/"d751713988987e9331980363e24189ce"
+      - W/"5ca77a20241863cde1c6ee06062b3ddb"
       Server:
       - nginx/1.10.3
       Vary:
@@ -40,24 +40,25 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '17'
+      - '19'
       X-RateLimit-Reset:
-      - '2017-03-27T14:48:00Z'
+      - '2017-03-28T17:31:00Z'
       X-Request-Id:
-      - c5744888b0e59f7198ae3a549dee8979
+      - 2f3e761c3bddae993cdb632199930128
       X-Runtime:
-      - '0.047916'
+      - '0.047697'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '22'
+      - '267'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: "[]"
+      string: '[{"category":{"account_id":3613,"cost":true,"created_at":"2015-07-29T11:04:50-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Despesas
+        com Filhos / Alimenta\u00e7\u00e3o","guid":null,"id":532331,"imported_from_sync":false,"interested_users_ids":[],"modified_by_sync":false,"name":"Alimenta\u00e7\u00e3o","parent_id":532330,"revenue":true,"updated_at":"2015-07-29T11:04:50-03:00","use_count":0}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/entities?search[name]=ENTIDADE_QUE_NAO_EXISTE_42
-  recorded_at: Mon, 27 Mar 2017 14:47:46 GMT
+      effective_url: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
+  recorded_at: Tue, 28 Mar 2017 17:30:35 GMT
 recorded_with: VCR 2.9.3

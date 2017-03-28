@@ -10,57 +10,49 @@ describe Myfinance::Resources::Person, vcr: true do
       it "show all people successfully" do
         expect(subject).to be_a(Myfinance::Entities::PersonCollection)
         expect(subject.collection.first).to be_a(entity_klass)
-        expect(subject.collection.first.name).to eq("Myfreecomm")
+        expect(subject.collection.first.name).to eq("João das neves")
       end
-    end
 
-    context "when not found" do
-      let(:client) { Myfinance.client("") }
+      context "with params" do
+        it "find people by attributte name_equals" do
+          result = client.people.find_all( name_equals: "Myfreecomm", person_type_in: "JuridicalPerson")
+          expect(result).to be_a(Myfinance::Entities::PersonCollection)
+          expect(result.collection.first.name).to eq("Myfreecomm")
+        end
 
-      it "raises Myfinance::RequestError with 401 status code" do
-        expect {
-          client.people.find_all
-        }.to raise_error(Myfinance::RequestError) do |error|
-          expect(error.code).to eq(401)
+        it "find people by attributte with special characters" do
+          result = client.people.find_all(name_equals: "João das neves")
+          expect(result).to be_a(Myfinance::Entities::PersonCollection)
+          expect(result.collection.first.name).to eq("João das neves")
+        end
+
+        it "find people by attributte federation_subscription_number_equals" do
+          result = client.people.find_all(
+            { federation_subscription_number_equals: "42.308.611/0001-41" }
+          )
+          expect(result).to be_a(Myfinance::Entities::PersonCollection)
+          expect(result.collection.first.name).to eq("Myfreecomm")
+        end
+        context "with error" do
+          let(:client) { Myfinance.client("") }
+
+          it "raises Myfinance::RequestError with 401 status code" do
+            params = { name_equals: "Myfreecomm" }
+            expect { client.people.find_all(params) }.to raise_error(Myfinance::RequestError) do |error|
+              expect(error.code).to eq(401)
+            end
+          end
         end
       end
     end
   end
 
-  describe "#find_by" do
-    context "with success" do
-      it "find people by attributte name_equals" do
-        result = client.people.find_by(
-          { name_equals: "Myfreecomm", person_type_in: "JuridicalPerson" }
-        )
-        expect(result).to be_a(Myfinance::Entities::PersonCollection)
-        expect(result.collection.first.name).to eq("Myfreecomm")
-      end
+  context "when not found" do
+    let(:client) { Myfinance.client("") }
 
-      it "find people by attributte name_equals with special characters" do
-        result = client.people.find_by({ name_equals: "João das neves"})
-        expect(result).to be_a(Myfinance::Entities::PersonCollection)
-        expect(result.collection.first.name).to eq("João das neves")
-      end
-
-      it "find people by attributte federation_subscription_number_equals" do
-        result = client.people.find_by(
-          { federation_subscription_number_equals: "42.308.611/0001-41" }
-        )
-        expect(result).to be_a(Myfinance::Entities::PersonCollection)
-        expect(result.collection.first.name).to eq("Myfreecomm")
-      end
-    end
-
-    context "with error" do
-      let(:client) { Myfinance.client("") }
-
-      it "raises Myfinance::RequestError with 401 status code" do
-        expect {
-          client.people.find_by({ name_equals: "Myfreecomm" })
-        }.to raise_error(Myfinance::RequestError) do |error|
-          expect(error.code).to eq(401)
-        end
+    it "raises Myfinance::RequestError with 401 status code" do
+      expect { client.people.find_all }.to raise_error(Myfinance::RequestError) do |error|
+        expect(error.code).to eq(401)
       end
     end
   end

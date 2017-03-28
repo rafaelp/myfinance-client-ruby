@@ -97,18 +97,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
       <code>client.entities.find</code>
     </td>
   </tr>
-  <tr>
-    <td><code>GET</code></td>
-    <td>
-      <a href="https://app.myfinance.com.br/docs/api/entities#get_show" target="_blank">
-        /entities
-      </a>
-    </td>
-    <td>
-      <code>client.entities.find_by</code>
-    </td>
-  </tr>
-
 </table>
 
 #### [FinancialTransactions](https://app.myfinance.com.br/docs/api/financial_transactions)
@@ -516,17 +504,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
   </tr>
   <tr>
-    <td><code>GET</code></td>
-    <td>
-      <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#get_show" target="_blank">
-        /entities/:entity_id/deposit_accounts
-      </a>
-    </td>
-    <td>
-      <code>client.deposit_accounts.find_by</code>
-    </td>
-  </tr>
-  <tr>
     <td><code>POST</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/deposit_accounts#post_create" target="_blank">
@@ -657,17 +634,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
   </tr>
   <tr>
-    <td><code>GET</code></td>
-    <td>
-      <a href="https://app.myfinance.com.br/docs/api/classification_centers#get_show" target="_blank">
-        /classification_centers
-      </a>
-    </td>
-    <td>
-      <code>client.classification_centers.find_by</code>
-    </td>
-  </tr>
-  <tr>
     <td><code>POST</code></td>
     <td>
       <a href="https://app.myfinance.com.br/docs/api/classification_centers#post_create" target="_blank">
@@ -719,17 +685,6 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
     <td>
       <code>client.people.find_all</code>
-    </td>
-  </tr>
-  <tr>
-    <td><code>GET</code></td>
-    <td>
-      <a href="https://app.myfinance.com.br/docs/api/people" target="_blank">
-        /people
-      </a>
-    </td>
-    <td>
-      <code>client.people.find_by</code>
     </td>
   </tr>
   <tr>

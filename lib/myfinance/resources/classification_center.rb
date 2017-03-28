@@ -8,15 +8,17 @@ module Myfinance
     #
     class ClassificationCenter < Base
       #
-      # List all classification centers
+      # List all classification centers, supplying optional params for refinement
       #
       # [API]
       #   Method: <tt>GET /classification_centers</tt>
       #
       #   Documentation: https://app.myfinance.com.br/docs/api/classification_centers#get_index
       #
-      def find_all
-        http.get("/classification_centers", body: {}) do |response|
+      def find_all(params = {})
+        search_endpoint = build_search_endpoint(params)
+
+        http.get(search_endpoint) do |response|
           respond_with_collection(response)
         end
       end
@@ -34,24 +36,6 @@ module Myfinance
           respond_with_object response, "classification_center"
         end
       end
-
-      #
-      # Find classification centers by attributtes
-      #
-      # [API]
-      #   Method: <tt>GET /classification_centers</tt>
-      #
-      #   Documentation: https://app.myfinance.com.br/docs/api/classification_centers
-      #
-      def find_by(params)
-        values = params.map { |k,v| "search[#{k}]=#{v}" }.join("&")
-        http.get(
-          URI.encode("/classification_centers?#{values}"), body: {}
-        ) do |response|
-          respond_with_collection(response)
-        end
-      end
-
       #
       # Creates a classification center
       #
@@ -97,6 +81,12 @@ module Myfinance
         http.delete("/classification_centers/#{id}", body: {}) do |response|
           respond_with_object response, "classification_center"
         end
+      end
+
+      private
+
+      def endpoint
+        "/classification_centers"
       end
     end
   end

@@ -8,35 +8,22 @@ module Myfinance
     #
     class Person < Base
       #
-      # List all people
+      # List all people with optional filters for refinement
       #
       # [API]
       #   Method: <tt>GET /people</tt>
       #
       #   Documentation: https://app.myfinance.com.br/docs/api/people#get_index
       #
-      def find_all
-        http.get("/people", body: {}) do |response|
+      def find_all(params = {})
+        search_endpoint = build_search_endpoint(params)
+
+        http.get(search_endpoint) do |response|
           respond_with_collection(response)
         end
       end
 
-      #
-      # Find people by attributtes
-      #
-      # [API]
-      #   Method: <tt>GET /people</tt>
-      #
-      #   Documentation: https://app.myfinance.com.br/docs/api/people#get_index
-      #
-      def find_by(params)
-        values = params.map { |k,v| "search[#{k}]=#{v}" }.join("&")
-
-        http.get(URI.encode("/people?#{values}"), body: {}) do |response|
-          respond_with_collection(response)
-        end
-      end
-
+      
       #
       # Show a person
       #
@@ -91,6 +78,12 @@ module Myfinance
         http.delete("/people/#{id}", body: {}) do |response|
           respond_with_object response, "person"
         end
+      end
+
+      private
+
+      def endpoint
+        "/people"
       end
     end
   end

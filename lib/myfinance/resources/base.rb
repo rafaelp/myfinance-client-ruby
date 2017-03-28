@@ -10,6 +10,18 @@ module Myfinance
 
       private
 
+      def build_search_endpoint(params)
+        query_string = query(params).join("&")
+        URI.encode("#{endpoint}?#{query_string}")
+      end
+
+      def query(params)
+        page = params.delete(:page)         
+        query = params.map { |key, value| "search[#{key}]=#{value}" }
+        query << "page=#{page}" if page
+        query
+      end
+
       def respond_with_collection(response)
         collection_klass = Myfinance::Entities.const_get("#{entity_klass_name}Collection")
         collection_klass.build(response)

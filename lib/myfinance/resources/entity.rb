@@ -15,8 +15,10 @@ module Myfinance
       #
       #   Documentation: https://app.myfinance.com.br/docs/api/entities#get_index
       #
-      def find_all
-        http.get('/entities', body: {}) do |response|
+      def find_all(params = {})
+        search_endpoint = build_search_endpoint(params)
+
+        http.get(search_endpoint) do |response|
           respond_with_collection(response)
         end
       end
@@ -35,23 +37,10 @@ module Myfinance
         end
       end
 
-      def find_by(params = {})
-        sanitized_params = search_params(params)
-        endpoint = encode_endpoint(sanitized_params)
-
-        http.get(endpoint, body: {}) do |response|
-          respond_with_collection(response)
-        end
-      end
-
       private
 
-      def search_params(params)
-        params.map { |key, value| "search[#{key}]=#{value}" }.join("&")
-      end
-
-      def encode_endpoint(path)
-        URI.encode("/entities?#{path}")
+      def endpoint
+        "/entities"
       end
     end
   end

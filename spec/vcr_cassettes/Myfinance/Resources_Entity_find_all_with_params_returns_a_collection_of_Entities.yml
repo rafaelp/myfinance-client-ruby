@@ -4,11 +4,11 @@ http_interactions:
     method: get
     uri: https://sandbox.myfinance.com.br/entities?search[name_contains]=Minhas
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 27 Mar 2017 14:47:44 GMT
+      - Tue, 28 Mar 2017 16:48:58 GMT
       ETag:
       - W/"f3a035ee88d3bb7e0279bf1eba61efc2"
       Server:
@@ -40,13 +40,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '10'
       X-RateLimit-Reset:
-      - '2017-03-27T14:48:00Z'
+      - '2017-03-28T16:49:00Z'
       X-Request-Id:
-      - fe7da35bbc0ab07efe7fe73fa87c7545
+      - 61f42a31073cf937cd5f892b290961bb
       X-Runtime:
-      - '0.074581'
+      - '0.039400'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -60,5 +60,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/entities?search[name_contains]=Minhas
-  recorded_at: Mon, 27 Mar 2017 14:47:44 GMT
+  recorded_at: Tue, 28 Mar 2017 16:48:58 GMT
 recorded_with: VCR 2.9.3

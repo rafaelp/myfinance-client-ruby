@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/classification_centers
+    uri: https://sandbox.myfinance.com.br/classification_centers?
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.4.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Thu, 09 Mar 2017 13:10:22 GMT
+      - Tue, 28 Mar 2017 17:20:50 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -35,9 +35,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 0b46611752b271873f9fedb438a51dc0
+      - fa4c815ecac9d3bf4a26fe9b38c521a2
       X-Runtime:
-      - '0.004979'
+      - '0.004713'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -51,6 +51,6 @@ http_interactions:
 '
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/classification_centers
-  recorded_at: Thu, 09 Mar 2017 13:10:22 GMT
+      effective_url: https://sandbox.myfinance.com.br/classification_centers?
+  recorded_at: Tue, 28 Mar 2017 17:20:50 GMT
 recorded_with: VCR 2.9.3

@@ -2,19 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/entities
+    uri: https://sandbox.myfinance.com.br/entities?
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.1.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
       - application/json
       Authorization:
-      - Basic d3JvbmctdG9rZW46WA==
+      - Basic Olg=
   response:
     status:
       code: 401
@@ -25,17 +25,19 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Wed, 29 Jul 2015 17:30:51 GMT
+      - Tue, 28 Mar 2017 16:48:58 GMT
       Server:
-      - nginx/1.8.0
+      - nginx/1.10.3
+      Vary:
+      - Origin
       WWW-Authenticate:
       - Basic realm="Myfinance API"
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 21b0e54bfd144a0e22e5c16799b73f2d
+      - f33d154e9c596294aa9195c7c173b42e
       X-Runtime:
-      - '0.004971'
+      - '0.004454'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -44,10 +46,11 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: |
-        HTTP Basic: Access denied.
+      string: 'HTTP Basic: Access denied.
+
+'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/entities
-  recorded_at: Wed, 29 Jul 2015 17:30:51 GMT
+      effective_url: https://sandbox.myfinance.com.br/entities?
+  recorded_at: Tue, 28 Mar 2017 16:48:58 GMT
 recorded_with: VCR 2.9.3

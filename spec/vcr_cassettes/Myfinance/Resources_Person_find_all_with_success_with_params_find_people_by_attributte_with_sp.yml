@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/people?
+    uri: https://sandbox.myfinance.com.br/people?search[name_equals]=Jo%C3%A3o%20das%20neves
     body:
       encoding: US-ASCII
       string: ''
@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 28 Mar 2017 18:06:04 GMT
+      - Tue, 28 Mar 2017 18:06:52 GMT
       ETag:
-      - W/"8f6e13fe3a6e64e1c4812f2e4dd5d5bc"
+      - W/"706d6e56af8c0583b0fcf546b6e62c2a"
       Server:
       - nginx/1.10.3
       Vary:
@@ -40,25 +40,25 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '18'
       X-RateLimit-Reset:
       - '2017-03-28T18:07:00Z'
       X-Request-Id:
-      - b37e3c19ebb2425660dd5d3c1759bba6
+      - d76bbd2e8f4ac5227aa251a55e5339bb
       X-Runtime:
-      - '0.036123'
+      - '0.043644'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '518'
+      - '362'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '[{"person":{"account_id":3613,"address":null,"address_number":null,"city":null,"complement":null,"country":null,"created_at":"2017-03-21T16:25:56-03:00","customer":true,"email":null,"excel_import_id":null,"febraban_favored_code":null,"febraban_name":null,"federation_subscription_number":null,"federation_subscription_number_only_numbers":null,"federation_subscription_type_id":null,"force_destroy":false,"guid":null,"id":207549,"imported_from_sync":false,"interested_users_ids":[3703],"modified_by_sync":false,"name":"Jo\u00e3o
-        das neves","neighborhood":null,"note":null,"person_type":null,"phone":null,"site":null,"state":null,"supplier":true,"updated_at":"2017-03-21T16:25:56-03:00","use_count":0,"zip_code":null}},{"person":{"account_id":3613,"address":"","address_number":"","city":"","complement":"","country":"","created_at":"2015-11-12T14:34:37-02:00","customer":true,"email":"","excel_import_id":null,"febraban_favored_code":null,"febraban_name":null,"federation_subscription_number":"42.308.611/0001-41","federation_subscription_number_only_numbers":"42308611000141","federation_subscription_type_id":null,"force_destroy":false,"guid":null,"id":199424,"imported_from_sync":false,"interested_users_ids":[3691],"modified_by_sync":false,"name":"Myfreecomm","neighborhood":"","note":"","person_type":"JuridicalPerson","phone":"","site":"","state":"","supplier":true,"updated_at":"2015-11-12T14:34:37-02:00","use_count":0,"zip_code":""}}]'
+        das neves","neighborhood":null,"note":null,"person_type":null,"phone":null,"site":null,"state":null,"supplier":true,"updated_at":"2017-03-21T16:25:56-03:00","use_count":0,"zip_code":null}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/people?
-  recorded_at: Tue, 28 Mar 2017 18:06:04 GMT
+      effective_url: https://sandbox.myfinance.com.br/people?search[name_equals]=Jo%C3%A3o%20das%20neves
+  recorded_at: Tue, 28 Mar 2017 18:06:52 GMT
 recorded_with: VCR 2.9.3

@@ -8,7 +8,7 @@ http_interactions:
       string: '{"category":{}}'
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.4.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -25,11 +25,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 24 Feb 2017 19:40:58 GMT
+      - Tue, 28 Mar 2017 17:30:38 GMT
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTk3OWVjZjA3MjExZTEwNTA3Mzc0OGNmZTViZGU2NjA0BjsAVA%3D%3D--1fe6446a61e8d752f89636daae491f039e89f4f1;
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTdmMGVlMGI1OTg0M2EwNzk3NGNjYjc1OTEyYmVmZmQxBjsAVA%3D%3D--5934a7d0a0701c44d4c19779eee952316adf4ea9;
         path=/; HttpOnly
       Vary:
       - Origin
@@ -38,13 +38,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '14'
       X-RateLimit-Reset:
-      - '2017-02-24T19:41:00Z'
+      - '2017-03-28T17:31:00Z'
       X-Request-Id:
-      - bedb258eaa293b3cc2e226884c73f356
+      - b5a20601d14fb535061190f463d93691
       X-Runtime:
-      - '0.041373'
+      - '0.044674'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -58,5 +58,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/categories
-  recorded_at: Fri, 24 Feb 2017 19:40:58 GMT
+  recorded_at: Tue, 28 Mar 2017 17:30:38 GMT
 recorded_with: VCR 2.9.3

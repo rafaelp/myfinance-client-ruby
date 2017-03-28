@@ -4,11 +4,11 @@ http_interactions:
     method: get
     uri: https://sandbox.myfinance.com.br/people?search[federation_subscription_number_equals]=42.308.611/0001-41
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 21 Mar 2017 19:06:53 GMT
+      - Tue, 28 Mar 2017 18:03:08 GMT
       ETag:
       - W/"8f9e3013157fc1b692f3f17f1973c6fe"
       Server:
@@ -40,13 +40,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '18'
+      - '17'
       X-RateLimit-Reset:
-      - '2017-03-21T19:07:00Z'
+      - '2017-03-28T18:04:00Z'
       X-Request-Id:
-      - 42c89081b937912c3a4511c0012dfb69
+      - b167cdf15f892ae07678d1bf06c4dc97
       X-Runtime:
-      - '0.035208'
+      - '0.036085'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -59,5 +59,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/people?search[federation_subscription_number_equals]=42.308.611/0001-41
-  recorded_at: Tue, 21 Mar 2017 19:06:53 GMT
+  recorded_at: Tue, 28 Mar 2017 18:03:08 GMT
 recorded_with: VCR 2.9.3

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
+    uri: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Centro%20de%20Custo%20Tal
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Mar 2017 19:03:15 GMT
+      - Tue, 28 Mar 2017 17:20:49 GMT
       ETag:
-      - W/"5ca77a20241863cde1c6ee06062b3ddb"
+      - W/"f024db5329094bae388f251ec2fd67ac"
       Server:
       - nginx/1.10.3
       Vary:
@@ -42,23 +42,23 @@ http_interactions:
       X-RateLimit-Remaining:
       - '18'
       X-RateLimit-Reset:
-      - '2017-03-16T19:04:00Z'
+      - '2017-03-28T17:21:00Z'
       X-Request-Id:
-      - 27f3d25a1066fe330ab0aeec140bcb7e
+      - 572401c970ecea9eadf1b2dfd1c9f091
       X-Runtime:
-      - '0.038495'
+      - '0.041053'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '267'
+      - '211'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '[{"category":{"account_id":3613,"cost":true,"created_at":"2015-07-29T11:04:50-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Despesas
-        com Filhos / Alimenta\u00e7\u00e3o","guid":null,"id":532331,"imported_from_sync":false,"interested_users_ids":[],"modified_by_sync":false,"name":"Alimenta\u00e7\u00e3o","parent_id":532330,"revenue":true,"updated_at":"2015-07-29T11:04:50-03:00","use_count":0}}]'
+      string: '[{"classification_center":{"cost_center":true,"created_at":"2015-11-13T16:40:42-02:00","entity_id":3798,"excel_import_id":null,"guid":null,"id":17982,"imported_from_sync":false,"modified_by_sync":false,"name":"Centro
+        de Custo Tal","revenue_center":false,"updated_at":"2015-11-13T16:40:42-02:00","use_count":0}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
-  recorded_at: Thu, 16 Mar 2017 19:03:15 GMT
+      effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Centro%20de%20Custo%20Tal
+  recorded_at: Tue, 28 Mar 2017 17:20:49 GMT
 recorded_with: VCR 2.9.3
