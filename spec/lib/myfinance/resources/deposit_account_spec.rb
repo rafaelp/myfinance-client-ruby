@@ -15,7 +15,6 @@ describe Myfinance::Resources::DepositAccount, vcr: true do
         expect(subject.collection.first.name).to eq("Caixa Grande")
       end
 
-
       context "with params" do
         subject { client.deposit_accounts.find_all(entity_id, name: "Carteira") }
       end
@@ -33,7 +32,7 @@ describe Myfinance::Resources::DepositAccount, vcr: true do
         expect(subject.collection.size).to eq(3)
       end
 
-      context "when not found"  do
+      context "when not found" do
         subject { client.deposit_accounts.find_all(entity_id, name: "NAO_EXISTE_ESSA_DEPOSIT_ACCOUNT_42") }
 
         it "returns an empty collection" do

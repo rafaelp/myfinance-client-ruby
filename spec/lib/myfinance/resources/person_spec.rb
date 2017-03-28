@@ -15,15 +15,13 @@ describe Myfinance::Resources::Person, vcr: true do
 
       context "with params" do
         it "find people by attributte name_equals" do
-          result = client.people.find_all(
-            { name_equals: "Myfreecomm", person_type_in: "JuridicalPerson" }
-          )
+          result = client.people.find_all( name_equals: "Myfreecomm", person_type_in: "JuridicalPerson")
           expect(result).to be_a(Myfinance::Entities::PersonCollection)
           expect(result.collection.first.name).to eq("Myfreecomm")
         end
 
         it "find people by attributte with special characters" do
-          result = client.people.find_all({ name_equals: "João das neves"})
+          result = client.people.find_all(name_equals: "João das neves")
           expect(result).to be_a(Myfinance::Entities::PersonCollection)
           expect(result.collection.first.name).to eq("João das neves")
         end
@@ -39,9 +37,8 @@ describe Myfinance::Resources::Person, vcr: true do
           let(:client) { Myfinance.client("") }
 
           it "raises Myfinance::RequestError with 401 status code" do
-            expect {
-              client.people.find_all({ name_equals: "Myfreecomm" })
-            }.to raise_error(Myfinance::RequestError) do |error|
+            params = { name_equals: "Myfreecomm" }
+            expect { client.people.find_all(params) }.to raise_error(Myfinance::RequestError) do |error|
               expect(error.code).to eq(401)
             end
           end
@@ -54,9 +51,7 @@ describe Myfinance::Resources::Person, vcr: true do
     let(:client) { Myfinance.client("") }
 
     it "raises Myfinance::RequestError with 401 status code" do
-      expect {
-        client.people.find_all
-      }.to raise_error(Myfinance::RequestError) do |error|
+      expect { client.people.find_all }.to raise_error(Myfinance::RequestError) do |error|
         expect(error.code).to eq(401)
       end
     end
