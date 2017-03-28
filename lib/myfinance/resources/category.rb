@@ -16,7 +16,7 @@ module Myfinance
       #   Documentation: https://sandbox.myfinance.com.br/docs/api/categories#get_index
       #
       def find_all(params = {})
-        search_endpoint = build_search_endpoint(params)        
+        search_endpoint = build_search_endpoint(params)
 
         http.get(search_endpoint) do |response|
           respond_with_collection(response)
@@ -37,7 +37,6 @@ module Myfinance
         end
       end
 
-            
       #
       # Creates a category
       #

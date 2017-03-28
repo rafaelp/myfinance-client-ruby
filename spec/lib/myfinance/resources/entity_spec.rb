@@ -46,7 +46,6 @@ describe Myfinance::Resources::Entity do
       end
     end
 
-
     context "when not found" do
       let(:client) { Myfinance.client('') }
       subject { client.entities.find_all }

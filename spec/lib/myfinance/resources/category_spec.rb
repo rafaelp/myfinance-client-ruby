@@ -34,14 +34,11 @@ describe Myfinance::Resources::Category, vcr: true do
     end
   end
 
-
   context "when not found" do
     let(:client) { Myfinance.client("") }
 
     it "raises Myfinance::RequestError with 401 status code" do
-      expect {
-        client.categories.find_all
-      }.to raise_error(Myfinance::RequestError) do |error|
+      expect { client.categories.find_all }.to raise_error(Myfinance::RequestError) do |error|
         expect(error.code).to eql(401)
       end
     end
@@ -59,9 +56,7 @@ describe Myfinance::Resources::Category, vcr: true do
 
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
-        expect {
-          client.categories.find(88888888)
-        }.to raise_error(Myfinance::RequestError) do |error|
+        expect { client.categories.find(88888888) }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
         end
       end
@@ -81,9 +76,7 @@ describe Myfinance::Resources::Category, vcr: true do
 
     context "with error" do
       it "raises Myfinance::RequestError with 422 status code" do
-        expect {
-          client.categories.create({})
-        }.to raise_error(Myfinance::RequestError) do |error|
+        expect { client.categories.create({}) }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(422)
         end
       end
@@ -93,17 +86,13 @@ describe Myfinance::Resources::Category, vcr: true do
   describe "#update" do
     context "with success" do
       it "updates a category successfully" do
-        expect(
-          client.categories.update(548083, { name: "Category updated" })
-        ).to be_a(entity_klass)
+        expect(client.categories.update(548083, { name: "Category updated" })).to be_a(entity_klass)
       end
     end
 
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
-        expect {
-          client.categories.update(88888888, {})
-        }.to raise_error(Myfinance::RequestError) do |error|
+        expect { client.categories.update(88888888, {}) }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
         end
       end
@@ -125,9 +114,7 @@ describe Myfinance::Resources::Category, vcr: true do
 
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
-        expect {
-          client.categories.destroy(88888888)
-        }.to raise_error(Myfinance::RequestError) do |error|
+        expect { client.categories.destroy(88888888) }.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
         end
       end

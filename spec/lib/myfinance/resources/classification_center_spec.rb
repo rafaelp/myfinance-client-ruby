@@ -50,9 +50,9 @@ describe Myfinance::Resources::ClassificationCenter, vcr: true do
 
       context "when paging" do
         let(:search_params) { { page: page, entity_id_equals: 3798, name_contains: "Centro" } }
-        subject { client.classification_centers.find_all(search_params) } 
+        subject { client.classification_centers.find_all(search_params) }
 
-        it "returns paginated url " do
+        it "returns paginated url" do
           url = subject.response.request.base_url
           expect(url).to include("page=#{page}")
         end

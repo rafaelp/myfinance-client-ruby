@@ -16,7 +16,7 @@ module Myfinance
       #   Documentation: https://app.myfinance.com.br/docs/api/classification_centers#get_index
       #
       def find_all(params = {})
-        search_endpoint = build_search_endpoint(params)        
+        search_endpoint = build_search_endpoint(params)
 
         http.get(search_endpoint) do |response|
           respond_with_collection(response)
@@ -86,7 +86,7 @@ module Myfinance
       private
 
       def endpoint
-        "/classification_centers" 
+        "/classification_centers"
       end
     end
   end
