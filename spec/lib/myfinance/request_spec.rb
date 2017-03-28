@@ -5,7 +5,7 @@ describe Myfinance::Request do
     subject { described_class.new({ method: 'post', params: {}, url: Myfinance.configuration.url, user_agent: 'My Test User-Agent', token: 'my-auth-hash' }) }
 
     it "does a request using Typhoeus::Request" do
-      expect(Typhoeus::Request).to receive(:new).with("https://sandbox.myfinance.com.br", { method: "post", params: {}, headers: { "Accept" => "application/json", "Content-Type" => "application/json", "User-Agent" => "My Test User-Agent", "Authorization" => "Basic bXktYXV0aC1oYXNoOlg=" }, accept_encoding: "gzip" }).and_return(double(run: true, response: true))
+      expect(Typhoeus::Request).to receive(:new).with("https://sandbox.myfinance.com.br", { method: "post", params: {}, headers: { "Accept" => "application/json", "Content-Type" => "application/json", "User-Agent" => "My Test User-Agent", "Authorization" => "Basic bXktYXV0aC1oYXNoOlg=" }, accept_encoding: "gzip", params_encoding: :rack }).and_return(double(run: true, response: true))
       subject.run
     end
 
@@ -30,7 +30,7 @@ describe Myfinance::Request do
       subject { described_class.new({ method: 'post', params: {}, url: Myfinance.configuration.url, user_agent: 'My Test User-Agent', token: 'my-auth-hash', account_id: "" }) }
 
       it "does not add ACCOUNT_ID on headers" do
-        expect(Typhoeus::Request).to receive(:new).with("https://sandbox.myfinance.com.br", { method: "post", params: {}, headers: { "Accept" => "application/json", "Content-Type" => "application/json", "User-Agent" => "My Test User-Agent", "Authorization" => "Basic bXktYXV0aC1oYXNoOlg=" }, accept_encoding: "gzip" }).and_return(double(run: true, response: true))
+        expect(Typhoeus::Request).to receive(:new).with("https://sandbox.myfinance.com.br", { method: "post", params: {}, headers: { "Accept" => "application/json", "Content-Type" => "application/json", "User-Agent" => "My Test User-Agent", "Authorization" => "Basic bXktYXV0aC1oYXNoOlg=" }, accept_encoding: "gzip", params_encoding: :rack }).and_return(double(run: true, response: true))
         subject.run
       end
     end
@@ -39,7 +39,7 @@ describe Myfinance::Request do
       subject { described_class.new({ method: 'post', params: {}, url: Myfinance.configuration.url, user_agent: 'My Test User-Agent', token: 'my-auth-hash', account_id: nil }) }
 
       it "does not add ACCOUNT_ID on headers" do
-        expect(Typhoeus::Request).to receive(:new).with("https://sandbox.myfinance.com.br", { method: "post", params: {}, headers: { "Accept" => "application/json", "Content-Type" => "application/json", "User-Agent" => "My Test User-Agent", "Authorization" => "Basic bXktYXV0aC1oYXNoOlg=" }, accept_encoding: "gzip" }).and_return(double(run: true, response: true))
+        expect(Typhoeus::Request).to receive(:new).with("https://sandbox.myfinance.com.br", { method: "post", params: {}, headers: { "Accept" => "application/json", "Content-Type" => "application/json", "User-Agent" => "My Test User-Agent", "Authorization" => "Basic bXktYXV0aC1oYXNoOlg=" }, accept_encoding: "gzip", params_encoding: :rack }).and_return(double(run: true, response: true))
         subject.run
       end
     end
@@ -48,7 +48,7 @@ describe Myfinance::Request do
       subject { described_class.new({ method: 'post', params: {}, url: Myfinance.configuration.url, user_agent: 'My Test User-Agent', token: 'my-auth-hash', account_id: 12 }) }
 
       it "does not add ACCOUNT_ID on headers" do
-        expect(Typhoeus::Request).to receive(:new).with("https://sandbox.myfinance.com.br", { method: "post", params: {}, headers: { "Accept" => "application/json", "Content-Type" => "application/json", "User-Agent" => "My Test User-Agent", "Authorization" => "Basic bXktYXV0aC1oYXNoOlg=", "ACCOUNT_ID" => 12 }, accept_encoding: "gzip" }).and_return(double(run: true, response: true))
+        expect(Typhoeus::Request).to receive(:new).with("https://sandbox.myfinance.com.br", { method: "post", params: {}, headers: { "Accept" => "application/json", "Content-Type" => "application/json", "User-Agent" => "My Test User-Agent", "Authorization" => "Basic bXktYXV0aC1oYXNoOlg=", "ACCOUNT_ID" => 12 }, accept_encoding: "gzip", params_encoding: :rack }).and_return(double(run: true, response: true))
         subject.run
       end
     end
