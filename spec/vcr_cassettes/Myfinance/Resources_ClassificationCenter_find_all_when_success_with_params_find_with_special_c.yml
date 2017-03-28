@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 28 Mar 2017 16:35:15 GMT
+      - Tue, 28 Mar 2017 17:20:49 GMT
       ETag:
       - W/"0563718e5d9e5b084bae2b3ae672ce5e"
       Server:
@@ -40,13 +40,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '18'
+      - '17'
       X-RateLimit-Reset:
-      - '2017-03-28T16:36:00Z'
+      - '2017-03-28T17:21:00Z'
       X-Request-Id:
-      - 0c6cd6942f61be830faa54fc11f39cd7
+      - f8418dc8073132480b2e36bbf2b8db3a
       X-Runtime:
-      - '0.055066'
+      - '0.057878'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -60,5 +60,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o%202
-  recorded_at: Tue, 28 Mar 2017 16:35:15 GMT
+  recorded_at: Tue, 28 Mar 2017 17:20:49 GMT
 recorded_with: VCR 2.9.3

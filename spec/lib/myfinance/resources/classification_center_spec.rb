@@ -2,6 +2,7 @@ require "spec_helper"
 
 describe Myfinance::Resources::ClassificationCenter, vcr: true do
   let(:entity_klass) { Myfinance::Entities::ClassificationCenter }
+  let(:page) { 2 }
 
   let(:entity_collection) do
     Myfinance::Entities::ClassificationCenterCollection

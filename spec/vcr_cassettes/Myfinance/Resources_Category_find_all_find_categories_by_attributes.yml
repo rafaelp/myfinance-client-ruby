@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 28 Mar 2017 16:57:48 GMT
+      - Tue, 28 Mar 2017 17:30:35 GMT
       ETag:
       - W/"5ca77a20241863cde1c6ee06062b3ddb"
       Server:
@@ -42,11 +42,11 @@ http_interactions:
       X-RateLimit-Remaining:
       - '19'
       X-RateLimit-Reset:
-      - '2017-03-28T16:58:00Z'
+      - '2017-03-28T17:31:00Z'
       X-Request-Id:
-      - ff20e885d1ed307f85f8c2d3807a9745
+      - 2f3e761c3bddae993cdb632199930128
       X-Runtime:
-      - '0.038001'
+      - '0.047697'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -60,5 +60,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/categories?search[name]=Alimenta%C3%A7%C3%A3o
-  recorded_at: Tue, 28 Mar 2017 16:57:48 GMT
+  recorded_at: Tue, 28 Mar 2017 17:30:35 GMT
 recorded_with: VCR 2.9.3

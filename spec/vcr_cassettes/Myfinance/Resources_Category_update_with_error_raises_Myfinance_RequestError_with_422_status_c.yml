@@ -25,11 +25,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 28 Mar 2017 16:57:51 GMT
+      - Tue, 28 Mar 2017 17:30:39 GMT
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWEwMzdhMDU2MzFjZTYyOGFhN2M3NDA4ZTk2YzRkNDliBjsAVA%3D%3D--97faa4963a27decd5a23860046286e001820f398;
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTg3NTFkYzM5OTc1OTU0ZDI3ZWIzM2Y3NGJhOWJjNzZiBjsAVA%3D%3D--9ec52db7dd25d820c136f76e231ef0b7cf9302c9;
         path=/; HttpOnly
       Vary:
       - Origin
@@ -38,13 +38,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '12'
+      - '11'
       X-RateLimit-Reset:
-      - '2017-03-28T16:58:00Z'
+      - '2017-03-28T17:31:00Z'
       X-Request-Id:
-      - fbf0ff3b7344f25dfd7037baa5c2db98
+      - ef1b0958b8ed771a7193b818d6ee47c7
       X-Runtime:
-      - '0.057684'
+      - '0.046798'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -58,5 +58,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/categories/548083
-  recorded_at: Tue, 28 Mar 2017 16:57:51 GMT
+  recorded_at: Tue, 28 Mar 2017 17:30:39 GMT
 recorded_with: VCR 2.9.3

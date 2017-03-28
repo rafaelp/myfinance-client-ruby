@@ -5,7 +5,7 @@ http_interactions:
     uri: https://sandbox.myfinance.com.br/categories
     body:
       encoding: UTF-8
-      string: '{"category":{"name":"Category 1"}}'
+      string: '{"category":{"name":"Categoria 42 do Marvin"}}'
     headers:
       User-Agent:
       - Myfinance Ruby Client v1.1.0
@@ -25,15 +25,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 28 Mar 2017 16:57:49 GMT
+      - Tue, 28 Mar 2017 17:35:12 GMT
       ETag:
-      - '"54dd1684f9a63d03efc98794e357b51e"'
+      - '"dbcce65fa4a198d172fbb728513dcf2b"'
       Location:
-      - https://sandbox.myfinance.com.br/categories/548640
+      - https://sandbox.myfinance.com.br/categories/548641
       Server:
       - nginx/1.10.3
       Set-Cookie:
-      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTcwZjkyNzIxMjQyM2U3NDk0ZTE3NGRkOThmMmE4MDAwBjsAVA%3D%3D--84fb8ce97395c7592c88726734c881b32b85e9b3;
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTcxMzI4ODRkYzRmNGIwN2YxMDhjNTZhY2RlZWU5OGJhBjsAVA%3D%3D--7fbe209358a030d7422c454c77c83589aa5a944c;
         path=/; HttpOnly
       Vary:
       - Origin
@@ -42,26 +42,26 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '16'
+      - '19'
       X-RateLimit-Reset:
-      - '2017-03-28T16:58:00Z'
+      - '2017-03-28T17:36:00Z'
       X-Request-Id:
-      - 63bef52beb85271fe5bf6387abda8b21
+      - 240bb81edbe00a1b5fd6be0b8151b6f4
       X-Runtime:
-      - '0.071671'
+      - '0.066712'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '338'
+      - '362'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"category":{"cost":true,"created_at":"2017-03-28T13:57:49-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Category
-        1","id":548640,"imported_from_sync":false,"interested_users_ids":[3703],"modified_by_sync":false,"name":"Category
-        1","parent_id":null,"revenue":true,"updated_at":"2017-03-28T13:57:49-03:00","use_count":0}}'
+      string: '{"category":{"cost":true,"created_at":"2017-03-28T14:35:12-03:00","excel_import_id":null,"force_destroy":false,"full_name":"Categoria
+        42 do Marvin","id":548641,"imported_from_sync":false,"interested_users_ids":[3703],"modified_by_sync":false,"name":"Categoria
+        42 do Marvin","parent_id":null,"revenue":true,"updated_at":"2017-03-28T14:35:12-03:00","use_count":0}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/categories
-  recorded_at: Tue, 28 Mar 2017 16:57:49 GMT
+  recorded_at: Tue, 28 Mar 2017 17:35:12 GMT
 recorded_with: VCR 2.9.3

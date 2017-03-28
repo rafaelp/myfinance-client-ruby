@@ -10,7 +10,7 @@ describe Myfinance::Resources::Category, vcr: true do
       it "show all categories successfully" do
         expect(subject.class).to eq(Myfinance::Entities::CategoryCollection)
         expect(subject.collection.first.class).to eq(entity_klass)
-        expect(subject.collection.first.full_name).to eq("Alimentação")
+        expect(subject.collection.first.full_name).to eq("Moradia / Água e Esgoto")
       end
     end
 
@@ -49,11 +49,11 @@ describe Myfinance::Resources::Category, vcr: true do
 
   describe "#find" do
     context "with success" do
-      subject { client.categories.find(532314) }
+      subject { client.categories.find(532323) }
 
       it "returns a category successfully" do
         expect(subject.class).to eql(entity_klass)
-        expect(subject.id).to eql(532314)
+        expect(subject.id).to eql(532323)
       end
     end
 
@@ -69,13 +69,13 @@ describe Myfinance::Resources::Category, vcr: true do
   end
 
   describe "#create" do
-    let(:params) { { name: "Category 1" } }
+    let(:params) { { name: "Categoria 42 do Marvin" } }
 
     context "with success" do
       it "creates a category successfully" do
         result = client.categories.create(params)
         expect(result).to be_a(entity_klass)
-        expect(result.name).to eql("Category 1")
+        expect(result.name).to eql("Categoria 42 do Marvin")
       end
     end
 
@@ -119,7 +119,7 @@ describe Myfinance::Resources::Category, vcr: true do
   describe "#destroy" do
     context "with success" do
       it "destroy a category successfully" do
-        expect(client.categories.destroy(532314)).to be_truthy
+        expect(client.categories.destroy(532350)).to be_truthy
       end
     end
 

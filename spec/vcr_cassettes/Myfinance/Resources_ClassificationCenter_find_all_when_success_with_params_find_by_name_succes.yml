@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 28 Mar 2017 16:35:14 GMT
+      - Tue, 28 Mar 2017 17:20:49 GMT
       ETag:
       - W/"f024db5329094bae388f251ec2fd67ac"
       Server:
@@ -40,13 +40,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '18'
       X-RateLimit-Reset:
-      - '2017-03-28T16:36:00Z'
+      - '2017-03-28T17:21:00Z'
       X-Request-Id:
-      - 479ad677cc6bd0b261447afdb112d35f
+      - 572401c970ecea9eadf1b2dfd1c9f091
       X-Runtime:
-      - '0.041004'
+      - '0.041053'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -60,5 +60,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Centro%20de%20Custo%20Tal
-  recorded_at: Tue, 28 Mar 2017 16:35:14 GMT
+  recorded_at: Tue, 28 Mar 2017 17:20:49 GMT
 recorded_with: VCR 2.9.3
