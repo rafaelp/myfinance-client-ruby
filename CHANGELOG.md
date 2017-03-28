@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.2.0
+### Endpoints improvements
+- The `#find_all` method of all endpoints that support filtering can now receive parameters to refine the results and paginate
+### Deprecations
+- No longer supports `#find_by`. Use `#find_all` instead, passing filters as a hash if needed.
+### Fixes
+- Params encoding set to Rack
+
+## v1.1.0
+
+### New Endpoints
+- Add endpoint Deposit Accounts filtering
+- Add endpoint Entities filtering
+
 ## v1.0.0
 
 ### New Endpoints
