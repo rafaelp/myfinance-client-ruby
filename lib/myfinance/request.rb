@@ -24,7 +24,8 @@ module Myfinance
         params:           args[:params],
         body:             body,
         headers:          headers,
-        accept_encoding:  "gzip"
+        accept_encoding:  "gzip",
+        params_encoding: :rack
       }.reject { |_k,v| v.nil? }
     end
 
