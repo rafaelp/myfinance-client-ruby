@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/people?search[name_equals]=Myfreecomm
+    uri: https://sandbox.myfinance.com.br/people?
     body:
-      encoding: UTF-8
-      string: "{}"
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
-      - Myfinance Ruby Client v0.7.0
+      - Myfinance Ruby Client v1.1.0
       Accept:
       - application/json
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Tue, 21 Mar 2017 19:06:53 GMT
+      - Tue, 28 Mar 2017 18:03:08 GMT
       Server:
       - nginx/1.10.3
       Vary:
@@ -35,9 +35,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 70fc9d72293eaaf0ba84dfc1618615ce
+      - 2486a89ab794713ef5c34c63e3a8e2b6
       X-Runtime:
-      - '0.004719'
+      - '0.004418'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -51,6 +51,6 @@ http_interactions:
 '
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/people?search[name_equals]=Myfreecomm
-  recorded_at: Tue, 21 Mar 2017 19:06:53 GMT
+      effective_url: https://sandbox.myfinance.com.br/people?
+  recorded_at: Tue, 28 Mar 2017 18:03:08 GMT
 recorded_with: VCR 2.9.3

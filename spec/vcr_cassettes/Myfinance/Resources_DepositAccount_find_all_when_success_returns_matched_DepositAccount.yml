@@ -40,13 +40,13 @@ http_interactions:
       X-RateLimit-Limit:
       - '20'
       X-RateLimit-Remaining:
-      - '19'
+      - '17'
       X-RateLimit-Reset:
       - '2017-03-28T19:14:00Z'
       X-Request-Id:
-      - aff5b929d43e14e11572241c923c91e0
+      - 64ec659dbe66971ca9b536b11f0980c9
       X-Runtime:
-      - '0.071513'
+      - '0.060317'
       X-UA-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
