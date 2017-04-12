@@ -16,7 +16,7 @@ module Myfinance
       end
 
       def query(params)
-        page = params.delete(:page)         
+        page = params.delete(:page)
         query = params.map { |key, value| "search[#{key}]=#{value}" }
         query << "page=#{page}" if page
         query
