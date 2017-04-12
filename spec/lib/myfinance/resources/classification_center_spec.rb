@@ -57,6 +57,16 @@ describe Myfinance::Resources::ClassificationCenter, vcr: true do
           expect(url).to include("page=#{page}")
         end
       end
+
+      context "when per page" do
+        let(:search_params) { { per_page: 400, page: page, entity_id_equals: 3798, name_contains: "Centro" } }
+        subject { client.classification_centers.find_all(search_params) }
+
+        it "returns url" do
+          url = subject.response.request.base_url
+          expect(url).to include("per_page=#{400}")
+        end
+      end
     end
 
     context "when error" do

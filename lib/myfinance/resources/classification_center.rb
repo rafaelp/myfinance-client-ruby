@@ -88,6 +88,20 @@ module Myfinance
       def endpoint
         "/classification_centers"
       end
+
+      def build_search_endpoint(params)
+        query_string = query(params).join("&")
+        URI.encode("#{endpoint}?#{query_string}")
+      end
+
+      def query(params)
+        page = params.delete(:page)
+        per_page = params.delete(:per_page)
+        query = params.map { |key, value| "search[#{key}]=#{value}" }
+        query << "page=#{page}" if page
+        query << "per_page=#{per_page}" if per_page
+        query
+      end
     end
   end
 end
