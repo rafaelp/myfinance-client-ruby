@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/entities/3703/sales
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 02 Jun 2017 15:31:06 GMT
+      ETag:
+      - W/"df7aab1ddf4422fd40b67ce60d267173"
+      Server:
+      - nginx/1.12.0
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '17'
+      X-RateLimit-Reset:
+      - '2017-06-02T15:32:00Z'
+      X-Request-Id:
+      - aed6725f72771798c3127fa4c5963c83
+      X-Runtime:
+      - '0.079343'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '622'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"sale":{"id":8,"nominal_amount":"100.0","receivable_amount":"95.0","fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":"American
+        Express","payment_method":"debit","status":1,"summary":false,"description":"Primeira
+        venda","observation":"","category_id":525219,"classification_center_id":18892,"person_id":191988,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":1819688,"liquidation_week_day":null,"estimated_liquidated_at":"2017-06-30","liquidated_at":null,"occurred_at":"2017-06-01","created_at":"2017-06-01T16:51:19-03:00","updated_at":"2017-06-01T16:51:19-03:00","custom_classifications":[]}},{"sale":{"id":9,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:18:32-03:00","updated_at":"2017-06-02T12:18:32-03:00","custom_classifications":[]}},{"sale":{"id":10,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:18:33-03:00","updated_at":"2017-06-02T12:18:33-03:00","custom_classifications":[]}},{"sale":{"id":11,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:18:33-03:00","updated_at":"2017-06-02T12:18:33-03:00","custom_classifications":[]}},{"sale":{"id":12,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:19:51-03:00","updated_at":"2017-06-02T12:19:51-03:00","custom_classifications":[]}},{"sale":{"id":13,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:19:51-03:00","updated_at":"2017-06-02T12:19:51-03:00","custom_classifications":[]}},{"sale":{"id":14,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:19:51-03:00","updated_at":"2017-06-02T12:19:51-03:00","custom_classifications":[]}},{"sale":{"id":15,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:20:29-03:00","updated_at":"2017-06-02T12:20:29-03:00","custom_classifications":[]}},{"sale":{"id":16,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:20:29-03:00","updated_at":"2017-06-02T12:20:29-03:00","custom_classifications":[]}},{"sale":{"id":17,"nominal_amount":"40.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":"","payment_method":"cash","status":0,"summary":false,"description":"","observation":"","category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-06-02","created_at":"2017-06-02T12:30:43-03:00","updated_at":"2017-06-02T12:30:43-03:00","custom_classifications":[]}}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3703/sales
+  recorded_at: Fri, 02 Jun 2017 15:31:06 GMT
+recorded_with: VCR 2.9.3

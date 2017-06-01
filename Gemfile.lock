@@ -4,6 +4,7 @@ PATH
     myfinance (1.2.1)
       mime-types (~> 2.99)
       multi_json (~> 1.11)
+      require_all (~> 1.4.0)
       typhoeus (~> 0.8)
       virtus (~> 1.0.5)
 
@@ -45,6 +46,7 @@ GEM
       pry (>= 0.9.10, < 0.11.0)
     public_suffix (2.0.5)
     rake (10.5.0)
+    require_all (1.4.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)

@@ -1,11 +1,12 @@
 *.gem
 *.rbc
 *.swp
+.DS_Store
 .bundle
 .config
-.DS_Store
-.envrc
 .env
+.envrc
+.rspec-local
 .ruby-*
 .rvmrc
 coverage

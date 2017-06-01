@@ -3,6 +3,16 @@ require "spec_helper"
 describe Myfinance::Client do
   subject { client }
 
+  shared_examples :resource do |method, type|
+    describe "##{method}" do
+      it "instantiates a new #{type}" do
+        allow(type).to receive(:new)
+        subject.send(method)
+        expect(type).to have_received(:new).with(subject.http)
+      end
+    end
+  end
+
   describe "#initialize" do
     it "instantiates a new Myfinance::Http object" do
       expect(Myfinance::Http).to receive(:new).with("abc", nil)
@@ -145,4 +155,6 @@ describe Myfinance::Client do
       subject.reconciles
     end
   end
+
+  include_examples :resource, :sales, Myfinance::Resources::Sale
 end

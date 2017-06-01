@@ -43,7 +43,7 @@ module Myfinance
     def categories
       Myfinance::Resources::Category.new(http)
     end
-    
+
     def accounts
       Myfinance::Resources::Account.new(http)
     end
@@ -54,7 +54,7 @@ module Myfinance
 
     def people
       Myfinance::Resources::Person.new(http)
-    end      
+    end
 
     def webhooks
       Myfinance::Resources::Webhook.new(http)
@@ -78,6 +78,10 @@ module Myfinance
 
     def bank_statements
       Myfinance::Resources::BankStatement.new(http)
+    end
+
+    def sales
+      Myfinance::Resources::Sale.new(http)
     end
   end
 end

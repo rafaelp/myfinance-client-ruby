@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/entities/3703/sales/8
+    body:
+      encoding: UTF-8
+      string: '{"sale":{"nominal_amount":"0.999E3","description":"O Guia Vol. II"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 02 Jun 2017 15:33:14 GMT
+      ETag:
+      - W/"b00a021f2637dce46c19ab1af42c10f8"
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3703/sales/8
+      Server:
+      - nginx/1.12.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTliOTM1MjFmNGUxOTEwZTM3ZTExMGQ4Njk5OGMzNmJjBjsAVA%3D%3D--c297c50b335ef8868a617d0dd5390d51660aed92;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-06-02T15:34:00Z'
+      X-Request-Id:
+      - b8651323aa7998f02f91076d4d27ffac
+      X-Runtime:
+      - '0.220205'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '370'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sale":{"category_id":525219,"classification_center_id":18892,"confirmed_at":null,"created_at":"2017-06-01T16:51:19-03:00","days_to_liquidation":0,"description":"O
+        Guia Vol. II","estimated_liquidated_at":"2017-06-30","fee_percentage":"0.0","fee_percentage_amount":null,"financial_account_id":1819688,"fixed_fee_amount":null,"id":8,"issuer":"American
+        Express","liquidated_at":null,"liquidation_week_day":null,"nominal_amount":"999.0","observation":"","occurred_at":"2017-06-01","payment_method":"debit","person_id":191988,"receivable_amount":"95.0","sale_account_id":7,"status":1,"summary":false,"updated_at":"2017-06-02T12:32:41-03:00"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3703/sales/8
+  recorded_at: Fri, 02 Jun 2017 15:33:14 GMT
+recorded_with: VCR 2.9.3

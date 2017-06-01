@@ -33,7 +33,7 @@ module Myfinance
       end
 
       def entity_klass_name
-        self.class.to_s.gsub('Resources', 'Entities')
+        self.class.to_s.gsub("Resources", "Entities")
       end
     end
   end

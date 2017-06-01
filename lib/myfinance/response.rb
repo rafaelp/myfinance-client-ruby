@@ -5,8 +5,7 @@ module Myfinance
   RequestError   = Class.new(Exception)
 
   class Response < SimpleDelegator
-
-    def resolve!(&block)
+    def resolve!
       if success?
         block_given? ? yield(self) : self
       elsif timed_out?

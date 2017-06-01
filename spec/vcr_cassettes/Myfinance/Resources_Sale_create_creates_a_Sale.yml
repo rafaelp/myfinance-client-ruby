@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/entities/3703/sales/
+    body:
+      encoding: UTF-8
+      string: '{"sale":{"nominal_amount":"0.199E3","payment_method":"cash","occurred_at":"2017-01-01","description":"O
+        Guia","sale_account_id":7}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 02 Jun 2017 15:31:07 GMT
+      ETag:
+      - '"1974168021b4ce05e8fe134762a31360"'
+      Location:
+      - https://sandbox.myfinance.com.br/entities/3703/sales/18
+      Server:
+      - nginx/1.12.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTAxNDhlMTY4NjUxM2QwNmYyMjVlZTI2MzQ1OTlmZWExBjsAVA%3D%3D--f17c824fad4d8c5cd8a25da869708cba7a385fe7;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '13'
+      X-RateLimit-Reset:
+      - '2017-06-02T15:32:00Z'
+      X-Request-Id:
+      - 2cc3995210a09a371b90bfb1648f42c6
+      X-Runtime:
+      - '0.066717'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '608'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sale":{"id":18,"nominal_amount":"199.0","receivable_amount":null,"fixed_fee_amount":null,"fee_percentage":"0.0","fee_percentage_amount":null,"issuer":null,"payment_method":"cash","status":0,"summary":false,"description":"O
+        Guia","observation":null,"category_id":null,"classification_center_id":null,"person_id":null,"days_to_liquidation":0,"sale_account_id":7,"financial_account_id":null,"liquidation_week_day":null,"estimated_liquidated_at":null,"liquidated_at":null,"occurred_at":"2017-01-01","created_at":"2017-06-02T12:31:07-03:00","updated_at":"2017-06-02T12:31:07-03:00","custom_classifications":[]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/entities/3703/sales/
+  recorded_at: Fri, 02 Jun 2017 15:31:07 GMT
+recorded_with: VCR 2.9.3
