@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/sale_accounts/7/rules/
+    body:
+      encoding: UTF-8
+      string: '{"sale_rule":{"amount":"0.199E3","description":"O Guia"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 02 Jun 2017 19:16:55 GMT
+      Server:
+      - nginx/1.12.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTMzZmFlNzhkYTAwNDU2Mjk2NDQxM2I0YzcxOGYzYjRhBjsAVA%3D%3D--92976e9ea3ce6e807df9082aa1096f384eca497d;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '11'
+      X-RateLimit-Reset:
+      - '2017-06-02T19:17:00Z'
+      X-Request-Id:
+      - 66927412ebdccac4d96033a488b9a41d
+      X-Runtime:
+      - '0.036863'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '109'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"payment_method":["n\u00e3o pode ser vazio"],"base":["Precisa ter
+        pelo menos taxa percentual ou taxa fixa"]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/sale_accounts/7/rules/
+  recorded_at: Fri, 02 Jun 2017 19:16:55 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/sale_accounts/7/rules/171
+    body:
+      encoding: UTF-8
+      string: '{"sale_rule":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 02 Jun 2017 19:16:56 GMT
+      Server:
+      - nginx/1.12.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTBmMjI5ZDkxMjJkOWE5MzNlMzU5MDA4NzgxZmQ1N2I4BjsAVA%3D%3D--5f07b745e70424122a78c1829b443a5b663c79fb;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '8'
+      X-RateLimit-Reset:
+      - '2017-06-02T19:17:00Z'
+      X-Request-Id:
+      - 63a6a8eefcd065041cbc1a6a8aee2c6e
+      X-Runtime:
+      - '0.035571'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '102'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":"Couldn''t find SaleRule with id=171 [WHERE `sale_rules`.`sale_account_id`
+        = 7]"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/sale_accounts/7/rules/171
+  recorded_at: Fri, 02 Jun 2017 19:16:56 GMT
+recorded_with: VCR 2.9.3

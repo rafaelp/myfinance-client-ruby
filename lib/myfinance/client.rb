@@ -83,5 +83,13 @@ module Myfinance
     def sales
       Myfinance::Resources::Sale.new(http)
     end
+
+    def sale_accounts
+      Myfinance::Resources::SaleAccount.new(http)
+    end
+
+    def sale_rules
+      Myfinance::Resources::SaleRule.new(http)
+    end
   end
 end

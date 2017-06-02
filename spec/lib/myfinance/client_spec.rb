@@ -157,4 +157,6 @@ describe Myfinance::Client do
   end
 
   include_examples :resource, :sales, Myfinance::Resources::Sale
+  include_examples :resource, :sale_accounts, Myfinance::Resources::SaleAccount
+  include_examples :resource, :sale_rules, Myfinance::Resources::SaleRule
 end
