@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/sale_accounts/10
+    body:
+      encoding: UTF-8
+      string: '{"sale_account":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      Date:
+      - Fri, 02 Jun 2017 19:54:08 GMT
+      Server:
+      - nginx/1.12.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWQ0YTU4MGVjNTgwNjY4YzAyMDlhYzBmMjc2YTkwNTMyBjsAVA%3D%3D--181e9a898714e0d0d34a904c94570dbf939073b4;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '12'
+      X-RateLimit-Reset:
+      - '2017-06-02T19:55:00Z'
+      X-Request-Id:
+      - ce95b0109d8bcbaf0ad45085f3c24d5f
+      X-Runtime:
+      - '0.067744'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/sale_accounts/10
+  recorded_at: Fri, 02 Jun 2017 19:54:08 GMT
+recorded_with: VCR 2.9.3

@@ -1,7 +1,9 @@
 module Myfinance
   module Entities
     #
-    # A wrapper to Myfinance collection returns from API. This wrapper represents a collection and it's responsible for processing pagination information as well.
+    # A wrapper to Myfinance collection returns from API.
+    # This wrapper represents a collection and it's responsible for
+    # processing pagination information as well.
     #
     class Collection < Base
       PAGE_REGEX = /page=(\d+)/
@@ -11,11 +13,15 @@ module Myfinance
       def initialize(response)
         @response = response
         @collection = []
-        @headers = response.headers['Link'].split(',') rescue []
+        @headers = begin
+                     response.headers["Link"].split(",")
+                   rescue
+                     []
+                   end
       end
 
       def self.build(response)
-        self.new(response).build
+        new(response).build
       end
 
       def build
@@ -42,11 +48,13 @@ module Myfinance
       private
 
       def page_for(page_rel)
-        header_link_for(page_rel).match(PAGE_REGEX)[1].to_i rescue nil
+        header_link_for(page_rel).match(PAGE_REGEX)[1].to_i
+      rescue
+        nil
       end
 
       def header_link_for(rel)
-        headers.select{|n| n =~ /rel=#{rel}/}.first
+        headers.select { |n| n =~ /rel=#{rel}/ }.first
       end
 
       def build_collection

@@ -64,6 +64,9 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [CreditCardsTransactions API](https://app.myfinance.com.br/docs/api/credit_cards_transactions) as `client.credit_cards_transactions`
 * [Reconciles API](https://app.myfinance.com.br/docs/api/reconciles) as `client.reconciles`
 * [BankStatements API](https://app.myfinance.com.br/docs/api/bank_statements) as `client.bank_statements`
+* [Sales](https://app.myfinance.com.br/docs/api/sales) as `client.sales`
+* [SaleAccounts](https://app.myfinance.com.br/docs/api/sale_accounts) as `client.sale_accounts`
+* [SaleRules](https://app.myfinance.com.br/docs/api/sale_rules) as `client.sale_rules`
 
 ### Endpoints
 
@@ -1021,6 +1024,203 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
     </td>
   </tr>
 </table>
+
+#### [Sales](https://app.myfinance.com.br/docs/api/sales)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sales#get_index" target="_blank">
+        /entities/:entity_id/sales
+      </a>
+    </td>
+    <td>
+      <code>client.sales.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sales#get_show" target="_blank">
+        /entities/:entity_id/sales/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sales.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sales#post_create" target="_blank">
+        /entities/:entity_id/sales
+      </a>
+    </td>
+    <td>
+      <code>client.sales.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sales#put_update" target="_blank">
+        /entities/:entity_id/sales/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sales.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sales#delete_destroy" target="_blank">
+        /entities/:entity_id/sales/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sales.destroy</code>
+    </td>
+  </tr>
+</table>
+
+
+#### [SaleAccounts](https://app.myfinance.com.br/docs/api/sale_accounts)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_accounts#get_index" target="_blank">
+        /entities/:entity_id/sale_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.sale_accounts.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_accounts#get_show" target="_blank">
+        /entities/:entity_id/sale_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sale_accounts.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_accounts#post_create" target="_blank">
+        /entities/:entity_id/sale_accounts
+      </a>
+    </td>
+    <td>
+      <code>client.sale_accounts.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_accounts#put_update" target="_blank">
+        /entities/:entity_id/sale_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sale_accounts.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_accounts#delete_destroy" target="_blank">
+        /entities/:entity_id/sale_accounts/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sale_accounts.destroy</code>
+    </td>
+  </tr>
+</table>
+
+#### [SaleRules](https://app.myfinance.com.br/docs/api/sale_rules)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_rules#get_index" target="_blank">
+        /entities/:entity_id/sale_rules
+      </a>
+    </td>
+    <td>
+      <code>client.sale_rules.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_rules#get_show" target="_blank">
+        /entities/:entity_id/sale_rules/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sale_rules.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_rules#post_create" target="_blank">
+        /entities/:entity_id/sale_rules
+      </a>
+    </td>
+    <td>
+      <code>client.sale_rules.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_rules#put_update" target="_blank">
+        /entities/:entity_id/sale_rules/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sale_rules.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/sale_rules#delete_destroy" target="_blank">
+        /entities/:entity_id/sale_rules/:id
+      </a>
+    </td>
+    <td>
+      <code>client.sale_rules.destroy</code>
+    </td>
+  </tr>
+</table>
+
 
 ### Configuration
 

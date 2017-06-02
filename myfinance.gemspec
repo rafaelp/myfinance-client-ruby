@@ -1,24 +1,28 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'myfinance/version'
+require "myfinance/version"
 
 Gem::Specification.new do |spec|
   spec.name                 = "myfinance"
   spec.version              = Myfinance::VERSION
   spec.authors              = ["Eduardo Hertz", "Guilherme Franco", "Rafael B. Tauil", "Rodrigo Tassinari"]
-  spec.email                = ["eduardohertz@gmail.com", "g.francosilva@gmail.com", "rafael@tauil.com.br", "rodrigo@pittlandia.net"]
-  spec.required_ruby_version = '>= 2.0.0'
+  spec.email                = [
+    "eduardohertz@gmail.com",
+    "g.francosilva@gmail.com",
+    "rafael@tauil.com.br",
+    "rodrigo@pittlandia.net"
+  ]
+  spec.required_ruby_version = ">= 2.0.0"
 
   spec.summary       = %q{A Ruby client for the Myfinance REST API}
   spec.description   = %q{A Ruby client for the Myfinance REST API: https://app.myfinance.com.br/docs/api}
   spec.homepage      = "https://github.com/myfreecomm/myfinance-client-ruby"
   spec.license       = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
+  # Prevent pushing this gem to RubyGems.org by setting "allowed_push_host", or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "https://rubygems.org"
+    spec.metadata["allowed_push_host"] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
@@ -31,8 +35,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "typhoeus", "~> 0.8"
   spec.add_dependency "multi_json", "~> 1.11"
-  spec.add_dependency "virtus", '~> 1.0.5'
-  spec.add_dependency "mime-types", '~> 2.99'
+  spec.add_dependency "virtus", "~> 1.0.5"
+  spec.add_dependency "mime-types", "~> 2.99"
+  spec.add_dependency "require_all", "~> 1.4.0"
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"

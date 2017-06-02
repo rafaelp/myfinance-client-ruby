@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/sale_accounts/7/rules/12
+    body:
+      encoding: UTF-8
+      string: '{"sale_rule":{}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      Date:
+      - Fri, 02 Jun 2017 19:16:55 GMT
+      Server:
+      - nginx/1.12.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTc5YzQ1ZWFmYzRhNjk5NDg1MDUzOTYzMTA5NzcyYTU2BjsAVA%3D%3D--032f7483a77df640fc8273366cccd62631128f97;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '9'
+      X-RateLimit-Reset:
+      - '2017-06-02T19:17:00Z'
+      X-Request-Id:
+      - 4923398b92451145b570e8e4588b8a45
+      X-Runtime:
+      - '0.045057'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/sale_accounts/7/rules/12
+  recorded_at: Fri, 02 Jun 2017 19:16:55 GMT
+recorded_with: VCR 2.9.3
