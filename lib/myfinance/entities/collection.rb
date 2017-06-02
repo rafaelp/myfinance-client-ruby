@@ -2,7 +2,8 @@ module Myfinance
   module Entities
     #
     # A wrapper to Myfinance collection returns from API.
-    # This wrapper represents a collection and it's responsible for processing pagination information as well.
+    # This wrapper represents a collection and it's responsible for
+    # processing pagination information as well.
     #
     class Collection < Base
       PAGE_REGEX = /page=(\d+)/
@@ -12,7 +13,7 @@ module Myfinance
       def initialize(response)
         @response = response
         @collection = []
-        @headers = response.headers['Link'].split(',') rescue []
+        @headers = response.headers["Link"].split(",") rescue []
       end
 
       def self.build(response)
