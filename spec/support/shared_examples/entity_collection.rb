@@ -7,7 +7,6 @@ shared_examples :entity_collection do |entity_type|
     it "returns a collection(#{described_class})" do
       expect(subject.build).to be_a(described_class)
     end
-
   end
 
   context "#collection" do

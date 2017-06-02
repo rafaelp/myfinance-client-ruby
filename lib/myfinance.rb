@@ -7,7 +7,7 @@ require_all "lib/myfinance"
 
 module Myfinance
   def self.configuration
-    @configuration ||=  Configuration.new
+    @configuration ||= Configuration.new
   end
 
   def self.configure

@@ -15,9 +15,9 @@ module Myfinance
       end
     end
 
-    def parsed_body(key=nil)
-      return MultiJson.load(self.body)[key] unless key.nil?
-      MultiJson.load(self.body)
+    def parsed_body(key = nil)
+      return MultiJson.load(body)[key] unless key.nil?
+      MultiJson.load(body)
     rescue MultiJson::ParseError
       {}
     end
@@ -29,11 +29,12 @@ module Myfinance
     end
 
     def error!
-      raise RequestError.new(
+      error = RequestError.new(
         code:    code,
         message: request_error_message,
         body:    parsed_body
       )
+      raise error
     end
 
     def request_error_message

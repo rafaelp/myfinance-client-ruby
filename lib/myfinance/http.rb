@@ -19,17 +19,16 @@ module Myfinance
     private
 
     def send_request(method, path, options, &block)
-      request  = Request.new(options.merge!({
-        method: method,
-        token: token,
-        url: "#{Myfinance.configuration.url}#{path}",
-        user_agent: Myfinance.configuration.user_agent,
-        account_id: account_id
-      }))
-
-      response = Response.new(request.run)
-
-      response.resolve!(&block)
+      request = Request.new(
+        options.merge!(
+          method: method,
+          token: token,
+          url: "#{Myfinance.configuration.url}#{path}",
+          user_agent: Myfinance.configuration.user_agent,
+          account_id: account_id
+        )
+      )
+      Response.new(request.run).resolve!(&block)
     end
   end
 end

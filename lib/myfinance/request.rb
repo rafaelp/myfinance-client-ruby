@@ -1,6 +1,5 @@
 module Myfinance
   class Request
-
     def initialize(args)
       @args = args
     end
@@ -26,7 +25,7 @@ module Myfinance
         headers:          headers,
         accept_encoding:  "gzip",
         params_encoding: :rack
-      }.reject { |_k,v| v.nil? }
+      }.reject { |_k, v| v.nil? }
     end
 
     def headers
@@ -38,7 +37,7 @@ module Myfinance
         "User-Agent"     => args[:user_agent],
         "Authorization"  => "Basic #{authorization_hash}",
         "ACCOUNT_ID"     => args[:account_id]
-      }.merge(headers).delete_if { |_,v| v.nil? || v.to_s.empty? }
+      }.merge(headers).delete_if { |_, v| v.nil? || v.to_s.empty? }
     end
 
     def body
