@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/sale_accounts/
+    body:
+      encoding: UTF-8
+      string: '{"sale_account":{"provider":"pagseguro","name":"PagSeguro","description":"Conta
+        do PagSeguro","entity_id":3703}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 02 Jun 2017 20:07:28 GMT
+      ETag:
+      - '"e3e8fea1ef95fa279e401d783805d9ac"'
+      Location:
+      - https://sandbox.myfinance.com.br/sale_accounts/11
+      Server:
+      - nginx/1.12.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTE2N2YxNjMxODBmNjg3YWJlMTgwNGZjN2I2NmI1YjEyBjsAVA%3D%3D--1a921b46132588e54c35677a064ac01158cbe092;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-06-02T20:08:00Z'
+      X-Request-Id:
+      - 826847a2a1978ea500180497c62ebebb
+      X-Runtime:
+      - '0.059880'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '202'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sale_account":{"created_at":"2017-06-02T17:07:28-03:00","description":"Conta
+        do PagSeguro","entity_id":3703,"id":11,"name":"PagSeguro","provider":"pagseguro","updated_at":"2017-06-02T17:07:28-03:00"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/sale_accounts/
+  recorded_at: Fri, 02 Jun 2017 20:07:28 GMT
+recorded_with: VCR 2.9.3

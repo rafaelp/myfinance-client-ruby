@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/sale_accounts/7
+    body:
+      encoding: UTF-8
+      string: '{"sale_account":{"nominal_amount":"0.999E3","description":"Amarelinha"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.2.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjhlMjI0ZWEyNDljOWUwMWEzMWNlMTlkNGY5MmUyYmFjYTNkNTA1NWExY2UwY2YwOlg=
+      ACCOUNT_ID:
+      - 3539
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 02 Jun 2017 19:54:07 GMT
+      ETag:
+      - W/"6dc8770334bb27ce049d5815fbdd413c"
+      Location:
+      - https://sandbox.myfinance.com.br/sale_accounts/7
+      Server:
+      - nginx/1.12.0
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWRhMTZlNDRlY2Q0ZDE5MzUzNWYxMDMxODNlZTZhYWY3BjsAVA%3D%3D--9e6566731f3dbe54cdf5afb80c444a1858b2887e;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '13'
+      X-RateLimit-Reset:
+      - '2017-06-02T19:55:00Z'
+      X-Request-Id:
+      - 429761944f13ed5fdcb9ec55f266341c
+      X-Runtime:
+      - '0.073337'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '164'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sale_account":{"created_at":"2017-05-30T10:12:04-03:00","description":"Amarelinha","entity_id":3703,"id":7,"name":"Conta
+        da Cielo","provider":"cielo","updated_at":"2017-06-02T16:54:07-03:00"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/sale_accounts/7
+  recorded_at: Fri, 02 Jun 2017 19:54:07 GMT
+recorded_with: VCR 2.9.3

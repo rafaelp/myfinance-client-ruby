@@ -1,30 +1,30 @@
 require "spec_helper"
 
-describe Myfinance::Resources::SaleRule, vcr: true do
+describe Myfinance::Resources::SaleAccount, vcr: true do
   let(:client) do
     equipemyfinance_api_token = "b8e224ea249c9e01a31ce19d4f92e2baca3d5055a1ce0cf0"
     equipemyfinance_account_id = 3539
     Myfinance.client(equipemyfinance_api_token, equipemyfinance_account_id)
   end
-  let(:resource) { client.sale_rules }
-  let(:entity_class) { Myfinance::Entities::SaleRule }
-  let(:collection_class) { Myfinance::Entities::SaleRuleCollection }
+  let(:resource) { client.sale_accounts }
+  let(:entity_class) { Myfinance::Entities::SaleAccount }
+  let(:collection_class) { Myfinance::Entities::SaleAccountCollection }
   let(:request_error) { Myfinance::RequestError }
+  let(:entity) { 3703 }
   let(:sale_account_id) { 7 }
-  let(:sale_rule_id) { 6 }
 
   describe "#find_all" do
-    subject { resource.find_all(sale_account_id) }
+    subject { resource.find_all }
 
     it "returns a 200 OK response code" do
       expect(subject.response.code).to eq(200)
     end
 
-    it "returns a SaleRule collection" do
+    it "returns a SaleAccounts collection" do
       expect(subject).to be_a(collection_class)
     end
 
-    it "returns items as SaleRule" do
+    it "returns items as SaleAccount" do
       expect(subject.collection).to all(be_a(entity_class))
     end
 
@@ -38,9 +38,9 @@ describe Myfinance::Resources::SaleRule, vcr: true do
   end
 
   describe "#find" do
-    subject { resource.find(sale_account_id, sale_rule_id) }
+    subject { resource.find(sale_account_id) }
 
-    it "returns a SaleRule" do
+    it "returns a Sale" do
       expect(subject).to be_a(entity_class)
     end
 
@@ -56,24 +56,23 @@ describe Myfinance::Resources::SaleRule, vcr: true do
   describe "#create" do
     let(:params) do
       {
-        payment_method: "debit",
-        issuer: "visa",
-        fee_percentage: 1.0,
-        sale_account_id: sale_account_id
+        provider: "pagseguro",
+        name: "PagSeguro",
+        description: "Conta do PagSeguro",
+        entity_id: entity_id
       }
     end
 
     subject { resource.create(sale_account_id, params) }
 
-    it "creates a SaleRule" do
+    it "creates a Sale" do
       expect(subject).to be_a(entity_class)
     end
 
     context "when given invalid params" do
       let(:params) do
         {
-          amount: BigDecimal.new(199),
-          description: "O Guia"
+          provider: "amarelinha",
         }
       end
 
@@ -91,29 +90,28 @@ describe Myfinance::Resources::SaleRule, vcr: true do
   describe "#update" do
     let(:params) do
       {
-        payment_method: "credit",
-        issuer: "visa",
-        sale_account_id: sale_account_id
+        nominal_amount: BigDecimal.new(999),
+        description: "Amarelinha"
       }
     end
-    subject { resource.update(sale_account_id, sale_rule_id, params) }
+    subject { resource.update(sale_account_id, params) }
 
-    it "updates a SaleRule" do
+    it "updates a Sale" do
       expect(subject).to be_a(entity_class)
     end
   end
 
   describe "#destroy" do
-    let(:sale_rule_id) { 12 }
+    let(:sale_account_id) { 10 }
 
-    subject { resource.destroy(sale_account_id, sale_rule_id) }
+    subject { resource.destroy(sale_account_id) }
 
-    it "destroys SaleRule" do
+    it "destroys Sale" do
       expect(subject).to be_truthy
     end
 
     context "when given invalid ID" do
-      let(:sale_rule_id) { 171 }
+      let(:sale_account_id) { 171 }
 
       it "returns 404 Not Found" do
         expect { subject }.to raise_error(request_error) do |e|
