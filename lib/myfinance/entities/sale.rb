@@ -20,7 +20,7 @@ module Myfinance
       attribute :sale_account_id
       attribute :financial_account_id
       attribute :liquidation_week_day
-      attribute :liquidation_date
+      attribute :estimated_liquidated_at
       attribute :liquidated_at
       attribute :occurred_at
       attribute :created_at
