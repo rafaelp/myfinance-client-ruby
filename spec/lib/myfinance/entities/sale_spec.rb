@@ -24,6 +24,7 @@ describe Myfinance::Entities::Sale do
     estimated_liquidated_at
     liquidated_at
     occurred_at
+    confirmed_at
     created_at
     updated_at
     custom_classifications
