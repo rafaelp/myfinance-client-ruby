@@ -1,10 +1,13 @@
 module Myfinance
   module Entities
     class SaleAccount < Base
-      attribute :provider
+      attribute :id
       attribute :name
-      attribute :description
       attribute :entity_id
+      attribute :description
+      attribute :provider
+      attribute :created_at
+      attribute :updated_at
     end
   end
 end

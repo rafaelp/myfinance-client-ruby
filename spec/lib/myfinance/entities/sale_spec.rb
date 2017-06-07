@@ -21,7 +21,7 @@ describe Myfinance::Entities::Sale do
     sale_account_id
     financial_account_id
     liquidation_week_day
-    liquidation_date
+    estimated_liquidated_at
     liquidated_at
     occurred_at
     created_at
