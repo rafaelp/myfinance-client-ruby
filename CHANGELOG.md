@@ -1,4 +1,7 @@
 # Changelog
+## v1.3.0
+### New Endpoints
+- Add endpoints for `Sale`, `SaleAccount` and `SaleRule`
 
 ## v1.2.0
 ### Endpoints improvements

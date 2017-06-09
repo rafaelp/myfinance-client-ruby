@@ -64,9 +64,9 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [CreditCardsTransactions API](https://app.myfinance.com.br/docs/api/credit_cards_transactions) as `client.credit_cards_transactions`
 * [Reconciles API](https://app.myfinance.com.br/docs/api/reconciles) as `client.reconciles`
 * [BankStatements API](https://app.myfinance.com.br/docs/api/bank_statements) as `client.bank_statements`
-* [Sales](https://app.myfinance.com.br/docs/api/sales) as `client.sales`
-* [SaleAccounts](https://app.myfinance.com.br/docs/api/sale_accounts) as `client.sale_accounts`
-* [SaleRules](https://app.myfinance.com.br/docs/api/sale_rules) as `client.sale_rules`
+* [Sales API](https://app.myfinance.com.br/docs/api/sales) as `client.sales`
+* [SaleAccounts API](https://app.myfinance.com.br/docs/api/sale_accounts) as `client.sale_accounts`
+* [SaleRules API](https://app.myfinance.com.br/docs/api/sale_rules) as `client.sale_rules`
 
 ### Endpoints
 
