@@ -1259,7 +1259,17 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`.
 
-To release a new version, update the version number in `lib/myfinance/version.rb`, run `bundle install` and commit & push the changes to the repository. Then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). Make sure you have publishing rights for the gem on RubyGems beforehand, though.
+## Release
+
+To release a new version, update the version number in `lib/myfinance/version.rb`, run `bundle install` and commit & push the changes to the repository.
+
+If this is your first time publishing a RubyGem in your local device, you will have to download your credentials. To do this, follow the instructions in your [profile page in RubyGems](https://rubygems.org/profile/edit) or just type the following in your command line, replacing `$username` with your RubyGems username.
+
+```bash
+$ curl -u $username https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials; chmod 0600 ~/.gem/credentials
+```
+
+Then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). Make sure you have publishing rights for the gem on RubyGems beforehand, though.
 
 After publishing the new version, add a comment to each pull request that was included in this release like this:
 
