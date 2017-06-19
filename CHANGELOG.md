@@ -1,4 +1,8 @@
 # Changelog
+## v1.3.1
+### Fixes
+- Fix lib require to be relatively
+
 ## v1.3.0
 ### New Endpoints
 - Add endpoints for `Sale`, `SaleAccount` and `SaleRule`
