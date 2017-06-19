@@ -3,7 +3,7 @@ require "multi_json"
 require "mime/types"
 require "require_all"
 
-require_all "lib/myfinance"
+require_rel "myfinance"
 
 module Myfinance
   def self.configuration
