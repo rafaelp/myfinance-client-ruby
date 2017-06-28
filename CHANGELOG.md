@@ -1,4 +1,17 @@
 # Changelog
+## v1.4.0
+### New attributes
+- `Sale` now has the following new attributes:
+  - `attachments_count`, reflecting the fact that `Sale` can now have attachments
+  - `ticket_amount`, amount needed to pay due to some kind of penalty
+  - `interest_amount`, interest amount
+  - `discount_amount`, amount that will be reduced because of a discount
+  - `total_amount`, equals nominal_amount + ticket_amount + interest_amount - discount_amount
+  - `api_related`, `true` if `Sale` was created by the API, `false` otherwise
+
+### Attribute renamed
+- `Sale`:
+  - `liquidation_week_day` changed to `liquidation_weekday`, conforming to Rails' convention
 ## v1.3.1
 ### Fixes
 - Fix lib require to be relatively
