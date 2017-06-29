@@ -2,31 +2,37 @@ require "spec_helper"
 
 describe Myfinance::Entities::Sale do
   it_behaves_like "entity_attributes", %i[
-    id
-    nominal_amount
-    receivable_amount
-    fixed_fee_amount
-    fee_percentage
-    fee_percentage_amount
-    issuer
-    payment_method
-    status
-    summary
-    description
-    observation
+    api_related
+    attachments_count
     category_id
     classification_center_id
-    person_id
-    days_to_liquidation
-    sale_account_id
-    financial_account_id
-    liquidation_week_day
-    estimated_liquidated_at
-    liquidated_at
-    occurred_at
     confirmed_at
     created_at
-    updated_at
     custom_classifications
+    days_to_liquidation
+    description
+    discount_amount
+    estimated_liquidated_at
+    fee_percentage
+    fee_percentage_amount
+    financial_account_id
+    fixed_fee_amount
+    id
+    interest_amount
+    issuer
+    liquidated_at
+    liquidation_weekday
+    nominal_amount
+    observation
+    occurred_at
+    payment_method
+    person_id
+    receivable_amount
+    sale_account_id
+    status
+    summary
+    ticket_amount
+    total_amount
+    updated_at
   ]
 end

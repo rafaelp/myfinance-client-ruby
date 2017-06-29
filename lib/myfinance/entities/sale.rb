@@ -1,32 +1,38 @@
 module Myfinance
   module Entities
     class Sale < Base
-      attribute :id
-      attribute :nominal_amount
-      attribute :receivable_amount
-      attribute :fixed_fee_amount
-      attribute :fee_percentage
-      attribute :fee_percentage_amount
-      attribute :issuer
-      attribute :payment_method
-      attribute :status
-      attribute :summary
-      attribute :description
-      attribute :observation
+      attribute :api_related
+      attribute :attachments_count
       attribute :category_id
       attribute :classification_center_id
-      attribute :person_id
-      attribute :days_to_liquidation
-      attribute :sale_account_id
-      attribute :financial_account_id
-      attribute :liquidation_week_day
-      attribute :estimated_liquidated_at
-      attribute :liquidated_at
-      attribute :occurred_at
       attribute :confirmed_at
       attribute :created_at
-      attribute :updated_at
       attribute :custom_classifications
+      attribute :days_to_liquidation
+      attribute :description
+      attribute :discount_amount
+      attribute :estimated_liquidated_at
+      attribute :fee_percentage
+      attribute :fee_percentage_amount
+      attribute :financial_account_id
+      attribute :fixed_fee_amount
+      attribute :id
+      attribute :interest_amount
+      attribute :issuer
+      attribute :liquidated_at
+      attribute :liquidation_weekday
+      attribute :nominal_amount
+      attribute :observation
+      attribute :occurred_at
+      attribute :payment_method
+      attribute :person_id
+      attribute :receivable_amount
+      attribute :sale_account_id
+      attribute :status
+      attribute :summary
+      attribute :ticket_amount
+      attribute :total_amount
+      attribute :updated_at
     end
   end
 end
