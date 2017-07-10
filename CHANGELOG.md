@@ -1,4 +1,7 @@
 # Changelog
+## v1.4.1
+- In v1.4.0 we broke the API by renaming `financial_account_taxes_attributes` to `tax_charges_attributes`.
+We will add `financial_account_taxes_attributes` back. Both can be used for the same purpose.
 ## v1.4.0
 ### New attributes
 - `Sale` now has the following new attributes:
