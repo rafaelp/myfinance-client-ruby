@@ -31,7 +31,7 @@ module Myfinance
       attribute :sale_account_id
       attribute :status
       attribute :summary
-      attribute :tax_charges_attributes
+      attribute :tax_charges
       attribute :ticket_amount
       attribute :total_amount
       attribute :updated_at
