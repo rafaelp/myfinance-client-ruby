@@ -31,7 +31,7 @@ describe Myfinance::Entities::Sale do
     sale_account_id
     status
     summary
-    tax_charges_attributes
+    tax_charges
     ticket_amount
     total_amount
     updated_at
