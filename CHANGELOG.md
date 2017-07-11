@@ -1,7 +1,7 @@
 # Changelog
 ## v1.4.1
 - In v1.4.0 we broke the API by renaming `financial_account_taxes_attributes` to `tax_charges_attributes`.
-We will add `financial_account_taxes_attributes` back. Both can be used for the same purpose.
+We add `financial_account_taxes_attributes` back. Both can be used for the same purpose.
 - We also renamed `tax_charges_attributes` to `tax_charges` as an effort to move away from the `_attributes` suffix.
 ## v1.4.0
 ### New attributes
