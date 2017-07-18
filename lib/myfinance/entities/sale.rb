@@ -8,7 +8,6 @@ module Myfinance
       attribute :confirmed_at
       attribute :created_at
       attribute :custom_classifications
-      attribute :custom_classifications
       attribute :days_to_liquidation
       attribute :description
       attribute :discount_amount

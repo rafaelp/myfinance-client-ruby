@@ -8,6 +8,7 @@ module Myfinance
       attribute :owner_id, Integer
       attribute :currency_id, Integer
       attribute :category_id, Integer
+      attribute :custom_classifications, Array[Hash]
       attribute :type, String
       attribute :occurred_at, Date
       attribute :document, String

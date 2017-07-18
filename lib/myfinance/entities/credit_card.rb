@@ -7,6 +7,7 @@ module Myfinance
       attribute :classification_center_id, Integer
       attribute :category_id, Integer
       attribute :closing_day, Integer
+      attribute :custom_classifications, Array[Hash]
       attribute :expiration_day, Integer
       attribute :name, String
       attribute :flag, String
