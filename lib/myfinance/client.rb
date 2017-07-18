@@ -91,5 +91,9 @@ module Myfinance
     def sale_rules
       Myfinance::Resources::SaleRule.new(http)
     end
+
+    def custom_classifiers
+      Myfinance::Resources::CustomClassifier.new(http)
+    end
   end
 end

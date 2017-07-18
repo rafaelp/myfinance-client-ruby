@@ -43,120 +43,23 @@ describe Myfinance::Client do
     end
   end
 
-  describe "#entities" do
-    it "instantiates a new Myfinance::Resources::Entity" do
-      expect(Myfinance::Resources::Entity).to receive(:new).with(subject.http)
-      subject.entities
-    end
-  end
-
-  describe "#payable_accounts" do
-    it "instantiates a new Myfinance::Resources::PayableAccount" do
-      expect(Myfinance::Resources::PayableAccount).to receive(:new).with(subject.http)
-      subject.payable_accounts
-    end
-  end
-
-  describe "#receivable_accounts" do
-    it "instantiates a new Myfinance::Resources::ReceivableAccount" do
-      expect(Myfinance::Resources::ReceivableAccount).to receive(:new).with(subject.http)
-      subject.receivable_accounts
-    end
-  end
-
-  describe "#attachments" do
-    it "instantiates a new Myfinance::Resources::Attachment" do
-      expect(Myfinance::Resources::Attachment).to receive(:new).with(subject.http)
-      subject.attachments
-    end
-  end
-
-  describe "#classification_centers" do
-    it "instantiates a new Myfinance::Resources::ClassificationCenter" do
-      expect(
-        Myfinance::Resources::ClassificationCenter
-      ).to receive(:new).with(subject.http)
-      subject.classification_centers
-    end
-  end
-
-  describe "#categories" do
-    it "instantiates a new Myfinance::Resources::Category" do
-      expect(Myfinance::Resources::Category).to receive(:new).with(subject.http)
-      subject.categories
-    end
-  end
-
-  describe "#accounts" do
-    it "instantiates a new Myfinance::Resources::Account" do
-      expect(Myfinance::Resources::Account).to receive(:new).with(subject.http)
-      subject.accounts
-    end
-  end
-
-  describe "#financial_transactions" do
-    it "instantiates a new Myfinance::Resources::FinancialTransaction" do
-      expect(
-        Myfinance::Resources::FinancialTransaction
-      ).to receive(:new).with(subject.http)
-
-      subject.financial_transactions
-    end
-  end
-
-  describe "#deposit_accounts" do
-    it "instantiates a new Myfinance::Resources::DepositAccount" do
-      expect(
-        Myfinance::Resources::DepositAccount
-      ).to receive(:new).with(subject.http)
-
-      subject.deposit_accounts
-    end
-  end
-
-  describe "#people" do
-    it "instantiates a new Myfinance::Resources::Person" do
-      expect(Myfinance::Resources::Person).to receive(:new).with(subject.http)
-      subject.people
-    end
-  end
-
-  describe "#webhooks" do
-    it "instantiates a new Myfinance::Resources::Webhook" do
-      expect(Myfinance::Resources::Webhook).to receive(:new).with(subject.http)
-      subject.webhooks
-    end
-  end
-
-  describe "#taxes" do
-    it "instantiates a new Myfinance::Resources::Tax" do
-      expect(Myfinance::Resources::Tax).to receive(:new).with(subject.http)
-      subject.taxes
-    end
-  end
-
-  describe "#credit_cards" do
-    it "instantiates a new Myfinance::Resources::CreditCard" do
-      expect(Myfinance::Resources::CreditCard).to receive(:new).with(subject.http)
-      subject.credit_cards
-    end
-  end
-
-  describe "#credit_card_transactions" do
-    it "instantiates a new Myfinance::Resources::CreditCardTransaction" do
-      expect(Myfinance::Resources::CreditCardTransaction).to receive(:new).with(subject.http)
-      subject.credit_card_transactions
-    end
-  end
-
-  describe "#reconciles" do
-    it "instantiates a new Myfinance::Resources::Reconcile" do
-      expect(Myfinance::Resources::Reconcile).to receive(:new).with(subject.http)
-      subject.reconciles
-    end
-  end
-
+  include_examples :resource, :entities, Myfinance::Resources::Entity
+  include_examples :resource, :payable_accounts, Myfinance::Resources::PayableAccount
+  include_examples :resource, :receivable_accounts, Myfinance::Resources::ReceivableAccount
+  include_examples :resource, :attachments, Myfinance::Resources::Attachment
+  include_examples :resource, :classification_centers, Myfinance::Resources::ClassificationCenter
+  include_examples :resource, :categories, Myfinance::Resources::Category
+  include_examples :resource, :accounts, Myfinance::Resources::Account
+  include_examples :resource, :financial_transactions, Myfinance::Resources::FinancialTransaction
+  include_examples :resource, :deposit_accounts, Myfinance::Resources::DepositAccount
+  include_examples :resource, :people, Myfinance::Resources::Person
+  include_examples :resource, :webhooks, Myfinance::Resources::Webhook
+  include_examples :resource, :taxes, Myfinance::Resources::Tax
+  include_examples :resource, :credit_cards, Myfinance::Resources::CreditCard
+  include_examples :resource, :credit_card_transactions, Myfinance::Resources::CreditCardTransaction
+  include_examples :resource, :reconciles, Myfinance::Resources::Reconcile
   include_examples :resource, :sales, Myfinance::Resources::Sale
   include_examples :resource, :sale_accounts, Myfinance::Resources::SaleAccount
   include_examples :resource, :sale_rules, Myfinance::Resources::SaleRule
+  include_examples :resource, :custom_classifiers, Myfinance::Resources::CustomClassifier
 end
