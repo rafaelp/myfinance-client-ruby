@@ -68,6 +68,7 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
 * [SaleAccounts API](https://app.myfinance.com.br/docs/api/sale_accounts) as `client.sale_accounts`
 * [SaleRules API](https://app.myfinance.com.br/docs/api/sale_rules) as `client.sale_rules`
 * [CustomClassifiers API](https://app.myfinance.com.br/docs/api/custom_classifiers) as `client.custom_classifiers`
+* [CustomClassifierValues API](https://app.myfinance.com.br/docs/api/custom_classifier_values) as `client.custom_classifier_values`
 
 ### Endpoints
 
@@ -1287,6 +1288,70 @@ client = Myfinance.client("YOUR_TOKEN_HERE")
   </tr>
 </table>
 
+#### [CustomClassifierValues](https://app.myfinance.com.br/docs/api/custom_classifier_values)
+
+<table>
+  <tr>
+    <th>HTTP method</th>
+    <th>Endpoint</th>
+    <th>Client method</th>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/custom_classifier_values#get_index" target="_blank">
+        /custom_classifiers/:custom_classifier_value_id/values
+      </a>
+    </td>
+    <td>
+      <code>client.custom_classifier_values.find_all</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>GET</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/custom_classifier_values#get_show" target="_blank">
+        /custom_classifiers/:custom_classifier_value_id/values/:id
+      </a>
+    </td>
+    <td>
+      <code>client.custom_classifier_values.find</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>POST</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/custom_classifier_values#post_create" target="_blank">
+        /custom_classifiers/:custom_classifier_value_id/values
+      </a>
+    </td>
+    <td>
+      <code>client.custom_classifier_values.create</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>PUT</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/custom_classifier_values#put_update" target="_blank">
+        /custom_classifiers/:custom_classifier_value_id/values/:id
+      </a>
+    </td>
+    <td>
+      <code>client.custom_classifier_values.update</code>
+    </td>
+  </tr>
+  <tr>
+    <td><code>DELETE</code></td>
+    <td>
+      <a href="https://app.myfinance.com.br/docs/api/custom_classifier_values#delete_destroy" target="_blank">
+        /custom_classifiers/:custom_classifier_value_id/values/:id
+      </a>
+    </td>
+    <td>
+      <code>client.custom_classifier_values.destroy</code>
+    </td>
+  </tr>
+</table>
 
 ### Configuration
 
