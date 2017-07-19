@@ -1,15 +1,13 @@
 require "spec_helper"
 
 describe Myfinance::Entities::ReconcileCollection do
-  let(:entity_klass) { described_class }
-
   let(:params) { double(headers: {}, parsed_body: [{}]) }
 
   subject { described_class.new(params) }
 
   context "#build" do
     it "returns order collection" do
-      expect(subject.build).to be_a(entity_klass)
+      expect(subject.build).to be_a(described_class)
     end
 
     it "returns order" do

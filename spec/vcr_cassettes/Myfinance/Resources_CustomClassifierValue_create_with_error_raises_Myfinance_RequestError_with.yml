@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/custom_classifiers/20/values
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier_value":{"value":{}}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 19 Jul 2017 17:40:59 GMT
+      Server:
+      - nginx/1.12.1
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJWY3YWQ3M2U4ZjU2OTZhODk2NWIxZjIxZWRhNGE0ZmQ2BjsAVA%3D%3D--2c28103c400a128d63cf53105edc6e84bccb927c;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '15'
+      X-RateLimit-Reset:
+      - '2017-07-19T17:41:00Z'
+      X-Request-Id:
+      - d54540a722251d7c5602e315b7a0d392
+      X-Runtime:
+      - '0.055921'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '37'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"value":["n\u00e3o pode ser vazio"]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/custom_classifiers/20/values
+  recorded_at: Wed, 19 Jul 2017 17:40:59 GMT
+recorded_with: VCR 2.9.3

@@ -26,7 +26,7 @@ module Myfinance
       #   Documentation: https://sandbox.myfinance.com.br/docs/api/custom_classifier_values#get_show
       #
       def find(custom_classifier_id, id)
-        http.get("/custom_classifiers/#{custom_classifier_id}/values", body: {}) do |response|
+        http.get("/custom_classifiers/#{custom_classifier_id}/values/#{id}", body: {}) do |response|
           respond_with_object(response, "custom_classifier_value")
         end
       end
@@ -79,7 +79,7 @@ module Myfinance
         query_string = query(params).join("&")
         custom_classifier_endpoint = endpoint(custom_classifier_id)
 
-        URI.encode("custom_classifiers/#{custom_classifier_endpoint}?#{query_string}")
+        URI.encode("#{custom_classifier_endpoint}?#{query_string}")
       end
 
       def endpoint(custom_classifier_id)
