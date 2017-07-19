@@ -40,7 +40,8 @@ module Myfinance
       #   Documentation: https://sandbox.myfinance.com.br/docs/api/custom_classifiers#post_create
       #
       def create(custom_classifier_id, params)
-        http.post("/custom_classifiers/#{custom_classifier_id}/values", body: { custom_classifier_value: params }) do |response|
+        body = { custom_classifier_value: params }
+        http.post("/custom_classifiers/#{custom_classifier_id}/values", body: body) do |response|
           respond_with_object(response, "custom_classifier_value")
         end
       end
@@ -54,7 +55,8 @@ module Myfinance
       #   Documentation: https://sandbox.myfinance.com.br/docs/api/custom_classifiers#put_update
       #
       def update(custom_classifier_id, id, params = {})
-        http.put("/custom_classifiers/#{custom_classifier_id}/values/#{id}", body: { custom_classifier_value: params }) do |response|
+        body = { custom_classifier_value: params }
+        http.put("/custom_classifiers/#{custom_classifier_id}/values/#{id}", body: body) do |response|
           respond_with_object(response, "custom_classifier_value")
         end
       end

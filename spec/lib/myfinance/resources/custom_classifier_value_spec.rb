@@ -29,7 +29,11 @@ describe Myfinance::Resources::CustomClassifierValue, vcr: true do
 
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
-        expect { client.custom_classifier_values.find(custom_classifier_id, 88_888_888) }.to raise_error(Myfinance::RequestError) do |error|
+        expectation = expect do
+          client.custom_classifier_values.find(custom_classifier_id, 88_888_888)
+        end
+
+        expectation.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
         end
       end
@@ -49,7 +53,11 @@ describe Myfinance::Resources::CustomClassifierValue, vcr: true do
 
     context "with error" do
       it "raises Myfinance::RequestError with 422 status code" do
-        expect { client.custom_classifier_values.create(custom_classifier_id, value: {}) }.to raise_error(Myfinance::RequestError) do |error|
+        expectation = expect do
+          client.custom_classifier_values.create(custom_classifier_id, value: {})
+        end
+
+        expectation.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(422)
         end
       end
@@ -59,13 +67,20 @@ describe Myfinance::Resources::CustomClassifierValue, vcr: true do
   describe "#update" do
     context "with success" do
       it "updates a custom_classifier_value successfully" do
-        expect(client.custom_classifier_values.update(custom_classifier_id, custom_classifier_value_id, value: "Valor alterado")).to be_a(entity_klass)
+        updated = client.custom_classifier_values.update(
+          custom_classifier_id, custom_classifier_value_id, value: "Valor alterado"
+        )
+        expect(updated).to be_a(entity_klass)
       end
     end
 
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
-        expect { client.custom_classifier_values.update(custom_classifier_id, 88_888_888, {}) }.to raise_error(Myfinance::RequestError) do |error|
+        expectation = expect do
+          client.custom_classifier_values.update(custom_classifier_id, 88_888_888, {})
+        end
+
+        expectation.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
         end
       end
@@ -83,7 +98,11 @@ describe Myfinance::Resources::CustomClassifierValue, vcr: true do
 
     context "with error" do
       it "raises Myfinance::RequestError with 404 status code" do
-        expect { client.custom_classifier_values.destroy(custom_classifier_id, 88_888_888) }.to raise_error(Myfinance::RequestError) do |error|
+        expectation = expect do
+          client.custom_classifier_values.destroy(custom_classifier_id, 88_888_888)
+        end
+
+        expectation.to raise_error(Myfinance::RequestError) do |error|
           expect(error.code).to eql(404)
         end
       end
