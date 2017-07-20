@@ -24,6 +24,7 @@ module Myfinance
 
       attribute :tax_charges, Array[Hash]
       attribute :financial_account_taxes_attributes, Array[Hash]
+      attribute :custom_classifications, Array[Hash]
       attribute :reconciliations, Hash[String => Array]
       attribute :links, Array[Hash[String => String]]
     end

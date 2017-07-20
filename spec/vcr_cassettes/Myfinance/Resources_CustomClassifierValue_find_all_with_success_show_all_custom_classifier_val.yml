@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.myfinance.com.br/custom_classifiers/20/values?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 19 Jul 2017 17:40:57 GMT
+      ETag:
+      - W/"e112992333a03e86b0f231734e54627a"
+      Server:
+      - nginx/1.12.1
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-DENTRO-ESCOPO-ADD-HEADER:
+      - t=1500486057.469
+      X-Rack-Cache:
+      - miss
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-07-19T17:41:00Z'
+      X-Request-Id:
+      - 4f9cb652ad90276cf6feacbfc0487b03
+      X-Runtime:
+      - '0.052199'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '158'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"custom_classifier_value":{"created_at":"2017-07-19T14:02:33-03:00","custom_classifier_id":20,"id":37,"updated_at":"2017-07-19T14:02:33-03:00","value":"Classificador
+        42"}},{"custom_classifier_value":{"created_at":"2017-07-19T13:44:27-03:00","custom_classifier_id":20,"id":36,"updated_at":"2017-07-19T14:39:54-03:00","value":"Valor"}}]'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/custom_classifiers/20/values?
+  recorded_at: Wed, 19 Jul 2017 17:40:57 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/custom_classifiers
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier":{"name":"Nome qualquer"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 18 Jul 2017 20:19:23 GMT
+      ETag:
+      - '"e878358c0f8796419500049bad6b93d2"'
+      Location:
+      - https://sandbox.myfinance.com.br/custom_classifiers/26
+      Server:
+      - nginx/1.12.1
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTZhMGY5OWY5NzNmYTk0ODYzNzAyYmJmYTYxNmQyM2UxBjsAVA%3D%3D--09c76c75951ebf95787755f1d3d49d385dd886d3;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '12'
+      X-RateLimit-Reset:
+      - '2017-07-18T20:20:00Z'
+      X-Request-Id:
+      - aa6605698b7a1c10b746438203b0442a
+      X-Runtime:
+      - '0.087009'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier":{"account_id":3613,"created_at":"2017-07-18T17:19:23-03:00","id":26,"name":"Nome
+        qualquer","updated_at":"2017-07-18T17:19:23-03:00"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/custom_classifiers
+  recorded_at: Tue, 18 Jul 2017 20:19:24 GMT
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/custom_classifiers/26
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      Date:
+      - Tue, 18 Jul 2017 20:19:24 GMT
+      Server:
+      - nginx/1.12.1
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTZlZDRjZDI5MDYzNWI2NDM3NDcwOWQ1MDlkYTRjZTkwBjsAVA%3D%3D--f95266b9d04459106644faee53dc5386f7a39236;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '11'
+      X-RateLimit-Reset:
+      - '2017-07-18T20:20:00Z'
+      X-Request-Id:
+      - cb1415b870fd30f1a8131588e7eb6657
+      X-Runtime:
+      - '0.050575'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/custom_classifiers/26
+  recorded_at: Tue, 18 Jul 2017 20:19:24 GMT
+recorded_with: VCR 2.9.3

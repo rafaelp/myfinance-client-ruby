@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/custom_classifiers/20/values
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier_value":{"value":"Nome qualquer"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 19 Jul 2017 17:43:50 GMT
+      ETag:
+      - '"b16f5ed8b13545b7e5a7713ddd811c7b"'
+      Location:
+      - "/custom_classifiers/20/values/39"
+      Server:
+      - nginx/1.12.1
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTNmODE0NzQzMzQxOGFlMDE2NjQ5NGRkMWIxZDE3NDNjBjsAVA%3D%3D--7bc1d4d230edea94dae906eec72111603a75bc46;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-DENTRO-ESCOPO-ADD-HEADER:
+      - t=1500486230.136
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '19'
+      X-RateLimit-Reset:
+      - '2017-07-19T17:44:00Z'
+      X-Request-Id:
+      - aae677aeee4c65c0f73e778afda92ba9
+      X-Runtime:
+      - '0.084432'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier_value":{"created_at":"2017-07-19T14:43:50-03:00","custom_classifier_id":20,"id":39,"updated_at":"2017-07-19T14:43:50-03:00","value":"Nome
+        qualquer"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/custom_classifiers/20/values
+  recorded_at: Wed, 19 Jul 2017 17:43:50 GMT
+- request:
+    method: delete
+    uri: https://sandbox.myfinance.com.br/custom_classifiers/20/values/39
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      Date:
+      - Wed, 19 Jul 2017 17:43:50 GMT
+      Server:
+      - nginx/1.12.1
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTQ4MjQ4NDI0OWVmYTVhMjBmNDcxMmIxNWNkZDhiOGIxBjsAVA%3D%3D--143d3846b3bff2fd3ae61b84181e410183049798;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-DENTRO-ESCOPO-ADD-HEADER:
+      - t=1500486230.356
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '18'
+      X-RateLimit-Reset:
+      - '2017-07-19T17:44:00Z'
+      X-Request-Id:
+      - 4e011d51aeb80a0a5e70c06c8cdd7e53
+      X-Runtime:
+      - '0.063265'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/custom_classifiers/20/values/39
+  recorded_at: Wed, 19 Jul 2017 17:43:50 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.myfinance.com.br/custom_classifiers/20/values/36
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier_value":{"value":"Valor alterado"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 19 Jul 2017 17:40:59 GMT
+      ETag:
+      - W/"6de4c6135c93f4b603d20b6eb8f969de"
+      Location:
+      - https://sandbox.myfinance.com.br/custom_classifiers/20.36
+      Server:
+      - nginx/1.12.1
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTRjMzM0NjE3Y2NmMGRkOWM3NTQxMDM1MmFiNDMzODEyBjsAVA%3D%3D--1b9c7172385deb61ea4f64a06e72af1bcef6d29b;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-DENTRO-ESCOPO-ADD-HEADER:
+      - t=1500486059.784
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '14'
+      X-RateLimit-Reset:
+      - '2017-07-19T17:41:00Z'
+      X-Request-Id:
+      - 311a1d152fe5a8bab9ecd366bef974fd
+      X-Runtime:
+      - '0.085155'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '133'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier_value":{"created_at":"2017-07-19T13:44:27-03:00","custom_classifier_id":20,"id":36,"updated_at":"2017-07-19T14:40:59-03:00","value":"Valor
+        alterado"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/custom_classifiers/20/values/36
+  recorded_at: Wed, 19 Jul 2017 17:40:59 GMT
+recorded_with: VCR 2.9.3

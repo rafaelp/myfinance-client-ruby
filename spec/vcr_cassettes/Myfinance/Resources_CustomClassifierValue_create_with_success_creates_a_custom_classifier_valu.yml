@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.myfinance.com.br/custom_classifiers/20/values
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier_value":{"value":"Valor 42"}}'
+    headers:
+      User-Agent:
+      - Myfinance Ruby Client v1.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YjU1MmRkNWE4NTk4Y2EwODliOTFjNWUzNTVhODNiODZlNDY5NmFlZmFjOWVhYTA1Olg=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 19 Jul 2017 17:40:58 GMT
+      ETag:
+      - '"7157e7a20fe2ae3d8123d3159b78a34b"'
+      Location:
+      - "/custom_classifiers/20/values/38"
+      Server:
+      - nginx/1.12.1
+      Set-Cookie:
+      - _financecompany_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTczM2U3Zjg1YmJkNTBlYTZjZWNhMzVlMmNlMzA0YzYyBjsAVA%3D%3D--bbfe2800cee197dbe13f8c9fc8089655f0dceab0;
+        path=/; HttpOnly
+      Vary:
+      - Origin
+      X-DENTRO-ESCOPO-ADD-HEADER:
+      - t=1500486058.523
+      X-Rack-Cache:
+      - invalidate, pass
+      X-RateLimit-Limit:
+      - '20'
+      X-RateLimit-Remaining:
+      - '16'
+      X-RateLimit-Reset:
+      - '2017-07-19T17:41:00Z'
+      X-Request-Id:
+      - 2165309de6b988b61bf3404c8f4245ec
+      X-Runtime:
+      - '0.086323'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '164'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"custom_classifier_value":{"created_at":"2017-07-19T14:40:58-03:00","custom_classifier_id":20,"id":38,"updated_at":"2017-07-19T14:40:58-03:00","value":"Valor
+        42"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.myfinance.com.br/custom_classifiers/20/values
+  recorded_at: Wed, 19 Jul 2017 17:40:59 GMT
+recorded_with: VCR 2.9.3
