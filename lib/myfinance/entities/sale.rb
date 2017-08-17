@@ -2,6 +2,7 @@ module Myfinance
   module Entities
     class Sale < Base
       attribute :api_related
+      attribute :attachments
       attribute :attachments_count
       attribute :category_id
       attribute :classification_center_id
@@ -19,6 +20,7 @@ module Myfinance
       attribute :id
       attribute :interest_amount
       attribute :issuer
+      attribute :links
       attribute :liquidated_at
       attribute :liquidation_weekday
       attribute :nominal_amount

@@ -3,6 +3,7 @@ require "spec_helper"
 describe Myfinance::Entities::Sale do
   it_behaves_like "entity_attributes", %i[
     api_related
+    attachments
     attachments_count
     category_id
     classification_center_id
@@ -20,6 +21,7 @@ describe Myfinance::Entities::Sale do
     id
     interest_amount
     issuer
+    links
     liquidated_at
     liquidation_weekday
     nominal_amount
