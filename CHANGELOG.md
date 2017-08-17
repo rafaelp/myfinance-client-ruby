@@ -1,4 +1,8 @@
 # Changelog
+## v1.6.0
+- `Sale` can now receive `attachments` and `links` from Myfinance app
+  - `attachments` returns the attachments of the `Sale`
+  - `links` returns a few endpoints related to the `Sale` object, such as associated Attachments and Financial Transaction
 ## v1.5.0
 ### New Endpoints
 - Add endpoints for `CustomClassifier` and `CustomClassifierValue`
