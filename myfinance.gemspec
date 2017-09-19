@@ -5,12 +5,19 @@ require "myfinance/version"
 Gem::Specification.new do |spec|
   spec.name                 = "myfinance"
   spec.version              = Myfinance::VERSION
-  spec.authors              = ["Eduardo Hertz", "Guilherme Franco", "Rafael B. Tauil", "Rodrigo Tassinari"]
+  spec.authors              = [
+    "Eduardo Hertz",
+    "Guilherme Franco",
+    "Rafael B. Tauil",
+    "Rodrigo Tassinari",
+    "Vagner Zampieri"
+  ]
   spec.email                = [
     "eduardohertz@gmail.com",
     "g.francosilva@gmail.com",
     "rafael@tauil.com.br",
-    "rodrigo@pittlandia.net"
+    "rodrigo@pittlandia.net",
+    "vgzampieri@gmail.com"
   ]
   spec.required_ruby_version = ">= 2.0.0"
 
