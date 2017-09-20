@@ -1,7 +1,7 @@
 # Changelog
 ## v1.6.1
 - `Sale` now has the following new attribute:
-  - `net_amount`, total_amount - withholding tax_charges
+  - `net_amount`, which represents the `total_amount` - withholded `tax_charges`
 ## v1.6.0
 - `Sale` can now receive `attachments` and `links` from Myfinance app
   - `attachments` returns the attachments of the `Sale`
