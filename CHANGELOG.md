@@ -1,4 +1,6 @@
 # Changelog
+## v1.6.3
+- Change `mime-types` dependency to allow a broader range of versions so as to continue supporting Rails 3
 ## v1.6.2
 - `SaleAccount` now has the following new attribute:
   - `consolidate`, which represents wether associated `sales` will be consolidated into one `ReceivableAccount` per date or one per `Sale`
