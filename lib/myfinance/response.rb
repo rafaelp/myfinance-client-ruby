@@ -29,12 +29,12 @@ module Myfinance
     end
 
     def error!
-      error = RequestError.new(
+      raise RequestError.new(
         code:    code,
         message: request_error_message,
-        body:    parsed_body
+        body:    parsed_body,
+        headers: headers
       )
-      raise error
     end
 
     def request_error_message

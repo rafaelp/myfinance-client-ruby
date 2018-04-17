@@ -89,7 +89,7 @@ describe Myfinance::Resources::Attachment, vcr: true do
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 422, message: "Unprocessable Entity", body: { "attachment" => ["não pode ser vazio."] }).and_call_original
+        expect(Myfinance::RequestError).to receive(:new).with(code: 422, message: "Unprocessable Entity", body: { "attachment" => ["não pode ser vazio."] }, headers: instance_of(Typhoeus::Response::Header)).and_call_original
         expect { subject }.to raise_error(Myfinance::RequestError)
       end
     end
@@ -102,7 +102,7 @@ describe Myfinance::Resources::Attachment, vcr: true do
       end
 
       it "adds information on request error object" do
-        expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: {"error" => "Você não tem permissão para acessar este recurso." }).and_call_original
+        expect(Myfinance::RequestError).to receive(:new).with(code: 403, message: "Forbidden", body: {"error" => "Você não tem permissão para acessar este recurso." }, headers: instance_of(Typhoeus::Response::Header)).and_call_original
         expect { subject }.to raise_error(Myfinance::RequestError)
       end
     end
