@@ -29,7 +29,20 @@ describe Myfinance::Response do
     end
 
     context 'when not success neither timeout' do
-      let(:response) { double(success?: false, timed_out?: false, code: 301, status_message: 'Moved Permanently', body: '') }
+      let(:headers) do
+        {
+          "Date" => "Tue, 17 Apr 2018 15:47:10 GMT", "Expires" => "-1",
+          "Cache-Control"=>"private, max-age=0"
+        }
+      end
+
+      let(:response) do
+        double({
+          success?: false, timed_out?: false, code: 301,
+          status_message: 'Moved Permanently', body: '',
+          headers: headers
+        })
+      end
 
       it 'raises RequestError' do
         expect { subject.resolve! }.to raise_error do |error|
@@ -37,12 +50,13 @@ describe Myfinance::Response do
           expect(error.code).to eq(301)
           expect(error.message).to eq("Moved Permanently")
           expect(error.body).to eq({})
+          expect(error.headers).to eq(headers)
         end
       end
 
       context "when status_message is empty" do
         context "when body has an 'error' key" do
-          let(:response) { double(success?: false, timed_out?: false, code: 301, status_message: '', body: '{"error": "My custom error message"}') }
+          let(:response) { double(success?: false, timed_out?: false, code: 301, status_message: '', body: '{"error": "My custom error message"}', headers: {}) }
 
           it "raises RequestError with custom message" do
             expect { subject.resolve! }.to raise_error do |error|
@@ -55,7 +69,7 @@ describe Myfinance::Response do
         end
 
         context "when body has an 'error' key" do
-          let(:response) { double(success?: false, timed_out?: false, code: 301, status_message: '', body: '') }
+          let(:response) { double(success?: false, timed_out?: false, code: 301, status_message: '', body: '', headers: {}) }
 
           it "raises RequestError with empty message" do
             expect { subject.resolve! }.to raise_error do |error|

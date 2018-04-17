@@ -11,7 +11,7 @@ describe Myfinance::Resources::ReceivableAccount do
     before :each do
       subject.build
     end
-    
+
     context "with pagination" do
       subject { client.receivable_accounts.find_all(entity_id, page) }
 
@@ -145,7 +145,7 @@ describe Myfinance::Resources::ReceivableAccount do
 
       it "adds information on request error object" do
         body = { "competency_month" => ["não pode ser vazio"], "due_date" => ["não é uma data válida"] }
-        expect(request_error).to receive(:new).with(code: 422, message: "", body: body).and_call_original
+        expect(request_error).to receive(:new).with(code: 422, message: "", body: body, headers: instance_of(Typhoeus::Response::Header)).and_call_original
         expect { subject }.to raise_error(request_error)
       end
     end
@@ -159,7 +159,7 @@ describe Myfinance::Resources::ReceivableAccount do
 
       it "adds information on request error object" do
         body = { "error" => "Você não tem permissão para acessar este recurso." }
-        expect(request_error).to receive(:new).with(code: 403, message: "Forbidden", body: body).and_call_original
+        expect(request_error).to receive(:new).with(code: 403, message: "Forbidden", body: body, headers: instance_of(Typhoeus::Response::Header)).and_call_original
         expect { subject }.to raise_error(request_error)
       end
     end
