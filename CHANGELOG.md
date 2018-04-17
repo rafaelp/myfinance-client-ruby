@@ -1,4 +1,6 @@
 # Changelog
+## v1.6.4
+- Add headers information in RequestError object
 ## v1.6.3
 - Change `mime-types` dependency to allow a broader range of versions so as to continue supporting Rails 3
 ## v1.6.2
