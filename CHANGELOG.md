@@ -1,4 +1,13 @@
 # Changelog
+## v1.6.5
+### Added
+- `Sale` now has the following new attributes:
+  * `document`
+  * `document_emission_date`
+  * `installment_count`
+  * `installment_number`
+  * `provider_code`
+  * `original_sale_id`
 ## v1.6.4
 - Add headers information in RequestError object
 ## v1.6.3
