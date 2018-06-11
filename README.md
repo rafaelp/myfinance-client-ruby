@@ -1402,7 +1402,7 @@ $ curl -u $username https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credential
 
 Then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). Make sure you have publishing rights for the gem on RubyGems beforehand, though.
 
-After publishing the new version, add a comment to each pull request that was included in this release like this:
+After publishing the new version, add a `released` label to each pull request included in the release and write a comment like this:
 
 ```
 :shipit: released on [version x.y.z](https://rubygems.org/gems/myfinance/versions/x.y.z)
