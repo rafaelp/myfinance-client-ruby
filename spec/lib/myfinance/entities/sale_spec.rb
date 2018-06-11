@@ -13,10 +13,11 @@ describe Myfinance::Entities::Sale do
     days_to_liquidation
     description
     discount_amount
+    document
+    document_emission_date
     estimated_liquidated_at
     fee_percentage
     fee_percentage_amount
-    net_amount
     financial_account_id
     fixed_fee_amount
     id
@@ -28,11 +29,13 @@ describe Myfinance::Entities::Sale do
     liquidated_at
     liquidation_weekday
     nominal_amount
+    net_amount
     observation
     occurred_at
     original_sale_id
     payment_method
     person_id
+    provider_code
     receivable_amount
     sale_account_id
     status

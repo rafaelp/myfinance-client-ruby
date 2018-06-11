@@ -12,6 +12,8 @@ module Myfinance
       attribute :days_to_liquidation
       attribute :description
       attribute :discount_amount
+      attribute :document
+      attribute :document_emission_date
       attribute :estimated_liquidated_at
       attribute :fee_percentage
       attribute :fee_percentage_amount
@@ -32,6 +34,7 @@ module Myfinance
       attribute :original_sale_id
       attribute :payment_method
       attribute :person_id
+      attribute :provider_code
       attribute :receivable_amount
       attribute :sale_account_id
       attribute :status
