@@ -2,11 +2,12 @@ require "spec_helper"
 
 describe Myfinance::Entities::Sale do
   it_behaves_like "entity_attributes", %i[
-    api_related
+    amount_difference
     attachments
     attachments_count
     category_id
     classification_center_id
+    competency_month
     confirmed_at
     created_at
     custom_classifications
@@ -23,13 +24,14 @@ describe Myfinance::Entities::Sale do
     id
     installment_count
     installment_number
+    installments
     interest_amount
     issuer
     links
     liquidated_at
     liquidation_weekday
-    nominal_amount
     net_amount
+    nominal_amount
     observation
     occurred_at
     original_sale_id
