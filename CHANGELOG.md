@@ -1,4 +1,18 @@
 # Changelog
+## v1.6.6
+### Added
+- `Sale` now has the following new attributes:
+  * `amount_difference`
+  * `competency_month`
+  * `installments`
+- `SaleAccount` now has the following new attribute:
+  * `expected_deposit_account_id`
+- `FinancialAccount` now has the following new attributes:
+  * `sale_account_id`
+  * `sale_ids`
+### Removed
+- `Sale` no longer has the followng new attributes:
+  * `api_related`
 ## v1.6.5
 ### Added
 - `Sale` now has the following new attributes:
