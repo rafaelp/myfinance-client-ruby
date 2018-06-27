@@ -1,4 +1,9 @@
 # Changelog
+
+## v1.7.0
+### Added
+- `ReceivableAccount` now has the following new attribute:
+  * `eletronic_invoices`
 ## v1.6.6
 ### Added
 - `Sale` now has the following new attributes:
