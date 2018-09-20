@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.8.0
+### Added
+- The following resources now have `classification_center_classifications`:
+  * `CreditCard`
+  * `CreditCardTransaction`
+  * `FinancialTransaction`
+  * `Sale`
+  * `SaleAccount`
+  * `ReceivableAccount`
+  * `PayableAccount`
 ## v1.7.0
 ### Added
 - `ReceivableAccount` now has the following new attribute:
