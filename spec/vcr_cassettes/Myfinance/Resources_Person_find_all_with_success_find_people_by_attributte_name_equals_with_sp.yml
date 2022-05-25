@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/people?search[name_equals]=Jo%C3%A3o%20das%20neves
+    uri: https://sandbox.myfinance.com.br/people?search[name_equals]=Jo%C3%A3o+das+neves
     body:
       encoding: US-ASCII
       string: ''
@@ -59,6 +59,6 @@ http_interactions:
         das neves","neighborhood":null,"note":null,"person_type":null,"phone":null,"site":null,"state":null,"supplier":true,"updated_at":"2017-03-21T16:25:56-03:00","use_count":0,"zip_code":null}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/people?search[name_equals]=Jo%C3%A3o%20das%20neves
+      effective_url: https://sandbox.myfinance.com.br/people?search[name_equals]=Jo%C3%A3o+das+neves
   recorded_at: Tue, 28 Mar 2017 18:03:08 GMT
 recorded_with: VCR 2.9.3
