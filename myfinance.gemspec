@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.0.0"
 
   spec.summary       = %q{A Ruby client for the Myfinance REST API}
-  spec.description   = %q{A Ruby client for the Myfinance REST API: https://app.myfinance.com.br/docs/api}
-  spec.homepage      = "https://github.com/myfreecomm/myfinance-client-ruby"
+  spec.description   = %q{A Ruby client for the Myfinance REST API: https://financeiro.fintera.com.br/docs/api}
+  spec.homepage      = "https://github.com/Myfc-github/myfinance-client-ruby/pulls"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting "allowed_push_host", or
