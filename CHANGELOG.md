@@ -1,6 +1,10 @@
 # Changelog
 
 ## v1.8.0
+### Fixes
+- Changed URL encoding to support special characters. Ex: '&'
+
+## v1.8.0
 ### Added
 - The following resources now have `classification_center_classifications`:
   * `CreditCard`

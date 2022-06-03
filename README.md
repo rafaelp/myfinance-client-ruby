@@ -1392,7 +1392,10 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Release
 
+
 To release a new version, update the version number in `lib/myfinance/version.rb`, run `bundle install` and commit & push the changes to the repository.
+
+Before releasing the gem, remember to update de CHANGELOG.md, describing the changes made in this version.
 
 If this is your first time publishing a RubyGem in your local device, you will have to download your credentials. To do this, follow the instructions in your [profile page in RubyGems](https://rubygems.org/profile/edit) or just type the following in your command line, replacing `$username` with your RubyGems username.
 
