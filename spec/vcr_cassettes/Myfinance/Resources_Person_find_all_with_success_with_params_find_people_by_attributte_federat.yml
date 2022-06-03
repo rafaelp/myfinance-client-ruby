@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/people?search[federation_subscription_number_equals]=42.308.611/0001-41
+    uri: https://sandbox.myfinance.com.br/people?search[federation_subscription_number_equals]=42.308.611%2F0001-41
     body:
       encoding: US-ASCII
       string: ''
@@ -58,6 +58,6 @@ http_interactions:
       string: '[{"person":{"account_id":3613,"address":"","address_number":"","city":"","complement":"","country":"","created_at":"2015-11-12T14:34:37-02:00","customer":true,"email":"","excel_import_id":null,"febraban_favored_code":null,"febraban_name":null,"federation_subscription_number":"42.308.611/0001-41","federation_subscription_number_only_numbers":"42308611000141","federation_subscription_type_id":null,"force_destroy":false,"guid":null,"id":199424,"imported_from_sync":false,"interested_users_ids":[3691],"modified_by_sync":false,"name":"Myfreecomm","neighborhood":"","note":"","person_type":"JuridicalPerson","phone":"","site":"","state":"","supplier":true,"updated_at":"2015-11-12T14:34:37-02:00","use_count":0,"zip_code":""}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/people?search[federation_subscription_number_equals]=42.308.611/0001-41
+      effective_url: https://sandbox.myfinance.com.br/people?search[federation_subscription_number_equals]=42.308.611%2F0001-41
   recorded_at: Tue, 28 Mar 2017 18:05:30 GMT
 recorded_with: VCR 2.9.3

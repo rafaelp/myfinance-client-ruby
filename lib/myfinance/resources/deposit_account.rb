@@ -85,7 +85,7 @@ module Myfinance
         query_string = query(params).join("&")
         deposit_endpoint = endpoint(entity_id)
 
-        URI.encode("#{deposit_endpoint}?#{query_string}")
+        "#{deposit_endpoint}?#{query_string}"
       end
 
       def endpoint(entity_id)

@@ -81,7 +81,7 @@ module Myfinance
         query_string = query(params).join("&")
         custom_classifier_endpoint = endpoint(custom_classifier_id)
 
-        URI.encode("#{custom_classifier_endpoint}?#{query_string}")
+        "#{custom_classifier_endpoint}?#{query_string}"
       end
 
       def endpoint(custom_classifier_id)

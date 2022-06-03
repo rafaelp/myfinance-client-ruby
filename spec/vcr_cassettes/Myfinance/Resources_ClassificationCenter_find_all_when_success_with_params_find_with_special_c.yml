@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o%202
+    uri: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o+2
     body:
       encoding: US-ASCII
       string: ''
@@ -59,6 +59,6 @@ http_interactions:
         2","revenue_center":true,"updated_at":"2017-03-21T16:34:11-03:00","use_count":0}}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o%202
+      effective_url: https://sandbox.myfinance.com.br/classification_centers?search[entity_id_equals]=3798&search[name_equals]=Socializa%C3%A7%C3%A3o+2
   recorded_at: Tue, 28 Mar 2017 17:20:49 GMT
 recorded_with: VCR 2.9.3
